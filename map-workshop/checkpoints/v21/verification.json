@@ -1,0 +1,19 @@
+{
+  "tests": "22 passing",
+  "browser": "Large world rendered; tour advanced from Mithril to ruby crystals and white stags; zoom stops tour; Fit restores overview; PNG and JSON exported; both in-app previews refreshed.",
+  "resourceCounts": {
+    "aurochs": 6,
+    "fish": 14,
+    "gems": 16,
+    "mithril": 5,
+    "scarlet_pepper": 12,
+    "voidstone": 4,
+    "wheat": 9,
+    "white_stags": 18
+  },
+  "dimensions": [
+    3584,
+    2688
+  ],
+  "wrapping": "Camera repeats horizontally at exploration scale, clamps vertically. Fit centers one overview. Ocean border retained; no cross-seam land generation."
+}

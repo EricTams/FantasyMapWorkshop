@@ -24,7 +24,7 @@ export function segmentDistance(x,y,s){
 }
 export function makeGeometry(world){
  const coast=[],rivers=[];
- const land=(x,y)=>x>=0&&y>=0&&x<16&&y<16&&world.cells[y*16+x].land;
+ const land=(x,y)=>x>=0&&y>=0&&x<world.width&&y<world.height&&world.cells[y*world.width+x].land;
  for(const c of world.cells){if(!c.land)continue;
   const x=c.x*128,y=c.y*96;
   if(!land(c.x-1,c.y))coast.push({ax:x,ay:y,bx:x,by:y+96});
@@ -36,9 +36,9 @@ export function makeGeometry(world){
   const [a,b]=[route.nodes[i-1],route.nodes[i]],s={ax:a[0]*128,ay:a[1]*96,bx:b[0]*128,by:b[1]*96,start:length};
   s.length=Math.hypot(s.bx-s.ax,s.by-s.ay);length+=s.length;rivers.push(s);
  }}
- const buckets=segments=>Array.from({length:256},(_,i)=>{const x=i%16,y=Math.floor(i/16);return segments.filter(s=>Math.max(s.ax,s.bx)>=(x-1)*128&&Math.min(s.ax,s.bx)<=(x+2)*128&&Math.max(s.ay,s.by)>=(y-1)*96&&Math.min(s.ay,s.by)<=(y+2)*96);});
+ const buckets=segments=>Array.from({length:world.width*world.height},(_,i)=>{const x=i%world.width,y=Math.floor(i/world.width);return segments.filter(s=>Math.max(s.ax,s.bx)>=(x-1)*128&&Math.min(s.ax,s.bx)<=(x+2)*128&&Math.max(s.ay,s.by)>=(y-1)*96&&Math.min(s.ay,s.by)<=(y+2)*96);});
  const cb=buckets(coast),rb=buckets(rivers);
- const bucket=(x,y)=>clamp(Math.floor(y/96),0,15)*16+clamp(Math.floor(x/128),0,15);
+ const bucket=(x,y)=>clamp(Math.floor(y/96),0,world.height-1)*world.width+clamp(Math.floor(x/128),0,world.width-1);
  return {
   coastDistance(x,y){let d=192;for(const s of cb[bucket(x,y)])d=Math.min(d,segmentDistance(x,y,s).distance);return d*(land(Math.floor(x/128),Math.floor(y/96))?1:-1);},
   riverDistance(x,y){let best=192,progress=100;for(const s of rb[bucket(x,y)]){const v=segmentDistance(x,y,s);if(v.distance<best){best=v.distance;progress=s.start+v.t*s.length;}}return {distance:best,progress};}

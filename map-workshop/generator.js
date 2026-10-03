@@ -9,21 +9,23 @@ export function noise(seed,x,y,stream=0){const ix=Math.floor(x),iy=Math.floor(y)
 export function neighbors(i,n=SIZE){const x=i%n,y=Math.floor(i/n),r=[];if(x>0)r.push(i-1);if(x<n-1)r.push(i+1);if(y>0)r.push(i-n);if(y<n-1)r.push(i+n);return r;}
 export function generateWorld(seedText='elderwood',input={}){
  const settings={};for(const [k,v] of Object.entries(DEFAULTS)){const a=Number(input[k]??v);settings[k]=Math.max(k==='land'?30:0,Math.min(k==='land'?78:100,Number.isFinite(a)?a:v));}
- const seed=hashSeed(seedText),n=SIZE,cells=[];
+ const n=[16,28].includes(Number(input.size))?Number(input.size):SIZE;
+ settings.size=n;
+ const seed=hashSeed(seedText),cells=[];
  for(let y=0;y<n;y++)for(let x=0;x<n;x++){
-  const dx=(x-7.5)/7,dy=(y-7.5)/7;
+  const dx=(x-(n-1)/2)/((n-2)/2),dy=(y-(n-1)/2)/((n-2)/2);
   const e=1-Math.sqrt(dx*dx*.85+dy*dy)+.65*(noise(seed,x/3.8,y/3.8)-.5)+.22*(noise(seed,x/1.8,y/1.8,2)-.5);
   cells.push({x,y,elevation:e,land:false,terrain:'ocean',vegetation:null,relief:null,resource:null});
  }
  // Grow one land component toward the requested coverage; keep an ocean border.
  const target=Math.min((n-2)**2,Math.round(n*n*settings.land/100));
  const interior=i=>cells[i].x>0&&cells[i].y>0&&cells[i].x<n-1&&cells[i].y<n-1;
- let start=cells.reduce((best,c,i)=>interior(i)&&c.elevation>cells[best].elevation?i:best,8*n+8);
+ let start=cells.reduce((best,c,i)=>interior(i)&&c.elevation>cells[best].elevation?i:best,Math.floor(n/2)*n+Math.floor(n/2));
  const frontier=new Set([start]);
  for(let k=0;k<target;k++){
   let best=-1;for(const i of frontier)if(best<0||cells[i].elevation>cells[best].elevation)best=i;
   if(best<0)break;frontier.delete(best);cells[best].land=true;
-  for(const i of neighbors(best))if(interior(i)&&!cells[i].land)frontier.add(i);
+  for(const i of neighbors(best,n))if(interior(i)&&!cells[i].land)frontier.add(i);
  }
  for(const c of cells){if(!c.land)continue;
   const wet=noise(seed,c.x/4,c.y/4,11)*.62+settings.moisture/100*.65;
@@ -37,12 +39,12 @@ export function generateWorld(seedText='elderwood',input={}){
    c.resource=choices[Math.floor(randomAt(seed,c.x,c.y,32)*choices.length)];
   }
  }
- for(const c of cells)if(!c.land&&neighbors(c.y*n+c.x).some(i=>cells[i].land)&&randomAt(seed,c.x,c.y,35)<settings.resources/100*.22)c.resource='fish';
- const rivers=makeRivers(cells,seed,settings);
+ for(const c of cells)if(!c.land&&neighbors(c.y*n+c.x,n).some(i=>cells[i].land)&&randomAt(seed,c.x,c.y,35)<settings.resources/100*.22)c.resource='fish';
+ const rivers=makeRivers(cells,seed,settings,n);
  return {version:2,generator:'atlas-island-v2',seed:String(seedText),settings,width:n,height:n,projection:{tileWidth:128,tileHeight:96},cells,rivers,provenance:'New procedural geography using preserved Prototype55 assets. Not a reconstruction of World20.'};
 }
-function makeRivers(cells,seed,s){
- const n=SIZE,w=n+1,total=w*w,heights=[],coast=[],touchLand=[];
+function makeRivers(cells,seed,s,n){
+ const w=n+1,total=w*w,heights=[],coast=[],touchLand=[];
  for(let y=0;y<=n;y++)for(let x=0;x<=n;x++){
   const near=[];for(const dy of [-1,0])for(const dx of [-1,0])if(x+dx>=0&&x+dx<n&&y+dy>=0&&y+dy<n)near.push(cells[(y+dy)*n+x+dx]);
   heights.push(near.reduce((a,c)=>a+c.elevation,0)/near.length);

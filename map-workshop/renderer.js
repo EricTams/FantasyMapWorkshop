@@ -1,7 +1,7 @@
 import {makeRelief,reliefPosition,alpineDensity,mountainFitsNorth} from './relief.js';
 import {noise,randomAt} from './generator.js';
 import {resourceMembers} from './resources.js?v=20';
-import {displacement,ownership,makeGeometry} from './geometry.js';
+import {displacement,ownership,makeGeometry} from './geometry.js?v=21';
 import {spriteFootprint,canopyClearsRiver,resourceTreeDensity,canopyClearsObjects} from './vegetation.js';
 const BASE=new URL('./assets/',import.meta.url);
 const names=['families/sage-scrub-atlas.png','families/vegetation-atlas.png','materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['sand'].flatMap(t=>[0,1].map(i=>`relief/${t}/hill_rock_${i}.png`)),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','ruby-clusters','voidstone'].map(s=>`minerals/reconstructed/${s}.png`),'fantasy/white_stag_0.png','fantasy/white_stag_1.png','pepper/scarlet_pepper_0.png','pepper/scarlet_pepper_1.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
@@ -38,7 +38,7 @@ const colors={swamp:[115,128,69],desert:[204,184,141],plains:[181,168,103],grass
 function biomeMaterial(world,x,y,band){
  const color=[0,0,0];let desert=0,swamp=0,wetland=0,alpine=0;
  for(const part of ownership(x,y,band)){
-  const cell=world.cells[clamp(part.row,0,15)*16+clamp(part.col,0,15)];
+  const cell=world.cells[clamp(part.row,0,world.height-1)*world.width+clamp(part.col,0,world.width-1)];
   const c=colors[cell.terrain];for(let k=0;k<3;k++)color[k]+=c[k]*part.weight;
   if(cell.terrain==='desert')desert+=part.weight;
   if(cell.terrain==='swamp')swamp+=part.weight;
@@ -51,7 +51,7 @@ function biomeMaterial(world,x,y,band){
 }
 // Sample world fields on a four-pixel lattice, then interpolate, never per tile.
 function prepareFields(world,seed,relief){
- const step=4,w=513,h=385,channels=10,a=new Float32Array(w*h*channels),geometry=makeGeometry(world);
+ const step=4,w=world.width*32+1,h=world.height*24+1,channels=10,a=new Float32Array(w*h*channels),geometry=makeGeometry(world);
  for(let iy=0;iy<h;iy++)for(let ix=0;ix<w;ix++){
   const x=ix*step,y=iy*step,[dx,dy]=displacement(seed,x,y),qx=x+dx,qy=y+dy;
   const r=geometry.riverDistance(qx,qy),o=(iy*w+ix)*channels;
@@ -77,17 +77,18 @@ function prepareFields(world,seed,relief){
 }
 const resourcePath={mithril:'minerals/reconstructed/mithril.png',gems:'minerals/reconstructed/ruby-clusters.png',voidstone:'minerals/reconstructed/voidstone.png',wheat:'resources/wheat_field.png',fish:'resources/fish_school.png'};
 export function renderWorld(world,seed){
- const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1536;const ctx=canvas.getContext('2d');const data=ctx.createImageData(2048,1536);const p=data.data;
+ const W=world.width*128,H=world.height*96;
+ const canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;const ctx=canvas.getContext('2d');const data=ctx.createImageData(W,H);const p=data.data;
  const water=texture.deep_water,shallow=texture.shallow_water,ground=texture.meadow,sand=texture.shore;
  const relief=makeRelief(world,seed),fields=prepareFields(world,seed,relief);
- for(let y=0;y<1536;y++){
-  for(let x=0;x<2048;x++){
+ for(let y=0;y<H;y++){
+  for(let x=0;x<W;x++){
    const f=fields.sample(x,y),qx=x+f[0],qy=y+f[1],coast=f[2];
    const land=clamp((coast+1.1)/2.2),shelf=clamp((coast+25)/25),beach=clamp((7-coast)/7)*land;
-   const bx=clamp(qx,0,2047.999),by=clamp(qy,0,1535.999);
+   const bx=clamp(qx,0,W-.001),by=clamp(qy,0,H-.001);
    // Ownership, material detail, and channel distance all use the same displaced point.
    const tx=((Math.floor(qx*.8)%224)+224)%224,ty=((Math.floor(qy*1.067)%224)+224)%224,ti=(ty*224+tx)*3;
-   const wi=((y%224)*224+x%224)*3,o=(y*2048+x)*4;
+   const wi=((y%224)*224+x%224)*3,o=(y*W+x)*4;
    const {color,desert,swamp,wetland,alpine}=biomeMaterial(world,bx,by,f[6]);
    const damp=(swamp||wetland)?noise(seed,qx/31,qy/22,151):0;
    const peat=swamp*clamp((damp-.48)*2.8);
@@ -128,26 +129,26 @@ export function renderWorld(world,seed){
 
  // Protect identifying parts only against trees drawn in front of each member.
  // Rear foliage can overlap freely; lower legs and bush bases allow small overlaps.
- const mask=document.createElement('canvas');mask.width=2048;mask.height=1536;
+ const mask=document.createElement('canvas');mask.width=W;mask.height=H;
  const mc=mask.getContext('2d',{willReadFrequently:true});
- const resourceDepth=new Float32Array(2048*1536);resourceDepth.fill(Infinity);
+ const resourceDepth=new Float32Array(W*H);resourceDepth.fill(Infinity);
  for(const r of resources)for(const o of r.objects){
   const sprite=document.createElement('canvas');sprite.width=Math.ceil(o.w);sprite.height=Math.ceil(o.h*o.protectedFraction);
   const sc=sprite.getContext('2d',{willReadFrequently:true});sc.drawImage(o.img,0,0,o.w,o.h);
   const pixels=sc.getImageData(0,0,sprite.width,sprite.height).data;
   for(let sy=0;sy<sprite.height;sy++)for(let sx=0;sx<sprite.width;sx++){
    const x=Math.floor(o.x)+sx,y=Math.floor(o.y)+sy;
-   if(x<0||y<0||x>=2048||y>=1536||pixels[(sy*sprite.width+sx)*4+3]<=24)continue;
-   const index=y*2048+x;resourceDepth[index]=Math.min(resourceDepth[index],o.depth);
+   if(x<0||y<0||x>=W||y>=H||pixels[(sy*sprite.width+sx)*4+3]<=24)continue;
+   const index=y*W+x;resourceDepth[index]=Math.min(resourceDepth[index],o.depth);
   }
   mc.save();mc.beginPath();mc.rect(o.x,o.y,o.w,o.h*o.protectedFraction);mc.clip();mc.drawImage(o.img,o.x,o.y,o.w,o.h);mc.restore();
  }
- const alpha=mc.getImageData(0,0,2048,1536).data,stride=2049,integral=new Uint32Array(stride*1537);
- for(let y=0;y<1536;y++){let sum=0;for(let x=0;x<2048;x++){sum+=alpha[(y*2048+x)*4+3]>24?1:0;integral[(y+1)*stride+x+1]=sum+integral[y*stride+x+1];}}
+ const alpha=mc.getImageData(0,0,W,H).data,stride=(W+1),integral=new Uint32Array(stride*(H+1));
+ for(let y=0;y<H;y++){let sum=0;for(let x=0;x<W;x++){sum+=alpha[(y*W+x)*4+3]>24?1:0;integral[(y+1)*stride+x+1]=sum+integral[y*stride+x+1];}}
  const occupied=(left,top,right,bottom,treeDepth)=>{
-  const x0=clamp(Math.floor(left),0,2048),y0=clamp(Math.floor(top),0,1536),x1=clamp(Math.ceil(right),0,2048),y1=clamp(Math.ceil(bottom),0,1536);
+  const x0=clamp(Math.floor(left),0,W),y0=clamp(Math.floor(top),0,H),x1=clamp(Math.ceil(right),0,W),y1=clamp(Math.ceil(bottom),0,H);
   if(integral[y1*stride+x1]-integral[y0*stride+x1]-integral[y1*stride+x0]+integral[y0*stride+x0]===0)return false;
-  for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++)if(resourceDepth[y*2048+x]<=treeDepth)return true;
+  for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++)if(resourceDepth[y*W+x]<=treeDepth)return true;
   return false;
  };
  // Shared shoulders bridge neighboring relief cells; all rocks sort with trees/resources.
@@ -179,10 +180,10 @@ export function renderWorld(world,seed){
 
  // Keep the connected planting lattice, but retain 55% of eligible tree candidates.
  // Reusing the same random threshold preserves positions as density is reduced.
- for(let y=12;y<1530;y+=14)for(let x=10;x<2040;x+=17){
+ for(let y=12;y<H-6;y+=14)for(let x=10;x<W-8;x+=17){
   const px=x+(randomAt(seed,x,y,70)-.5)*13,py=y+(randomAt(seed,x,y,71)-.5)*11;
   const f=fields.sample(px,py);
-  const col=Math.floor((px+f[0])/128),row=Math.floor((py+f[1])/96),c=world.cells[row*16+col];if(!c?.vegetation)continue;
+  const col=Math.floor((px+f[0])/128),row=Math.floor((py+f[1])/96),c=world.cells[row*world.width+col];if(!c?.vegetation)continue;
   if(f[2]<8)continue;
   if(randomAt(seed,x,y,122)>(c.vegetation==='scrub'?.30:c.vegetation==='alpine'?alpineDensity(seed,px,py,f[8]):.55)*resourceTreeDensity(seed,px,py,resources,noise))continue;
   const i=Math.floor(randomAt(seed,x,y,72)*4),kind=c.vegetation;

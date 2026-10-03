@@ -5,7 +5,7 @@
 <title>Atlas • Fantasy Map Workshop</title>
 <meta name="description" content="Shape a fantasy world from a seed. An experimental map workshop using the preserved Fantasy Terrain art.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23142024'/%3E%3Cpath d='M5 25 14 6l5 10 3-5 6 14z' fill='%23caa976'/%3E%3C/svg%3E">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=21">
 </head>
 <body>
 <header><a class="brand" href="./" aria-label="Atlas home"><span class="brand-mark">A</span><span>ATLAS<small>FANTASY MAP WORKSHOP</small></span></a><span class="edition">FIELD EDITION <b>01</b></span></header>
@@ -14,6 +14,7 @@
 <div class="panel-title"><span class="eyebrow">WORLD BUILDER</span><h1>A world of your own.</h1><p>Shape the land. See what takes root.</p></div>
 <form id="controls">
 <label class="seed-label" for="seed">World seed</label><div class="seed-row"><input id="seed" name="seed" value="wildwood-1701" maxlength="64" spellcheck="false" autocomplete="off"><button id="reroll" type="button" title="Choose a new seed" aria-label="Choose a new seed">⚄</button></div>
+<label class="seed-label" for="size">Map size</label><select id="size" name="size"><option value="16">16 × 16 · Small</option><option value="28" selected>28 × 28 · Large</option></select>
 <div class="sliders">
 <label for="land"><span>Land coverage <output id="land-value">72%</output></span><input type="range" id="land" name="land" min="30" max="78" value="72"><small><span>Ocean</span><span>Continent</span></small></label>
 <label for="ruggedness"><span>Ruggedness <output id="ruggedness-value">62%</output></span><input type="range" id="ruggedness" name="ruggedness" min="0" max="100" value="62"><small><span>Rolling plains</span><span>High peaks</span></small></label>
@@ -27,18 +28,19 @@
 <div class="export"><span class="eyebrow">TAKE YOUR WORLD WITH YOU</span><div><button id="png" disabled>Save image <span>↓</span></button><button id="json" disabled>Save map <span>↓</span></button></div></div>
 </aside>
 <section class="workspace" aria-label="Generated world">
-<div class="map-heading"><div><span class="eyebrow">THE KNOWN WORLD</span><h2 id="world-name">The Wildwood Reach</h2></div><span class="map-size">16 × 16 <span>tiles</span></span></div>
+<div class="map-heading"><div><span class="eyebrow">THE KNOWN WORLD</span><h2 id="world-name">The Wildwood Reach</h2></div><span class="map-size" id="map-size">28 × 28 tiles</span></div>
 <div id="viewport" tabindex="0" aria-label="Fantasy map. Drag to pan, scroll to zoom. Arrow keys pan, plus and minus zoom, zero fits the map.">
 <canvas id="map" aria-label="Generated fantasy map"></canvas>
 <div class="map-vignette"></div><div class="compass" aria-hidden="true">N<span>↑</span></div>
-<div class="view-tools"><button id="zoom-out" aria-label="Zoom out">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="Zoom in">+</button><button id="fit">Fit</button><label><input type="checkbox" id="grid"> Grid</label></div>
+<div class="view-tools"><button id="zoom-out" aria-label="Zoom out">−</button><output id="zoom-value">100%</output><button id="zoom-in" aria-label="Zoom in">+</button><button id="fit">Fit</button><button id="tour" disabled aria-pressed="false">World tour</button><label><input type="checkbox" id="grid"> Grid</label></div>
 <div id="loading" role="status">Gathering the terrain…</div>
 </div>
+<p id="tour-status" role="status" hidden></p>
 <div class="map-footer"><p id="stats" aria-live="polite">Preparing your world</p><span>DRAG TO EXPLORE · SCROLL TO ZOOM</span></div>
 <div class="legend"><span><i style="--swatch:#8c9b50"></i>Grassland</span><span><i style="--swatch:#b6ad71"></i>Plains</span><span><i style="--swatch:#d0bc8a"></i>Desert</span><span><i style="--swatch:#738045"></i>Swamp</span><span><i style="--swatch:#536c3c"></i>Woodland</span><span><i style="--swatch:#568d9c"></i>River</span><p id="tile-info">Point to a tile to inspect it.</p></div>
 <p class="build-note"><a href="tests/terrain-families.html" target="_blank" rel="noopener">View all 16 terrain variants ↗</a> · <a href="tests/connected-relief.html" target="_blank" rel="noopener">Connected relief study ↗</a> · <a href="tests/relief-blocks.html" target="_blank" rel="noopener">3 × 3 relief blocks ↗</a> · <a href="tests/mineral-deposits.html" target="_blank" rel="noopener">Mineral deposits ↗</a></p>
 </section>
 </main>
-<script type="module" src="app.js"></script>
+<script type="module" src="app.js?v=21b"></script>
 </body>
 </html>
