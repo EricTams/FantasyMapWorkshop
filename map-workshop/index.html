@@ -13,12 +13,12 @@
 <aside>
 <div class="panel-title"><span class="eyebrow">WORLD BUILDER</span><h1>A world of your own.</h1><p>Shape the land. See what takes root.</p></div>
 <form id="controls">
-<label class="seed-label" for="seed">World seed</label><div class="seed-row"><input id="seed" name="seed" value="elderwood" maxlength="64" spellcheck="false" autocomplete="off"><button id="reroll" type="button" title="Choose a new seed" aria-label="Choose a new seed">⚄</button></div>
+<label class="seed-label" for="seed">World seed</label><div class="seed-row"><input id="seed" name="seed" value="wildwood-184" maxlength="64" spellcheck="false" autocomplete="off"><button id="reroll" type="button" title="Choose a new seed" aria-label="Choose a new seed">⚄</button></div>
 <div class="sliders">
-<label for="land"><span>Land coverage <output id="land-value">58%</output></span><input type="range" id="land" name="land" min="30" max="78" value="58"><small><span>Ocean</span><span>Continent</span></small></label>
-<label for="ruggedness"><span>Ruggedness <output id="ruggedness-value">45%</output></span><input type="range" id="ruggedness" name="ruggedness" min="0" max="100" value="45"><small><span>Rolling plains</span><span>High peaks</span></small></label>
-<label for="moisture"><span>Moisture <output id="moisture-value">55%</output></span><input type="range" id="moisture" name="moisture" min="0" max="100" value="55"><small><span>Arid</span><span>Lush</span></small></label>
-<label for="forest"><span>Forest coverage <output id="forest-value">48%</output></span><input type="range" id="forest" name="forest" min="0" max="100" value="48"><small><span>Open country</span><span>Deep woods</span></small></label>
+<label for="land"><span>Land coverage <output id="land-value">66%</output></span><input type="range" id="land" name="land" min="30" max="78" value="66"><small><span>Ocean</span><span>Continent</span></small></label>
+<label for="ruggedness"><span>Ruggedness <output id="ruggedness-value">57%</output></span><input type="range" id="ruggedness" name="ruggedness" min="0" max="100" value="57"><small><span>Rolling plains</span><span>High peaks</span></small></label>
+<label for="moisture"><span>Moisture <output id="moisture-value">43%</output></span><input type="range" id="moisture" name="moisture" min="0" max="100" value="43"><small><span>Arid</span><span>Lush</span></small></label>
+<label for="forest"><span>Forest coverage <output id="forest-value">65%</output></span><input type="range" id="forest" name="forest" min="0" max="100" value="65"><small><span>Open country</span><span>Deep woods</span></small></label>
 <label for="resources"><span>Resource abundance <output id="resources-value">35%</output></span><input type="range" id="resources" name="resources" min="0" max="100" value="35"><small><span>Scarce</span><span>Plentiful</span></small></label>
 </div>
 <button class="primary" type="submit" id="generate">Generate world <span>✦</span></button>
@@ -27,7 +27,7 @@
 <div class="export"><span class="eyebrow">TAKE YOUR WORLD WITH YOU</span><div><button id="png" disabled>Save image <span>↓</span></button><button id="json" disabled>Save map <span>↓</span></button></div></div>
 </aside>
 <section class="workspace" aria-label="Generated world">
-<div class="map-heading"><div><span class="eyebrow">THE KNOWN WORLD</span><h2 id="world-name">The Elderwood Reach</h2></div><span class="map-size">16 × 16 <span>tiles</span></span></div>
+<div class="map-heading"><div><span class="eyebrow">THE KNOWN WORLD</span><h2 id="world-name">The Wildwood Reach</h2></div><span class="map-size">16 × 16 <span>tiles</span></span></div>
 <div id="viewport" tabindex="0" aria-label="Fantasy map. Drag to pan, scroll to zoom. Arrow keys pan, plus and minus zoom, zero fits the map.">
 <canvas id="map" aria-label="Generated fantasy map"></canvas>
 <div class="map-vignette"></div><div class="compass" aria-hidden="true">N<span>↑</span></div>

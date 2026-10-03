@@ -1,0 +1,23 @@
+{
+  "seed": "wildwood-184",
+  "settings": {
+    "land": 66,
+    "ruggedness": 57,
+    "moisture": 43,
+    "forest": 65,
+    "resources": 35
+  },
+  "counts": {
+    "ocean": 87,
+    "grassland": 100,
+    "broadleaf": 48,
+    "jungle": 27,
+    "hill": 24,
+    "mountain": 22,
+    "pine": 15,
+    "plains": 52,
+    "desert": 17
+  },
+  "tests": "14 passed; opening HTML values generate at least ten tiles of each implemented terrain, vegetation and relief type",
+  "previews": "Chrome inspected; both IAB tabs refreshed"
+}

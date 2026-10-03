@@ -60,3 +60,5 @@ Preserve each meaningful iteration in Git, including semantic inputs and preview
 - `checkpoints/v9/`: sparse grass, moss, leaf litter and tiny stones beneath relief, trees and resources. Continuous clustered coverage blends across forest edges and resource clearings; entire patch silhouettes fade away from the displaced coast and riverbanks. Tree retention remains 55%.
 
 - `checkpoints/v10/`: ground-cover sprites disabled after visual review. The detailed patches read as smudges; simplified tufts did not match the existing art. Experimental code and both atlases are retained for reference but are not loaded or drawn. Restores the clean v8 appearance, retaining 55% tree density.
+
+- `checkpoints/v11/`: opening showcase uses seed `wildwood-184`, land 66, ruggedness 57, moisture 43, forest 65, resources 35. All implemented terrain, forest and relief types have at least 15 tiles each; map remains 16×16. Coverage is verified against actual opening form values by `tests/showcase.test.mjs`. Subsequent random seeds and slider changes are not forced to include every type.
