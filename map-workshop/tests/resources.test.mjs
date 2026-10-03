@@ -7,5 +7,5 @@ test('stags and pepper bushes use distinct native sprites with independent groun
   for(const m of members){assert.ok(m.x>5*128&&m.x<6*128);assert.ok(m.y>7*96&&m.y<8*96);assert.ok(m.width>40);assert.ok(m.protectedFraction>.8&&m.protectedFraction<1);}
   assert.deepEqual(resourceMembers(kind,5,7),members);
  }
- assert.deepEqual(resourceMembers('mithril',5,7),[]);
+ assert.deepEqual(resourceMembers('fish',5,7),[]);
 });

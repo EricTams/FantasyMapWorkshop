@@ -1,0 +1,5 @@
+{
+  "change": "Three reconstructed mineral sprites, each rendered as a loose 62/37/29px group after user found single deposits too large",
+  "validation": "Native-scale comparison inspected; resource test passed; both map previews refreshed",
+  "limitations": "Smaller members reuse the main outcrop art at reduced scale. Voidstone violet seams are faint at map scale."
+}

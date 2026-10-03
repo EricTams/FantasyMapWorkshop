@@ -74,3 +74,5 @@ Preserve each meaningful iteration in Git, including semantic inputs and preview
 - `checkpoints/v16/`: larger mountain peaks (128–158 world pixels wide) and less low hill cover immediately around their bases, improving mountain prominence within broad foothill regions.
 
 - `checkpoints/v17/`: adjacent mountains share broad rocky saddles and secondary crags; grassy interior knolls become rock. The 3×3 study now includes a full mountain massif. Mountain silhouettes are fitted against displaced northern boundaries: overlap into another mountain is allowed, while peaks bordering other terrain shift down or scale to fit. Existing river/coast/resource clearance remains active. 20 tests pass.
+
+- `checkpoints/v18/`: reconstructed mineral art: silver-bearing mithril rock, embedded gemstones and dark voidstone. Following scale feedback, each tile uses three separated outcrops (62/37/29px widths) with independent depth/clearance. Smaller members currently reuse the same image. Built-in imagegen prompts saved in `assets/minerals/reconstructed/provenance.json`; original mineral art retained. Native-size comparison linked below the map.
