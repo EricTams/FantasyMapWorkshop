@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Create a transparent game sprite atlas, square, exactly four separate very simple tiny grass tufts in a 2 by 2 grid with generous empty transparent margins. Each tuft consists ONLY of three or four broad short tapered blades joined at a tiny base. Each tuft uses exactly TWO flat muted olive colors, one medium olive and one lighter khaki green. Radically simplified hand-painted strategy game icon silhouettes, clean hard edges, no outlines. Different lean and blade heights in each quadrant. Designed to read at 12 pixels wide in a fantasy world map, elevated three-quarter view. NO TEXTURE, NO GRAIN, NO GRADIENTS, NO tiny details, NO shadows, NO ground patch, NO soil, NO moss, NO pebbles, NO scattered leaves, NO glow, NO blur. The space around and between the blades is fully transparent. No text, no labels, no grid lines.",
+  "asset": "simple-tuft-atlas.png",
+  "date": "2026-10-03"
+}

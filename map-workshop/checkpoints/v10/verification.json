@@ -1,0 +1,6 @@
+{
+  "groundCover": "disabled following user visual feedback",
+  "matchesV8Pixels": true,
+  "checks": "13 tests passed before disabling layer; exported final image compared with v8",
+  "previews": "both IAB tabs refreshed"
+}

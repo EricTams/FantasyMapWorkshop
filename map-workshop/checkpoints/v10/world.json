@@ -1,0 +1,2647 @@
+{
+  "version": 1,
+  "generator": "atlas-island-v1",
+  "seed": "elderwood",
+  "settings": {
+    "land": 58,
+    "ruggedness": 45,
+    "moisture": 55,
+    "forest": 48,
+    "resources": 35
+  },
+  "width": 16,
+  "height": 16,
+  "projection": {
+    "tileWidth": 128,
+    "tileHeight": 96
+  },
+  "cells": [
+    {
+      "x": 0,
+      "y": 0,
+      "elevation": -0.3505351485184063,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 0,
+      "elevation": -0.20481715784629595,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 0,
+      "elevation": -0.0831678286801203,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "elevation": -0.13241995094855896,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 0,
+      "elevation": -0.11404696854752902,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 0,
+      "elevation": -0.04432940783190972,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 0,
+      "elevation": -0.005372432729747412,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 0,
+      "elevation": 0.01934283653563354,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 0,
+      "elevation": 0.012098377722720897,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 0,
+      "elevation": -0.036867533542391,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 0,
+      "elevation": -0.008105344020585433,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 0,
+      "elevation": -0.014150963704867903,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 0,
+      "elevation": -0.13887026390159804,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 0,
+      "elevation": -0.18697955397233215,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 0,
+      "elevation": -0.18211757629035707,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 0,
+      "elevation": -0.2502893972643935,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 1,
+      "elevation": -0.23695889106414608,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 1,
+      "elevation": -0.13423245840076248,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 1,
+      "elevation": -0.0483433546636797,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 1,
+      "elevation": -0.031735493616406596,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "elevation": 0.019969176171956843,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 1,
+      "elevation": 0.12847328384126963,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 1,
+      "elevation": 0.16827258243387938,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 1,
+      "elevation": 0.14706942150232055,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 1,
+      "elevation": 0.1353425090812269,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 1,
+      "elevation": 0.07940487216288325,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 1,
+      "elevation": 0.0794021014957451,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 1,
+      "elevation": 0.051780772272606024,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": "wheat"
+    },
+    {
+      "x": 12,
+      "y": 1,
+      "elevation": -0.044325600537171175,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 1,
+      "elevation": -0.09018463010431246,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 1,
+      "elevation": -0.09095904162850306,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 1,
+      "elevation": -0.15037086147552198,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 2,
+      "elevation": -0.13919734961150568,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 2,
+      "elevation": -0.0771754424298679,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "elevation": -0.03837046686147283,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 2,
+      "elevation": 0.007954735338083479,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 2,
+      "elevation": 0.0804070886218611,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 2,
+      "elevation": 0.231173909646808,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "white_stags"
+    },
+    {
+      "x": 6,
+      "y": 2,
+      "elevation": 0.2954225973698115,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 2,
+      "elevation": 0.26195906494113824,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 2,
+      "elevation": 0.2519911892842947,
+      "land": true,
+      "terrain": "desert",
+      "vegetation": null,
+      "relief": null,
+      "resource": "voidstone"
+    },
+    {
+      "x": 9,
+      "y": 2,
+      "elevation": 0.19293344090183173,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 2,
+      "elevation": 0.17140365856975617,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 2,
+      "elevation": 0.12627019616316745,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "scarlet_pepper"
+    },
+    {
+      "x": 12,
+      "y": 2,
+      "elevation": 0.04531072246626641,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 2,
+      "elevation": -0.010362531384500055,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 2,
+      "elevation": -0.030015893549518842,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 2,
+      "elevation": -0.09201243574908874,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 3,
+      "elevation": -0.05358570684575585,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 3,
+      "elevation": -0.03253567599414191,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "elevation": -0.04047661386212216,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 3,
+      "elevation": 0.011139750168379023,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 3,
+      "elevation": 0.08995563576069501,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 3,
+      "elevation": 0.244782758741052,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 3,
+      "elevation": 0.35718078975233586,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 3,
+      "elevation": 0.3931658769282994,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 3,
+      "elevation": 0.41179857718570084,
+      "land": true,
+      "terrain": "desert",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 3,
+      "elevation": 0.3805380025892246,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 3,
+      "elevation": 0.33428357129023406,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 3,
+      "elevation": 0.2669325935210027,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 3,
+      "elevation": 0.16316234370726715,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 3,
+      "elevation": 0.07330602277980154,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 3,
+      "elevation": -0.027236174006231812,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 3,
+      "elevation": -0.12336724911647183,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 4,
+      "elevation": 0.019887645060431124,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 4,
+      "elevation": 0.03463835908358795,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 4,
+      "elevation": 0.01915954312535864,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 4,
+      "elevation": 0.08244662771758926,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 4,
+      "elevation": 0.17243187846763056,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "white_stags"
+    },
+    {
+      "x": 5,
+      "y": 4,
+      "elevation": 0.3342277097200131,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 4,
+      "elevation": 0.4687557578496053,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 4,
+      "elevation": 0.5307247197430884,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "pine",
+      "relief": "hill",
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 4,
+      "elevation": 0.5550347204670119,
+      "land": true,
+      "terrain": "desert",
+      "vegetation": null,
+      "relief": "mountain",
+      "resource": "gems"
+    },
+    {
+      "x": 9,
+      "y": 4,
+      "elevation": 0.5231792716992396,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": "hill",
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 4,
+      "elevation": 0.45444024233984026,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 4,
+      "elevation": 0.367292289135753,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 4,
+      "elevation": 0.26742351951919235,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 4,
+      "elevation": 0.16422987068953462,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 4,
+      "elevation": 0.020936382823658443,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 4,
+      "elevation": -0.09361328132402803,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 5,
+      "elevation": 0.10139856783141513,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 5,
+      "elevation": 0.14378031647066608,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": "aurochs"
+    },
+    {
+      "x": 2,
+      "y": 5,
+      "elevation": 0.15417970116903978,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 5,
+      "elevation": 0.23936407185017133,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 5,
+      "elevation": 0.3438454378908018,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 5,
+      "elevation": 0.48347549972228804,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "scarlet_pepper"
+    },
+    {
+      "x": 6,
+      "y": 5,
+      "elevation": 0.5828769269891009,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 5,
+      "elevation": 0.6045264779134143,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": "mountain",
+      "resource": "mithril"
+    },
+    {
+      "x": 8,
+      "y": 5,
+      "elevation": 0.5968702976132024,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": "mountain",
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 5,
+      "elevation": 0.5348369901638859,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": "mountain",
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 5,
+      "elevation": 0.4393854749298663,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": "mountain",
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 5,
+      "elevation": 0.3349264049096421,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 5,
+      "elevation": 0.3426926823677836,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 5,
+      "elevation": 0.2547448132863038,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": "aurochs"
+    },
+    {
+      "x": 14,
+      "y": 5,
+      "elevation": 0.04671609715460387,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 5,
+      "elevation": -0.08900170574206767,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 6,
+      "elevation": 0.1561878664550082,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 6,
+      "elevation": 0.2292758660061053,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "elevation": 0.26729740985398603,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 6,
+      "elevation": 0.34774858421203664,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 6,
+      "elevation": 0.45790638024839714,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 6,
+      "elevation": 0.5691814527126405,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 6,
+      "elevation": 0.6206698061255335,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 6,
+      "elevation": 0.6097727518237628,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "pine",
+      "relief": "hill",
+      "resource": "mithril"
+    },
+    {
+      "x": 8,
+      "y": 6,
+      "elevation": 0.5891014367654925,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": "mountain",
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 6,
+      "elevation": 0.5281644952859664,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": "hill",
+      "resource": "mithril"
+    },
+    {
+      "x": 10,
+      "y": 6,
+      "elevation": 0.45300332087726675,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 6,
+      "elevation": 0.3626277444200442,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 6,
+      "elevation": 0.36964257425249625,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 6,
+      "elevation": 0.25968531784300164,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 6,
+      "elevation": 0.03140521401424343,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": "fish"
+    },
+    {
+      "x": 15,
+      "y": 6,
+      "elevation": -0.13065428653728797,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 7,
+      "elevation": 0.1433815356425555,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 7,
+      "elevation": 0.27492137545788753,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 7,
+      "elevation": 0.35676223014293496,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "elevation": 0.3913423210024355,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "elevation": 0.48950607560431736,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "elevation": 0.5770343794855066,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 7,
+      "elevation": 0.6015227565159406,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": "wheat"
+    },
+    {
+      "x": 7,
+      "y": 7,
+      "elevation": 0.6093433295595723,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 7,
+      "elevation": 0.5836623823339435,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 7,
+      "elevation": 0.5032634263669143,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 7,
+      "elevation": 0.4630611569842369,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 7,
+      "elevation": 0.40089935010574684,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 7,
+      "elevation": 0.3784692429353316,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 7,
+      "elevation": 0.24745942268404142,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": "aurochs"
+    },
+    {
+      "x": 14,
+      "y": 7,
+      "elevation": 0.04225518982709162,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 7,
+      "elevation": -0.15092337778587622,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 8,
+      "elevation": 0.12626704998303423,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 8,
+      "elevation": 0.2558668883029632,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": "white_stags"
+    },
+    {
+      "x": 2,
+      "y": 8,
+      "elevation": 0.33650695717053036,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 8,
+      "elevation": 0.3814653483838335,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "elevation": 0.4797935565109579,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "elevation": 0.5416100746817771,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 8,
+      "elevation": 0.5593417611575,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 8,
+      "elevation": 0.5743302125651966,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 8,
+      "elevation": 0.5842983738232651,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 8,
+      "elevation": 0.5576749004118078,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 8,
+      "elevation": 0.5015698751469937,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "white_stags"
+    },
+    {
+      "x": 11,
+      "y": 8,
+      "elevation": 0.42632693420555806,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 8,
+      "elevation": 0.3689893471378723,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 8,
+      "elevation": 0.22211375560674063,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 8,
+      "elevation": 0.0001726609191504934,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 8,
+      "elevation": -0.18513750611257287,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 9,
+      "elevation": 0.0537584961886428,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 9,
+      "elevation": 0.16848704638127743,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "jungle",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 9,
+      "elevation": 0.2291559732781281,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 9,
+      "elevation": 0.27555245435782116,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 9,
+      "elevation": 0.36431481206868443,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": "aurochs"
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "elevation": 0.40692093045772837,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "white_stags"
+    },
+    {
+      "x": 6,
+      "y": 9,
+      "elevation": 0.44048109995994505,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 9,
+      "elevation": 0.46072782900491294,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": "wheat"
+    },
+    {
+      "x": 8,
+      "y": 9,
+      "elevation": 0.5271627185509287,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": "aurochs"
+    },
+    {
+      "x": 9,
+      "y": 9,
+      "elevation": 0.6017876082774574,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 9,
+      "elevation": 0.5199649980402856,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 9,
+      "elevation": 0.41982902333297006,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 9,
+      "elevation": 0.32760221567991277,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 9,
+      "elevation": 0.19305508415946768,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 9,
+      "elevation": -0.01655651809939241,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 9,
+      "elevation": -0.1658776575600409,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 10,
+      "elevation": 0.007897746241870271,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 10,
+      "elevation": 0.14008178412817504,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "white_stags"
+    },
+    {
+      "x": 2,
+      "y": 10,
+      "elevation": 0.1963226818959051,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 10,
+      "elevation": 0.1742743776747589,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 10,
+      "elevation": 0.23230735885715842,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 10,
+      "elevation": 0.3026795827391075,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 10,
+      "elevation": 0.3665861986685651,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "scarlet_pepper"
+    },
+    {
+      "x": 7,
+      "y": 10,
+      "elevation": 0.4016254327792823,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 10,
+      "elevation": 0.42349520340306873,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 10,
+      "elevation": 0.4278541460660751,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 10,
+      "elevation": 0.38549589664610917,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 10,
+      "elevation": 0.31255042227368895,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": "wheat"
+    },
+    {
+      "x": 12,
+      "y": 10,
+      "elevation": 0.19589548148390798,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "white_stags"
+    },
+    {
+      "x": 13,
+      "y": 10,
+      "elevation": 0.11030765437916526,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 10,
+      "elevation": 0.04803645879157942,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 10,
+      "elevation": -0.04950295694398448,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 11,
+      "elevation": -0.05024710893560073,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 11,
+      "elevation": 0.08666927681162716,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 11,
+      "elevation": 0.1328412521572772,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 11,
+      "elevation": 0.0590402465125414,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 11,
+      "elevation": 0.09239863391830117,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 11,
+      "elevation": 0.1854571039410979,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 11,
+      "elevation": 0.2710497886029459,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 11,
+      "elevation": 0.3168729759864021,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 11,
+      "elevation": 0.3086843705550113,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "elevation": 0.26129908260949997,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 11,
+      "elevation": 0.2436721586686283,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 11,
+      "elevation": 0.19103492175974596,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 11,
+      "elevation": 0.06151753081037377,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 11,
+      "elevation": 0.015452242739661212,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 11,
+      "elevation": 0.06343626498497501,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 11,
+      "elevation": 0.006116740705429911,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 12,
+      "elevation": -0.05123039712933524,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 12,
+      "elevation": -0.013812488476679985,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 12,
+      "elevation": -0.03619347649058134,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 12,
+      "elevation": -0.08658904756966225,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": "fish"
+    },
+    {
+      "x": 4,
+      "y": 12,
+      "elevation": -0.03289507180320966,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 12,
+      "elevation": 0.1649493561849042,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 12,
+      "elevation": 0.2245974461367691,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 12,
+      "elevation": 0.17552540140579093,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 12,
+      "elevation": 0.203216845216072,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 12,
+      "elevation": 0.2138519155275532,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 12,
+      "elevation": 0.13582367324512665,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 12,
+      "elevation": 0.044942485848857835,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 12,
+      "elevation": -0.06431372578597025,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 12,
+      "elevation": -0.09356774166698695,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 12,
+      "elevation": -0.013984232865614094,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 12,
+      "elevation": -0.06402395348126397,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 13,
+      "elevation": -0.08040851282117108,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 13,
+      "elevation": -0.0586247497720972,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 13,
+      "elevation": -0.0671665372940486,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 13,
+      "elevation": -0.07334601852769071,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 13,
+      "elevation": -0.007404540823042531,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 13,
+      "elevation": 0.1864292983955935,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 13,
+      "elevation": 0.19763487610801095,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": "wheat"
+    },
+    {
+      "x": 7,
+      "y": 13,
+      "elevation": 0.09295214773901402,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 13,
+      "elevation": 0.12377750471573781,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 13,
+      "elevation": 0.13331454769563178,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 13,
+      "elevation": 0.008162075755723175,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 13,
+      "elevation": -0.1121267055946272,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 13,
+      "elevation": -0.21181937588177097,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 13,
+      "elevation": -0.24978584349826796,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 13,
+      "elevation": -0.18453711538227074,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 13,
+      "elevation": -0.2455258683875236,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 14,
+      "elevation": -0.19325297733999014,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 14,
+      "elevation": -0.108861222816809,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 14,
+      "elevation": -0.040657008780467886,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 14,
+      "elevation": 0.021979072236587925,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 14,
+      "elevation": 0.08988561205929635,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 14,
+      "elevation": 0.15767029678748729,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": "scarlet_pepper"
+    },
+    {
+      "x": 6,
+      "y": 14,
+      "elevation": 0.12704529997542566,
+      "land": true,
+      "terrain": "grassland",
+      "vegetation": "broadleaf",
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 14,
+      "elevation": 0.05033329736714848,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 14,
+      "elevation": 0.06319465929028863,
+      "land": true,
+      "terrain": "plains",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 14,
+      "elevation": 0.032386668530831185,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 14,
+      "elevation": -0.11635339843256436,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 14,
+      "elevation": -0.24925177113400607,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 14,
+      "elevation": -0.3297665852670891,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 14,
+      "elevation": -0.3840636464688414,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 14,
+      "elevation": -0.3789270873963206,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 14,
+      "elevation": -0.47214419293809673,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 0,
+      "y": 15,
+      "elevation": -0.28532531142025186,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 1,
+      "y": 15,
+      "elevation": -0.1749626461739763,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 2,
+      "y": 15,
+      "elevation": -0.07090441446882678,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 3,
+      "y": 15,
+      "elevation": 0.005507061444754546,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 4,
+      "y": 15,
+      "elevation": 0.07188042311244729,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 5,
+      "y": 15,
+      "elevation": 0.1126591474083744,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 6,
+      "y": 15,
+      "elevation": 0.04776930687360147,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 7,
+      "y": 15,
+      "elevation": -0.05815738600738756,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 8,
+      "y": 15,
+      "elevation": -0.046481710735441176,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 9,
+      "y": 15,
+      "elevation": -0.08450929217477222,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 10,
+      "y": 15,
+      "elevation": -0.2526477961237439,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 11,
+      "y": 15,
+      "elevation": -0.39703736643197673,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 12,
+      "y": 15,
+      "elevation": -0.4833112734463628,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 13,
+      "y": 15,
+      "elevation": -0.5523366676703156,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 14,
+      "y": 15,
+      "elevation": -0.5815598377578644,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    },
+    {
+      "x": 15,
+      "y": 15,
+      "elevation": -0.6705414310377914,
+      "land": false,
+      "terrain": "ocean",
+      "vegetation": null,
+      "relief": null,
+      "resource": null
+    }
+  ],
+  "rivers": [
+    {
+      "id": "river-1",
+      "nodes": [
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "outlet": "coast"
+    },
+    {
+      "id": "river-2",
+      "nodes": [
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          10
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          10,
+          14
+        ]
+      ],
+      "outlet": "coast"
+    }
+  ],
+  "provenance": "New procedural geography using preserved Prototype55 assets. Not a reconstruction of World20."
+}

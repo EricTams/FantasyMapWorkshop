@@ -58,3 +58,5 @@ Preserve each meaningful iteration in Git, including semantic inputs and preview
 - `checkpoints/v8/`: tree retention reduced from 82% to 55% of the original candidate density (about one third fewer than v7). Same candidate positions, scale and forest area; more ground shows through the canopy. Both in-app previews refreshed.
 
 - `checkpoints/v9/`: sparse grass, moss, leaf litter and tiny stones beneath relief, trees and resources. Continuous clustered coverage blends across forest edges and resource clearings; entire patch silhouettes fade away from the displaced coast and riverbanks. Tree retention remains 55%.
+
+- `checkpoints/v10/`: ground-cover sprites disabled after visual review. The detailed patches read as smudges; simplified tufts did not match the existing art. Experimental code and both atlases are retained for reference but are not loaded or drawn. Restores the clean v8 appearance, retaining 55% tree density.
