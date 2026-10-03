@@ -1,5 +1,5 @@
 import {randomAt,noise} from './generator.js';
-import {displacement,segmentDistance} from './geometry.js';
+import {displacement,segmentDistance} from './geometry.js?v=24';
 const strength=c=>c?.land?(c.relief==='mountain'?1:c.relief==='hill'?.48:0):0;
 
 // Shared ridge graph: adjacent relief cells meet at the same displaced saddle.
@@ -10,7 +10,7 @@ export function makeRelief(world,seed){
   nodes.set(id,{x:(c.x+.5)*128+(randomAt(seed,id,0,160)-.5)*38,y:(c.y+.55)*96+(randomAt(seed,id,0,161)-.5)*25,height:strength(c),cell:c,id});
  }
  // Smooth two-dimensional support, including the spaces between ridge branches.
- const at=(x,y)=>x>=0&&y>=0&&x<world.width&&y<world.height?strength(world.cells[y*world.width+x]):0;
+ const at=(x,y)=>y>=0&&y<world.height&&(world.wrapX||x>=0&&x<world.width)?strength(world.cells[y*world.width+((x%world.width)+world.width)%world.width]):0;
  const blend=(x,y,read)=>{
   const gx=x/128-.5,gy=y/96-.5,ix=Math.floor(gx),iy=Math.floor(gy);
   let u=gx-ix,v=gy-iy;u=u*u*(3-2*u);v=v*v*(3-2*v);
@@ -72,8 +72,10 @@ export function makeRelief(world,seed){
    r.rocky=true;r.width*=.92;r.heightScale=.74;
   }
  }
+ if(world.wrapX){const original=[...segments];for(const dx of [-world.width*128,world.width*128])for(const s of original)segments.push({...s,ax:s.ax+dx,bx:s.bx+dx});}
  const buckets=world.cells.map(c=>segments.filter(s=>Math.max(s.ax,s.bx)>=c.x*128-100&&Math.min(s.ax,s.bx)<=(c.x+1)*128+100&&Math.max(s.ay,s.by)>=c.y*96-80&&Math.min(s.ay,s.by)<=(c.y+1)*96+80));
  function height(x,y){
+  if(world.wrapX)x=((x%(world.width*128))+world.width*128)%(world.width*128);
   const col=Math.floor(x/128),row=Math.floor(y/96);if(col<0||row<0||col>=world.width||row>=world.height)return 0;
   let value=0;
   for(const s of buckets[row*world.width+col]){
@@ -91,8 +93,8 @@ export function makeRelief(world,seed){
 }
 
 // Invert the same display→logical warp used for materials and rivers.
-export function reliefPosition(seed,x,y){
- let px=x,py=y;for(let i=0;i<6;i++){const d=displacement(seed,px,py);px=x-d[0];py=y-d[1];}return [px,py];
+export function reliefPosition(seed,x,y,period=0){
+ let px=x,py=y;for(let i=0;i<6;i++){const d=displacement(seed,px,py,period);px=x-d[0];py=y-d[1];}return [px,py];
 }
 export function alpineDensity(seed,x,y,height){
  const grove=.55+.75*noise(seed,x/79,y/58,168);
@@ -101,10 +103,11 @@ export function alpineDensity(seed,x,y,height){
 
 // Only mountain terrain may receive visible rock above its anchor's logical row.
 export function mountainFitsNorth(world,seed,footprint,left,top,scale,anchorRow){
+ const period=world.wrapX?world.width*128:0;
  for(const [x,y,pad] of footprint.points){
   for(const side of [-1,1]){
    const px=left+(x+side*pad)*scale,py=top+(y-pad)*scale-2;
-   const [dx,dy]=displacement(seed,px,py),col=Math.floor((px+dx)/128),row=Math.floor((py+dy)/96);
+   const [dx,dy]=displacement(seed,px,py,period),col=world.wrapX?((Math.floor((px+dx)/128)%world.width)+world.width)%world.width:Math.floor((px+dx)/128),row=Math.floor((py+dy)/96);
    if(row>=anchorRow)continue;
    if(col<0||col>=world.width||row<0||world.cells[row*world.width+col]?.relief!=='mountain')return false;
   }

@@ -2,7 +2,8 @@
 // This moves boundaries and material coordinates together without changing game data.
 import {noise} from './generator.js';
 export const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
-export function displacement(seed,x,y){
+export function displacement(seed,x,y,period=0){
+ if(period){const q=((x%period)+period)%period,t=q/period,a=displacement(seed,q,y),b=displacement(seed,q-period,y);return a.map((v,i)=>v*(1-t)+b[i]*t);}
  const wy=y/0.75;
  return [
   (noise(seed,x/73,wy/73,101)-.5)*23+(noise(seed,x/21,wy/21,103)-.5)*5,
@@ -24,7 +25,8 @@ export function segmentDistance(x,y,s){
 }
 export function makeGeometry(world){
  const coast=[],rivers=[];
- const land=(x,y)=>x>=0&&y>=0&&x<world.width&&y<world.height&&world.cells[y*world.width+x].land;
+ const W=world.width*128,wrap=x=>((x%world.width)+world.width)%world.width;
+ const land=(x,y)=>y>=0&&y<world.height&&(world.wrapX||x>=0&&x<world.width)&&world.cells[y*world.width+(world.wrapX?wrap(x):x)].land;
  for(const c of world.cells){if(!c.land)continue;
   const x=c.x*128,y=c.y*96;
   if(!land(c.x-1,c.y))coast.push({ax:x,ay:y,bx:x,by:y+96});
@@ -34,8 +36,10 @@ export function makeGeometry(world){
  }
  for(const route of world.rivers){let length=0;for(let i=1;i<route.nodes.length;i++){
   const [a,b]=[route.nodes[i-1],route.nodes[i]],s={ax:a[0]*128,ay:a[1]*96,bx:b[0]*128,by:b[1]*96,start:length};
+  if(world.wrapX&&Math.abs(s.bx-s.ax)>W/2)s.bx+=s.bx>s.ax?-W:W;
   s.length=Math.hypot(s.bx-s.ax,s.by-s.ay);length+=s.length;rivers.push(s);
  }}
+ if(world.wrapX)for(const list of [coast,rivers]){const original=[...list];for(const offset of [-W,W])for(const s of original)list.push({...s,ax:s.ax+offset,bx:s.bx+offset});}
  const buckets=segments=>Array.from({length:world.width*world.height},(_,i)=>{const x=i%world.width,y=Math.floor(i/world.width);return segments.filter(s=>Math.max(s.ax,s.bx)>=(x-1)*128&&Math.min(s.ax,s.bx)<=(x+2)*128&&Math.max(s.ay,s.by)>=(y-1)*96&&Math.min(s.ay,s.by)<=(y+2)*96);});
  const cb=buckets(coast),rb=buckets(rivers);
  const bucket=(x,y)=>clamp(Math.floor(y/96),0,world.height-1)*world.width+clamp(Math.floor(x/128),0,world.width-1);

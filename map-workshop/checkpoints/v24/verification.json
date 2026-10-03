@@ -1,0 +1,7 @@
+{
+  "tests": "24 passing; 72-case Pangea sweep asserts exactly one connected land component, target coverage, polar oceans and valid wrapped river steps. Seam geometry and displacement checks pass.",
+  "browser": "Rendered default and silhouette study; both previews refreshed; PNG and semantic map exported.",
+  "showcase": "All eight resources and all 16 terrain variants verified by test.",
+  "scope": "Pangea default and Classic island comparison. No offshore islands. Other proposed map styles deferred.",
+  "limitations": "At extreme coverage the display seam may still cross the connected continent. Terrain climate remains noise-driven; full tectonic and rain-shadow simulation not implemented."
+}

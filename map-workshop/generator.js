@@ -1,3 +1,4 @@
+import {buildPangea,worldNeighbors} from './landforms.js?v=24d';
 import {forestKind} from './terrain.js';
 // New reconstruction, October 2026. No historical World20 layout is inferred here.
 export const SIZE = 16;
@@ -10,13 +11,17 @@ export function neighbors(i,n=SIZE){const x=i%n,y=Math.floor(i/n),r=[];if(x>0)r.
 export function generateWorld(seedText='elderwood',input={}){
  const settings={};for(const [k,v] of Object.entries(DEFAULTS)){const a=Number(input[k]??v);settings[k]=Math.max(k==='land'?30:0,Math.min(k==='land'?78:100,Number.isFinite(a)?a:v));}
  const n=[16,28].includes(Number(input.size))?Number(input.size):SIZE;
- settings.size=n;
+ settings.size=n;settings.style=input.style==='island'?'island':'pangea';
+ const complexity=Number(input.complexity??60);settings.complexity=Number.isFinite(complexity)?Math.max(0,Math.min(100,complexity)):60;
+ const wrapped=settings.style==='pangea',adjacent=i=>wrapped?worldNeighbors(i,n):neighbors(i,n);
  const seed=hashSeed(seedText),cells=[];
  for(let y=0;y<n;y++)for(let x=0;x<n;x++){
   const dx=(x-(n-1)/2)/((n-2)/2),dy=(y-(n-1)/2)/((n-2)/2);
   const e=1-Math.sqrt(dx*dx*.85+dy*dy)+.65*(noise(seed,x/3.8,y/3.8)-.5)+.22*(noise(seed,x/1.8,y/1.8,2)-.5);
   cells.push({x,y,elevation:e,land:false,terrain:'ocean',vegetation:null,relief:null,resource:null});
  }
+ if(wrapped)buildPangea(cells,n,seed,settings,randomAt,noise);
+ else {
  // Grow one land component toward the requested coverage; keep an ocean border.
  const target=Math.min((n-2)**2,Math.round(n*n*settings.land/100));
  const interior=i=>cells[i].x>0&&cells[i].y>0&&cells[i].x<n-1&&cells[i].y<n-1;
@@ -26,6 +31,7 @@ export function generateWorld(seedText='elderwood',input={}){
   let best=-1;for(const i of frontier)if(best<0||cells[i].elevation>cells[best].elevation)best=i;
   if(best<0)break;frontier.delete(best);cells[best].land=true;
   for(const i of neighbors(best,n))if(interior(i)&&!cells[i].land)frontier.add(i);
+ }
  }
  for(const c of cells){if(!c.land)continue;
   const wet=noise(seed,c.x/4,c.y/4,11)*.62+settings.moisture/100*.65;
@@ -39,14 +45,14 @@ export function generateWorld(seedText='elderwood',input={}){
    c.resource=choices[Math.floor(randomAt(seed,c.x,c.y,32)*choices.length)];
   }
  }
- for(const c of cells)if(!c.land&&neighbors(c.y*n+c.x,n).some(i=>cells[i].land)&&randomAt(seed,c.x,c.y,35)<settings.resources/100*.22)c.resource='fish';
+ for(const c of cells)if(!c.land&&adjacent(c.y*n+c.x).some(i=>cells[i].land)&&randomAt(seed,c.x,c.y,35)<settings.resources/100*.22)c.resource='fish';
  const rivers=makeRivers(cells,seed,settings,n);
- return {version:2,generator:'atlas-island-v2',seed:String(seedText),settings,width:n,height:n,projection:{tileWidth:128,tileHeight:96},cells,rivers,provenance:'New procedural geography using preserved Prototype55 assets. Not a reconstruction of World20.'};
+ return {version:3,generator:wrapped?'atlas-pangea-v3':'atlas-island-v2',wrapX:wrapped,seed:String(seedText),settings,width:n,height:n,projection:{tileWidth:128,tileHeight:96},cells,rivers,provenance:'New procedural geography using preserved Prototype55 assets. Not a reconstruction of World20.'};
 }
 function makeRivers(cells,seed,s,n){
- const w=n+1,total=w*w,heights=[],coast=[],touchLand=[];
- for(let y=0;y<=n;y++)for(let x=0;x<=n;x++){
-  const near=[];for(const dy of [-1,0])for(const dx of [-1,0])if(x+dx>=0&&x+dx<n&&y+dy>=0&&y+dy<n)near.push(cells[(y+dy)*n+x+dx]);
+ const wrapped=s.style==='pangea',w=wrapped?n:n+1,total=w*(n+1),heights=[],coast=[],touchLand=[];
+ for(let y=0;y<=n;y++)for(let x=0;x<w;x++){
+  const near=[];for(const dy of [-1,0])for(const dx of [-1,0])if((wrapped||(x+dx>=0&&x+dx<n))&&y+dy>=0&&y+dy<n)near.push(cells[(y+dy)*n+((x+dx+n)%n)]);
   heights.push(near.reduce((a,c)=>a+c.elevation,0)/near.length);
   touchLand.push(near.some(c=>c.land));coast.push(near.filter(c=>c.land).length===1&&near.filter(c=>!c.land).length>=2);
  }
@@ -56,7 +62,8 @@ function makeRivers(cells,seed,s,n){
  for(let k=0;k<total;k++){
   let u=-1;for(let i=0;i<total;i++)if(!done.has(i)&&(u<0||dist[i]<dist[u]))u=i;
   if(u<0||!Number.isFinite(dist[u]))break;done.add(u);
-  for(const v of neighbors(u,w)){if(!touchLand[v]||done.has(v))continue;
+  const adjacent=wrapped?[Math.floor(u/w)*w+(u%w+w-1)%w,Math.floor(u/w)*w+(u%w+1)%w,...(u>=w?[u-w]:[]),...(u<total-w?[u+w]:[])]:neighbors(u,w);
+  for(const v of adjacent){if(!touchLand[v]||done.has(v))continue;
    const cost=1+Math.max(0,heights[u]-heights[v])*18+randomAt(seed,u,v,40)*.35;
    if(dist[u]+cost<dist[v]){dist[v]=dist[u]+cost;parent[v]=u;}
   }

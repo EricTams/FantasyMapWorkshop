@@ -4,7 +4,7 @@ import {generateWorld,neighbors} from '../generator.js';
 test('same seed and settings reproduce the entire world',()=>{assert.deepEqual(generateWorld('elderwood'),generateWorld('elderwood'));assert.notDeepEqual(generateWorld('elderwood'),generateWorld('other'));});
 test('seed sweep: connected land, ocean border, valid resources and shared-edge river drainage',()=>{
  for(let seed=0;seed<80;seed++){
-  const w=generateWorld(String(seed),{land:30+seed%49,moisture:seed%101,ruggedness:seed%101,forest:seed%101,resources:seed%101});
+  const w=generateWorld(String(seed),{style:"island",land:30+seed%49,moisture:seed%101,ruggedness:seed%101,forest:seed%101,resources:seed%101});
   const land=w.cells.map((c,i)=>c.land?i:-1).filter(i=>i>=0),visited=new Set([land[0]]),queue=[land[0]];
   for(const i of queue)for(const j of neighbors(i))if(w.cells[j].land&&!visited.has(j)){visited.add(j);queue.push(j);}
   assert.equal(visited.size,land.length);assert.equal(land.length,Math.min(196,Math.round(256*w.settings.land/100)));

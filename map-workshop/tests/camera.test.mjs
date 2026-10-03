@@ -12,7 +12,7 @@ test('camera wraps horizontally and clamps or centers vertically at every scale'
  assert.equal(nearestWrappedX(-3500,-100,3584),-3684);
 });
 test('large world has connected land and valid geometry beyond former 16-tile boundary',()=>{
- const w=generateWorld('wildwood-1701',{size:28,land:72,ruggedness:62,moisture:43,forest:60,resources:35});
+ const w=generateWorld('wildwood-1701',{style:"island",size:28,land:72,ruggedness:62,moisture:43,forest:60,resources:35});
  assert.equal(w.cells.length,784);
  const land=w.cells.map((c,i)=>c.land?i:-1).filter(i=>i>=0),seen=new Set([land[0]]),queue=[land[0]];
  for(const i of queue)for(const j of neighbors(i,w.width))if(w.cells[j].land&&!seen.has(j)){seen.add(j);queue.push(j);}assert.equal(seen.size,land.length);

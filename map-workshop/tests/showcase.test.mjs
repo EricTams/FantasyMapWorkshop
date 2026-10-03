@@ -7,7 +7,7 @@ import {generateWorld} from '../generator.js';
 test('opening map represents every supported terrain, forest and relief type',()=>{
  const html=readFileSync(new URL('../index.html',import.meta.url),'utf8');
  const value=id=>html.match(new RegExp(`id="${id}"[^>]*value="([^"]+)"`))[1];
- const settings=Object.fromEntries(['land','ruggedness','moisture','forest','resources'].map(k=>[k,+value(k)]));
+ const settings=Object.fromEntries(['land','ruggedness','moisture','forest','resources','complexity'].map(k=>[k,+value(k)]));
  settings.size=Number(html.match(/<option value="(\d+)" selected>/)[1]);
  const world=generateWorld(value('seed'),settings);
  assert.equal(world.width,28);

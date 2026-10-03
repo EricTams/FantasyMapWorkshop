@@ -1,13 +1,14 @@
 import {wrap,constrainView,nearestWrappedX,tourStops} from './camera.js?v=21b';
-import {generateWorld,hashSeed,describeCell} from './generator.js?v=21';
-import {loadAssets,renderWorld} from './renderer.js?v=23';
+import {generateWorld,hashSeed,describeCell} from './generator.js?v=24d';
+import {loadAssets,renderWorld} from './renderer.js?v=24b';
 const $=id=>document.getElementById(id),canvas=$('map'),ctx=canvas.getContext('2d'),viewport=$('viewport');
 let world,art,view={scale:1,x:0,y:0},fitScale=1,drag=null,busy=false,request=0,ready=false;
-const controls=['land','ruggedness','moisture','forest','resources'];
+const controls=['land','ruggedness','moisture','forest','resources','complexity'];
 for(const key of controls)$(key).addEventListener('input',()=>{$(`${key}-value`).textContent=$(key).value+'%';schedule();});
 let timer;function schedule(){clearTimeout(timer);timer=setTimeout(()=>generate(),200);}
-function settings(){return {...Object.fromEntries(controls.map(k=>[k,+$(k).value])),size:+$('size').value};}
+function settings(){return {...Object.fromEntries(controls.map(k=>[k,+$(k).value])),size:+$('size').value,style:$('style').value};}
 $('size').onchange=()=>generate();
+$('style').onchange=()=>{ $('complexity').disabled=$('style').value!=='pangea';generate();};
 $('controls').addEventListener('submit',e=>{e.preventDefault();clearTimeout(timer);generate();});
 $('reroll').addEventListener('click',()=>{const a=new Uint32Array(1);crypto.getRandomValues(a);$('seed').value=a[0].toString(36);generate();});
 async function generate(){
