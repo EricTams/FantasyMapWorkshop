@@ -1,0 +1,6 @@
+{
+  "tests": "20 passed",
+  "visual": "3x3 massif and solitary peak checked; both previews refreshed",
+  "changes": "Rocky saddles and secondary crags; visible mountain crowns fitted against displaced north boundary, allowing overlap only into mountain cells.",
+  "limits": "Sprite alpha occupancy threshold 24 plus conservative padding. Peaks may shrink near non-mountain northern neighbors; river/resource clearance can remove candidates."
+}

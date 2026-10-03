@@ -19,3 +19,21 @@ test('3x3 blocks retain raised interiors between ridges, with no internal pits',
  const interior=r.rocks.filter(p=>p.x>7*128&&p.x<8*128&&p.y>7*96&&p.y<8*96);
  assert.ok(interior.length>=3);
 });
+test('3x3 mountains have rocky saddles across all twelve shared edges',()=>{
+ const block={...world,cells:world.cells.map(c=>({...c,relief:c.x>=6&&c.x<=8&&c.y>=6&&c.y<=8?'mountain':null}))};
+ const r=makeRelief(block,42);
+ assert.equal(r.rocks.filter(p=>p.saddle).length,12);
+ assert.equal(r.rocks.filter(p=>p.peak).length,9);
+ assert.ok(r.rocks.filter(p=>p.rocky&&!p.saddle).length>0);
+ assert.ok(r.rocks.every(p=>p.peak||p.rocky));
+});
+test('mountain crown can cross north boundary only into mountain terrain',async()=>{
+ const {mountainFitsNorth}=await import('../relief.js');
+ const block={...world,cells:world.cells.map(c=>({...c,relief:null}))};
+ const footprint={points:[[10,0,1],[10,20,1]]};
+ assert.equal(mountainFitsNorth(block,42,footprint,950,630,1,7),false);
+ for(let x=6;x<=8;x++)block.cells[6*16+x].relief='mountain';
+ assert.equal(mountainFitsNorth(block,42,footprint,950,630,1,7),true);
+ block.cells[6*16+7].relief='hill';
+ assert.equal(mountainFitsNorth(block,42,footprint,950,630,1,7),false);
+});

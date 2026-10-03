@@ -1,4 +1,4 @@
-import {makeRelief,reliefPosition,alpineDensity} from './relief.js';
+import {makeRelief,reliefPosition,alpineDensity,mountainFitsNorth} from './relief.js';
 import {noise,randomAt} from './generator.js';
 import {resourceMembers} from './resources.js';
 import {displacement,ownership,makeGeometry} from './geometry.js';
@@ -116,7 +116,7 @@ export function renderWorld(world,seed){
   }
  }ctx.putImageData(data,0,0);
  const objects=[],resources=[];
- const add=(path,x,y,width,anchor=.87,protectedFraction=1)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width;objects.push({img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y,protectedFraction});};
+ const add=(path,x,y,width,anchor=.87,protectedFraction=1,heightScale=1)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width*heightScale;objects.push({img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y,protectedFraction});};
  for(const c of world.cells){const x=(c.x+.5)*128,y=(c.y+.57)*96;
   const before=objects.length;
   const members=resourceMembers(c.resource,c.x,c.y);
@@ -152,15 +152,29 @@ export function renderWorld(world,seed){
  };
  // Shared shoulders bridge neighboring relief cells; all rocks sort with trees/resources.
  for(const rock of relief.rocks){
-  const [px,py]=reliefPosition(seed,rock.x,rock.y),f=fields.sample(px,py);
+  let [px,py]=reliefPosition(seed,rock.x,rock.y);const f=fields.sample(px,py);
   const c=world.cells[Math.floor(rock.y/96)*world.width+Math.floor(rock.x/128)];
   if(!c?.land||!c.relief||f[2]<12)continue;
   const climate=c.terrain==='desert'&&c.vegetation!=='alpine'?'sand/':'';
-  const path=rock.peak?`relief/mountain_rock_${rock.variant}.png`:`relief/${climate}hill_rock_${rock.variant}.png`;
-  const width=rock.width*(c.resource?.82:1),img=images[path],scale=width/img.width,h=img.height*scale,anchor=rock.peak?.87:.72;
-  if(!canopyClearsObjects(footprints[path],px-width/2,py-h*anchor,scale,(l,t,r,b)=>occupied(l,t,r,b,py)))continue;
-  if(!canopyClearsRiver(footprints[path],px-width/2,py-h*anchor,scale,(x,y)=>{const a=fields.sample(x,y);return Math.min(a[3]-a[4],a[2]);}))continue;
-  add(path,px,py,width,anchor);
+  const path=(rock.peak||rock.rocky)?`relief/mountain_rock_${rock.variant}.png`:`relief/${climate}hill_rock_${rock.variant}.png`;
+  const img=images[path],anchor=(rock.peak||rock.rocky)?.87:.72;
+  let width=rock.width*(c.resource?.82:1),scale=width/img.width,h=img.height*scale*(rock.heightScale??1);
+  const original=footprints[path],sy=rock.heightScale??1;
+  const footprint=sy===1?original:{...original,center:[original.center[0],original.center[1]*sy],points:original.points.map(([x,y,pad])=>[x,y*sy,pad])};
+  if(rock.peak||rock.rocky){
+   const initialWidth=width,initialY=py;let fits=false;
+   for(const factor of [1,.92,.84,.76,.68,.60,.50,.40]){
+    width=initialWidth*factor;scale=width/img.width;h=img.height*scale*sy;
+    for(const shift of [0,8,16]){
+     py=Math.min(initialY+shift,reliefPosition(seed,rock.x,(c.y+1)*96-12)[1]);
+     if(mountainFitsNorth(world,seed,footprint,px-width/2,py-h*anchor,scale,c.y)){fits=true;break;}
+    }if(fits)break;
+   }
+   if(!fits)continue;
+  }
+  if(!canopyClearsObjects(footprint,px-width/2,py-h*anchor,scale,(l,t,r,b)=>occupied(l,t,r,b,py)))continue;
+  if(!canopyClearsRiver(footprint,px-width/2,py-h*anchor,scale,(x,y)=>{const a=fields.sample(x,y);return Math.min(a[3]-a[4],a[2]);}))continue;
+  add(path,px,py,width,anchor,1,rock.heightScale??1);
  }
 
  // Keep the connected planting lattice, but retain 55% of eligible tree candidates.

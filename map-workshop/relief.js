@@ -57,6 +57,21 @@ export function makeRelief(world,seed){
   if(randomAt(seed,x,y,177)>breadth(px,py)*.88)continue;
   rocks.push({x:px,y:py,peak:false,width:92+randomAt(seed,x,y,178)*32,variant:Math.floor(randomAt(seed,x,y,179)*2)});
  }
+ // Mountain neighbors share broad rocky saddles, including non-spine edges.
+ const mountainNodes=[...nodes.values()].filter(n=>n.cell.relief==='mountain');
+ for(const n of mountainNodes)for(const [dx,dy] of [[1,0],[0,1]]){
+  const other=nodes.get((n.cell.y+dy)*world.width+n.cell.x+dx);
+  if(!other||other.cell.relief!=='mountain'||other.cell.x!==n.cell.x+dx)continue;
+  rocks.push({x:(n.x+other.x)/2,y:(n.y+other.y)/2,rocky:true,saddle:true,width:132+randomAt(seed,n.id,other.id,181)*18,heightScale:.55,variant:Math.floor(randomAt(seed,n.id,other.id,182)*2)});
+ }
+ // Interior knolls become smaller crags; grassy shoulders remain at the perimeter.
+ for(const r of rocks){
+  if(r.peak||r.rocky)continue;
+  const col=Math.floor(r.x/128),row=Math.floor(r.y/96),n=nodes.get(row*world.width+col);
+  if(n?.cell.relief==='mountain'&&mountainNodes.some(m=>m!==n&&Math.abs(m.cell.x-col)+Math.abs(m.cell.y-row)===1)){
+   r.rocky=true;r.width*=.92;r.heightScale=.74;
+  }
+ }
  const buckets=world.cells.map(c=>segments.filter(s=>Math.max(s.ax,s.bx)>=c.x*128-100&&Math.min(s.ax,s.bx)<=(c.x+1)*128+100&&Math.max(s.ay,s.by)>=c.y*96-80&&Math.min(s.ay,s.by)<=(c.y+1)*96+80));
  function height(x,y){
   const col=Math.floor(x/128),row=Math.floor(y/96);if(col<0||row<0||col>=world.width||row>=world.height)return 0;
@@ -71,7 +86,7 @@ export function makeRelief(world,seed){
  }
  // Keep the summit silhouette exposed above the surrounding foothills.
  const peaks=rocks.filter(r=>r.peak);
- const visibleRocks=rocks.filter(r=>r.peak||!peaks.some(p=>Math.hypot((r.x-p.x)/57,(r.y-p.y)/43)<1));
+ const visibleRocks=rocks.filter(r=>r.peak||r.rocky||!peaks.some(p=>Math.hypot((r.x-p.x)/57,(r.y-p.y)/43)<1));
  return {height,breadth,rocks:visibleRocks,segments,links:links.map(e=>[e.n.id,e.other.id])};
 }
 
@@ -82,4 +97,16 @@ export function reliefPosition(seed,x,y){
 export function alpineDensity(seed,x,y,height){
  const grove=.55+.75*noise(seed,x/79,y/58,168);
  return .45*grove*(1-Math.min(.8,height)*.85);
+}
+
+// Only mountain terrain may receive visible rock above its anchor's logical row.
+export function mountainFitsNorth(world,seed,footprint,left,top,scale,anchorRow){
+ for(const [x,y,pad] of footprint.points){
+  for(const side of [-1,1]){
+   const px=left+(x+side*pad)*scale,py=top+(y-pad)*scale-2;
+   const [dx,dy]=displacement(seed,px,py),col=Math.floor((px+dx)/128),row=Math.floor((py+dy)/96);
+   if(row>=anchorRow)continue;
+   if(col<0||col>=world.width||row<0||world.cells[row*world.width+col]?.relief!=='mountain')return false;
+  }
+ }return true;
 }
