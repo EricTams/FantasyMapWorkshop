@@ -1,0 +1,6 @@
+{
+  "tests": "22 passing",
+  "visualReview": "Native-scale before/after for white stags and aurochs. Both main previews rendered.",
+  "scope": "Separate ground shadow pass for white stags and aurochs, below all sprites. Soft procedural contact and cast ellipses anchored to occupied feet. No asset edits.",
+  "semanticMap": "Unchanged from v21"
+}

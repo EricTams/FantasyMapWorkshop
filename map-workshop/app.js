@@ -1,6 +1,6 @@
 import {wrap,constrainView,nearestWrappedX,tourStops} from './camera.js?v=21b';
 import {generateWorld,hashSeed,describeCell} from './generator.js?v=21';
-import {loadAssets,renderWorld} from './renderer.js?v=21';
+import {loadAssets,renderWorld} from './renderer.js?v=22';
 const $=id=>document.getElementById(id),canvas=$('map'),ctx=canvas.getContext('2d'),viewport=$('viewport');
 let world,art,view={scale:1,x:0,y:0},fitScale=1,drag=null,busy=false,request=0,ready=false;
 const controls=['land','ruggedness','moisture','forest','resources'];

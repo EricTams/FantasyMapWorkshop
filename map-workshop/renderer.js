@@ -76,7 +76,7 @@ function prepareFields(world,seed,relief){
  }};
 }
 const resourcePath={mithril:'minerals/reconstructed/mithril.png',gems:'minerals/reconstructed/ruby-clusters.png',voidstone:'minerals/reconstructed/voidstone.png',wheat:'resources/wheat_field.png',fish:'resources/fish_school.png'};
-export function renderWorld(world,seed){
+export function renderWorld(world,seed,{animalShadows=true}={}){
  const W=world.width*128,H=world.height*96;
  const canvas=document.createElement('canvas');canvas.width=W;canvas.height=H;const ctx=canvas.getContext('2d');const data=ctx.createImageData(W,H);const p=data.data;
  const water=texture.deep_water,shallow=texture.shallow_water,ground=texture.meadow,sand=texture.shore;
@@ -116,8 +116,8 @@ export function renderWorld(world,seed){
    }p[o+3]=255;
   }
  }ctx.putImageData(data,0,0);
- const objects=[],resources=[];
- const add=(path,x,y,width,anchor=.87,protectedFraction=1,heightScale=1)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width*heightScale;objects.push({img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y,protectedFraction});};
+ const objects=[],resources=[],shadowCasters=[];
+ const add=(path,x,y,width,anchor=.87,protectedFraction=1,heightScale=1)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width*heightScale;const object={img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y,protectedFraction};objects.push(object);if(path.startsWith('fantasy/white_stag_')||path.startsWith('wildlife/aurochs_'))shadowCasters.push({...object,footprint:footprints[path]});};
  for(const c of world.cells){const x=(c.x+.5)*128,y=(c.y+.57)*96;
   const before=objects.length;
   const members=resourceMembers(c.resource,c.x,c.y);
@@ -199,6 +199,32 @@ export function renderWorld(world,seed){
   }))continue;
   add(path,px,py,width,.93);
  }
+ // Ground-only pass: shadows fall beneath every rock, resource and tree.
+ if(animalShadows)drawAnimalShadows(ctx,shadowCasters);
  objects.sort((a,b)=>a.depth-b.depth);for(const o of objects)ctx.drawImage(o.img,o.x,o.y,o.w,o.h);
  return canvas;
+}
+
+function drawAnimalShadows(ctx,casters){
+ ctx.save();ctx.globalCompositeOperation='multiply';
+ const ellipse=(x,y,rx,ry,opacity)=>{
+  ctx.save();ctx.translate(x,y);ctx.scale(rx,ry);
+  const gradient=ctx.createRadialGradient(0,0,0,0,0,1);
+  gradient.addColorStop(0,`rgba(35,39,31,${opacity})`);
+  gradient.addColorStop(.42,`rgba(35,39,31,${opacity*.65})`);
+  gradient.addColorStop(1,'rgba(35,39,31,0)');
+  ctx.fillStyle=gradient;ctx.fillRect(-1,-1,2,2);ctx.restore();
+ };
+ for(const o of casters){
+  const points=o.footprint.points;if(!points.length)continue;
+  // Use the occupied feet, not the image rectangle or the antler/body center.
+  const bottom=Math.max(...points.map(p=>p[1]));
+  const feet=points.filter(p=>p[1]>=bottom-o.img.height*.15);
+  const left=Math.min(...feet.map(p=>p[0])),right=Math.max(...feet.map(p=>p[0]));
+  const x=o.x+(left+right)/2*o.w/o.img.width,y=o.y+bottom*o.h/o.img.height;
+  // A soft cast to the lower right matches the existing upper-left illumination.
+  ellipse(x+o.w*.07,y+o.w*.015,o.w*.42,o.w*.13,.19);
+  ellipse(x,y,o.w*.28,o.w*.065,.23);
+ }
+ ctx.restore();
 }
