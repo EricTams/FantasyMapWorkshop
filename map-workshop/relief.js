@@ -41,7 +41,7 @@ export function makeRelief(world,seed){
    const dx=Math.cos(angle)*36,dy=Math.sin(angle)*24;
    segments.push({ax:n.x-dx,ay:n.y-dy,bx:n.x,by:n.y,a:n.height*.5,b:n.height},{ax:n.x,ay:n.y,bx:n.x+dx,by:n.y+dy,a:n.height,b:n.height*.5});
   }
-  if(n.cell.relief==='mountain'||randomAt(seed,n.id,0,173)>breadth(n.x,n.y))rocks.push({x:n.x,y:n.y,peak:n.cell.relief==='mountain',width:n.cell.relief==='mountain'?86+randomAt(seed,n.id,0,170)*27:68+randomAt(seed,n.id,0,170)*18,variant:Math.floor(randomAt(seed,n.id,0,165)*2)});
+  if(n.cell.relief==='mountain'||randomAt(seed,n.id,0,173)>breadth(n.x,n.y))rocks.push({x:n.x,y:n.y,peak:n.cell.relief==='mountain',width:n.cell.relief==='mountain'?128+randomAt(seed,n.id,0,170)*30:68+randomAt(seed,n.id,0,170)*18,variant:Math.floor(randomAt(seed,n.id,0,165)*2)});
  }
  for(const [i,s] of segments.entries()){
   const length=Math.hypot(s.bx-s.ax,s.by-s.ay),count=Math.max(1,Math.round(length/34));
@@ -69,7 +69,10 @@ export function makeRelief(world,seed){
   const rolling=.73+.23*noise(seed,x/83,y/62,180);
   return Math.max(value*(1-b*.78),mass*rolling)+value*b*.12;
  }
- return {height,breadth,rocks,segments,links:links.map(e=>[e.n.id,e.other.id])};
+ // Keep the summit silhouette exposed above the surrounding foothills.
+ const peaks=rocks.filter(r=>r.peak);
+ const visibleRocks=rocks.filter(r=>r.peak||!peaks.some(p=>Math.hypot((r.x-p.x)/57,(r.y-p.y)/43)<1));
+ return {height,breadth,rocks:visibleRocks,segments,links:links.map(e=>[e.n.id,e.other.id])};
 }
 
 // Invert the same display→logical warp used for materials and rivers.

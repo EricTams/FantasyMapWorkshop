@@ -1,0 +1,4 @@
+{
+  "change": "Peak width 128\u2013158 vs 86\u2013113; low knolls removed within 57\u00d743 radius ellipse around summit",
+  "validation": "Mountain-core comparison and mixed map visually inspected; both IAB tabs refreshed. No new automated tests for visual scale adjustment."
+}
