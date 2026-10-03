@@ -1,8 +1,9 @@
 import {noise,randomAt} from './generator.js';
+import {resourceMembers} from './resources.js';
 import {displacement,ownership,makeGeometry} from './geometry.js';
 import {spriteFootprint,canopyClearsRiver,resourceTreeDensity,canopyClearsObjects} from './vegetation.js';
 const BASE=new URL('./assets/',import.meta.url);
-const names=['materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','gems','voidstone'].map(s=>`minerals/${s}.png`),'fantasy/white_stags_tile.png','pepper/scarlet_pepper_bushes.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
+const names=['materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','gems','voidstone'].map(s=>`minerals/${s}.png`),'fantasy/white_stag_0.png','fantasy/white_stag_1.png','pepper/scarlet_pepper_0.png','pepper/scarlet_pepper_1.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
 export const images={};
 const texture={};
 const footprints={};
@@ -50,7 +51,7 @@ function prepareFields(world,seed){
   return out;
  }};
 }
-const resourcePath={mithril:'minerals/mithril.png',gems:'minerals/gems.png',voidstone:'minerals/voidstone.png',white_stags:'fantasy/white_stags_tile.png',scarlet_pepper:'pepper/scarlet_pepper_bushes.png',wheat:'resources/wheat_field.png',fish:'resources/fish_school.png'};
+const resourcePath={mithril:'minerals/mithril.png',gems:'minerals/gems.png',voidstone:'minerals/voidstone.png',wheat:'resources/wheat_field.png',fish:'resources/fish_school.png'};
 export function renderWorld(world,seed){
  const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1536;const ctx=canvas.getContext('2d');const data=ctx.createImageData(2048,1536);const p=data.data;
  const water=texture.deep_water,shallow=texture.shallow_water,ground=texture.meadow,sand=texture.shore;
@@ -83,24 +84,40 @@ export function renderWorld(world,seed){
   }
  }ctx.putImageData(data,0,0);
  const objects=[],resources=[];
- const add=(path,x,y,width,anchor=.87)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width;objects.push({img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y});};
+ const add=(path,x,y,width,anchor=.87,protectedFraction=1)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width;objects.push({img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y,protectedFraction});};
  for(const c of world.cells){const x=(c.x+.5)*128,y=(c.y+.57)*96;
   if(c.relief==='mountain')add(`relief/mountain_rock_${Math.floor(randomAt(seed,c.x,c.y,80)*2)}.png`,x+(c.resource?-18:0),y+(c.resource?-10:5),c.resource?86:110);
   const before=objects.length;
-  if(c.resource==='aurochs'){add('wildlife/aurochs_0.png',x-25,y,48);add('wildlife/aurochs_1.png',x+27,y+19,44);}
+  const members=resourceMembers(c.resource,c.x,c.y);
+  if(members.length){for(const m of members)add(m.path,m.x,m.y,m.width,m.anchor,m.protectedFraction);}
+  else if(c.resource==='aurochs'){add('wildlife/aurochs_0.png',x-25,y,48);add('wildlife/aurochs_1.png',x+27,y+19,44);}
   else if(c.resource)add(resourcePath[c.resource],x,y+14,c.resource==='fish'?88:102,.78);
   if(c.resource&&c.land){resources.push({x,y,objects:objects.slice(before)});}
  }
 
- // Build a summed-area mask of actual resource alpha, including compound animal groups.
+ // Protect identifying parts only against trees drawn in front of each member.
+ // Rear foliage can overlap freely; lower legs and bush bases allow small overlaps.
  const mask=document.createElement('canvas');mask.width=2048;mask.height=1536;
  const mc=mask.getContext('2d',{willReadFrequently:true});
- for(const r of resources)for(const o of r.objects)mc.drawImage(o.img,o.x,o.y,o.w,o.h);
+ const resourceDepth=new Float32Array(2048*1536);resourceDepth.fill(Infinity);
+ for(const r of resources)for(const o of r.objects){
+  const sprite=document.createElement('canvas');sprite.width=Math.ceil(o.w);sprite.height=Math.ceil(o.h*o.protectedFraction);
+  const sc=sprite.getContext('2d',{willReadFrequently:true});sc.drawImage(o.img,0,0,o.w,o.h);
+  const pixels=sc.getImageData(0,0,sprite.width,sprite.height).data;
+  for(let sy=0;sy<sprite.height;sy++)for(let sx=0;sx<sprite.width;sx++){
+   const x=Math.floor(o.x)+sx,y=Math.floor(o.y)+sy;
+   if(x<0||y<0||x>=2048||y>=1536||pixels[(sy*sprite.width+sx)*4+3]<=24)continue;
+   const index=y*2048+x;resourceDepth[index]=Math.min(resourceDepth[index],o.depth);
+  }
+  mc.save();mc.beginPath();mc.rect(o.x,o.y,o.w,o.h*o.protectedFraction);mc.clip();mc.drawImage(o.img,o.x,o.y,o.w,o.h);mc.restore();
+ }
  const alpha=mc.getImageData(0,0,2048,1536).data,stride=2049,integral=new Uint32Array(stride*1537);
  for(let y=0;y<1536;y++){let sum=0;for(let x=0;x<2048;x++){sum+=alpha[(y*2048+x)*4+3]>24?1:0;integral[(y+1)*stride+x+1]=sum+integral[y*stride+x+1];}}
- const occupied=(left,top,right,bottom)=>{
+ const occupied=(left,top,right,bottom,treeDepth)=>{
   const x0=clamp(Math.floor(left),0,2048),y0=clamp(Math.floor(top),0,1536),x1=clamp(Math.ceil(right),0,2048),y1=clamp(Math.ceil(bottom),0,1536);
-  return integral[y1*stride+x1]-integral[y0*stride+x1]-integral[y1*stride+x0]+integral[y0*stride+x0]>0;
+  if(integral[y1*stride+x1]-integral[y0*stride+x1]-integral[y1*stride+x0]+integral[y0*stride+x0]===0)return false;
+  for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++)if(resourceDepth[y*2048+x]<=treeDepth)return true;
+  return false;
  };
  // Relief and resource footprints stay distinct from vegetation and base biome.
  for(const c of world.cells){if(c.relief==='hill'){
@@ -118,7 +135,7 @@ export function renderWorld(world,seed){
   const path=kind==='pine'?`pine/sprites/pine_edge_${i}.png`:kind==='jungle'?`jungle/jungle_edge_${i}.png`:`sprites/broadleaf_edge_${i}.png`;
   const width=(kind==='pine'?29:39)*(0.85+randomAt(seed,x,y,73)*.28);
   const scale=width/images[path].width,height=images[path].height*scale;
-  if(!canopyClearsObjects(footprints[path],px-width/2,py-height*.93,scale,occupied))continue;
+  if(!canopyClearsObjects(footprints[path],px-width/2,py-height*.93,scale,(l,t,r,b)=>occupied(l,t,r,b,py)))continue;
   // Test the alpha-weighted visual center and occupied canopy, not just the root.
   // In particular, a foreground tree's crown reaches north across a horizontal river.
   if(!canopyClearsRiver(footprints[path],px-width/2,py-height*.93,scale,(sx,sy)=>{

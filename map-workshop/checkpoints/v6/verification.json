@@ -1,0 +1,20 @@
+{
+  "iteration": "individual-resource-sprites-v6",
+  "semantic_map_unchanged": true,
+  "changes": [
+    "Native stag and pepper variants replace composite group PNGs",
+    "Each member uses its own ground anchor and depth sort",
+    "Depth-aware resource protection allows rear foliage and limited lower-edge foreground overlap",
+    "Pair layouts, large resource scale and surrounding density falloff retained"
+  ],
+  "validation": "11 tests pass. Actual woodland groups visually inspected; no captured errors in diagnostic. Main map render and PNG export verified.",
+  "limitations": "Protection uses upper sprite fraction rather than hand-authored identifying-part masks. Fixed pair layouts remain; additional pose and placement variation can be added later.",
+  "files": {
+    "renderer.js": "fa1bd38a5af6599123ed86f8dc991471f9046c135235e1849bda1a285cae9b13",
+    "resources.js": "18aa27b656142d63f46ead9952de7df29d348e086b4e743ad3a2b16e67c71fda",
+    "checkpoints/v6/world.png": "a8fe71b2816d4c7b3427fc65bbb9ec75a2e4f01a90c52ae55f78732c30cf5064",
+    "checkpoints/v6/world.json": "29c5497eb49ebf4a69b7c382631864361af2b3d02b874472c0fa2e71693c2f1e",
+    "checkpoints/v6/resource-groups.png": "ed95c5fc54780258abceebca7c0588b22d758fc52e0ad1eb5dfad8e0322e1e60",
+    "checkpoints/v6/workshop.png": "8603dfde22a5abd23f76fd4f43b483594e7ea40faf1f0a9e954831b543da1395"
+  }
+}
