@@ -1,10 +1,12 @@
 import {noise,randomAt} from './generator.js';
 import {displacement,ownership,makeGeometry} from './geometry.js';
+import {spriteFootprint,canopyClearsRiver} from './vegetation.js';
 const BASE=new URL('./assets/',import.meta.url);
 const names=['materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','gems','voidstone'].map(s=>`minerals/${s}.png`),'fantasy/white_stags_tile.png','pepper/scarlet_pepper_bushes.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
 export const images={};
 const texture={};
-export async function loadAssets(){await Promise.all(names.map(async name=>{const img=new Image();img.src=new URL(name,BASE).href;await img.decode();images[name]=img;}));for(const name of ['deep_water','shallow_water','meadow','shore'])texture[name]=prepareTexture(images[`materials/${name}.png`]);}
+const footprints={};
+export async function loadAssets(){await Promise.all(names.map(async name=>{const img=new Image();img.src=new URL(name,BASE).href;await img.decode();images[name]=img;if(name.includes('_edge_')){const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);footprints[name]=spriteFootprint(ctx.getImageData(0,0,img.width,img.height).data,img.width,img.height);}}));for(const name of ['deep_water','shallow_water','meadow','shore'])texture[name]=prepareTexture(images[`materials/${name}.png`]);}
 function prepareTexture(image){
  const c=document.createElement('canvas');c.width=c.height=256;const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(image,0,0,256,256);const src=cx.getImageData(0,0,256,256).data,out=new Uint8ClampedArray(224*224*3);
  // Fold the final 32 pixels over the start in both axes; globally phased 224px repeat.
@@ -95,10 +97,16 @@ export function renderWorld(world,seed){
   if(f[2]<8)continue;
   const dx=px-(col+.5)*128,dy=py-(row+.5)*96;
   if(c.resource&&(dx*dx/2600+dy*dy/1200)<1)continue;
-  if(f[3]<f[4]+15)continue;
   const i=Math.floor(randomAt(seed,x,y,72)*4),kind=c.vegetation;
   const path=kind==='pine'?`pine/sprites/pine_edge_${i}.png`:kind==='jungle'?`jungle/jungle_edge_${i}.png`:`sprites/broadleaf_edge_${i}.png`;
-  add(path,px,py,(kind==='pine'?29:39)*(0.85+randomAt(seed,x,y,73)*.28),.93);
+  const width=(kind==='pine'?29:39)*(0.85+randomAt(seed,x,y,73)*.28);
+  const scale=width/images[path].width,height=images[path].height*scale;
+  // Test the alpha-weighted visual center and occupied canopy, not just the root.
+  // In particular, a foreground tree's crown reaches north across a horizontal river.
+  if(!canopyClearsRiver(footprints[path],px-width/2,py-height*.93,scale,(sx,sy)=>{
+   const sample=fields.sample(sx,sy);return sample[3]-sample[4];
+  }))continue;
+  add(path,px,py,width,.93);
  }
  for(const c of world.cells){const x=(c.x+.5)*128,y=(c.y+.57)*96;
   if(c.relief==='mountain')add(`relief/mountain_rock_${Math.floor(randomAt(seed,c.x,c.y,80)*2)}.png`,x+(c.resource?-18:0),y+(c.resource?-10:5),c.resource?86:110);

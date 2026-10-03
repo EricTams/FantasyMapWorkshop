@@ -30,6 +30,7 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 ## Files
 
 - `generator.js`: pure seeded geography, settings, drainage and map data.
+- `vegetation.js`: alpha-weighted visual centers and occupied sprite footprints for river clearance; ground anchors and depth ordering remain independent.
 - `geometry.js`: shared displacement, biome weights, tile coast distances and river distances.
 - `renderer.js`: material sampling, coasts, vegetation, rivers and resource art.
 - `app.js`: controls, camera, tile inspection and exports.
@@ -38,6 +39,7 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 - `checkpoints/v1/`: original browser milestone.
 - `checkpoints/v2/`: shared interior displacement with reduced coastal displacement.
 - `checkpoints/v3/`: full shared coastal displacement, with identical seed and geography for comparison.
+- `checkpoints/v4/`: canopy-aware river clearance. Tree candidates whose visible footprint crosses the channel/bank margin are rejected; roots are not shifted. Horizontal rivers therefore reserve extra space for foreground crowns. `tests/forest-rivers.html` verifies channel visibility with the actual broadleaf, pine and jungle sprites.
 
 Run tests with Node 20+:
 

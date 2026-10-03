@@ -1,0 +1,15 @@
+{
+  "iteration": "canopy-clearance-v4",
+  "semantic_map_unchanged": true,
+  "method": "Alpha-weighted center plus occupied alpha-mask blocks; compare entire projected tree footprint to shared displaced river-distance field, including bank gap. Reject overlapping candidates; retain root anchors and depth sorting.",
+  "tests": "8 tests passed. Actual-sprite browser diagnostic: 1258 channel-center samples, zero obscured (RGB tolerance 8). Chrome render and export verified; no captured browser errors.",
+  "limitations": "Current clearance rejects trees rather than relocating them and may leave a visibly open bank corridor. Coverage uses 2px alpha blocks with conservative padding and is not a general collision system for mountains or resources.",
+  "files": {
+    "renderer.js": "6186c380ff1d76664f3beb8f31b93d07039f908f20b53eae5639964f5479bb55",
+    "vegetation.js": "1757d31a72eb50029a81a4264b184cdebc05a7d3cc175861a0ff166c83e14bb1",
+    "checkpoints/v4/world.png": "cad61cf0936220272cbdcbd8ebf6d357aecd387a1896ed0d9dd10a5865d61a9f",
+    "checkpoints/v4/world.json": "29c5497eb49ebf4a69b7c382631864361af2b3d02b874472c0fa2e71693c2f1e",
+    "checkpoints/v4/forest-rivers.png": "94ccb139fbb057b746827f32bcaf8e3e8d11ae0f8e24e1c40d2f32968797342e",
+    "checkpoints/v4/workshop.png": "88eafae33c1541fb8bf218399218158284c9f85deabfaaa3c9d303ddcd5384ff"
+  }
+}
