@@ -1,0 +1,13 @@
+{
+  "iteration": "lighter-canopy-v7",
+  "retention_multiplier": 0.82,
+  "semantic_map_unchanged": true,
+  "validation": "11 existing tests passed; same-seed browser render visually inspected; PNG exported.",
+  "visual_review": "Modest additional gaps in connected woodland; tree sizes, resource thinning and river clearance preserved.",
+  "files": {
+    "renderer.js": "c68db0c88f04c7f810d60a70243214462f9c5a3012a48b11d557db49b3c094b8",
+    "checkpoints/v7/world.png": "eb2399e11fb8cc22029f9c1ecc429fae81c1dafe0152f3c6bbc09d2c901f31e5",
+    "checkpoints/v7/world.json": "29c5497eb49ebf4a69b7c382631864361af2b3d02b874472c0fa2e71693c2f1e",
+    "checkpoints/v7/workshop.png": "e624b57e4a97edf22b7a5c5801382acda00f2bcdfbb7efc8644d0a65645fe41b"
+  }
+}

@@ -52,3 +52,5 @@ Preserve each meaningful iteration in Git, including semantic inputs and preview
 - `checkpoints/v5/`: gradual resource clearings and actual resource silhouette protection, with the same default semantic world as v4.
 
 - `checkpoints/v6/`: individual white stags and scarlet pepper bushes, using preserved native anchors and pair layouts at 90% native size. Each sorts independently with trees. Foliage behind a resource can overlap; foreground foliage protects the upper 84–85% of stag/bush alpha while allowing lower-edge overlap. Crystals remain single sprites. Broad thinning and river clearance remain unchanged. See `tests/resource-groups.html` for enlarged woodland examples.
+
+- `checkpoints/v7/`: reduce tree retention probability to 82% of its previous value, retaining the same deterministic candidate positions, scales and woodland extent. This thins canopy density without changing the forest-coverage slider or semantic map.
