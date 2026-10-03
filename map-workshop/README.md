@@ -19,7 +19,7 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 - 16×16 logical square tiles projected to 128×96 pixels, with upright sprites.
 - One connected landmass, always bordered by ocean. Maximum coverage is capped at 196 of 256 cells to retain that border.
 - Seeded elevation/moisture fields drive terrain, relief and vegetation. A coast-rooted shortest-path tree generates acyclic rivers on grid edges. This is a gameplay-oriented drainage approximation, not a hydrological simulation: local uphill segments may occur.
-- Terrain, vegetation, relief and resource identities are independent. Resources are biome-dependent and forests have clearings. Placement is not yet balanced for multiplayer or tested for complete sprite collision avoidance.
+- Terrain, vegetation, relief and resource identities are independent. Resources are biome-dependent. Their actual alpha silhouettes reserve canopy clearance; surrounding forest density falls off smoothly over roughly one to two tiles with seeded irregularity. Thinning crosses tile borders, overlapping influences do not multiply, and tree sizes stay unchanged. Placement is not yet balanced for multiplayer or tested for complete sprite collision avoidance.
 - Coastlines follow the union of logical land tiles, with small softened corners and edge weathering. The coast now receives the full displacement, using the same coordinates as the interior. A shared inverse displacement field drives biome ownership, material coordinates, forest boundaries, river distances and tree clearance. Rivers use a union distance field with varying widths, textured water and source tapering; the logical shared-edge graph is unchanged.
 - Original materials are globally sampled with overlapping repeat boundaries and reduced contrast. Biome crossfades occupy narrow edge bands. Vegetation is drawn on a globally seeded lattice and sprites are sorted by their ground contact depth.
 - Uses grassland, plains, desert, broadleaf, pine and jungle. Later swamp, scrub, desert-wetland and snowy alpine art is missing and is not represented as recovered work. Older pine assets currently represent wooded hills.
@@ -30,7 +30,7 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 ## Files
 
 - `generator.js`: pure seeded geography, settings, drainage and map data.
-- `vegetation.js`: alpha-weighted visual centers and occupied sprite footprints for river clearance; ground anchors and depth ordering remain independent.
+- `vegetation.js`: alpha-weighted visual centers, occupied sprite footprints for river/resource clearance, and seeded resource density falloff; ground anchors and depth ordering remain independent.
 - `geometry.js`: shared displacement, biome weights, tile coast distances and river distances.
 - `renderer.js`: material sampling, coasts, vegetation, rivers and resource art.
 - `app.js`: controls, camera, tile inspection and exports.
@@ -48,3 +48,5 @@ node --test tests/*.test.mjs
 ```
 
 Preserve each meaningful iteration in Git, including semantic inputs and previews; never overwrite the historical baseline to match the new renderer.
+
+- `checkpoints/v5/`: gradual resource clearings and actual resource silhouette protection, with the same default semantic world as v4.

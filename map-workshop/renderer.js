@@ -1,12 +1,12 @@
 import {noise,randomAt} from './generator.js';
 import {displacement,ownership,makeGeometry} from './geometry.js';
-import {spriteFootprint,canopyClearsRiver} from './vegetation.js';
+import {spriteFootprint,canopyClearsRiver,resourceTreeDensity,canopyClearsObjects} from './vegetation.js';
 const BASE=new URL('./assets/',import.meta.url);
 const names=['materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','gems','voidstone'].map(s=>`minerals/${s}.png`),'fantasy/white_stags_tile.png','pepper/scarlet_pepper_bushes.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
 export const images={};
 const texture={};
 const footprints={};
-export async function loadAssets(){await Promise.all(names.map(async name=>{const img=new Image();img.src=new URL(name,BASE).href;await img.decode();images[name]=img;if(name.includes('_edge_')){const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);footprints[name]=spriteFootprint(ctx.getImageData(0,0,img.width,img.height).data,img.width,img.height);}}));for(const name of ['deep_water','shallow_water','meadow','shore'])texture[name]=prepareTexture(images[`materials/${name}.png`]);}
+export async function loadAssets(){await Promise.all(names.map(async name=>{const img=new Image();img.src=new URL(name,BASE).href;await img.decode();images[name]=img;if(!name.startsWith('materials/')){const c=document.createElement('canvas');c.width=img.width;c.height=img.height;const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(img,0,0);footprints[name]=spriteFootprint(ctx.getImageData(0,0,img.width,img.height).data,img.width,img.height);}}));for(const name of ['deep_water','shallow_water','meadow','shore'])texture[name]=prepareTexture(images[`materials/${name}.png`]);}
 function prepareTexture(image){
  const c=document.createElement('canvas');c.width=c.height=256;const cx=c.getContext('2d',{willReadFrequently:true});cx.drawImage(image,0,0,256,256);const src=cx.getImageData(0,0,256,256).data,out=new Uint8ClampedArray(224*224*3);
  // Fold the final 32 pixels over the start in both axes; globally phased 224px repeat.
@@ -82,8 +82,26 @@ export function renderWorld(world,seed){
    }p[o+3]=255;
   }
  }ctx.putImageData(data,0,0);
- const objects=[];
+ const objects=[],resources=[];
  const add=(path,x,y,width,anchor=.87)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width;objects.push({img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y});};
+ for(const c of world.cells){const x=(c.x+.5)*128,y=(c.y+.57)*96;
+  if(c.relief==='mountain')add(`relief/mountain_rock_${Math.floor(randomAt(seed,c.x,c.y,80)*2)}.png`,x+(c.resource?-18:0),y+(c.resource?-10:5),c.resource?86:110);
+  const before=objects.length;
+  if(c.resource==='aurochs'){add('wildlife/aurochs_0.png',x-25,y,48);add('wildlife/aurochs_1.png',x+27,y+19,44);}
+  else if(c.resource)add(resourcePath[c.resource],x,y+14,c.resource==='fish'?88:102,.78);
+  if(c.resource&&c.land){resources.push({x,y,objects:objects.slice(before)});}
+ }
+
+ // Build a summed-area mask of actual resource alpha, including compound animal groups.
+ const mask=document.createElement('canvas');mask.width=2048;mask.height=1536;
+ const mc=mask.getContext('2d',{willReadFrequently:true});
+ for(const r of resources)for(const o of r.objects)mc.drawImage(o.img,o.x,o.y,o.w,o.h);
+ const alpha=mc.getImageData(0,0,2048,1536).data,stride=2049,integral=new Uint32Array(stride*1537);
+ for(let y=0;y<1536;y++){let sum=0;for(let x=0;x<2048;x++){sum+=alpha[(y*2048+x)*4+3]>24?1:0;integral[(y+1)*stride+x+1]=sum+integral[y*stride+x+1];}}
+ const occupied=(left,top,right,bottom)=>{
+  const x0=clamp(Math.floor(left),0,2048),y0=clamp(Math.floor(top),0,1536),x1=clamp(Math.ceil(right),0,2048),y1=clamp(Math.ceil(bottom),0,1536);
+  return integral[y1*stride+x1]-integral[y0*stride+x1]-integral[y1*stride+x0]+integral[y0*stride+x0]>0;
+ };
  // Relief and resource footprints stay distinct from vegetation and base biome.
  for(const c of world.cells){if(c.relief==='hill'){
   for(let j=0;j<3;j++){const x=c.x*128+30+j*34,y=c.y*96+44+(j%2)*25;const img=images[`relief/hill_rock_${j%2}.png`];ctx.drawImage(img,x-39,y-26,78,78*img.height/img.width);}
@@ -95,23 +113,18 @@ export function renderWorld(world,seed){
   const f=fields.sample(px,py);
   const col=Math.floor((px+f[0])/128),row=Math.floor((py+f[1])/96),c=world.cells[row*16+col];if(!c?.vegetation)continue;
   if(f[2]<8)continue;
-  const dx=px-(col+.5)*128,dy=py-(row+.5)*96;
-  if(c.resource&&(dx*dx/2600+dy*dy/1200)<1)continue;
+  if(randomAt(seed,x,y,122)>resourceTreeDensity(seed,px,py,resources,noise))continue;
   const i=Math.floor(randomAt(seed,x,y,72)*4),kind=c.vegetation;
   const path=kind==='pine'?`pine/sprites/pine_edge_${i}.png`:kind==='jungle'?`jungle/jungle_edge_${i}.png`:`sprites/broadleaf_edge_${i}.png`;
   const width=(kind==='pine'?29:39)*(0.85+randomAt(seed,x,y,73)*.28);
   const scale=width/images[path].width,height=images[path].height*scale;
+  if(!canopyClearsObjects(footprints[path],px-width/2,py-height*.93,scale,occupied))continue;
   // Test the alpha-weighted visual center and occupied canopy, not just the root.
   // In particular, a foreground tree's crown reaches north across a horizontal river.
   if(!canopyClearsRiver(footprints[path],px-width/2,py-height*.93,scale,(sx,sy)=>{
    const sample=fields.sample(sx,sy);return sample[3]-sample[4];
   }))continue;
   add(path,px,py,width,.93);
- }
- for(const c of world.cells){const x=(c.x+.5)*128,y=(c.y+.57)*96;
-  if(c.relief==='mountain')add(`relief/mountain_rock_${Math.floor(randomAt(seed,c.x,c.y,80)*2)}.png`,x+(c.resource?-18:0),y+(c.resource?-10:5),c.resource?86:110);
-  if(c.resource==='aurochs'){add('wildlife/aurochs_0.png',x-25,y,48);add('wildlife/aurochs_1.png',x+27,y+19,44);}
-  else if(c.resource)add(resourcePath[c.resource],x,y+14,c.resource==='fish'?88:102,.78);
  }
  objects.sort((a,b)=>a.depth-b.depth);for(const o of objects)ctx.drawImage(o.img,o.x,o.y,o.w,o.h);
  return canvas;

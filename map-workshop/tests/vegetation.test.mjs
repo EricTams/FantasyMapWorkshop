@@ -17,3 +17,19 @@ test('canopy respects vertical rivers and transparent sprite margins',()=>{
  const blank=spriteFootprint(new Uint8ClampedArray(20*50*4),20,50);
  assert.equal(canopyClearsRiver(blank,40,80,1,vertical),true);
 });
+
+import {resourceTreeDensity,canopyClearsObjects} from '../vegetation.js';
+import {noise} from '../generator.js';
+test('resource thinning is deterministic, gradual, crosses tile borders and recovers',()=>{
+ const resources=[{x:64,y:48}],keep=(x,y)=>resourceTreeDensity(123,x,y,resources,noise);
+ assert.equal(keep(64,48),.22);assert.equal(keep(400,48),1);
+ assert.ok(keep(128,48)<1);assert.ok(Math.abs(keep(127.99,48)-keep(128.01,48))<.001);
+ for(let x=0;x<250;x+=3){assert.equal(keep(x,48),keep(x,48));assert.ok(keep(x,48)>=.22&&keep(x,48)<=1);}
+ assert.equal(resourceTreeDensity(123,64,48,[...resources,...resources],noise),.22);
+ assert.equal(resourceTreeDensity(123,64,48,[],noise),1);
+});
+test('canopy footprints protect a resource even when its roots are outside the clearing',()=>{
+ const overlaps=(l,t,r,b)=>l<55&&r>45&&t<100&&b>90;
+ assert.equal(canopyClearsObjects(tree(),40,80,1,overlaps),false);
+ assert.equal(canopyClearsObjects(tree(),75,80,1,overlaps),true);
+});

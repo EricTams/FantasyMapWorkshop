@@ -23,3 +23,27 @@ export function canopyClearsRiver(footprint,left,top,scale,clearanceAt,bankGap=3
  }
  return true;
 }
+
+// Smooth probability field crosses tile borders; overlapping clearings use the strongest
+// influence rather than multiplying probabilities and erasing whole forests.
+export function resourceTreeDensity(seed,x,y,resources,noise){
+ let keep=1;
+ for(const r of resources){
+  const dx=(x-r.x)/115,dy=(y-r.y)/88;
+  const radius=Math.hypot(dx,dy);
+  if(radius>=1.5)continue;
+  const patch=noise(seed,x/37,y/28,121);
+  const warped=radius+(patch-.5)*.3*Math.min(radius,1);
+  const t=Math.max(0,Math.min(1,warped/1.5));
+  const falloff=t*t*(3-2*t);
+  keep=Math.min(keep,.22+.78*falloff);
+ }
+ return keep;
+}
+export function canopyClearsObjects(footprint,left,top,scale,occupied){
+ for(const [x,y,pad] of footprint.points){
+  const cx=left+x*scale,cy=top+y*scale,r=pad*scale+2;
+  if(occupied(cx-r,cy-r,cx+r,cy+r))return false;
+ }
+ return true;
+}

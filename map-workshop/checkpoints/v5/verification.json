@@ -1,0 +1,18 @@
+{
+  "iteration": "resource-woodland-v5",
+  "semantic_map_unchanged": true,
+  "changes": [
+    "Replace fixed elliptical exclusion with seeded smooth density falloff spanning neighboring tiles",
+    "Protect actual resource sprite alpha from projected tree canopies using summed-area occupancy",
+    "Preserve tree scale, deterministic placement, river clearance and ground anchors"
+  ],
+  "validation": "10 tests pass; default map visually inspected and exported in Chrome with no captured browser errors",
+  "visual_review": "Resources now sit in wider, irregular open woodland with surviving clumps. Densely packed resources can still create larger clearings. General mountain/resource collision is outside this change.",
+  "files": {
+    "renderer.js": "a0e557b934853833cc006de5393459e99edd4e33028094c2bd11c26f8fc52f39",
+    "vegetation.js": "ce2d49d792ecccb5dee7a783e6ae21be23ab41f185128e61291a2c7e91e07746",
+    "checkpoints/v5/world.png": "14f8e97ea9a93f431dad1ac6692b439b0bd7a93a95ebadec729d6d2e8f3acfac",
+    "checkpoints/v5/world.json": "29c5497eb49ebf4a69b7c382631864361af2b3d02b874472c0fa2e71693c2f1e",
+    "checkpoints/v5/workshop.png": "73764f3f9c332927cc58f36007c31343cabde0422a13b96cd53afad0b994e101"
+  }
+}
