@@ -1,0 +1,40 @@
+{
+  "seed": "wildwood-1701",
+  "settings": {
+    "land": 72,
+    "ruggedness": 62,
+    "moisture": 43,
+    "forest": 60,
+    "resources": 35
+  },
+  "counts": {
+    "swamp:forest": 14,
+    "swamp:forest+hills": 4,
+    "grassland:forest": 20,
+    "plains:flat": 37,
+    "desert:forest": 8,
+    "desert:flat": 16,
+    "grassland:forest+hills": 10,
+    "swamp:mountain": 6,
+    "plains:forest": 14,
+    "grassland:hills": 8,
+    "swamp:flat": 8,
+    "grassland:flat": 16,
+    "desert:hills": 5,
+    "plains:forest+hills": 4,
+    "grassland:mountain": 5,
+    "plains:mountain": 2,
+    "desert:forest+hills": 2,
+    "swamp:hills": 1,
+    "plains:hills": 4
+  },
+  "tests": "15 passed",
+  "visual": "Native-size 16-panel matrix and mixed map inspected in Chrome. Both IAB map tabs refreshed.",
+  "limitations": "New reconstruction. Pool coverage not calibrated to historical 2.3%. Repeated hill layouts remain.",
+  "hashes": {
+    "generator.js": "ebf858e99d1ebf58478b9cf735aec588ca1db7ab4bb59ee4a7ec860365b6fe76",
+    "terrain.js": "dfdc7b3c475e7d368a0968d6026cdebeda54b9aee9f2327e4c8bc7e65a795607",
+    "renderer.js": "7c164f57e13dbe4ef095fd650bf65ec37ee69e646e781bac4502d386792f0bc4",
+    "assets/families/vegetation-atlas.png": "da349248b67fba7b0cd91f42fe85fe94bfd19b801bb6cb9b9158c9ecf11dcb35"
+  }
+}

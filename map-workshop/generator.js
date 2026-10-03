@@ -1,3 +1,4 @@
+import {forestKind} from './terrain.js';
 // New reconstruction, October 2026. No historical World20 layout is inferred here.
 export const SIZE = 16;
 export const DEFAULTS = Object.freeze({land:58,ruggedness:45,moisture:55,forest:48,resources:35});
@@ -27,10 +28,10 @@ export function generateWorld(seedText='elderwood',input={}){
  for(const c of cells){if(!c.land)continue;
   const wet=noise(seed,c.x/4,c.y/4,11)*.62+settings.moisture/100*.65;
   const h=noise(seed,c.x/2.6,c.y/2.6,17)*.7+c.elevation*.3;
-  c.terrain=wet<.36?'desert':wet<.57?'plains':'grassland';
+  c.terrain=wet<.36?'desert':wet<.57?'plains':wet>.74?'swamp':'grassland';
   c.relief=settings.ruggedness===0?null:h>1.02-settings.ruggedness/100*.60?'mountain':h>1.08-settings.ruggedness/100*.85?'hill':null;
   const cover=noise(seed,c.x/2.5,c.y/2.5,21)*.8+randomAt(seed,c.x,c.y,23)*.2;
-  if(c.relief!=='mountain'&&c.terrain!=='desert'&&cover<settings.forest/100*(.6+wet*.45))c.vegetation=c.relief==='hill'?'pine':wet>.79?'jungle':'broadleaf';
+  if(c.relief!=='mountain'&&cover<settings.forest/100*(.6+wet*.45))c.vegetation=forestKind(c.terrain,c.relief);
   if(randomAt(seed,c.x,c.y,31)<settings.resources/100*.34){
    const choices=c.relief?['mithril','gems','voidstone']:c.vegetation?['white_stags','scarlet_pepper']:c.terrain==='desert'?['gems','voidstone']:['wheat','aurochs'];
    c.resource=choices[Math.floor(randomAt(seed,c.x,c.y,32)*choices.length)];
@@ -38,7 +39,7 @@ export function generateWorld(seedText='elderwood',input={}){
  }
  for(const c of cells)if(!c.land&&neighbors(c.y*n+c.x).some(i=>cells[i].land)&&randomAt(seed,c.x,c.y,35)<settings.resources/100*.22)c.resource='fish';
  const rivers=makeRivers(cells,seed,settings);
- return {version:1,generator:'atlas-island-v1',seed:String(seedText),settings,width:n,height:n,projection:{tileWidth:128,tileHeight:96},cells,rivers,provenance:'New procedural geography using preserved Prototype55 assets. Not a reconstruction of World20.'};
+ return {version:2,generator:'atlas-island-v2',seed:String(seedText),settings,width:n,height:n,projection:{tileWidth:128,tileHeight:96},cells,rivers,provenance:'New procedural geography using preserved Prototype55 assets. Not a reconstruction of World20.'};
 }
 function makeRivers(cells,seed,s){
  const n=SIZE,w=n+1,total=w*w,heights=[],coast=[],touchLand=[];

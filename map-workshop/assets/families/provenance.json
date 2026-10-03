@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset: one transparent sprite atlas for a Civilization 4 era painterly fantasy terrain map. Exactly 12 isolated sprites arranged in a strict 4-column by 3-row grid. Each sprite centered within its own equal rectangular cell with generous transparent margins. Row 1: four variations of a low spreading woody thorn scrub bush, muted olive-brown foliage, sparse branching irregular horizontal silhouette. Row 2: four variations of a small dense tuft of upright thin marsh reeds, muted sage/olive green, tapered short blades, a few brown reed tips. Row 3: four variations of a full dark green alpine conifer tree with small patches of white snow resting on a few branches; mostly green, modest snow, visible short trunk. View: elevated three-quarter camera looking down on ground, upright vegetation, light from upper left. Style: compact painterly game sprites with broad readable color masses, lightly modeled form, restrained detail suitable for rendering only 25–40 pixels wide. NOT flat vector icons, NOT photorealistic. No ground tiles, no soil islands, no water, no large ground shadows, no labels, no grid, no text. True transparent background between all sprites. No touching adjacent cells. Row 1 low wide shrubs; row 2 short reed clumps; row 3 taller conical trees.",
+  "asset": "vegetation-atlas.png",
+  "date": "2026-10-03",
+  "note": "New reconstruction, not recovered historical artwork. Runtime extracts alpha bounds of three rows of four sprites."
+}

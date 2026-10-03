@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Terrain families — all 16 variants</title>
+<style>body{background:#192b24;color:#eee8d7;font:16px system-ui;margin:24px}h1{margin-bottom:8px}p{color:#c0cab9;max-width:1000px}table{border-collapse:collapse}th{padding:12px;text-align:left;text-transform:capitalize}td{padding:0;border:1px solid #68765a}canvas{display:block;width:256px;height:192px}a{color:#dac38d}</style>
+<h1>Terrain families</h1><p>New reconstruction from the surviving reference. Four base terrains with independent forest and relief. Forest + hills always uses Alpine conifers and modest snow. Mountains use the shared rocky family.</p><p><a href="../">← Map workshop</a></p><div id="status">Rendering all 16 combinations…</div><table id="matrix"><thead><tr><th>Terrain</th><th>Flat</th><th>Forest</th><th>Hills</th><th>Forest + hills</th></tr></thead><tbody></tbody></table>
+<script type="module">
+import {generateWorld,hashSeed} from '../generator.js';import {loadAssets,renderWorld} from '../renderer.js';import {TERRAIN_FAMILIES,forestKind} from '../terrain.js';
+try{
+ await loadAssets();const w=generateWorld('terrain-families-v2');w.rivers=[];
+ for(const c of w.cells){const row=Math.floor(c.y/4),col=Math.floor(c.x/4);c.land=true;c.terrain=TERRAIN_FAMILIES[row];c.resource=null;c.relief=col>=2?'hill':null;c.vegetation=col%2?forestKind(c.terrain,c.relief):null;}
+ const art=renderWorld(w,hashSeed(w.seed));
+ for(let row=0;row<4;row++){const tr=document.createElement('tr'),th=document.createElement('th');th.textContent=TERRAIN_FAMILIES[row];tr.append(th);
+  for(let col=0;col<4;col++){const td=document.createElement('td'),canvas=document.createElement('canvas');canvas.width=256;canvas.height=192;canvas.setAttribute('aria-label',`${TERRAIN_FAMILIES[row]} ${['flat','forest','hills','forest and hills'][col]}`);canvas.getContext('2d').drawImage(art,(col*4+1)*128,(row*4+1)*96,256,192,0,0,256,192);td.append(canvas);tr.append(td);}document.querySelector('tbody').append(tr);
+ }document.querySelector('#status').textContent='All 16 combinations rendered. Each panel shows a 2 × 2 tile area at native size.';
+}catch(e){document.querySelector('#status').textContent='Render failed: '+e.message;throw e;}
+</script></html>

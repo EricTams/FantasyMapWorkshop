@@ -13,12 +13,12 @@
 <aside>
 <div class="panel-title"><span class="eyebrow">WORLD BUILDER</span><h1>A world of your own.</h1><p>Shape the land. See what takes root.</p></div>
 <form id="controls">
-<label class="seed-label" for="seed">World seed</label><div class="seed-row"><input id="seed" name="seed" value="wildwood-184" maxlength="64" spellcheck="false" autocomplete="off"><button id="reroll" type="button" title="Choose a new seed" aria-label="Choose a new seed">⚄</button></div>
+<label class="seed-label" for="seed">World seed</label><div class="seed-row"><input id="seed" name="seed" value="wildwood-1701" maxlength="64" spellcheck="false" autocomplete="off"><button id="reroll" type="button" title="Choose a new seed" aria-label="Choose a new seed">⚄</button></div>
 <div class="sliders">
-<label for="land"><span>Land coverage <output id="land-value">66%</output></span><input type="range" id="land" name="land" min="30" max="78" value="66"><small><span>Ocean</span><span>Continent</span></small></label>
-<label for="ruggedness"><span>Ruggedness <output id="ruggedness-value">57%</output></span><input type="range" id="ruggedness" name="ruggedness" min="0" max="100" value="57"><small><span>Rolling plains</span><span>High peaks</span></small></label>
+<label for="land"><span>Land coverage <output id="land-value">72%</output></span><input type="range" id="land" name="land" min="30" max="78" value="72"><small><span>Ocean</span><span>Continent</span></small></label>
+<label for="ruggedness"><span>Ruggedness <output id="ruggedness-value">62%</output></span><input type="range" id="ruggedness" name="ruggedness" min="0" max="100" value="62"><small><span>Rolling plains</span><span>High peaks</span></small></label>
 <label for="moisture"><span>Moisture <output id="moisture-value">43%</output></span><input type="range" id="moisture" name="moisture" min="0" max="100" value="43"><small><span>Arid</span><span>Lush</span></small></label>
-<label for="forest"><span>Forest coverage <output id="forest-value">65%</output></span><input type="range" id="forest" name="forest" min="0" max="100" value="65"><small><span>Open country</span><span>Deep woods</span></small></label>
+<label for="forest"><span>Forest coverage <output id="forest-value">60%</output></span><input type="range" id="forest" name="forest" min="0" max="100" value="60"><small><span>Open country</span><span>Deep woods</span></small></label>
 <label for="resources"><span>Resource abundance <output id="resources-value">35%</output></span><input type="range" id="resources" name="resources" min="0" max="100" value="35"><small><span>Scarce</span><span>Plentiful</span></small></label>
 </div>
 <button class="primary" type="submit" id="generate">Generate world <span>✦</span></button>
@@ -35,8 +35,8 @@
 <div id="loading" role="status">Gathering the terrain…</div>
 </div>
 <div class="map-footer"><p id="stats" aria-live="polite">Preparing your world</p><span>DRAG TO EXPLORE · SCROLL TO ZOOM</span></div>
-<div class="legend"><span><i style="--swatch:#8c9b50"></i>Grassland</span><span><i style="--swatch:#b6ad71"></i>Plains</span><span><i style="--swatch:#d0bc8a"></i>Desert</span><span><i style="--swatch:#536c3c"></i>Woodland</span><span><i style="--swatch:#568d9c"></i>River</span><p id="tile-info">Point to a tile to inspect it.</p></div>
-<p class="build-note">Prototype terrain • Original asset collection, new procedural worlds.</p>
+<div class="legend"><span><i style="--swatch:#8c9b50"></i>Grassland</span><span><i style="--swatch:#b6ad71"></i>Plains</span><span><i style="--swatch:#d0bc8a"></i>Desert</span><span><i style="--swatch:#738045"></i>Swamp</span><span><i style="--swatch:#536c3c"></i>Woodland</span><span><i style="--swatch:#568d9c"></i>River</span><p id="tile-info">Point to a tile to inspect it.</p></div>
+<p class="build-note"><a href="tests/terrain-families.html" target="_blank" rel="noopener">View all 16 terrain variants ↗</a> · Reconstructed terrain families.</p>
 </section>
 </main>
 <script type="module" src="app.js"></script>
