@@ -1,5 +1,5 @@
 import {generateWorld,hashSeed,describeCell} from './generator.js';
-import {loadAssets,renderWorld} from './renderer.js?v=19';
+import {loadAssets,renderWorld} from './renderer.js?v=20';
 const $=id=>document.getElementById(id),canvas=$('map'),ctx=canvas.getContext('2d'),viewport=$('viewport');
 let world,art,view={scale:1,x:0,y:0},fitScale=1,drag=null,busy=false,request=0,ready=false;
 const controls=['land','ruggedness','moisture','forest','resources'];
