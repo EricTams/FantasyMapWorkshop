@@ -124,14 +124,14 @@ export function renderWorld(world,seed){
   for(let j=0;j<3;j++){const x=c.x*128+30+j*34,y=c.y*96+44+(j%2)*25;const img=images[`relief/hill_rock_${j%2}.png`];ctx.drawImage(img,x-39,y-26,78,78*img.height/img.width);}
  }}
 
- // Keep the connected planting lattice, but retain 82% of eligible tree candidates.
+ // Keep the connected planting lattice, but retain 55% of eligible tree candidates.
  // Reusing the same random threshold preserves positions as density is reduced.
  for(let y=12;y<1530;y+=14)for(let x=10;x<2040;x+=17){
   const px=x+(randomAt(seed,x,y,70)-.5)*13,py=y+(randomAt(seed,x,y,71)-.5)*11;
   const f=fields.sample(px,py);
   const col=Math.floor((px+f[0])/128),row=Math.floor((py+f[1])/96),c=world.cells[row*16+col];if(!c?.vegetation)continue;
   if(f[2]<8)continue;
-  if(randomAt(seed,x,y,122)>.82*resourceTreeDensity(seed,px,py,resources,noise))continue;
+  if(randomAt(seed,x,y,122)>.55*resourceTreeDensity(seed,px,py,resources,noise))continue;
   const i=Math.floor(randomAt(seed,x,y,72)*4),kind=c.vegetation;
   const path=kind==='pine'?`pine/sprites/pine_edge_${i}.png`:kind==='jungle'?`jungle/jungle_edge_${i}.png`:`sprites/broadleaf_edge_${i}.png`;
   const width=(kind==='pine'?29:39)*(0.85+randomAt(seed,x,y,73)*.28);

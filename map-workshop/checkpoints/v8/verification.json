@@ -1,0 +1,13 @@
+{
+  "iteration": "open-canopy-v8",
+  "retention_multiplier": 0.55,
+  "previous_multiplier": 0.82,
+  "semantic_map_unchanged": true,
+  "validation": "Same-seed browser render visually inspected, PNG exported, both in-app preview tabs refreshed. This is a single density constant change; existing tests were not rerun.",
+  "files": {
+    "renderer.js": "21383bb6b49ab2a8330ada6be1be78f0ab9b56b02252cc653c3d540fa105ded8",
+    "checkpoints/v8/world.png": "cbd8c0f2b411cbcaa8a854ca5f9813dad51860f5dba00a0be60a995d435651a0",
+    "checkpoints/v8/world.json": "29c5497eb49ebf4a69b7c382631864361af2b3d02b874472c0fa2e71693c2f1e",
+    "checkpoints/v8/workshop.png": "0dac0e11eff3c7988a9b8643be67f3ea515a7987ccac23a6d78fc783f5712132"
+  }
+}
