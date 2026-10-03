@@ -1,0 +1,6 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Edit this transparent vegetation atlas. Change ONLY the foliage color of the four scrub bushes in the TOP ROW from brownish olive to noticeably lighter muted sage gray-green (rough midtone #98aa88, soft silvery green highlights). Keep the visible woody branches warm gray-brown. Preserve the exact silhouettes, sprite positions, sizes, texture, painterly shading, transparent background and 4-column/3-row atlas layout. Leave the reed row and Alpine conifer row unchanged. No new objects, no text, no ground, no shadows or background.",
+  "asset": "sage-scrub-atlas.png",
+  "usage": "Only top row used for scrub; reeds and Alpine trees still use original vegetation-atlas.png"
+}
