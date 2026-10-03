@@ -1,0 +1,15 @@
+{
+  "iteration": "full-coast-displacement-v3",
+  "seed": "elderwood",
+  "semantic_map_unchanged_from_v2": true,
+  "change": "Coastal signed-distance sampling now uses the same full displaced coordinates as biomes and rivers, retaining the six-pixel corner filter. Displacement strengths and scales otherwise unchanged.",
+  "checks": "6 tests passed; browser render and PNG/JSON exports verified; no captured browser errors.",
+  "visual_review": "Coast retains stepped tile structure but gains coherent bends along formerly straight reaches. Change is subtle at fit zoom; remaining grid-scale steps and repeated forest blocks are not solved by this iteration.",
+  "files": {
+    "renderer.js": "8237048761081adb50b02e34447e08b9e927e632ec7a48a9eff51513878e5534",
+    "geometry.js": "3906134e18e3cd7651bdc2ec9323d9da00afc7c68e1b3a686a347333013fcc27",
+    "checkpoints/v3/world.png": "0bd81a323af0b84a2adfa04c5f48aac6eca2d226e7510437db26de2e593c24d0",
+    "checkpoints/v3/world.json": "29c5497eb49ebf4a69b7c382631864361af2b3d02b874472c0fa2e71693c2f1e",
+    "checkpoints/v3/workshop.png": "67166d98636901c553ebadd473d50c6f51ecbd20cd8e071a6769f753ede56d7f"
+  }
+}

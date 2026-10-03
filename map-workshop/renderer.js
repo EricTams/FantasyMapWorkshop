@@ -31,8 +31,9 @@ function prepareFields(world,seed){
   const x=ix*step,y=iy*step,[dx,dy]=displacement(seed,x,y),qx=x+dx,qy=y+dy;
   const r=geometry.riverDistance(qx,qy),o=(iy*w+ix)*channels;
   a[o]=dx;a[o+1]=dy;
-  // Coast retains the orthogonal tile silhouette, with only a little edge weathering.
-  const cx=x+dx*.16,cy=y+dy*.16;
+  // Coast uses the same inverse-mapped point as biomes, materials and rivers.
+  // The six-pixel corner filter softens the logical silhouette before displacement.
+  const cx=qx,cy=qy;
   a[o+2]=(geometry.coastDistance(cx-6,cy-6)+geometry.coastDistance(cx+6,cy-6)+geometry.coastDistance(cx-6,cy+6)+geometry.coastDistance(cx+6,cy+6))/4;
   a[o+3]=r.distance;
   a[o+4]=(3.3+noise(seed,qx/48,qy/36,111)*2.1)*clamp(r.progress/42,.12,1);

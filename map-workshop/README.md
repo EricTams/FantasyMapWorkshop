@@ -20,7 +20,7 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 - One connected landmass, always bordered by ocean. Maximum coverage is capped at 196 of 256 cells to retain that border.
 - Seeded elevation/moisture fields drive terrain, relief and vegetation. A coast-rooted shortest-path tree generates acyclic rivers on grid edges. This is a gameplay-oriented drainage approximation, not a hydrological simulation: local uphill segments may occur.
 - Terrain, vegetation, relief and resource identities are independent. Resources are biome-dependent and forests have clearings. Placement is not yet balanced for multiplayer or tested for complete sprite collision avoidance.
-- Coastlines follow the union of logical land tiles, with small softened corners and edge weathering. A shared inverse displacement field drives biome ownership, material coordinates, forest boundaries, river distances and tree clearance. Rivers use a union distance field with varying widths, textured water and source tapering; the logical shared-edge graph is unchanged.
+- Coastlines follow the union of logical land tiles, with small softened corners and edge weathering. The coast now receives the full displacement, using the same coordinates as the interior. A shared inverse displacement field drives biome ownership, material coordinates, forest boundaries, river distances and tree clearance. Rivers use a union distance field with varying widths, textured water and source tapering; the logical shared-edge graph is unchanged.
 - Original materials are globally sampled with overlapping repeat boundaries and reduced contrast. Biome crossfades occupy narrow edge bands. Vegetation is drawn on a globally seeded lattice and sprites are sorted by their ground contact depth.
 - Uses grassland, plains, desert, broadleaf, pine and jungle. Later swamp, scrub, desert-wetland and snowy alpine art is missing and is not represented as recovered work. Older pine assets currently represent wooded hills.
 - Current aesthetic limits: obvious forest cell shapes, residual texture repetition, some long river reaches and angular elbows, repeated mountain silhouettes, and occasional crowded resource/mountain tiles. No claim of Civ4 quality parity.
@@ -36,7 +36,8 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 - `tests/generator.test.mjs`: deterministic replay, connected land, resource/relief constraints, river bounds/adjacency/cycles and control extremes over 80 seeds.
 - `tests/materials.html`: flat-field and mixed-field rendering diagnostics.
 - `checkpoints/v1/`: original browser milestone.
-- `checkpoints/v2/`: shared displacement iteration, unchanged semantic map, new renders, diagnostics and checksums.
+- `checkpoints/v2/`: shared interior displacement with reduced coastal displacement.
+- `checkpoints/v3/`: full shared coastal displacement, with identical seed and geography for comparison.
 
 Run tests with Node 20+:
 
