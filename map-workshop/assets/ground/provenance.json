@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: transparent sprite atlas for a painterly fantasy Civilization-style strategy map. Create one square sprite sheet with exactly four isolated small ground-cover patches in a regular 2 by 2 grid, each entirely inside its quadrant with ample transparent margins. Top left: a few short muted olive grass tufts. Top right: sparse flat ochre brown leaf litter with a little moss. Bottom left: low moss and a few tiny weathered pebbles. Bottom right: sparse low grass with scattered dry leaves. Elevated top-down three-quarter strategy map view, ground plane vertically foreshortened. Quiet low contrast natural olive, khaki and warm brown colors, soft painted game art, light upper left. Very low flat pieces with irregular feathered edges and transparent gaps between leaves and blades; no thick soil base, no tile shape, no trees, no flowers, no giant rocks, no text, no grid lines, no frame, no opaque background. These will render only 20 to 35 pixels wide beneath existing trees; prioritize simple readable silhouettes and subtle texture. Genuine transparent background.",
+  "asset": "ground-cover-atlas.png",
+  "layout": "2x2: grass, leaves, moss and pebbles, mixed grass and leaves",
+  "generated": "2026-10-03"
+}

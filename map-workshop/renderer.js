@@ -1,9 +1,10 @@
 import {noise,randomAt} from './generator.js';
+import {drawGroundCover} from './ground-cover.js';
 import {resourceMembers} from './resources.js';
 import {displacement,ownership,makeGeometry} from './geometry.js';
 import {spriteFootprint,canopyClearsRiver,resourceTreeDensity,canopyClearsObjects} from './vegetation.js';
 const BASE=new URL('./assets/',import.meta.url);
-const names=['materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','gems','voidstone'].map(s=>`minerals/${s}.png`),'fantasy/white_stag_0.png','fantasy/white_stag_1.png','pepper/scarlet_pepper_0.png','pepper/scarlet_pepper_1.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
+const names=['ground/ground-cover-atlas.png','materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','gems','voidstone'].map(s=>`minerals/${s}.png`),'fantasy/white_stag_0.png','fantasy/white_stag_1.png','pepper/scarlet_pepper_0.png','pepper/scarlet_pepper_1.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
 export const images={};
 const texture={};
 const footprints={};
@@ -119,6 +120,7 @@ export function renderWorld(world,seed){
   for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++)if(resourceDepth[y*2048+x]<=treeDepth)return true;
   return false;
  };
+ drawGroundCover(ctx,world,seed,fields,resources,images['ground/ground-cover-atlas.png']);
  // Relief and resource footprints stay distinct from vegetation and base biome.
  for(const c of world.cells){if(c.relief==='hill'){
   for(let j=0;j<3;j++){const x=c.x*128+30+j*34,y=c.y*96+44+(j%2)*25;const img=images[`relief/hill_rock_${j%2}.png`];ctx.drawImage(img,x-39,y-26,78,78*img.height/img.width);}

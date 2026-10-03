@@ -1,0 +1,11 @@
+{
+  "tests": "13 passed",
+  "visual": "Viewed default map in Chrome; both IAB previews refreshed. Ground pieces are subtle at map scale, but source art is more detailed than necessary. Simplified silhouettes are a suggested subsequent art direction.",
+  "semanticWorld": "unchanged from v8",
+  "treeRetention": 0.55,
+  "hashes": {
+    "renderer.js": "06564c8a9e17b87f044356265354b68b5d2b42b686787f3580085e38914d929f",
+    "ground-cover.js": "1877c2c7162f5921b1e767aaec71cc159725c4df9ff0bac10959bec360d59aa3",
+    "assets/ground/ground-cover-atlas.png": "2a27a6be0a2cf2044583063c9d428934b04fe11e29f073970c5202111e1a03d9"
+  }
+}

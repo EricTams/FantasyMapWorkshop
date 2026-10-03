@@ -25,7 +25,7 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 - Uses grassland, plains, desert, broadleaf, pine and jungle. Later swamp, scrub, desert-wetland and snowy alpine art is missing and is not represented as recovered work. Older pine assets currently represent wooded hills.
 - Current aesthetic limits: obvious forest cell shapes, residual texture repetition, some long river reaches and angular elbows, repeated mountain silhouettes, and occasional crowded resource/mountain tiles. No claim of Civ4 quality parity.
 - Rendering is synchronous Canvas 2D with a loading overlay and debounced controls. A worker and chunk caching would be appropriate before increasing map size significantly.
-- No external service, runtime package, telemetry, new artwork, publishing or deployment. Assets copied unchanged from `../Fantasy_Terrain_Codex/baseline/Fantasy_Tileset_Prototype55/assets`; original provenance and rights remain unchanged.
+- No runtime service, package, telemetry, publishing or deployment. Ground-cover artwork is newly generated (see assets/ground/provenance.json). Other assets copied unchanged from `../Fantasy_Terrain_Codex/baseline/Fantasy_Tileset_Prototype55/assets`; original provenance and rights remain unchanged.
 
 ## Files
 
@@ -56,3 +56,5 @@ Preserve each meaningful iteration in Git, including semantic inputs and preview
 - `checkpoints/v7/`: reduce tree retention probability to 82% of its previous value, retaining the same deterministic candidate positions, scales and woodland extent. This thins canopy density without changing the forest-coverage slider or semantic map.
 
 - `checkpoints/v8/`: tree retention reduced from 82% to 55% of the original candidate density (about one third fewer than v7). Same candidate positions, scale and forest area; more ground shows through the canopy. Both in-app previews refreshed.
+
+- `checkpoints/v9/`: sparse grass, moss, leaf litter and tiny stones beneath relief, trees and resources. Continuous clustered coverage blends across forest edges and resource clearings; entire patch silhouettes fade away from the displaced coast and riverbanks. Tree retention remains 55%.
