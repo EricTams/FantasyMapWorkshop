@@ -9,6 +9,15 @@ export function makeRelief(world,seed){
   const id=c.y*world.width+c.x;
   nodes.set(id,{x:(c.x+.5)*128+(randomAt(seed,id,0,160)-.5)*38,y:(c.y+.55)*96+(randomAt(seed,id,0,161)-.5)*25,height:strength(c),cell:c,id});
  }
+ // Smooth two-dimensional support, including the spaces between ridge branches.
+ const at=(x,y)=>x>=0&&y>=0&&x<world.width&&y<world.height?strength(world.cells[y*world.width+x]):0;
+ const blend=(x,y,read)=>{
+  const gx=x/128-.5,gy=y/96-.5,ix=Math.floor(gx),iy=Math.floor(gy);
+  let u=gx-ix,v=gy-iy;u=u*u*(3-2*u);v=v*v*(3-2*v);
+  return (read(ix,iy)*(1-u)+read(ix+1,iy)*u)*(1-v)+(read(ix,iy+1)*(1-u)+read(ix+1,iy+1)*u)*v;
+ };
+ const density=(x,y)=>{let n=0;for(let dy=-1;dy<=1;dy++)for(let dx=-1;dx<=1;dx++)if(at(x+dx,y+dy))n++;return Math.max(0,Math.min(1,(n-3)/4));};
+ const breadth=(x,y)=>blend(x,y,density);
  // A spanning forest avoids rectangular rings in dense relief regions.
  const candidates=[],parent=new Map([...nodes.keys()].map(id=>[id,id]));
  const root=id=>{while(parent.get(id)!==id)id=parent.get(id);return id;};
@@ -32,13 +41,21 @@ export function makeRelief(world,seed){
    const dx=Math.cos(angle)*36,dy=Math.sin(angle)*24;
    segments.push({ax:n.x-dx,ay:n.y-dy,bx:n.x,by:n.y,a:n.height*.5,b:n.height},{ax:n.x,ay:n.y,bx:n.x+dx,by:n.y+dy,a:n.height,b:n.height*.5});
   }
-  rocks.push({x:n.x,y:n.y,peak:n.cell.relief==='mountain',width:n.cell.relief==='mountain'?86+randomAt(seed,n.id,0,170)*27:68+randomAt(seed,n.id,0,170)*18,variant:Math.floor(randomAt(seed,n.id,0,165)*2)});
+  if(n.cell.relief==='mountain'||randomAt(seed,n.id,0,173)>breadth(n.x,n.y))rocks.push({x:n.x,y:n.y,peak:n.cell.relief==='mountain',width:n.cell.relief==='mountain'?86+randomAt(seed,n.id,0,170)*27:68+randomAt(seed,n.id,0,170)*18,variant:Math.floor(randomAt(seed,n.id,0,165)*2)});
  }
  for(const [i,s] of segments.entries()){
   const length=Math.hypot(s.bx-s.ax,s.by-s.ay),count=Math.max(1,Math.round(length/34));
   for(let j=0;j<count;j++){const t=(j+.5)/count;
+   if(randomAt(seed,i,j,174)<breadth(s.ax+(s.bx-s.ax)*t,s.ay+(s.by-s.ay)*t))continue;
    rocks.push({x:s.ax+(s.bx-s.ax)*t+(randomAt(seed,i,j,171)-.5)*22,y:s.ay+(s.by-s.ay)*t+(randomAt(seed,i,j,172)-.5)*17,peak:false,width:62+randomAt(seed,i,j,166)*24,variant:Math.floor(randomAt(seed,i,j,167)*2)});
   }
+ }
+ // Broad blocks get area-distributed knolls, not a trace of the ridge graph.
+ for(let y=24;y<world.height*96;y+=39)for(let x=24;x<world.width*128;x+=49){
+  const px=x+(randomAt(seed,x,y,175)-.5)*30,py=y+(randomAt(seed,x,y,176)-.5)*24;
+  if(!at(Math.floor(px/128),Math.floor(py/96)))continue;
+  if(randomAt(seed,x,y,177)>breadth(px,py)*.88)continue;
+  rocks.push({x:px,y:py,peak:false,width:92+randomAt(seed,x,y,178)*32,variant:Math.floor(randomAt(seed,x,y,179)*2)});
  }
  const buckets=world.cells.map(c=>segments.filter(s=>Math.max(s.ax,s.bx)>=c.x*128-100&&Math.min(s.ax,s.bx)<=(c.x+1)*128+100&&Math.max(s.ay,s.by)>=c.y*96-80&&Math.min(s.ay,s.by)<=(c.y+1)*96+80));
  function height(x,y){
@@ -47,9 +64,12 @@ export function makeRelief(world,seed){
   for(const s of buckets[row*world.width+col]){
    const d=segmentDistance(x,y,s),h=s.a+(s.b-s.a)*d.t,radius=46+h*22,t=Math.max(0,1-d.distance/radius);
    value=Math.max(value,h*t*t*(3-2*t));
-  }return value;
+  }
+  const mass=blend(x,y,at),b=breadth(x,y);
+  const rolling=.73+.23*noise(seed,x/83,y/62,180);
+  return Math.max(value*(1-b*.78),mass*rolling)+value*b*.12;
  }
- return {height,rocks,segments,links:links.map(e=>[e.n.id,e.other.id])};
+ return {height,breadth,rocks,segments,links:links.map(e=>[e.n.id,e.other.id])};
 }
 
 // Invert the same display→logical warp used for materials and rivers.

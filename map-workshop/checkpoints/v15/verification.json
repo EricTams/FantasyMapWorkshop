@@ -1,0 +1,7 @@
+{
+  "tests": "18 passed before final sprite-width adjustment",
+  "visual": "3x3 hills, Alpine hills, mountain core and narrow-chain comparison inspected; both map previews refreshed",
+  "semanticWorld": "unchanged from v14",
+  "limitation": "Two reused hill silhouettes still visibly repeat; broad relief is visual shading and sprites, not mesh geometry",
+  "reliefSha256": "16002cde03e7bddc46b6f5217d406feb04417d08f90bc1f7959ae839cde3f0ea"
+}

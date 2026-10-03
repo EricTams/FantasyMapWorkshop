@@ -10,3 +10,12 @@ test('ridge connections are continuous through saddles and vanish away from reli
 test('ridge anchors invert the shared displacement and Alpine density thins at crests',()=>{
  for(let x=400;x<1500;x+=37){const [px,py]=reliefPosition(42,x,800),[dx,dy]=displacement(42,px,py);assert.ok(Math.hypot(px+dx-x,py+dy-800)<.2);assert.ok(alpineDensity(42,x,800,.7)<alpineDensity(42,x,800,.1));}
 });
+test('3x3 blocks retain raised interiors between ridges, with no internal pits',()=>{
+ const block={...world,cells:world.cells.map(c=>({...c,relief:c.x>=6&&c.x<=8&&c.y>=6&&c.y<=8?'hill':null}))};
+ const r=makeRelief(block,42);
+ for(let y=6.5*96;y<=8.5*96;y+=8)for(let x=6.5*128;x<=8.5*128;x+=8)assert.ok(r.height(x,y)>.34,`pit at ${x},${y}`);
+ assert.equal(r.height(100,100),0);
+ assert.ok(r.breadth(7.5*128,7.5*96)>.9);
+ const interior=r.rocks.filter(p=>p.x>7*128&&p.x<8*128&&p.y>7*96&&p.y<8*96);
+ assert.ok(interior.length>=3);
+});
