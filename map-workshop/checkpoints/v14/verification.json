@@ -1,0 +1,10 @@
+{
+  "tests": "17 passed",
+  "visual": "Connected relief study and default map inspected in Chrome; both IAB previews refreshed",
+  "semanticWorld": "unchanged from v13",
+  "limitations": "Existing two rock variants remain recognizable; clearance rejection can interrupt a visual ridge near rivers/resources; elevation is decorative and does not change drainage or gameplay.",
+  "hashes": {
+    "relief.js": "48fca273a50c0504fc7d43789be6e942d7523ebba41af2c2351d5643318fa21d",
+    "renderer.js": "c0828b316146664bed2db178a6928b6cbd1882bc785653204aa5c0f4e6dcb8db"
+  }
+}

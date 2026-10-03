@@ -1,3 +1,4 @@
+import {makeRelief,reliefPosition,alpineDensity} from './relief.js';
 import {noise,randomAt} from './generator.js';
 import {resourceMembers} from './resources.js';
 import {displacement,ownership,makeGeometry} from './geometry.js';
@@ -49,8 +50,8 @@ function biomeMaterial(world,x,y,band){
  return {color,desert,swamp,wetland,alpine};
 }
 // Sample world fields on a four-pixel lattice, then interpolate, never per tile.
-function prepareFields(world,seed){
- const step=4,w=513,h=385,channels=8,a=new Float32Array(w*h*channels),geometry=makeGeometry(world);
+function prepareFields(world,seed,relief){
+ const step=4,w=513,h=385,channels=10,a=new Float32Array(w*h*channels),geometry=makeGeometry(world);
  for(let iy=0;iy<h;iy++)for(let ix=0;ix<w;ix++){
   const x=ix*step,y=iy*step,[dx,dy]=displacement(seed,x,y),qx=x+dx,qy=y+dy;
   const r=geometry.riverDistance(qx,qy),o=(iy*w+ix)*channels;
@@ -64,6 +65,8 @@ function prepareFields(world,seed){
   a[o+5]=noise(seed,qx/19,qy/14,112);
   a[o+6]=4+noise(seed,qx/35,qy/26,113)*2;
   a[o+7]=r.progress;
+  a[o+8]=relief.height(qx,qy);
+  a[o+9]=clamp(((relief.height(qx-5,qy)-relief.height(qx+5,qy))+(relief.height(qx,qy-5)-relief.height(qx,qy+5)))*-1.2,-.20,.20);
  }
  const out=new Float32Array(channels);
  return {geometry,sample(x,y){
@@ -76,7 +79,7 @@ const resourcePath={mithril:'minerals/mithril.png',gems:'minerals/gems.png',void
 export function renderWorld(world,seed){
  const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1536;const ctx=canvas.getContext('2d');const data=ctx.createImageData(2048,1536);const p=data.data;
  const water=texture.deep_water,shallow=texture.shallow_water,ground=texture.meadow,sand=texture.shore;
- const fields=prepareFields(world,seed);
+ const relief=makeRelief(world,seed),fields=prepareFields(world,seed,relief);
  for(let y=0;y<1536;y++){
   for(let x=0;x<2048;x++){
    const f=fields.sample(x,y),qx=x+f[0],qy=y+f[1],coast=f[2];
@@ -89,7 +92,7 @@ export function renderWorld(world,seed){
    const damp=(swamp||wetland)?noise(seed,qx/31,qy/22,151):0;
    const peat=swamp*clamp((damp-.48)*2.8);
    const pool=(swamp||wetland)?clamp((damp-(wetland?.76:.84))/.065)*(swamp*.7+wetland):0;
-   const snow=alpine?clamp((noise(seed,qx/20,qy/15,152)-.77)*5)*alpine:0;
+   const snow=alpine?clamp((noise(seed,qx/35,qy/26,152)-.64)*4)*alpine*clamp(f[8]*1.6)*clamp(.55-f[9]):0;
    const channel=clamp((f[4]-f[3]+1.4)/2.8);
    const bank=clamp((f[4]+2.5+f[5]*2-f[3])/3.5);
    const riverLand=clamp((coast+6)/10);
@@ -98,6 +101,7 @@ export function renderWorld(world,seed){
     g=g*(1-peat*.27)+[89,91,57][k]*peat*.27;
     g=g*(1-pool)+([69,120,119][k]+(shallow[ti+k]-shallow.mean[k])*.25)*pool;
     g=g*(1-snow*.7)+[217,224,213][k]*snow*.7;
+    g*=1+f[9]*clamp(coast/16)*(1-pool);
     g=g*(1-beach)+([198,186,137][k]+(sand[ti+k]-sand.mean[k])*.4)*beach;
     const deep=[19,74,114][k]+(water[wi+k]-water.mean[k])*.40;
     const light=[42,107,131][k]+(shallow[wi+k]-shallow.mean[k])*.45;
@@ -114,7 +118,6 @@ export function renderWorld(world,seed){
  const objects=[],resources=[];
  const add=(path,x,y,width,anchor=.87,protectedFraction=1)=>{const img=images[path];if(!img)return;const h=img.height*width/img.width;objects.push({img,x:x-width/2,y:y-h*anchor,w:width,h,depth:y,protectedFraction});};
  for(const c of world.cells){const x=(c.x+.5)*128,y=(c.y+.57)*96;
-  if(c.relief==='mountain')add(`relief/mountain_rock_${Math.floor(randomAt(seed,c.x,c.y,80)*2)}.png`,x+(c.resource?-18:0),y+(c.resource?-10:5),c.resource?86:110);
   const before=objects.length;
   const members=resourceMembers(c.resource,c.x,c.y);
   if(members.length){for(const m of members)add(m.path,m.x,m.y,m.width,m.anchor,m.protectedFraction);}
@@ -147,10 +150,18 @@ export function renderWorld(world,seed){
   for(let y=y0;y<y1;y++)for(let x=x0;x<x1;x++)if(resourceDepth[y*2048+x]<=treeDepth)return true;
   return false;
  };
- // Relief and resource footprints stay distinct from vegetation and base biome.
- for(const c of world.cells){if(c.relief==='hill'){
-  for(let j=0;j<3;j++){const x=c.x*128+30+j*34,y=c.y*96+44+(j%2)*25;const climate=c.terrain==='desert'&&c.vegetation!=='alpine'?'sand/':'';const img=images[`relief/${climate}hill_rock_${j%2}.png`];ctx.drawImage(img,x-39,y-26,78,78*img.height/img.width);}
- }}
+ // Shared shoulders bridge neighboring relief cells; all rocks sort with trees/resources.
+ for(const rock of relief.rocks){
+  const [px,py]=reliefPosition(seed,rock.x,rock.y),f=fields.sample(px,py);
+  const c=world.cells[Math.floor(rock.y/96)*world.width+Math.floor(rock.x/128)];
+  if(!c?.land||!c.relief||f[2]<12)continue;
+  const climate=c.terrain==='desert'&&c.vegetation!=='alpine'?'sand/':'';
+  const path=rock.peak?`relief/mountain_rock_${rock.variant}.png`:`relief/${climate}hill_rock_${rock.variant}.png`;
+  const width=rock.width*(c.resource?.82:1),img=images[path],scale=width/img.width,h=img.height*scale,anchor=rock.peak?.87:.72;
+  if(!canopyClearsObjects(footprints[path],px-width/2,py-h*anchor,scale,(l,t,r,b)=>occupied(l,t,r,b,py)))continue;
+  if(!canopyClearsRiver(footprints[path],px-width/2,py-h*anchor,scale,(x,y)=>{const a=fields.sample(x,y);return Math.min(a[3]-a[4],a[2]);}))continue;
+  add(path,px,py,width,anchor);
+ }
 
  // Keep the connected planting lattice, but retain 55% of eligible tree candidates.
  // Reusing the same random threshold preserves positions as density is reduced.
@@ -159,7 +170,7 @@ export function renderWorld(world,seed){
   const f=fields.sample(px,py);
   const col=Math.floor((px+f[0])/128),row=Math.floor((py+f[1])/96),c=world.cells[row*16+col];if(!c?.vegetation)continue;
   if(f[2]<8)continue;
-  if(randomAt(seed,x,y,122)>(c.vegetation==='scrub'?.30:c.vegetation==='alpine'?.40:.55)*resourceTreeDensity(seed,px,py,resources,noise))continue;
+  if(randomAt(seed,x,y,122)>(c.vegetation==='scrub'?.30:c.vegetation==='alpine'?alpineDensity(seed,px,py,f[8]):.55)*resourceTreeDensity(seed,px,py,resources,noise))continue;
   const i=Math.floor(randomAt(seed,x,y,72)*4),kind=c.vegetation;
   const palm=kind==='wetland'&&randomAt(seed,x,y,154)<.13;
   const path=['scrub','wetland','alpine'].includes(kind)&&!palm?`families/${kind}_${i}`:palm?`jungle/jungle_edge_${i}.png`:kind==='pine'?`pine/sprites/pine_edge_${i}.png`:kind==='jungle'?`jungle/jungle_edge_${i}.png`:`sprites/broadleaf_edge_${i}.png`;

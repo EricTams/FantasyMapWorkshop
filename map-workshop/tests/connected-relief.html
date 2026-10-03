@@ -1,0 +1,7 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Connected relief study</title><style>body{background:#192b24;color:#eee8d7;font:16px system-ui;margin:24px}canvas{display:block;width:1024px;max-width:100%;height:auto}h2{margin-top:24px}p{max-width:1000px}a{color:#dcc492}</style><h1>Connected relief study</h1><p>Shared ridges, lower shoulders and Alpine groves. Each strip uses the same bent chain; the last adds a river crossing and crystal clearing.</p><a href="../">Map workshop</a><main></main><script type="module">
+import {generateWorld,hashSeed} from '../generator.js';import {loadAssets,renderWorld} from '../renderer.js';
+await loadAssets();const w=generateWorld('ridge-study');w.rivers=[];for(const c of w.cells){c.land=true;c.terrain='grassland';c.relief=c.vegetation=c.resource=null;}
+for(let band=0;band<3;band++)for(let x=3;x<=11;x++){const y=band*5+2+(x>7?1:0),c=w.cells[y*16+x];c.relief=band===0?'hill':x>=6&&x<=9?'mountain':'hill';c.vegetation=band===2&&c.relief==='hill'?'alpine':null;if(x===8){const join=w.cells[(y-1)*16+x];join.relief=c.relief;}}
+w.cells[12*16+5].resource='gems';w.rivers=[{nodes:[[10,11],[10,12],[10,13],[10,14],[10,15]]}];
+const art=renderWorld(w,hashSeed(w.seed));for(let b=0;b<3;b++){const h=document.createElement('h2');h.textContent=['Hill chain','Mountain range and foothills','Alpine transition, river and resource'][b];const c=document.createElement('canvas');c.width=1280;c.height=384;c.getContext('2d').drawImage(art,256,b*480+48,1280,384,0,0,1280,384);document.querySelector('main').append(h,c);}
+</script></html>
