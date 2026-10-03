@@ -12,12 +12,16 @@ python3 -m http.server 4173 --bind 127.0.0.1
 
 Open http://127.0.0.1:4173 in a browser. Use Chrome or another standard browser for downloads; the Codex embedded browser did not complete a download during testing. No package installation or build is required. JavaScript modules need HTTP serving, rather than opening index.html as a file.
 
-Sliders regenerate after a brief pause. A fixed seed preserves the underlying noise fields when settings change. The die picks a new seed. Drag to pan; scroll or use +/− to zoom; Fit resets the camera. Focus the map for arrow-key panning, +/− zoom, and 0 to fit. PNG export is the clean 2048×1536 world without the UI or grid; JSON includes generator version, seed, settings, projection, cells and shared-edge river routes. Resource labels are included in hover inspection.
+Sliders regenerate after a brief pause. A fixed seed preserves the underlying noise fields when settings change. The die picks a new seed. Drag to pan; scroll or use +/− to zoom; Fit resets the camera. Focus the map for arrow-key panning, +/− zoom, and 0 to fit. PNG export is the clean world (3584×2688 for 28×28, 2048×1536 for 16×16) without the UI or grid; JSON includes generator version, seed, settings, projection, cells and shared-edge river routes. Resource labels are included in hover inspection.
+
+## Deploy
+
+Run `npm run build` to produce `dist/`, then `npm run preview` to serve it on port 4174. The build copies only the static app, visual study pages and renderer-loaded assets. `dist/` is ignored by Git. The root GitHub Actions workflow validates pull requests and publishes main-branch builds. See [repository setup](../README.md).
 
 ## Design and boundaries
 
-- 16×16 logical square tiles projected to 128×96 pixels, with upright sprites.
-- One connected landmass, always bordered by ocean. Maximum coverage is capped at 196 of 256 cells to retain that border.
+- 28×28 tiles by default, with a 16×16 option; tiles project to 128×96 pixels, with upright sprites.
+- Pangea generates one connected continent with horizontal wrapping, polar ocean borders, and a Coast complexity control. Classic island retains the original ocean border on every side.
 - Seeded elevation/moisture fields drive terrain, relief and vegetation. A coast-rooted shortest-path tree generates acyclic rivers on grid edges. This is a gameplay-oriented drainage approximation, not a hydrological simulation: local uphill segments may occur.
 - Terrain, vegetation, relief and resource identities are independent. Resources are biome-dependent. Their actual alpha silhouettes reserve canopy clearance; surrounding forest density falls off smoothly over roughly one to two tiles with seeded irregularity. Thinning crosses tile borders, overlapping influences do not multiply, and tree sizes stay unchanged. Placement is not yet balanced for multiplayer or tested for complete sprite collision avoidance.
 - Coastlines follow the union of logical land tiles, with small softened corners and edge weathering. The coast now receives the full displacement, using the same coordinates as the interior. A shared inverse displacement field drives biome ownership, material coordinates, forest boundaries, river distances and tree clearance. Rivers use a union distance field with varying widths, textured water and source tapering; the logical shared-edge graph is unchanged.
@@ -25,7 +29,7 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 - Four terrain families: grassland, plains, swamp and desert. Each supports flat, forest, hills and forest+hills. Flat forests use broadleaf, scrub, jungle and desert wetland respectively. All forest+hills use shared Alpine conifers, green ground, modest snow and hills; mountains remain shared rocky sprites. Swamp and wetland materials and scrub/reed/Alpine art are new reconstructions, not recovered World20 assets.
 - Current aesthetic limits: obvious forest cell shapes, residual texture repetition, some long river reaches and angular elbows, repeated mountain silhouettes, and occasional crowded resource/mountain tiles. No claim of Civ4 quality parity.
 - Rendering is synchronous Canvas 2D with a loading overlay and debounced controls. A worker and chunk caching would be appropriate before increasing map size significantly.
-- No runtime service, package, telemetry, publishing or deployment. New family vegetation artwork uses built-in imagegen (see assets/families/provenance.json); unused ground-cover experiments are retained in assets/ground. Other assets copied unchanged from `../Fantasy_Terrain_Codex/baseline/Fantasy_Tileset_Prototype55/assets`; original provenance and rights remain unchanged.
+- No runtime service, package dependencies or telemetry. GitHub Pages deployment is configured at the repository root; see [deployment instructions](../README.md). New family vegetation artwork uses built-in imagegen (see assets/families/provenance.json); unused ground-cover experiments are retained in assets/ground. Other assets copied unchanged from `../Fantasy_Terrain_Codex/baseline/Fantasy_Tileset_Prototype55/assets`; original provenance and rights remain unchanged.
 
 ## Files
 

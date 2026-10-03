@@ -5,6 +5,7 @@ import {displacement,ownership,makeGeometry} from './geometry.js?v=24';
 import {spriteFootprint,canopyClearsRiver,resourceTreeDensity,canopyClearsObjects} from './vegetation.js';
 const BASE=new URL('./assets/',import.meta.url);
 const names=['families/sage-scrub-atlas.png','families/vegetation-atlas.png','materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['sand'].flatMap(t=>[0,1].map(i=>`relief/${t}/hill_rock_${i}.png`)),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','ruby-clusters','voidstone'].map(s=>`minerals/reconstructed/${s}.png`),'fantasy/white_stag_0.png','fantasy/white_stag_1.png','pepper/scarlet_pepper_0.png','pepper/scarlet_pepper_1.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
+export {names as assetPaths};
 export const images={};
 const texture={};
 const footprints={};
