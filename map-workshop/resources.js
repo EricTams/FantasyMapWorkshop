@@ -3,7 +3,7 @@
 export function resourceMembers(kind,col,row){
  // New mineral deposits are loose groups with independent depth and clearance.
  if(['mithril','gems','voidstone'].includes(kind)){
-  return [[.36,.44,62],[.74,.61,37],[.30,.83,29]].map(([u,v,width])=>({path:`minerals/reconstructed/${kind}.png`,x:(col+u)*128,y:(row+v)*96,width,anchor:.80,protectedFraction:.92}));
+  return [[.36,.44,62],[.74,.61,37],[.30,.83,29]].map(([u,v,width])=>({path:`minerals/reconstructed/${kind==='gems'?'rubies':kind}.png`,x:(col+u)*128,y:(row+v)*96,width,anchor:.80,protectedFraction:.92}));
  }
  const families={
   white_stags:{folder:'fantasy',stem:'white_stag',width:48,anchor:.97,protectedFraction:.84,roots:[[.27,.65],[.75,.84]]},

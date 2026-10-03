@@ -1,0 +1,5 @@
+{
+  "visualReview": "Native-size mineral study and main map rendered; ruby-only gemstones with broad simplified stone faces. Both in-app previews refreshed.",
+  "semanticMap": "Unchanged from v18",
+  "tests": "Art/path change verified in browser; unit suite not rerun."
+}
