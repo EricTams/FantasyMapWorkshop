@@ -1,0 +1,329 @@
+{
+  "generation_count": 1,
+  "logical_cell_px": 128,
+  "sprites": [
+    {
+      "file": "hill_rock_0.png",
+      "kind": "hill",
+      "native_size": [
+        112,
+        47
+      ],
+      "ground_anchor": [
+        56.0,
+        39.48
+      ],
+      "source_component_box": [
+        70,
+        83,
+        721,
+        358
+      ]
+    },
+    {
+      "file": "hill_rock_1.png",
+      "kind": "hill",
+      "native_size": [
+        116,
+        50
+      ],
+      "ground_anchor": [
+        58.0,
+        42.0
+      ],
+      "source_component_box": [
+        816,
+        83,
+        1482,
+        370
+      ]
+    },
+    {
+      "file": "mountain_rock_0.png",
+      "kind": "mountain",
+      "native_size": [
+        124,
+        88
+      ],
+      "ground_anchor": [
+        62.0,
+        73.92
+      ],
+      "source_component_box": [
+        38,
+        428,
+        770,
+        948
+      ]
+    },
+    {
+      "file": "mountain_rock_1.png",
+      "kind": "mountain",
+      "native_size": [
+        124,
+        89
+      ],
+      "ground_anchor": [
+        62.0,
+        74.75999999999999
+      ],
+      "source_component_box": [
+        803,
+        461,
+        1500,
+        961
+      ]
+    }
+  ],
+  "method": "Four original generated component cutouts; pale rocky rounded hills and pointed dark rocky mountains. Native scale export; no shape repaint.",
+  "climate_variants": {
+    "tundra": [
+      {
+        "file": "tundra/hill_rock_0.png",
+        "kind": "hill",
+        "native_size": [
+          112,
+          47
+        ],
+        "ground_anchor": [
+          56.0,
+          39.48
+        ],
+        "source_component_box": [
+          70,
+          83,
+          721,
+          358
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "tundra/hill_rock_1.png",
+        "kind": "hill",
+        "native_size": [
+          116,
+          50
+        ],
+        "ground_anchor": [
+          58.0,
+          42.0
+        ],
+        "source_component_box": [
+          816,
+          83,
+          1482,
+          370
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "tundra/mountain_rock_0.png",
+        "kind": "mountain",
+        "native_size": [
+          124,
+          88
+        ],
+        "ground_anchor": [
+          62.0,
+          73.92
+        ],
+        "source_component_box": [
+          38,
+          428,
+          770,
+          948
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "tundra/mountain_rock_1.png",
+        "kind": "mountain",
+        "native_size": [
+          124,
+          89
+        ],
+        "ground_anchor": [
+          62.0,
+          74.75999999999999
+        ],
+        "source_component_box": [
+          803,
+          461,
+          1500,
+          961
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      }
+    ],
+    "snow": [
+      {
+        "file": "snow/hill_rock_0.png",
+        "kind": "hill",
+        "native_size": [
+          112,
+          47
+        ],
+        "ground_anchor": [
+          56.0,
+          39.48
+        ],
+        "source_component_box": [
+          70,
+          83,
+          721,
+          358
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "snow/hill_rock_1.png",
+        "kind": "hill",
+        "native_size": [
+          116,
+          50
+        ],
+        "ground_anchor": [
+          58.0,
+          42.0
+        ],
+        "source_component_box": [
+          816,
+          83,
+          1482,
+          370
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "snow/mountain_rock_0.png",
+        "kind": "mountain",
+        "native_size": [
+          124,
+          88
+        ],
+        "ground_anchor": [
+          62.0,
+          73.92
+        ],
+        "source_component_box": [
+          38,
+          428,
+          770,
+          948
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "snow/mountain_rock_1.png",
+        "kind": "mountain",
+        "native_size": [
+          124,
+          89
+        ],
+        "ground_anchor": [
+          62.0,
+          74.75999999999999
+        ],
+        "source_component_box": [
+          803,
+          461,
+          1500,
+          961
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      }
+    ],
+    "sand": [
+      {
+        "file": "sand/hill_rock_0.png",
+        "kind": "hill",
+        "native_size": [
+          112,
+          47
+        ],
+        "ground_anchor": [
+          56.0,
+          39.48
+        ],
+        "source_component_box": [
+          70,
+          83,
+          721,
+          358
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "sand/hill_rock_1.png",
+        "kind": "hill",
+        "native_size": [
+          116,
+          50
+        ],
+        "ground_anchor": [
+          58.0,
+          42.0
+        ],
+        "source_component_box": [
+          816,
+          83,
+          1482,
+          370
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "sand/mountain_rock_0.png",
+        "kind": "mountain",
+        "native_size": [
+          124,
+          88
+        ],
+        "ground_anchor": [
+          62.0,
+          73.92
+        ],
+        "source_component_box": [
+          38,
+          428,
+          770,
+          948
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      },
+      {
+        "file": "sand/mountain_rock_1.png",
+        "kind": "mountain",
+        "native_size": [
+          124,
+          89
+        ],
+        "ground_anchor": [
+          62.0,
+          74.75999999999999
+        ],
+        "source_component_box": [
+          803,
+          461,
+          1500,
+          961
+        ],
+        "alpha_unchanged": true,
+        "geometry_unchanged": true
+      }
+    ]
+  },
+  "climate_method": "Deterministic selective yellow-green vegetation/base regrade, retaining painted light/shadow and unchanged alpha/anchors. Snow adds restrained coverage on existing bright rock planes; dark faces and summit profile remain visible.",
+  "climate_source_generation_count": 0
+}

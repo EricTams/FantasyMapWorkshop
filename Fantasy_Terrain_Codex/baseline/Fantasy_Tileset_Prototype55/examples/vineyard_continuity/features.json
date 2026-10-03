@@ -1,0 +1,130 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "asset": "vineyard_press.png",
+      "kind": "improvement",
+      "label": "Vineyard press",
+      "source_category": "winery"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "asset": "vineyard_press.png",
+      "kind": "improvement",
+      "label": "Vineyard press",
+      "source_category": "winery"
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "asset": "vineyard_press.png",
+      "kind": "improvement",
+      "label": "Vineyard press",
+      "source_category": "winery"
+    },
+    {
+      "cell": [
+        1,
+        6
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet peppers"
+    },
+    {
+      "cell": [
+        4,
+        5
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "Cottage"
+    },
+    {
+      "cell": [
+        2,
+        6
+      ],
+      "asset": "legacy_mine.png",
+      "kind": "improvement",
+      "label": "Mine prototype"
+    },
+    {
+      "cell": [
+        4,
+        6
+      ],
+      "asset": "wildlife_winter_foxes.png",
+      "kind": "resource",
+      "label": "Winter foxes"
+    }
+  ]
+}

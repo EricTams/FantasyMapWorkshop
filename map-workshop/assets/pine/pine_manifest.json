@@ -1,0 +1,225 @@
+{
+  "version": 30,
+  "asset_family": "pine_conifer",
+  "interior_material": "pine_interior_512.png",
+  "screen_sampling_scale_at128": 2.0,
+  "screen_sampling_scale_range_at128": [
+    1.8,
+    2.2
+  ],
+  "screen_sampling_rule": "sample in upright screen x,y with scale=2.0/(local_or_average_cell_width_pixels/128); never scale tree height by ground row depth",
+  "sprites": [
+    {
+      "name": "pine_edge_0",
+      "file": "sprites/pine_edge_0.png",
+      "kind": "upright_tree",
+      "native_size": [
+        25,
+        45
+      ],
+      "root_anchor": [
+        11.584,
+        42.191
+      ],
+      "source_crop_box": [
+        560,
+        180,
+        670,
+        395
+      ],
+      "source_alpha_bounds_in_crop": [
+        3,
+        10,
+        104,
+        209
+      ],
+      "source_root_in_crop": [
+        51,
+        207
+      ],
+      "source_resolution_file": "sprites/pine_edge_0_source_resolution.png",
+      "root_anchor_source_resolution": [
+        56,
+        205
+      ],
+      "mask_method": "Explicit hand-traced conservative branch silhouette polygon; antialiasing only on native export",
+      "native_content_scale_from_source": 0.20414673046251994,
+      "limit": "Lower dark boughs are conservatively traced where neighboring dark foliage merges; visible trunk foot retained."
+    },
+    {
+      "name": "pine_edge_1",
+      "file": "sprites/pine_edge_1.png",
+      "kind": "upright_tree",
+      "native_size": [
+        20,
+        31
+      ],
+      "root_anchor": [
+        9.708,
+        28.398
+      ],
+      "source_crop_box": [
+        210,
+        458,
+        313,
+        611
+      ],
+      "source_alpha_bounds_in_crop": [
+        10,
+        15,
+        87,
+        147
+      ],
+      "source_root_in_crop": [
+        49,
+        146
+      ],
+      "source_resolution_file": "sprites/pine_edge_1_source_resolution.png",
+      "root_anchor_source_resolution": [
+        47,
+        139
+      ],
+      "mask_method": "Explicit hand-traced conservative branch silhouette polygon; antialiasing only on native export",
+      "native_content_scale_from_source": 0.20414673046251994,
+      "limit": "Left lower foreground tree is excluded; silhouette follows the visible main-tree bough boundary."
+    },
+    {
+      "name": "pine_edge_2",
+      "file": "sprites/pine_edge_2.png",
+      "kind": "upright_tree",
+      "native_size": [
+        16,
+        27
+      ],
+      "root_anchor": [
+        7.297,
+        24.197
+      ],
+      "source_crop_box": [
+        474,
+        1003,
+        573,
+        1200
+      ],
+      "source_alpha_bounds_in_crop": [
+        19,
+        23,
+        78,
+        137
+      ],
+      "source_root_in_crop": [
+        47,
+        135
+      ],
+      "source_resolution_file": "sprites/pine_edge_2_source_resolution.png",
+      "root_anchor_source_resolution": [
+        36,
+        120
+      ],
+      "mask_method": "Explicit hand-traced conservative branch silhouette polygon; antialiasing only on native export",
+      "native_content_scale_from_source": 0.20414673046251994,
+      "limit": "Conservative edge extraction; a foreground neighbor overlaps some leftmost low boughs, which were excluded without reconstructing them."
+    },
+    {
+      "name": "pine_edge_3",
+      "file": "sprites/pine_edge_3.png",
+      "kind": "upright_tree",
+      "native_size": [
+        16,
+        28
+      ],
+      "root_anchor": [
+        7.5,
+        25.4
+      ],
+      "source_crop_box": [
+        798,
+        856,
+        888,
+        988
+      ],
+      "source_alpha_bounds_in_crop": [
+        16,
+        10,
+        77,
+        130
+      ],
+      "source_root_in_crop": [
+        46,
+        129
+      ],
+      "source_resolution_file": "sprites/pine_edge_3_source_resolution.png",
+      "root_anchor_source_resolution": [
+        38,
+        127
+      ],
+      "mask_method": "Explicit hand-traced conservative branch silhouette polygon; antialiasing only on native export",
+      "native_content_scale_from_source": 0.20414673046251994,
+      "limit": "Left touching neighbor removed using a conservative visible-edge polygon; small branch ambiguities remain."
+    }
+  ],
+  "source_generated_material": "sources/pine_surface_source.png",
+  "source_sha256": "f5f24d1c4ff3db9bfe38e46c1eb40184a8ca7eb3c15a7c520e75e1befae7b055",
+  "periodic_source": "sources/pine_surface_512.png",
+  "periodic_source_sha256": "d80d98e8e7a0735441282a94912259a2ad3d20adf87063f47e291a9510c3eadd",
+  "interior_sha256": "d80d98e8e7a0735441282a94912259a2ad3d20adf87063f47e291a9510c3eadd",
+  "new_generation_count": 0,
+  "palette_grading": "None. The existing source and periodic source colors are preserved byte-for-byte or source-sampled.",
+  "scale_basis": {
+    "method": "Visible individual evergreen silhouettes in actual Dutch Civ4 crop, approximate manual screen-space envelopes, normalized by the manifest local horizontal cell span. These are visual observations, not recovered meshes.",
+    "dutch_reference_url": "http://www.sullla.com/Civ4/WCC/WCC-11.jpg",
+    "estimated_dutch_crown_width_source_px": [
+      10,
+      14
+    ],
+    "estimated_dutch_tip_to_base_height_source_px": [
+      17,
+      26
+    ],
+    "local_cell_width_source_px": [
+      75,
+      84
+    ],
+    "target_128px_crown_width": [
+      15,
+      24
+    ],
+    "target_128px_tip_to_base_height": [
+      26,
+      44
+    ],
+    "material_generated_tree_width_512px_typical": [
+      27,
+      40
+    ],
+    "material_generated_tree_height_512px_typical": [
+      45,
+      80
+    ],
+    "result_at_sample_scale_2_width": [
+      13.5,
+      20
+    ],
+    "result_at_sample_scale_2_height": [
+      22.5,
+      40
+    ],
+    "uncertainty": "Approximate +/-2 to 3 source screenshot pixels; perspective, overlaps and compression prevent exact isolation.",
+    "reference_screenshot_included": false
+  },
+  "boreal_caveat": "Boreal source contains pale/frosted-looking crowns and thinner, smaller visible silhouettes. These four green conifers provide species-correct edges but do not claim a faithful snow/frost material. Keep this mismatch visible in benchmark review.",
+  "periodic_boundary_qc": {
+    "edge_difference_x_mean_abs": 0.0,
+    "edge_difference_y_mean_abs": 0.0
+  },
+  "native_root_placement": "Sprite origin = projected_root_xy - root_anchor * (screen_cell_width/128). Sort by root screen y. Use identical uniform scale on both axes.",
+  "transparent_gutter_native_px": 2,
+  "deterministic_script": "tools/extract_pine.py",
+  "no_unique_scene_tile_slicing": true,
+  "known_limits": [
+    "Silhouettes are manually masked from a dense generated forest material, so some dark touching bough boundaries remain ambiguous.",
+    "Four finite edge variants; all keep original light direction and upright orientation.",
+    "Bare ground in periodic material is part of its authored interior, not transparent.",
+    "The source material is not an exact Civ4 palette or species match; actual screenshot references are benchmark only and no source screenshot pixels enter the reusable game assets."
+  ]
+}

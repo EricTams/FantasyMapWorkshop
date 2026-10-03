@@ -1,0 +1,282 @@
+{
+  "package_verification_before_render": "passed: 356 source files and 5 references",
+  "runtime": "Python 3.12; numpy 2.3.5; Pillow 12.3.0; scipy 1.17.0",
+  "command": ".venv/bin/python run_baseline.py",
+  "render": "completed; runtime chunk and Tiled reconstruction differences were zero",
+  "scaffold_verification": "failed on regenerated ground_and_forest_interior.png SHA256",
+  "changed_outputs": [
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/ground_and_forest_interior.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/bank.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/forest_floor.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/forest_interior.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/jungle_weight.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/land.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/river_bank.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/river_channel.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/river_water.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/sand.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/shallow_water.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/masks/vegetation_clearance.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/preview.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/broadleaf_forest.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/grass.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/hill.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/ice.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/jungle.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/mountain.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/pine_forest.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/plains.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/sand.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/snow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/tundra.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/unknown.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/semantic_tiles/water.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/00_jungle_edge_2.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/01_jungle_edge_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/02_jungle_edge_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/03_mountain_rock_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/04_broadleaf_edge_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/05_broadleaf_edge_3.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/06_broadleaf_edge_2.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/07_broadleaf_edge_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/08_jungle_edge_3.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/09_winter_fox_0_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/10_winter_fox_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/11_winter_fox_1_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/12_winter_fox_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/13_scarlet_pepper_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/14_fish_school.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/15_stag_shadow_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/16_white_stag_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/17_stag_shadow_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/18_white_stag_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/19_scarlet_pepper_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/20_boar_0_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/21_woolly_sheep_0_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/22_boar_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/23_woolly_sheep_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/24_boar_1_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/25_woolly_sheep_1_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/26_boar_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/27_woolly_sheep_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/28_cottage_plot.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/29_aurochs_0_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/30_aurochs_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/31_mammoth_adult_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/32_mammoth_adult.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/33_aurochs_1_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/34_mammoth_young_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/35_aurochs_1.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/36_mammoth_young.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/37_corn_field.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/38_riding_horse_0_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/39_riding_horse_0.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/40_riding_horse_1_shadow.png",
+      "max_pixel_difference": 0
+    },
+    {
+      "path": "baseline/Fantasy_Tileset_Prototype55/examples/jungle_mixed/generated/sprites/41_riding_horse_1.png",
+      "max_pixel_difference": 0
+    }
+  ],
+  "baseline": "restored archive bytes; rerun differences preserved here"
+}

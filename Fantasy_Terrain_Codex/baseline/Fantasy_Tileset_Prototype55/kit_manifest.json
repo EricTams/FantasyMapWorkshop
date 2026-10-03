@@ -1,0 +1,260 @@
+{
+  "pass": 26,
+  "generation_count": 2,
+  "material_cleanup": "Periodic boundary normalization; water whitecaps selectively attenuated, no whole-image blur",
+  "materials": {
+    "meadow": {
+      "source_box": [
+        22,
+        14,
+        501,
+        496
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "edge_difference_x": 0,
+      "edge_difference_y": 0,
+      "whitecap_attenuated": false
+    },
+    "woodland": {
+      "source_box": [
+        524,
+        14,
+        1003,
+        496
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "edge_difference_x": 0,
+      "edge_difference_y": 0,
+      "whitecap_attenuated": false
+    },
+    "deep_water": {
+      "source_box": [
+        22,
+        513,
+        501,
+        996
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "edge_difference_x": 0,
+      "edge_difference_y": 0,
+      "whitecap_attenuated": true
+    },
+    "shallow_water": {
+      "source_box": [
+        524,
+        513,
+        1003,
+        996
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "edge_difference_x": 0,
+      "edge_difference_y": 0,
+      "whitecap_attenuated": true
+    },
+    "shore": {
+      "source_box": [
+        22,
+        1013,
+        501,
+        1518
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "edge_difference_x": 0,
+      "edge_difference_y": 0,
+      "whitecap_attenuated": false
+    },
+    "forest_floor": {
+      "source_box": [
+        524,
+        1013,
+        1003,
+        1518
+      ],
+      "size": [
+        512,
+        512
+      ],
+      "edge_difference_x": 0,
+      "edge_difference_y": 0,
+      "whitecap_attenuated": false
+    }
+  },
+  "sprites": [
+    {
+      "name": "broadleaf_edge_0",
+      "file": "broadleaf_edge_0.png",
+      "kind": "upright_tree",
+      "native_size": [
+        30,
+        30
+      ],
+      "root_anchor": [
+        16.2,
+        27.9
+      ],
+      "source_component_box": [
+        72,
+        126,
+        411,
+        462
+      ],
+      "anchor_method": "Visible root-foot location estimated from generated asset, not generic center"
+    },
+    {
+      "name": "broadleaf_edge_1",
+      "file": "broadleaf_edge_1.png",
+      "kind": "upright_tree",
+      "native_size": [
+        30,
+        34
+      ],
+      "root_anchor": [
+        14.1,
+        31.28
+      ],
+      "source_component_box": [
+        500,
+        108,
+        823,
+        473
+      ],
+      "anchor_method": "Visible root-foot location estimated from generated asset, not generic center"
+    },
+    {
+      "name": "broadleaf_edge_2",
+      "file": "broadleaf_edge_2.png",
+      "kind": "upright_tree",
+      "native_size": [
+        30,
+        29
+      ],
+      "root_anchor": [
+        14.7,
+        26.68
+      ],
+      "source_component_box": [
+        932,
+        124,
+        1286,
+        471
+      ],
+      "anchor_method": "Visible root-foot location estimated from generated asset, not generic center"
+    },
+    {
+      "name": "broadleaf_edge_3",
+      "file": "broadleaf_edge_3.png",
+      "kind": "upright_tree",
+      "native_size": [
+        30,
+        33
+      ],
+      "root_anchor": [
+        13.8,
+        30.36
+      ],
+      "source_component_box": [
+        1399,
+        106,
+        1725,
+        462
+      ],
+      "anchor_method": "Visible root-foot location estimated from generated asset, not generic center"
+    },
+    {
+      "name": "city_compact",
+      "file": "city_compact.png",
+      "kind": "upright_site",
+      "native_size": [
+        112,
+        74
+      ],
+      "site_anchor": [
+        56.0,
+        37.0
+      ],
+      "source_component_box": [
+        23,
+        517,
+        508,
+        837
+      ]
+    },
+    {
+      "name": "corn_field",
+      "file": "corn_field.png",
+      "kind": "upright_site",
+      "native_size": [
+        112,
+        76
+      ],
+      "site_anchor": [
+        56.0,
+        38.0
+      ],
+      "source_component_box": [
+        496,
+        532,
+        925,
+        824
+      ]
+    },
+    {
+      "name": "cottage_plot",
+      "file": "cottage_plot.png",
+      "kind": "upright_site",
+      "native_size": [
+        110,
+        82
+      ],
+      "site_anchor": [
+        55.0,
+        41.0
+      ],
+      "source_component_box": [
+        922,
+        515,
+        1338,
+        826
+      ]
+    },
+    {
+      "name": "mine_site",
+      "file": "mine_site.png",
+      "kind": "upright_site",
+      "native_size": [
+        112,
+        77
+      ],
+      "site_anchor": [
+        56.0,
+        38.5
+      ],
+      "source_component_box": [
+        1351,
+        533,
+        1757,
+        813
+      ]
+    }
+  ],
+  "no_unique_scene_tile_slicing": true,
+  "known_limits": [
+    "Material forest panel is coarser than requested; sampling scale must be calibrated at play size",
+    "Finite edge tree variation, no rotations that would change light direction"
+  ]
+}

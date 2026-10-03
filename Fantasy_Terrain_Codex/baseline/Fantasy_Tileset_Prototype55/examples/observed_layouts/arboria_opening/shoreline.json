@@ -1,0 +1,27 @@
+{
+  "fractional_grid_polygon": [
+    [
+      -1,
+      -1
+    ],
+    [
+      6,
+      -1
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      -1,
+      6
+    ]
+  ],
+  "edge_evidence": [
+    "analysis_clipped",
+    "analysis_clipped",
+    "analysis_clipped",
+    "analysis_clipped"
+  ],
+  "definition": "Non-coastal crop closure only; no physical beach implied"
+}

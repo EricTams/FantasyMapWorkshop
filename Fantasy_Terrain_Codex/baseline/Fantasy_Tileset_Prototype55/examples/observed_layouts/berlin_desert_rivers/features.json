@@ -1,0 +1,125 @@
+{
+  "scene_id": "berlin_desert_rivers",
+  "grid_cells": 25,
+  "known_base_cells": 18,
+  "unknown_base_cells": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "rendered_broadleaf_cells": 4,
+  "missing_pine_cells": [],
+  "rendered_features": [
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "kind": "resource",
+      "label": "wheat",
+      "confidence": "high",
+      "asset": "wheat_field.png",
+      "render_note": "Wheat represented by existing planted-field composition; improvement status not inferred"
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "kind": "city",
+      "label": "Berlin",
+      "confidence": "high",
+      "note": "Underlying elevated base terrain left unknown",
+      "asset": "city_compact.png",
+      "render_note": "Shared kit26 upright authored site"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "asset": "wildlife_aurochs.png",
+      "kind": "resource",
+      "label": "Aurochs",
+      "source_category": "cows"
+    }
+  ],
+  "missing_features": [],
+  "rendered_river_paths": 3,
+  "untraced_river_routes": [],
+  "source_url": "http://www.sullla.com/Civ4/EpicSix/EP6-1.jpg",
+  "caveats": [
+    "No UI/units/yield bubbles recreated",
+    "Unknown base remains excluded beneath known woodland",
+    "No missing feature is replaced by another category",
+    "Floodplain-specific green bank treatment missing; sand ownership retained",
+    "West main channel and visible sandbar branch now traced; occlusion labels tied only to explicit path IDs",
+    "Wildlife extracted/repositioned as small figures across tile, retaining terrain between them; no forest cells deleted",
+    "Rice source is water-dominant; asset is a visible prototype, not a claimed final readability pass",
+    "All source-visible river centerlines rendered with material channels and damp banks; source-hidden spans are annotated rather than invented",
+    "Legacy wheat, wildlife and rice assets retained; their remaining style/readability limits are not resolved by this integration",
+    "Only explicitly confirmed hill/mountain cells are rendered; unknown base IDs remain unknown and unannotated relief is not inferred"
+  ],
+  "rendered_pine_cells": 2,
+  "newly_rendered_features_pass24": [
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "kind": "city",
+      "label": "Berlin",
+      "confidence": "high",
+      "note": "Underlying elevated base terrain left unknown",
+      "asset": "city_compact.png",
+      "render_note": "Compact fantasy city cluster; source culture/era-specific architecture not duplicated"
+    }
+  ],
+  "kit_version": 30,
+  "relief_cells": {
+    "H": [
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "M": []
+  }
+}

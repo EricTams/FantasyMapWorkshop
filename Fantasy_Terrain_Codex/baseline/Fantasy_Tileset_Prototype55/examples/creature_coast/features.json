@@ -1,0 +1,164 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        3,
+        1
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "White stags",
+      "resource_id": "deer"
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet pepper bushes",
+      "resource_id": "spices"
+    },
+    {
+      "cell": [
+        4,
+        1
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet pepper bushes",
+      "resource_id": "spices"
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "Cottage"
+    },
+    {
+      "cell": [
+        5,
+        2
+      ],
+      "asset": "corn_field.png",
+      "kind": "resource",
+      "label": "Sun-maize study",
+      "resource_id": "corn"
+    },
+    {
+      "cell": [
+        2,
+        6
+      ],
+      "asset": "fish_school.png",
+      "kind": "resource",
+      "label": "Silverfin shoal",
+      "resource_id": "fish"
+    },
+    {
+      "cell": [
+        2,
+        1
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "White stags in greenwood",
+      "resource_id": "deer"
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet peppers in jungle",
+      "resource_id": "spices"
+    },
+    {
+      "cell": [
+        3,
+        0
+      ],
+      "asset": "wildlife_boars.png",
+      "kind": "resource",
+      "label": "Boars"
+    },
+    {
+      "cell": [
+        4,
+        0
+      ],
+      "asset": "wildlife_aurochs.png",
+      "kind": "resource",
+      "label": "Aurochs"
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "asset": "wildlife_mammoths.png",
+      "kind": "resource",
+      "label": "Mammoths"
+    },
+    {
+      "cell": [
+        1,
+        0
+      ],
+      "asset": "wildlife_winter_foxes.png",
+      "kind": "resource",
+      "label": "Winter foxes"
+    },
+    {
+      "cell": [
+        3,
+        4
+      ],
+      "asset": "wildlife_woolly_sheep.png",
+      "kind": "resource",
+      "label": "Woolly sheep"
+    },
+    {
+      "cell": [
+        4,
+        5
+      ],
+      "asset": "wildlife_pearl_clams.png",
+      "kind": "resource",
+      "label": "Pearl clams"
+    },
+    {
+      "cell": [
+        5,
+        1
+      ],
+      "asset": "wildlife_riding_horses.png",
+      "kind": "resource",
+      "label": "Riding Horses"
+    },
+    {
+      "cell": [
+        1,
+        5
+      ],
+      "asset": "wildlife_giant_red_crabs.png",
+      "kind": "resource",
+      "label": "Giant Red Crabs"
+    },
+    {
+      "cell": [
+        3,
+        6
+      ],
+      "asset": "wildlife_leviathans.png",
+      "kind": "resource",
+      "label": "Leviathans"
+    }
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "removed_entry_count": 8,
+  "scenes": [
+    {
+      "file": "examples/observed_layouts/dutch_pine_opening/features.json",
+      "removed_stale_entries": [
+        {
+          "cell": [
+            0,
+            1
+          ],
+          "kind": "resource",
+          "label": "ivory",
+          "confidence": "high"
+        },
+        {
+          "cell": [
+            0,
+            2
+          ],
+          "kind": "resource",
+          "label": "sheep",
+          "confidence": "high"
+        }
+      ],
+      "rule": "Exact resource source-category and cell match to an explicitly named rendered wildlife group; uncertain field/building/elevation entries retained"
+    },
+    {
+      "file": "examples/observed_layouts/arboria_opening/features.json",
+      "removed_stale_entries": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "kind": "resource",
+          "label": "ivory",
+          "confidence": "high",
+          "note": "Plains confirmed by visible tooltip"
+        }
+      ],
+      "rule": "Exact resource source-category and cell match to an explicitly named rendered wildlife group; uncertain field/building/elevation entries retained"
+    },
+    {
+      "file": "examples/observed_layouts/berlin_desert_rivers/features.json",
+      "removed_stale_entries": [
+        {
+          "cell": [
+            3,
+            3
+          ],
+          "kind": "resource",
+          "label": "cows",
+          "confidence": "high"
+        }
+      ],
+      "rule": "Exact resource source-category and cell match to an explicitly named rendered wildlife group; uncertain field/building/elevation entries retained"
+    },
+    {
+      "file": "examples/observed_layouts/dutch_developed_fields/features.json",
+      "removed_stale_entries": [
+        {
+          "cell": [
+            3,
+            3
+          ],
+          "kind": "resource",
+          "label": "sheep",
+          "confidence": "high"
+        }
+      ],
+      "rule": "Exact resource source-category and cell match to an explicitly named rendered wildlife group; uncertain field/building/elevation entries retained"
+    },
+    {
+      "file": "examples/observed_layouts/totestra_peninsula/features.json",
+      "removed_stale_entries": [
+        {
+          "cell": [
+            2,
+            0
+          ],
+          "kind": "resource",
+          "label": "pigs",
+          "confidence": "high"
+        },
+        {
+          "cell": [
+            2,
+            1
+          ],
+          "kind": "resource",
+          "label": "pigs",
+          "confidence": "high"
+        },
+        {
+          "cell": [
+            4,
+            2
+          ],
+          "kind": "resource",
+          "label": "clams",
+          "confidence": "high"
+        }
+      ],
+      "rule": "Exact resource source-category and cell match to an explicitly named rendered wildlife group; uncertain field/building/elevation entries retained"
+    }
+  ]
+}

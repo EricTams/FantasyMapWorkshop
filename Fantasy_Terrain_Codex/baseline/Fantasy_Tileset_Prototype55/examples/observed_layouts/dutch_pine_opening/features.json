@@ -1,0 +1,169 @@
+{
+  "scene_id": "dutch_pine_opening",
+  "grid_cells": 25,
+  "known_base_cells": 7,
+  "unknown_base_cells": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "rendered_broadleaf_cells": 0,
+  "missing_pine_cells": [],
+  "rendered_features": [
+    {
+      "cell": [
+        0,
+        3
+      ],
+      "kind": "resource",
+      "label": "corn",
+      "confidence": "high",
+      "asset": "corn_field.png",
+      "render_note": "Shared kit26 upright authored site"
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "kind": "city",
+      "label": "Cradle",
+      "confidence": "high",
+      "asset": "city_compact.png",
+      "render_note": "Shared kit26 upright authored site"
+    },
+    {
+      "cell": [
+        0,
+        1
+      ],
+      "asset": "wildlife_mammoths.png",
+      "kind": "resource",
+      "label": "Mammoths",
+      "source_category": "ivory"
+    },
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "asset": "wildlife_woolly_sheep.png",
+      "kind": "resource",
+      "label": "Woolly sheep",
+      "source_category": "sheep"
+    }
+  ],
+  "missing_features": [],
+  "rendered_river_paths": 9,
+  "untraced_river_routes": [],
+  "source_url": "http://www.sullla.com/Civ4/WCC/WCC-11.jpg",
+  "caveats": [
+    "No UI/units/yield bubbles recreated",
+    "Unknown base remains excluded beneath known woodland",
+    "No missing feature is replaced by another category",
+    "Wildlife extracted/repositioned as small figures across tile, retaining terrain between them; no forest cells deleted",
+    "Rice source is water-dominant; asset is a visible prototype, not a claimed final readability pass",
+    "All source-visible river centerlines rendered with material channels and damp banks; source-hidden spans are annotated rather than invented",
+    "Legacy wheat, wildlife and rice assets retained; their remaining style/readability limits are not resolved by this integration",
+    "Only explicitly confirmed hill/mountain cells are rendered; unknown base IDs remain unknown and unannotated relief is not inferred"
+  ],
+  "rendered_pine_cells": 13,
+  "newly_rendered_features_pass24": [
+    {
+      "cell": [
+        0,
+        3
+      ],
+      "kind": "resource",
+      "label": "corn",
+      "confidence": "high",
+      "asset": "corn_field.png",
+      "render_note": "Original fantasy rendering of source resource category"
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "kind": "city",
+      "label": "Cradle",
+      "confidence": "high",
+      "asset": "city_compact.png",
+      "render_note": "Compact fantasy city cluster; source culture/era-specific architecture not duplicated"
+    }
+  ],
+  "kit_version": 30,
+  "relief_cells": {
+    "H": [],
+    "M": []
+  }
+}

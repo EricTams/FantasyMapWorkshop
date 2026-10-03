@@ -1,0 +1,252 @@
+{
+  "scene_id": "dutch_developed_fields",
+  "source_url": "http://www.sullla.com/Civ4/WCC/WCC-14.jpg",
+  "definition": "Approximate outer wet-beach/land boundary against shallow water; distinguishes visible coast, inferred hidden spans and artificial clipping closure.",
+  "closed": true,
+  "source_pixel_polygon": [
+    [
+      296,
+      177
+    ],
+    [
+      726,
+      177
+    ],
+    [
+      726,
+      514
+    ],
+    [
+      399,
+      514
+    ],
+    [
+      390,
+      509
+    ],
+    [
+      381,
+      502
+    ],
+    [
+      370,
+      503
+    ],
+    [
+      359,
+      496
+    ],
+    [
+      355,
+      486
+    ],
+    [
+      360,
+      477
+    ],
+    [
+      361,
+      465
+    ],
+    [
+      355,
+      456
+    ],
+    [
+      346,
+      448
+    ],
+    [
+      334,
+      443
+    ],
+    [
+      321,
+      444
+    ],
+    [
+      309,
+      446
+    ],
+    [
+      296,
+      448
+    ],
+    [
+      296,
+      177
+    ]
+  ],
+  "fractional_grid_polygon": [
+    [
+      -0.4026,
+      0.0
+    ],
+    [
+      5.075,
+      0.0
+    ],
+    [
+      4.9997,
+      5.0133
+    ],
+    [
+      1.2127,
+      5.0133
+    ],
+    [
+      1.1022,
+      4.9467
+    ],
+    [
+      0.9896,
+      4.8533
+    ],
+    [
+      0.8605,
+      4.8667
+    ],
+    [
+      0.723,
+      4.7733
+    ],
+    [
+      0.6644,
+      4.64
+    ],
+    [
+      0.7142,
+      4.52
+    ],
+    [
+      0.713,
+      4.36
+    ],
+    [
+      0.6306,
+      4.24
+    ],
+    [
+      0.5121,
+      4.1333
+    ],
+    [
+      0.3601,
+      4.0667
+    ],
+    [
+      0.2033,
+      4.08
+    ],
+    [
+      0.0603,
+      4.1067
+    ],
+    [
+      -0.0947,
+      4.1333
+    ],
+    [
+      -0.4026,
+      0.0
+    ]
+  ],
+  "edge_evidence": [
+    {
+      "from_vertex": 0,
+      "to_vertex": 1,
+      "status": "analysis_clipped"
+    },
+    {
+      "from_vertex": 1,
+      "to_vertex": 2,
+      "status": "analysis_clipped"
+    },
+    {
+      "from_vertex": 2,
+      "to_vertex": 3,
+      "status": "analysis_clipped"
+    },
+    {
+      "from_vertex": 3,
+      "to_vertex": 4,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 4,
+      "to_vertex": 5,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 5,
+      "to_vertex": 6,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 6,
+      "to_vertex": 7,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 7,
+      "to_vertex": 8,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 8,
+      "to_vertex": 9,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 9,
+      "to_vertex": 10,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 10,
+      "to_vertex": 11,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 11,
+      "to_vertex": 12,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 12,
+      "to_vertex": 13,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 13,
+      "to_vertex": 14,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 14,
+      "to_vertex": 15,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 15,
+      "to_vertex": 16,
+      "status": "visible"
+    },
+    {
+      "from_vertex": 16,
+      "to_vertex": 17,
+      "status": "analysis_clipped"
+    }
+  ],
+  "uncertainty_spans": [],
+  "pixel_error_estimate": {
+    "visible_edges_px": 4,
+    "inferred_edges_px": 20
+  },
+  "notes": [
+    "Only the visible northwest edge of the southern coastal bay lies within this 5x5 crop.",
+    "Land continues beyond top/right/bottom; closure segments on image bounds are not actual coast.",
+    "Wet-edge precision is limited by soft cream beach and pale cyan shallows, approximately +/-4 source pixels."
+  ],
+  "renderer_instruction": "Use polygon for land/water shape only; score visible edges, exclude inferred and analysis-clipped edges. Do not render clipped closure as beach/coast; it is only a polygon closure."
+}

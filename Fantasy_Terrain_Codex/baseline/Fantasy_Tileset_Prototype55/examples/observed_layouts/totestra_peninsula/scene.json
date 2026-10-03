@@ -1,0 +1,247 @@
+{
+  "id": "totestra_peninsula",
+  "title": "Jungle peninsula with indented east coast",
+  "source_url": "http://www.sullla.com/Civ4/WCLT/WCLT-11.jpg",
+  "source_page_url": "https://www.sullla.com/Civ4/WCLT.html",
+  "source_art_status": "Stock-looking art on documented custom Totestra map script",
+  "grid_size": [
+    5,
+    5
+  ],
+  "crop_bounds_px": [
+    548,
+    130,
+    907,
+    430
+  ],
+  "geometry": {
+    "type": "approximate perspective grid",
+    "row_boundary_y": [
+      130,
+      185,
+      242,
+      301,
+      363,
+      429
+    ],
+    "column_boundary_x_by_row": [
+      [
+        548,
+        613,
+        677,
+        741,
+        805,
+        869
+      ],
+      [
+        548,
+        614,
+        679,
+        745,
+        810,
+        877
+      ],
+      [
+        548,
+        615,
+        682,
+        749,
+        817,
+        885
+      ],
+      [
+        548,
+        616,
+        685,
+        753,
+        822,
+        892
+      ],
+      [
+        548,
+        617,
+        687,
+        758,
+        828,
+        899
+      ],
+      [
+        548,
+        618,
+        690,
+        762,
+        834,
+        907
+      ]
+    ],
+    "confidence": "high coast topology; resource bubbles displace apparent anchors"
+  },
+  "terrain_rows": [
+    [
+      "unknown",
+      "water",
+      "water",
+      "water",
+      "water"
+    ],
+    [
+      "grass",
+      "unknown",
+      "water",
+      "water",
+      "water"
+    ],
+    [
+      "grass",
+      "grass",
+      "unknown",
+      "water",
+      "water"
+    ],
+    [
+      "unknown",
+      "unknown",
+      "water",
+      "water",
+      "water"
+    ],
+    [
+      "unknown",
+      "unknown",
+      "water",
+      "water",
+      "water"
+    ]
+  ],
+  "forest_rows": [
+    [
+      "D",
+      ".",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      ".",
+      "J",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      ".",
+      ".",
+      "D",
+      ".",
+      "."
+    ],
+    [
+      "D",
+      "D",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      "D",
+      "D",
+      ".",
+      ".",
+      "."
+    ]
+  ],
+  "features": [
+    {
+      "cell": [
+        2,
+        0
+      ],
+      "kind": "resource",
+      "label": "pigs",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        2,
+        1
+      ],
+      "kind": "resource",
+      "label": "pigs",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        2,
+        4
+      ],
+      "kind": "resource",
+      "label": "fish",
+      "confidence": "medium",
+      "note": "Source bubble at right edge; underlying fish cell appears at crop col4"
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "kind": "resource",
+      "label": "clams",
+      "confidence": "high"
+    }
+  ],
+  "river_routes": [],
+  "elevation_ignored": [],
+  "benchmark_focus": [
+    "Concave and convex coast edges",
+    "Small east-pointing land spur",
+    "Clear resource cells beside continuous jungle"
+  ],
+  "notes": [
+    "Dense jungle bases marked unknown; coast/land occupancy is certain.",
+    "The fish cell anchor has medium confidence because its bubble is lifted and approaches right crop boundary.",
+    "No recreation of source elevations needed in crop."
+  ],
+  "source_dimensions_px": [
+    1400,
+    788
+  ],
+  "forest_legend": {
+    "D": "broadleaf canopy",
+    "P": "pine/conifer canopy",
+    "?": "unknown"
+  },
+  "unknown_cells": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      1
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ]
+  ],
+  "source_sha256": "a70f4f82ab3fdfd75af18debc5dc257af4b4dda57371f2768adb48cad3b72563",
+  "confidence_policy": "Topology is visually transcribed. Known labels are high/medium visual confidence; exact game-state semantics are unverified without save file.",
+  "screenshot_bundled": false,
+  "crop_local_path": "/workspace/scratch/69c5d365b573/civ4_benchmarks/totestra_peninsula_crop.png"
+}

@@ -1,0 +1,57 @@
+{
+  "scene_id": "generic_bay",
+  "fractional_grid_polygon": [
+    [
+      0.4,
+      0.35
+    ],
+    [
+      4.1,
+      0.35
+    ],
+    [
+      4.8,
+      1.2
+    ],
+    [
+      5.05,
+      2.4
+    ],
+    [
+      4.65,
+      3.1
+    ],
+    [
+      5.1,
+      4.4
+    ],
+    [
+      4.3,
+      5.5
+    ],
+    [
+      1.1,
+      5.55
+    ],
+    [
+      0.4,
+      4.8
+    ],
+    [
+      0.4,
+      0.35
+    ]
+  ],
+  "edge_evidence": [
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored"
+  ],
+  "definition": "Authored land boundary in fractional 128-pixel grid coordinates"
+}

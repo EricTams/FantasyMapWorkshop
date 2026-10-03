@@ -1,0 +1,159 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        1,
+        0
+      ],
+      "asset": "mineral_stone.png",
+      "kind": "resource",
+      "label": "stone",
+      "source_category": "stone"
+    },
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "asset": "mineral_marble.png",
+      "kind": "resource",
+      "label": "marble",
+      "source_category": "marble"
+    },
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "asset": "mineral_copper.png",
+      "kind": "resource",
+      "label": "copper",
+      "source_category": "copper"
+    },
+    {
+      "cell": [
+        1,
+        6
+      ],
+      "asset": "mineral_iron.png",
+      "kind": "resource",
+      "label": "iron",
+      "source_category": "iron"
+    },
+    {
+      "cell": [
+        3,
+        0
+      ],
+      "asset": "mineral_coal.png",
+      "kind": "resource",
+      "label": "coal",
+      "source_category": "coal"
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "asset": "mineral_oil.png",
+      "kind": "resource",
+      "label": "oil",
+      "source_category": "oil"
+    },
+    {
+      "cell": [
+        3,
+        4
+      ],
+      "asset": "mineral_aluminum.png",
+      "kind": "resource",
+      "label": "aluminum",
+      "source_category": "aluminum"
+    },
+    {
+      "cell": [
+        3,
+        6
+      ],
+      "asset": "mineral_uranium.png",
+      "kind": "resource",
+      "label": "uranium",
+      "source_category": "uranium"
+    },
+    {
+      "cell": [
+        5,
+        0
+      ],
+      "asset": "mineral_gold.png",
+      "kind": "resource",
+      "label": "gold",
+      "source_category": "gold"
+    },
+    {
+      "cell": [
+        5,
+        2
+      ],
+      "asset": "mineral_silver.png",
+      "kind": "resource",
+      "label": "silver",
+      "source_category": "silver"
+    },
+    {
+      "cell": [
+        5,
+        4
+      ],
+      "asset": "mineral_gems.png",
+      "kind": "resource",
+      "label": "gems",
+      "source_category": "gems"
+    },
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "White stags"
+    },
+    {
+      "cell": [
+        0,
+        4
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet peppers"
+    },
+    {
+      "cell": [
+        7,
+        3
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "Cottage"
+    },
+    {
+      "cell": [
+        7,
+        4
+      ],
+      "asset": "legacy_mine.png",
+      "kind": "improvement",
+      "label": "Mine prototype"
+    },
+    {
+      "cell": [
+        7,
+        5
+      ],
+      "asset": "wildlife_winter_foxes.png",
+      "kind": "resource",
+      "label": "Winter foxes"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "pass": 29,
+  "generation_count": 1,
+  "source": "sources/fish_school_source.png",
+  "native_tile_px": [
+    128,
+    128
+  ],
+  "fish_count": 5,
+  "method": "Five connected generated cutouts resized and placed; solid body interiors retained; semitransparent wake fringe attenuated. No background replacement.",
+  "body_cutouts": [
+    {
+      "source_component_box": [
+        195,
+        239,
+        663,
+        420
+      ],
+      "native_size": [
+        25,
+        10
+      ],
+      "center": [
+        27,
+        27
+      ]
+    },
+    {
+      "source_component_box": [
+        618,
+        387,
+        1111,
+        620
+      ],
+      "native_size": [
+        25,
+        12
+      ],
+      "center": [
+        74,
+        36
+      ]
+    },
+    {
+      "source_component_box": [
+        127,
+        524,
+        587,
+        708
+      ],
+      "native_size": [
+        24,
+        10
+      ],
+      "center": [
+        99,
+        65
+      ]
+    },
+    {
+      "source_component_box": [
+        619,
+        662,
+        1042,
+        868
+      ],
+      "native_size": [
+        25,
+        12
+      ],
+      "center": [
+        59,
+        94
+      ]
+    },
+    {
+      "source_component_box": [
+        267,
+        802,
+        802,
+        1004
+      ],
+      "native_size": [
+        25,
+        9
+      ],
+      "center": [
+        25,
+        108
+      ]
+    }
+  ],
+  "school_visible_bbox": [
+    12,
+    22,
+    111,
+    113
+  ],
+  "resource_directory": "assets/resources"
+}

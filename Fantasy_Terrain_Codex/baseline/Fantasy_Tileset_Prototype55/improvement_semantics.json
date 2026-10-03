@@ -1,0 +1,14 @@
+{
+  "scope": "Independent improvement codes; never terrain, relief or resource GIDs",
+  "categories": {
+    "unknown": 0,
+    "winery": 1,
+    "cottage": 2,
+    "mine": 3
+  },
+  "asset_categories": {
+    "vineyard_press.png": "winery",
+    "cottage_plot.png": "cottage",
+    "legacy_mine.png": "mine"
+  }
+}

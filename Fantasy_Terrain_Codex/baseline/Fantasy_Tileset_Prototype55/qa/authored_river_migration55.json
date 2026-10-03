@@ -1,0 +1,947 @@
+{
+  "scope": "Authored game layouts only; nine observed layouts are excluded and unchanged",
+  "explicit_source_rules": {
+    "scope": "Authored game layouts only; nine observed layouts are excluded and unchanged",
+    "rules": [
+      {
+        "match_original_path_id": "authored_brook",
+        "required_shape": [
+          6,
+          8
+        ],
+        "replacement": {
+          "version": 1,
+          "coordinate_order": "integer grid corners [x,y]",
+          "mode": "shared_edges",
+          "routes": [
+            {
+              "id": "brook",
+              "nodes": [
+                [
+                  4,
+                  0
+                ],
+                [
+                  4,
+                  1
+                ],
+                [
+                  4,
+                  2
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  4,
+                  5
+                ],
+                [
+                  4,
+                  6
+                ]
+              ],
+              "coast_outlet": true
+            }
+          ],
+          "provenance": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+        }
+      },
+      {
+        "match_original_path_id": "authored_headwater_to_coast",
+        "required_shape": [
+          6,
+          8
+        ],
+        "replacement": {
+          "version": 1,
+          "coordinate_order": "integer grid corners [x,y]",
+          "mode": "shared_edges",
+          "routes": [
+            {
+              "id": "headwater_to_coast",
+              "nodes": [
+                [
+                  1,
+                  1
+                ],
+                [
+                  2,
+                  1
+                ],
+                [
+                  3,
+                  1
+                ],
+                [
+                  3,
+                  2
+                ],
+                [
+                  3,
+                  3
+                ],
+                [
+                  4,
+                  3
+                ],
+                [
+                  4,
+                  4
+                ],
+                [
+                  5,
+                  4
+                ],
+                [
+                  6,
+                  4
+                ]
+              ],
+              "coast_outlet": true
+            }
+          ],
+          "provenance": "Explicit migration of original authored headwater route onto shared tile edges; not snapped source evidence."
+        }
+      }
+    ],
+    "default_scene": "scenario/scene.json",
+    "junction_scene": "junction_scenario/scene.json",
+    "archive_previous_route_in_migration_audit": true,
+    "reject_unmapped_authored_interior_routes": true,
+    "current_design": "Rivers are shared-edge gameplay features; curve geometry remains within a narrow corridor."
+  },
+  "migrated_layouts": [
+    {
+      "example": "examples/creature_coast",
+      "original_input_sha256": "6ec20fdfa8992a9ed4f90ef7b2cf2a9ed9cc6c03935c568449089ab06f36f20f",
+      "previous_river_digitization": {
+        "paths": [
+          {
+            "path_id": "authored_brook",
+            "route_id": "brook",
+            "fractional_grid_nodes": [
+              [
+                3.3,
+                -0.25
+              ],
+              [
+                3.2,
+                0.6
+              ],
+              [
+                3.45,
+                1.3
+              ],
+              [
+                3.85,
+                2.2
+              ],
+              [
+                3.5,
+                3.1
+              ],
+              [
+                3.7,
+                4.1
+              ],
+              [
+                3.9,
+                4.7
+              ],
+              [
+                3.82,
+                5.35
+              ],
+              [
+                3.95,
+                5.83
+              ]
+            ]
+          }
+        ],
+        "occlusions": [],
+        "provenance": "Authored continuous route, not a source-transcribed river"
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "brook",
+            "nodes": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+      },
+      "current_input_sha256": "57a7ee76c088788f4bd4aff8531fbfe8f69c3661450d5361c376a462e9a0212c"
+    },
+    {
+      "example": "examples/draft_fantasy_spice_proposal",
+      "original_input_sha256": "aa91a23fa7c6854de24b125b80651b09201eb5159a0f461244964a77a1c15930",
+      "previous_river_digitization": {
+        "provenance": "Original authored continuous technical route, not inferred from source-hidden spans",
+        "paths": [
+          {
+            "path_id": "authored_headwater_to_coast",
+            "role": "authored_main",
+            "fractional_grid_nodes": [
+              [
+                1.0,
+                0.9
+              ],
+              [
+                1.45,
+                1.1
+              ],
+              [
+                2.1,
+                1.1
+              ],
+              [
+                2.7,
+                1.5
+              ],
+              [
+                3.1,
+                2.1
+              ],
+              [
+                3.5,
+                2.8
+              ],
+              [
+                4.25,
+                3.2
+              ],
+              [
+                4.95,
+                3.8
+              ]
+            ],
+            "width_world_px": 9.5
+          }
+        ],
+        "occlusions": []
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "headwater_to_coast",
+            "nodes": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                6,
+                4
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Explicit migration of original authored headwater route onto shared tile edges; not snapped source evidence."
+      },
+      "current_input_sha256": "b778b34169d7e93d488fb8425dbb44feb3a9560c18e3e295eb7f20a64010d891"
+    },
+    {
+      "example": "examples/generic_relief_fantasy",
+      "original_input_sha256": "aa91a23fa7c6854de24b125b80651b09201eb5159a0f461244964a77a1c15930",
+      "previous_river_digitization": {
+        "provenance": "Original authored continuous technical route, not inferred from source-hidden spans",
+        "paths": [
+          {
+            "path_id": "authored_headwater_to_coast",
+            "role": "authored_main",
+            "fractional_grid_nodes": [
+              [
+                1.0,
+                0.9
+              ],
+              [
+                1.45,
+                1.1
+              ],
+              [
+                2.1,
+                1.1
+              ],
+              [
+                2.7,
+                1.5
+              ],
+              [
+                3.1,
+                2.1
+              ],
+              [
+                3.5,
+                2.8
+              ],
+              [
+                4.25,
+                3.2
+              ],
+              [
+                4.95,
+                3.8
+              ]
+            ],
+            "width_world_px": 9.5
+          }
+        ],
+        "occlusions": []
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "headwater_to_coast",
+            "nodes": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                6,
+                4
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Explicit migration of original authored headwater route onto shared tile edges; not snapped source evidence."
+      },
+      "current_input_sha256": "b778b34169d7e93d488fb8425dbb44feb3a9560c18e3e295eb7f20a64010d891"
+    },
+    {
+      "example": "examples/generic_river_pine",
+      "original_input_sha256": "eee6d8660e5d4dbc88d2519d6a986840f63f554d5aede56a343bf17d47d8a659",
+      "previous_river_digitization": {
+        "provenance": "Original authored continuous technical route, not inferred from source-hidden spans",
+        "paths": [
+          {
+            "path_id": "authored_headwater_to_coast",
+            "role": "authored_main",
+            "fractional_grid_nodes": [
+              [
+                1.0,
+                0.9
+              ],
+              [
+                1.45,
+                1.1
+              ],
+              [
+                2.1,
+                1.1
+              ],
+              [
+                2.7,
+                1.5
+              ],
+              [
+                3.1,
+                2.1
+              ],
+              [
+                3.5,
+                2.8
+              ],
+              [
+                4.25,
+                3.2
+              ],
+              [
+                4.95,
+                3.8
+              ]
+            ],
+            "width_world_px": 9.5
+          }
+        ],
+        "occlusions": []
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "headwater_to_coast",
+            "nodes": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                5,
+                4
+              ],
+              [
+                6,
+                4
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Explicit migration of original authored headwater route onto shared tile edges; not snapped source evidence."
+      },
+      "current_input_sha256": "b2b3de4f82ecd2d4ad143827d212546784d27bb0c8bd459d3a74dc753a44d121"
+    },
+    {
+      "example": "examples/jungle_mixed",
+      "original_input_sha256": "6ec20fdfa8992a9ed4f90ef7b2cf2a9ed9cc6c03935c568449089ab06f36f20f",
+      "previous_river_digitization": {
+        "paths": [
+          {
+            "path_id": "authored_brook",
+            "route_id": "brook",
+            "fractional_grid_nodes": [
+              [
+                3.3,
+                -0.25
+              ],
+              [
+                3.2,
+                0.6
+              ],
+              [
+                3.45,
+                1.3
+              ],
+              [
+                3.85,
+                2.2
+              ],
+              [
+                3.5,
+                3.1
+              ],
+              [
+                3.7,
+                4.1
+              ],
+              [
+                3.9,
+                4.7
+              ],
+              [
+                3.82,
+                5.35
+              ],
+              [
+                3.95,
+                5.83
+              ]
+            ]
+          }
+        ],
+        "occlusions": [],
+        "provenance": "Authored continuous route, not a source-transcribed river"
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "brook",
+            "nodes": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+      },
+      "current_input_sha256": "1a2c8fe90e599a4b95c6a890cc902790101775cab9442d28918e0bc1e9c836dd",
+      "additional_input_change": "Default scene id/title now match exact reviewed55 source; cells, features and shoreline retain the54 layout."
+    },
+    {
+      "example": "examples/mixed_junctions",
+      "original_input_sha256": "79cc6cb9eb8c6ca4b62dfa6340e2ac6776fe8fb65e63c7abbfd22ed9926f02a4",
+      "previous_river_digitization": {
+        "paths": [
+          {
+            "path_id": "authored_brook",
+            "route_id": "brook",
+            "fractional_grid_nodes": [
+              [
+                3.3,
+                -0.25
+              ],
+              [
+                3.2,
+                0.6
+              ],
+              [
+                3.45,
+                1.3
+              ],
+              [
+                3.85,
+                2.2
+              ],
+              [
+                3.5,
+                3.1
+              ],
+              [
+                3.7,
+                4.1
+              ],
+              [
+                3.9,
+                4.7
+              ],
+              [
+                3.82,
+                5.35
+              ],
+              [
+                3.95,
+                5.83
+              ]
+            ]
+          }
+        ],
+        "occlusions": [],
+        "provenance": "Authored continuous route, not a source-transcribed river"
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "brook",
+            "nodes": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+      },
+      "current_input_sha256": "ee734b588bc50044b167d175981030ede57dda741cf964171125b3e3535e62a9"
+    },
+    {
+      "example": "examples/scarlet_pepper_valley",
+      "original_input_sha256": "8bb8c33ffbf17395549de8c72098ef686d196f447b7371b8e0b60765534b2b49",
+      "previous_river_digitization": {
+        "paths": [
+          {
+            "path_id": "authored_brook",
+            "route_id": "brook",
+            "fractional_grid_nodes": [
+              [
+                3.3,
+                -0.25
+              ],
+              [
+                3.2,
+                0.6
+              ],
+              [
+                3.45,
+                1.3
+              ],
+              [
+                3.85,
+                2.2
+              ],
+              [
+                3.5,
+                3.1
+              ],
+              [
+                3.7,
+                4.1
+              ],
+              [
+                3.9,
+                4.7
+              ],
+              [
+                3.82,
+                5.35
+              ],
+              [
+                3.95,
+                5.83
+              ]
+            ]
+          }
+        ],
+        "occlusions": [],
+        "provenance": "Authored continuous route, not a source-transcribed river"
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "brook",
+            "nodes": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+      },
+      "current_input_sha256": "524d35264e75cc389b5cbf3d7e20d6822dd9011fd1d73803bbed8d4d6f756b70"
+    },
+    {
+      "example": "examples/wildlife_water_test",
+      "original_input_sha256": "79cc6cb9eb8c6ca4b62dfa6340e2ac6776fe8fb65e63c7abbfd22ed9926f02a4",
+      "previous_river_digitization": {
+        "paths": [
+          {
+            "path_id": "authored_brook",
+            "route_id": "brook",
+            "fractional_grid_nodes": [
+              [
+                3.3,
+                -0.25
+              ],
+              [
+                3.2,
+                0.6
+              ],
+              [
+                3.45,
+                1.3
+              ],
+              [
+                3.85,
+                2.2
+              ],
+              [
+                3.5,
+                3.1
+              ],
+              [
+                3.7,
+                4.1
+              ],
+              [
+                3.9,
+                4.7
+              ],
+              [
+                3.82,
+                5.35
+              ],
+              [
+                3.95,
+                5.83
+              ]
+            ]
+          }
+        ],
+        "occlusions": [],
+        "provenance": "Authored continuous route, not a source-transcribed river"
+      },
+      "replacement": {
+        "version": 1,
+        "coordinate_order": "integer grid corners [x,y]",
+        "mode": "shared_edges",
+        "routes": [
+          {
+            "id": "brook",
+            "nodes": [
+              [
+                4,
+                0
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ],
+              [
+                4,
+                5
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            "coast_outlet": true
+          }
+        ],
+        "provenance": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+      },
+      "current_input_sha256": "ee734b588bc50044b167d175981030ede57dda741cf964171125b3e3535e62a9"
+    }
+  ],
+  "unhandled_authored_interior_routes": 0,
+  "observed_files_unchanged": 27
+}

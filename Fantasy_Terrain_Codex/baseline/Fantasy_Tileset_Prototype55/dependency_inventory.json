@@ -1,0 +1,1114 @@
+{
+  "baseline": 55,
+  "staging_status": "Frozen55 runtime; staged all25 runtime checks passed. Portable ZIP extraction is checked by the delivery report.",
+  "canonical_asset_count": 130,
+  "asset_counts_by_directory": {
+    "botanicals": 6,
+    "cold": 6,
+    "fantasy": 9,
+    "jungle": 5,
+    "materials": 6,
+    "minerals": 11,
+    "pepper": 3,
+    "pine": 9,
+    "relief": 16,
+    "resources": 10,
+    "sprites": 8,
+    "vineyard": 7,
+    "wildlife": 34
+  },
+  "assets": [
+    {
+      "file": "assets/botanicals/cocoon_trees.png",
+      "width": 112,
+      "height": 59,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "bb08c641bb4bbbefd2a2b4071ab4b89587d26f571920d113e159d2712395f3ce"
+    },
+    {
+      "file": "assets/botanicals/giant_pod_fruit.png",
+      "width": 112,
+      "height": 76,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "bb0576d0cdbeec5dd31781e4c70faf3421900bf923d03648984b70ccc3feffc2"
+    },
+    {
+      "file": "assets/botanicals/honey_reeds.png",
+      "width": 112,
+      "height": 80,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "5f0d3ec937198ebda9dbbf566596d55eec4573db2b583d7dc920a2dda4cebded"
+    },
+    {
+      "file": "assets/botanicals/indigo_flowers_0.png",
+      "width": 112,
+      "height": 64,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "064ff312206f8d010e07d918c1fb0b82935a9b6f2d2aab8f9ab64d0aa1a8d6d3"
+    },
+    {
+      "file": "assets/botanicals/indigo_flowers_1.png",
+      "width": 112,
+      "height": 65,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "4dd421e029fb03070f14935afb943c1c605c6e0d6e6521a4e5330792ec26c572"
+    },
+    {
+      "file": "assets/botanicals/resin_trees.png",
+      "width": 112,
+      "height": 77,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "145b8c16b18339f8a845f6ee20c2a1a0288063932f3e4ccd4e4e598f68c9bf6c"
+    },
+    {
+      "file": "assets/cold/frost_heath.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "f191924f87215f26f52718316e14475251c1872985750da482100de434ea5fc1"
+    },
+    {
+      "file": "assets/cold/ice_edge_0.png",
+      "width": 48,
+      "height": 39,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "25a4d2d81e77ebe75654e5899b968f91ec4ba62b7e73e73098e12a7a6b559588"
+    },
+    {
+      "file": "assets/cold/ice_edge_1.png",
+      "width": 48,
+      "height": 40,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "d5c50147f11c3961a292a2c62dbaaf36420f5823523bbd1a8fe59fb687446960"
+    },
+    {
+      "file": "assets/cold/ice_edge_2.png",
+      "width": 48,
+      "height": 40,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "7edbf5eba844c820c40ad8e2fc87529a4f214a153f245c0f14e4a45d97549f9f"
+    },
+    {
+      "file": "assets/cold/pack_ice.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "13bee6e394ed8d0751e103157424888286807298e6e846dd5e074d185a6e3387"
+    },
+    {
+      "file": "assets/cold/snowfields.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "70177154d0b961475d74f81b1a3953385162be026b9d4fa81493ed19f0cd9bc2"
+    },
+    {
+      "file": "assets/fantasy/crimson_spice_0.png",
+      "width": 108,
+      "height": 93,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "780383bb0d6fc905a1b6a59be7956fc186f292b301894492e3ec4b4a17dca174"
+    },
+    {
+      "file": "assets/fantasy/crimson_spice_1.png",
+      "width": 110,
+      "height": 75,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "908f035aa104a5831a844e343a9f39f613d45ef7ca17606da1a9af017135068f"
+    },
+    {
+      "file": "assets/fantasy/crimson_spice_tile_0.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b959993a501117a67e9e82e6802650c4c55c41e269f98efd918409cdb41d1f72"
+    },
+    {
+      "file": "assets/fantasy/crimson_spice_tile_1.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b6592a29ec3ee203fbacedf0195d4051a785b450d83ee96de8d116cb8990789d"
+    },
+    {
+      "file": "assets/fantasy/stag_shadow_0.png",
+      "width": 48,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "4519ae1216ef92b5fdabbea638c1f8daefc045beec444be82990b84257bd60f6"
+    },
+    {
+      "file": "assets/fantasy/stag_shadow_1.png",
+      "width": 48,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "315a6975d0e0cad3d7ff470f1b90dbbdeb3648953179556d1831ff2e81f943d4"
+    },
+    {
+      "file": "assets/fantasy/white_stag_0.png",
+      "width": 48,
+      "height": 64,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "47c75a152f595bbdf797f162df0b40871f40b90b829f42c269c92cf2708f32b5"
+    },
+    {
+      "file": "assets/fantasy/white_stag_1.png",
+      "width": 48,
+      "height": 58,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "d82f1704cfee5407108c1a8148f62c44035b691299fb7c812e3351063ddc5b11"
+    },
+    {
+      "file": "assets/fantasy/white_stags_tile.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "60383773bdf33b70e4016f13e3f04f42ba9b570e9588eb5e8ed3dd292604c2e0"
+    },
+    {
+      "file": "assets/jungle/jungle_edge_0.png",
+      "width": 31,
+      "height": 36,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "66a660fb8fccc6dc289e0b9354c814baf1c5b8306726b9aa92d761d308cca53b"
+    },
+    {
+      "file": "assets/jungle/jungle_edge_1.png",
+      "width": 35,
+      "height": 33,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "bf366628b661886961a954a9ec21df641d8bc4bf839333497df1230b8f06e28d"
+    },
+    {
+      "file": "assets/jungle/jungle_edge_2.png",
+      "width": 37,
+      "height": 26,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "e2220b2989cfced86e75cb5e0e9cb3ceec8ac9f74e08ee2a43fd230c1ab0e380"
+    },
+    {
+      "file": "assets/jungle/jungle_edge_3.png",
+      "width": 33,
+      "height": 35,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "67c3745eb3e82f5848443e6ed0481ca6b2b3c02386c137ec6d09a72f13c567a2"
+    },
+    {
+      "file": "assets/jungle/jungle_interior.png",
+      "width": 1254,
+      "height": 1254,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "4ca0445450f5383d6fff8495fde60ac110ef850555606abab0e39e08b9f76cbc"
+    },
+    {
+      "file": "assets/materials/deep_water.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "573c678c80b2fa77bbfec30e89a644c107cdeafb577743a9b5b9cddcc92bc25b"
+    },
+    {
+      "file": "assets/materials/forest_floor.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "f384439f6408366223324b608e4fc7224c8aace2da4a61c32ed285bf540233a8"
+    },
+    {
+      "file": "assets/materials/meadow.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "68d4f3ac3f70c939050f198a66a03febbfaa0f8043858d60650d671016271aab"
+    },
+    {
+      "file": "assets/materials/shallow_water.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "1d2f593e745eb775c1a5be037df36c20c9e894f0326fcd20d3fd133264fc5f9c"
+    },
+    {
+      "file": "assets/materials/shore.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "84498d79ca3ce738096eb00d29e3e07b48e4751abc4c6c4848d8c25647797f92"
+    },
+    {
+      "file": "assets/materials/woodland.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "c4a9b054534a0e092b74bc55b34719b23ede8c90aa789fa5937f06b9b429aa21"
+    },
+    {
+      "file": "assets/minerals/black_ichor.png",
+      "width": 112,
+      "height": 56,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "f801dd4afbae6b4d27f32801996802646f21c6896aae184e967f1c83d0b9e7b2"
+    },
+    {
+      "file": "assets/minerals/copper.png",
+      "width": 112,
+      "height": 69,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "41e0fbf2ad7a22a9110cf9675c8797dba779b79836cd9ad5b76c223d54de3041"
+    },
+    {
+      "file": "assets/minerals/emberstone.png",
+      "width": 112,
+      "height": 69,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "e9ba9aa4116c680a185766cace894777c7bd185144baed844119e06e86b6a867"
+    },
+    {
+      "file": "assets/minerals/gems.png",
+      "width": 112,
+      "height": 76,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "1a73f1d84bdc560c16cde7a92be32325d63bc3d1d756717eb2d4f5dc42982ae7"
+    },
+    {
+      "file": "assets/minerals/gold.png",
+      "width": 112,
+      "height": 76,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "366aceb17242a3b3e11182f337800ad3aa1cb9a474de19726ac56b3d2a0946bd"
+    },
+    {
+      "file": "assets/minerals/iron.png",
+      "width": 112,
+      "height": 70,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "a2b23906b790e3cc3e031a725377a51541cf692a10a8e4686d58c4abfd224897"
+    },
+    {
+      "file": "assets/minerals/marble.png",
+      "width": 112,
+      "height": 67,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "a2df1b1e39c8ba90a860f36f5ead7289f82ae0a2b1844c6bbe9f4730e13140e4"
+    },
+    {
+      "file": "assets/minerals/mithril.png",
+      "width": 112,
+      "height": 80,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "8975343edbcfd241b6094735802862c3c9e0a2df0b527bafabd7d8475bc3c891"
+    },
+    {
+      "file": "assets/minerals/silver.png",
+      "width": 112,
+      "height": 77,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "43f476ce49f6bcd4f7b8aa1201517357322aad41d12fb562fa5ed1a5652b123c"
+    },
+    {
+      "file": "assets/minerals/stone.png",
+      "width": 112,
+      "height": 64,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b2951789e03e0d5007aa7a0a1a33d38ef2fbcbb3d50ffdf488a431b061cbacef"
+    },
+    {
+      "file": "assets/minerals/voidstone.png",
+      "width": 112,
+      "height": 84,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "7ad8046c0f03c173aae03ce4962074e838abe7edcaaa1eb82edbbc63e83b95d8"
+    },
+    {
+      "file": "assets/pepper/scarlet_pepper_0.png",
+      "width": 70,
+      "height": 45,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "0144f7ac1d4fca41d63dac3b833b88f4a1b988a4be6cfaed0b1eb90bce2cb00c"
+    },
+    {
+      "file": "assets/pepper/scarlet_pepper_1.png",
+      "width": 70,
+      "height": 40,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "3fd9646e9ad5d9a58b9081d4bf9dfb21820aa2db3f6ab6bdcaed3fbf29f3365d"
+    },
+    {
+      "file": "assets/pepper/scarlet_pepper_bushes.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "ae99a5caee8e6f54850e6f80d7b6932b85ddef02810627844c78a512d1bfbeda"
+    },
+    {
+      "file": "assets/pine/pine_interior_512.png",
+      "width": 512,
+      "height": 512,
+      "bits_per_channel": 8,
+      "png_color_type": 2,
+      "sha256": "d80d98e8e7a0735441282a94912259a2ad3d20adf87063f47e291a9510c3eadd"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_0.png",
+      "width": 25,
+      "height": 45,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "1eee56c36d5e545a083bc4e6cf9cdc6e3d3344d8fb29ae15b0c801af7ffbebe5"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_0_source_resolution.png",
+      "width": 117,
+      "height": 215,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "746b8d8a91f1758fd9c81a5d2b62f08bdb6ad2daa25c2c2f11770dc4239b78ce"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_1.png",
+      "width": 20,
+      "height": 31,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "8c30b10fb989ee3c7165a3a4006c8b66b044c9b0674dced20fe00df88dc6196a"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_1_source_resolution.png",
+      "width": 93,
+      "height": 148,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "52492c4526737617500e00b748e83fc5874275c8f0339fff03934ed3b180c948"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_2.png",
+      "width": 16,
+      "height": 27,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "e478b6ac7b4f3883b2b8c2b0cf47592356d6fba6935433d71bd4d792fd4e4472"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_2_source_resolution.png",
+      "width": 75,
+      "height": 130,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "43950f1547b21750b72d92670b48e486ecef500ab759c0ce0218b4becdc7805c"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_3.png",
+      "width": 16,
+      "height": 28,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "055cc5b1195001875b48962fed8e4a2da0ca14f061539dabecb88e96934b603a"
+    },
+    {
+      "file": "assets/pine/sprites/pine_edge_3_source_resolution.png",
+      "width": 77,
+      "height": 136,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "3c526b988d5c82df06cc8ca54faa28076e0331a65fc9837410ad3de502f5f1c4"
+    },
+    {
+      "file": "assets/relief/hill_rock_0.png",
+      "width": 112,
+      "height": 47,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "f4e249c3b14697e01b6e911640d06ff18bf490a8c529aaa8032f856004ca2278"
+    },
+    {
+      "file": "assets/relief/hill_rock_1.png",
+      "width": 116,
+      "height": 50,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "6e08a741be8eab6ea6253432bad008b02bd35cb325e001862e36e489ea515a1f"
+    },
+    {
+      "file": "assets/relief/mountain_rock_0.png",
+      "width": 124,
+      "height": 88,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "e8c690d88c7c4bddd12202ff220e731269d241fdb16e723f607a1423c63bcf07"
+    },
+    {
+      "file": "assets/relief/mountain_rock_1.png",
+      "width": 124,
+      "height": 89,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "40262b687634f0b425a855fd49771ef15795d0e4739bfd061bd27aa4ce3b1883"
+    },
+    {
+      "file": "assets/relief/sand/hill_rock_0.png",
+      "width": 112,
+      "height": 47,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "145daadb7e7cbed3fe491206ff137561e7b24b5139632c893b939043db0e4bbd"
+    },
+    {
+      "file": "assets/relief/sand/hill_rock_1.png",
+      "width": 116,
+      "height": 50,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "d0c7ab2ac46f0bb3e8196e89bea5a9bfb0ad7acef932fcf895f8f1de88c620f1"
+    },
+    {
+      "file": "assets/relief/sand/mountain_rock_0.png",
+      "width": 124,
+      "height": 88,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "27b83218bb478cd82b928e9265f0fbe2a4bdc63b85e5910928d536c6a4e68be8"
+    },
+    {
+      "file": "assets/relief/sand/mountain_rock_1.png",
+      "width": 124,
+      "height": 89,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "04a6c51e7a2f135240afd44cb2a33b5ab6b39cfb0fef43a907e35c4d946b876b"
+    },
+    {
+      "file": "assets/relief/snow/hill_rock_0.png",
+      "width": 112,
+      "height": 47,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "76ee9fe1d944c5802039e307dc689fbaa78e3d5de9c784fecc89485d65f27230"
+    },
+    {
+      "file": "assets/relief/snow/hill_rock_1.png",
+      "width": 116,
+      "height": 50,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "14fe6c81606b24a113ba0860ccc014ba5607496ecb4fb630d4540fcf822b0159"
+    },
+    {
+      "file": "assets/relief/snow/mountain_rock_0.png",
+      "width": 124,
+      "height": 88,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "0e90db79f211932c408d2a0c5449aebc904bc425181da3ba011bda4f9ea17bb9"
+    },
+    {
+      "file": "assets/relief/snow/mountain_rock_1.png",
+      "width": 124,
+      "height": 89,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "8d02a72f020392c99a41c8ab37ea5f410def7f45d3add80e87595ce1bd7e37fb"
+    },
+    {
+      "file": "assets/relief/tundra/hill_rock_0.png",
+      "width": 112,
+      "height": 47,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "724cbc964f14f2f5f02af802973fa532e5d6ae0bdec2808db86a3d54d88923e9"
+    },
+    {
+      "file": "assets/relief/tundra/hill_rock_1.png",
+      "width": 116,
+      "height": 50,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "d4c850f833fb40415a0608e3aa41075992672f2d3dd9788b70089229a994bb68"
+    },
+    {
+      "file": "assets/relief/tundra/mountain_rock_0.png",
+      "width": 124,
+      "height": 88,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "2e8d378f62aef9be9f0e86fdc04c8b990a1b0091ee07556655e7d2f8129b30d7"
+    },
+    {
+      "file": "assets/relief/tundra/mountain_rock_1.png",
+      "width": 124,
+      "height": 89,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "cbb468e31ca5d83a6b4048709ef9f9b2ab0428e6103e33108c50e89e41855c67"
+    },
+    {
+      "file": "assets/resources/deer_herd.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "ba8e4d2c4893e11240788268faaf8e4539a8f44b141ff2a35e37d011ac99251f"
+    },
+    {
+      "file": "assets/resources/fish_body_0.png",
+      "width": 25,
+      "height": 10,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "8c8fe5187739c95b1c54207d0dfad479256ecc83f6702daf6106259c07a0329f"
+    },
+    {
+      "file": "assets/resources/fish_body_1.png",
+      "width": 25,
+      "height": 12,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "042cf5d1ac4abc7587969199ca58d91c1725aaf93e9e8ecf04962bf8497a50c8"
+    },
+    {
+      "file": "assets/resources/fish_body_2.png",
+      "width": 24,
+      "height": 10,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "ea261a4b2a490798373b4169776a7f19a45a950af0e5b7181f44d2872491ca32"
+    },
+    {
+      "file": "assets/resources/fish_body_3.png",
+      "width": 25,
+      "height": 12,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "3eae4cc8c756e1cc3413912f1a1c9e2e5bf32a81ed22e7f2f2754cff3f002996"
+    },
+    {
+      "file": "assets/resources/fish_body_4.png",
+      "width": 25,
+      "height": 9,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "3b2798953661abb7a1b033544409438e664e1a85aa0608328f301c40a3d31dcf"
+    },
+    {
+      "file": "assets/resources/fish_school.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "901f250cdbac59274375a10f07d5a22acd7d52dde212e217612e5130a6c476c5"
+    },
+    {
+      "file": "assets/resources/fur_habitat.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "5e342d84a8315907f14940a38d822d98521820a72ea4cd423dcd9d2d72bb3738"
+    },
+    {
+      "file": "assets/resources/rice_paddy.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "e6403ab8692f776d918ec62010774c23cf83455484e88ad727e8b67eead5d311"
+    },
+    {
+      "file": "assets/resources/wheat_field.png",
+      "width": 128,
+      "height": 128,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "f77c7fe9ab9d9d6469881b25d53b0902c55a80a67abf041a694023caa8390185"
+    },
+    {
+      "file": "assets/sprites/broadleaf_edge_0.png",
+      "width": 30,
+      "height": 30,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "4053b65346e425d0fd8b612a7b4c966e3aa21da00f52e60ba0d1640753b7bf3a"
+    },
+    {
+      "file": "assets/sprites/broadleaf_edge_1.png",
+      "width": 30,
+      "height": 34,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b489ee11b16b4f17cfaef2adda0e16fa2c2fad885c3737f2305616cbfd7581e8"
+    },
+    {
+      "file": "assets/sprites/broadleaf_edge_2.png",
+      "width": 30,
+      "height": 29,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "f0b72cc3f8e6f563f2a8aca0455b5984b4a457158621c19c244846f3b48cca39"
+    },
+    {
+      "file": "assets/sprites/broadleaf_edge_3.png",
+      "width": 30,
+      "height": 33,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "ed7d1c929f1bdaeee56140945b5e9dd55212b2d696373352bd6b3fd59c84c3e8"
+    },
+    {
+      "file": "assets/sprites/city_compact.png",
+      "width": 112,
+      "height": 74,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "75ed15df3be056eec7f5adce7dd5b1fa0f971a8063e3280ce58512773588b158"
+    },
+    {
+      "file": "assets/sprites/corn_field.png",
+      "width": 112,
+      "height": 76,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "c953cc42c1566db6cc715618787e1f700f9e9530332f8f5ccf05fb62e555cb5f"
+    },
+    {
+      "file": "assets/sprites/cottage_plot.png",
+      "width": 110,
+      "height": 82,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "dc17a5b1d68670b1586cf12694020a0dfcc4ea03afbbb54f692095c936c69f13"
+    },
+    {
+      "file": "assets/sprites/mine_site.png",
+      "width": 112,
+      "height": 77,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "45a0395dae3f87d5b74b764dd0bfb2151140176c027d50d345e06accdfba4882"
+    },
+    {
+      "file": "assets/vineyard/grapes_plot_0.png",
+      "width": 112,
+      "height": 97,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "45d44a1a5e8aa67af025570bb9e8c183fd9d207530aa0c74c79b315b2fcb1ed8"
+    },
+    {
+      "file": "assets/vineyard/grapes_plot_1.png",
+      "width": 112,
+      "height": 97,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "6abac3d0b3f451e0c27ccd5d303795f0cf0435b783e8368e3a23eec468728042"
+    },
+    {
+      "file": "assets/vineyard/rows/vine_row_0_aligned_native.png",
+      "width": 88,
+      "height": 31,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "506add0b63d3b154ba4d71796ead56b27a120a9a1f26dcdfbeed8984f7cf97e6"
+    },
+    {
+      "file": "assets/vineyard/rows/vine_row_1_aligned_native.png",
+      "width": 99,
+      "height": 28,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "041cd62e05922715e159f841e855ab6615e91c74e8313125c7bba4a1b68c95cb"
+    },
+    {
+      "file": "assets/vineyard/rows/vine_row_2_aligned_native.png",
+      "width": 97,
+      "height": 31,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "14fdf273181e6e5ef1fc0c4264e31b747385b9ebf9b7b64f8db2dfcbe6254ba4"
+    },
+    {
+      "file": "assets/vineyard/vineyard_press_0.png",
+      "width": 44,
+      "height": 39,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "fd642fb0f680774af88eafae65c40f799d4a28e8a3d7ca4d460927b084e163f1"
+    },
+    {
+      "file": "assets/vineyard/vineyard_press_1.png",
+      "width": 44,
+      "height": 41,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "7c4cd2fdb0e993efe1d16caf025fa387912fcfe0ac0dd92e178787ac664cd3eb"
+    },
+    {
+      "file": "assets/wildlife/aurochs_0.png",
+      "width": 56,
+      "height": 42,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "882e97236b55c07c6deb3015a40e4fdd1aa13dd96079cf40ab7b42f639481a7a"
+    },
+    {
+      "file": "assets/wildlife/aurochs_0_shadow.png",
+      "width": 56,
+      "height": 8,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "5702cf49d466be8296f85e3f6d4914b1f55340d98f063707e937583cda35db18"
+    },
+    {
+      "file": "assets/wildlife/aurochs_1.png",
+      "width": 56,
+      "height": 35,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "cc95230098bb1a3633ed1c2f38c6fdbc621160dd7e7c632ffdcba0cd8407ae3e"
+    },
+    {
+      "file": "assets/wildlife/aurochs_1_shadow.png",
+      "width": 56,
+      "height": 8,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "795a272e374c0d91e2b480e7e05bd0101a29cc0a6e48886a090296557b7851d0"
+    },
+    {
+      "file": "assets/wildlife/boar_0.png",
+      "width": 52,
+      "height": 39,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "005d9bba731f5418bb8dbfcf30d981e5ba39860c42198725b25726416d35ae04"
+    },
+    {
+      "file": "assets/wildlife/boar_0_shadow.png",
+      "width": 52,
+      "height": 8,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "7e77476cab31e129708f92d6d37ecd7950e51afcec11749f2cbfdc42e54b67a3"
+    },
+    {
+      "file": "assets/wildlife/boar_1.png",
+      "width": 52,
+      "height": 37,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "6a53eacaddf72b04cb08096375dfa10ef9a10ebe22053627e0c15f54af8e0896"
+    },
+    {
+      "file": "assets/wildlife/boar_1_shadow.png",
+      "width": 52,
+      "height": 8,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "79645bb91c2eb5ffc3449b1f56bb4255843ccba9add759ca294696efcc980185"
+    },
+    {
+      "file": "assets/wildlife/giant_red_crab_0.png",
+      "width": 52,
+      "height": 31,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "52aee8b90654800ae14f3c977793522f8eab8f287a8338458dc886ebbe32e579"
+    },
+    {
+      "file": "assets/wildlife/giant_red_crab_0_shadow.png",
+      "width": 52,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "8a6e0eb146511a01e7fce78944a41bc513abf7de28ab7a3f6ad39be366c3533f"
+    },
+    {
+      "file": "assets/wildlife/giant_red_crab_1.png",
+      "width": 52,
+      "height": 31,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "5736ece50e94da64731c1ed598ca5f2eeb1894a483e61e333ebd70acd60c082b"
+    },
+    {
+      "file": "assets/wildlife/giant_red_crab_1_shadow.png",
+      "width": 52,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "8a6e0eb146511a01e7fce78944a41bc513abf7de28ab7a3f6ad39be366c3533f"
+    },
+    {
+      "file": "assets/wildlife/leviathan.png",
+      "width": 104,
+      "height": 37,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "08f9802a87e813878c9b97f782643be09a77d54627f68cf7a73feb9accc55411"
+    },
+    {
+      "file": "assets/wildlife/leviathan_shadow.png",
+      "width": 104,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "62eda7ef2721231641ebb9c29e1fbf73d5be8cd59c382b46d34e7e37bfb4727b"
+    },
+    {
+      "file": "assets/wildlife/mammoth_adult.png",
+      "width": 84,
+      "height": 58,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b7ba24ad3b2e552e0143d25b24d8658c78950614671186ee74a0f9bd901bdfe3"
+    },
+    {
+      "file": "assets/wildlife/mammoth_adult_shadow.png",
+      "width": 84,
+      "height": 8,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "280bb5f26ec1e6de4b494c9688c84a6bb07178acae86d8513a3542b949418ee4"
+    },
+    {
+      "file": "assets/wildlife/mammoth_young.png",
+      "width": 42,
+      "height": 33,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "40a85059804d4b93cf6483674ec41008283699e64bffc5709b94f39ef4439884"
+    },
+    {
+      "file": "assets/wildlife/mammoth_young_shadow.png",
+      "width": 42,
+      "height": 8,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "f39046a99f324ce39d0a98e78c49da8819cc5822cb755887e59b0de44d3f207d"
+    },
+    {
+      "file": "assets/wildlife/pearl_clam_0.png",
+      "width": 38,
+      "height": 32,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "9024f271e5f8cf9c7e7af11405c2e2a8477f7397435afd96cd655a71e26a0d62"
+    },
+    {
+      "file": "assets/wildlife/pearl_clam_0_shadow.png",
+      "width": 38,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "f700a2b4aa86af56da5f1522240aa58fcd20f01162ad8d1d2345aeb7420a89c5"
+    },
+    {
+      "file": "assets/wildlife/pearl_clam_1.png",
+      "width": 36,
+      "height": 24,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "641698461ccc6dc70724dc9768b2c89b0b5f340de40d5720268e18dce5bd950c"
+    },
+    {
+      "file": "assets/wildlife/pearl_clam_1_shadow.png",
+      "width": 36,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b3937a9c90e4091d8dd6fccc25480eda6688db0f65a304468f0282c13541f80f"
+    },
+    {
+      "file": "assets/wildlife/riding_horse_0.png",
+      "width": 56,
+      "height": 44,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "01e0d003785e3bb7c68afd122dba9c64be80063e652506859469dad87a011668"
+    },
+    {
+      "file": "assets/wildlife/riding_horse_0_shadow.png",
+      "width": 56,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "570b02c8d24dd2ac2ec9f5feb2cf2ec49f05bd689e4d02ce35e356ee1d2df5d4"
+    },
+    {
+      "file": "assets/wildlife/riding_horse_1.png",
+      "width": 56,
+      "height": 42,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "656687d7a53e9b5c3a9a3f72e5d1f9b93b958068b7c42c527a7ca52396861e7f"
+    },
+    {
+      "file": "assets/wildlife/riding_horse_1_shadow.png",
+      "width": 56,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "fe5198ec96dc688328e64f86f5660aeff220fae9e2d3d465c0b378927cd06bdf"
+    },
+    {
+      "file": "assets/wildlife/winter_fox_0.png",
+      "width": 60,
+      "height": 36,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "aa04c5e5f74ff8d547c81876e76e1a5f7170561f6ddc33841b173f8b60a058b5"
+    },
+    {
+      "file": "assets/wildlife/winter_fox_0_shadow.png",
+      "width": 60,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "9c015caafd9537221f26afe42394746a9b4dfbe5bb7aacbcab45f535c3121447"
+    },
+    {
+      "file": "assets/wildlife/winter_fox_1.png",
+      "width": 60,
+      "height": 39,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "0fea130eb28b8cec39e12023572653c128726e201c21690e40b9286ee0a8d5c5"
+    },
+    {
+      "file": "assets/wildlife/winter_fox_1_shadow.png",
+      "width": 60,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b89f7190273274c2cb5ad88c442c0818947b6d9511e9466fb48b7f2d5b45ffb5"
+    },
+    {
+      "file": "assets/wildlife/woolly_sheep_0.png",
+      "width": 52,
+      "height": 45,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "b626fe3ec7778bcd99be3a6dca7fabe535d8eef69b01d0428e5361dfae102494"
+    },
+    {
+      "file": "assets/wildlife/woolly_sheep_0_shadow.png",
+      "width": 52,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "f8942d6f8de8964cbb669d9119c0090371c8d4a52059b62d638dc6470d8ae278"
+    },
+    {
+      "file": "assets/wildlife/woolly_sheep_1.png",
+      "width": 52,
+      "height": 43,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "9b18af087cbff68c82f341257cd9a51cef05aaa29e918378e21c5bfa8fd77632"
+    },
+    {
+      "file": "assets/wildlife/woolly_sheep_1_shadow.png",
+      "width": 52,
+      "height": 6,
+      "bits_per_channel": 8,
+      "png_color_type": 6,
+      "sha256": "cce6d558c8916b6d7464ff763e24aa21dcb88de285033678bd2bbdb93e93043b"
+    }
+  ],
+  "runtime_python": [
+    "numpy",
+    "Pillow>=10.1",
+    "scipy"
+  ],
+  "portable_modules": [
+    "botanical_renderer.py",
+    "build_mixed_junctions.py",
+    "build_pepper_showcase.py",
+    "coast_renderer.py",
+    "cold_renderer.py",
+    "deterministic_hash.py",
+    "fantasy_renderer.py",
+    "ground_field.py",
+    "kit_renderer.py",
+    "mineral_renderer.py",
+    "pepper_renderer.py",
+    "relief_renderer.py",
+    "render_example.py",
+    "render_scene.py",
+    "river_edges.py",
+    "river_renderer.py",
+    "source_occlusions.py",
+    "submerged_resources.py",
+    "vegetation_clearance.py",
+    "verify_scaffold.py",
+    "vineyard_field.py",
+    "vineyard_renderer.py",
+    "wildlife_renderer.py"
+  ],
+  "semantic_layouts": {
+    "authored": 16,
+    "observed": 9,
+    "total": 25,
+    "source_screenshot_files": 0
+  },
+  "external_workspace_dependencies_remaining": [],
+  "screenshot_dependencies": [],
+  "source_regeneration": {
+    "required_for_runtime": false,
+    "scope": "Optional source artwork/export tools; core requires only native runtime PNGs",
+    "new_families": "botanical49 then resin50; wildlife41 then42 then51; cold52; relief33 then53; jungle54"
+  },
+  "object_order_api": "KitScene.object_instances supplies stable named depth order to renderer and Tiled",
+  "water_pass_contract": "Raw aquatic actors excluded from visible objects. Actual43 or painted-waterline51 treatment baked into sample ground",
+  "scope_gaps": [
+    "Partial81-concept coverage",
+    "Source-hidden river spans stay disconnected",
+    "Repeated material structures and geometric coast/biome/ice patterns",
+    "Clam and crab physical water contact partial",
+    "Native Tiled GUI validation not performed"
+  ]
+}

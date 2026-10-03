@@ -1,0 +1,85 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        3,
+        1
+      ],
+      "asset": "city_compact.png",
+      "kind": "city",
+      "label": "town"
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "asset": "corn_field.png",
+      "kind": "resource",
+      "label": "corn"
+    },
+    {
+      "cell": [
+        4,
+        1
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "cottage"
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "asset": "legacy_mine.png",
+      "kind": "improvement",
+      "label": "mine"
+    },
+    {
+      "cell": [
+        2,
+        6
+      ],
+      "asset": "fish_school.png",
+      "kind": "resource",
+      "label": "fish"
+    },
+    {
+      "cell": [
+        1,
+        1
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "legacy deer technical placement"
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "asset": "fur_habitat.png",
+      "kind": "resource",
+      "label": "legacy fur technical placement"
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "asset": "rice_paddy.png",
+      "kind": "resource",
+      "label": "legacy water-dominant rice technical placement"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "asset": "wheat_field.png",
+      "kind": "resource",
+      "label": "legacy wheat technical placement"
+    }
+  ]
+}

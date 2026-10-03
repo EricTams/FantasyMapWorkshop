@@ -1,0 +1,7625 @@
+{
+  "type": "map",
+  "version": "1.10",
+  "tiledversion": "1.11.2",
+  "orientation": "orthogonal",
+  "renderorder": "right-down",
+  "width": 8,
+  "height": 6,
+  "tilewidth": 128,
+  "tileheight": 128,
+  "infinite": false,
+  "nextlayerid": 12,
+  "nextobjectid": 178,
+  "tilesets": [
+    {
+      "firstgid": 1,
+      "source": "semantics.tsx"
+    },
+    {
+      "firstgid": 14,
+      "source": "objects.tsx"
+    }
+  ],
+  "properties": [
+    {
+      "name": "renderer",
+      "type": "string",
+      "value": "../../../render_example.py + kit_renderer.py + coast_renderer.py"
+    },
+    {
+      "name": "art_baseline",
+      "type": "string",
+      "value": "Prototype55: authored shared-edge rivers, cold terrain, independent pack ice, botanical resources, riding horses and painted waterline wildlife and real-jungle vegetation"
+    },
+    {
+      "name": "ground_is_sample_specific",
+      "type": "bool",
+      "value": true
+    },
+    {
+      "name": "ice_semantics",
+      "type": "string",
+      "value": "Independent ice_cells overlay; underlying terrain remains water (material code 2)"
+    },
+    {
+      "name": "semantic_axes",
+      "type": "string",
+      "value": "terrain,forest,relief,resource,improvement,ice,river_edges"
+    },
+    {
+      "name": "river_semantics",
+      "type": "string",
+      "value": "Layer 11 contains authored shared edges only; layer 6 retains source traces or explicit authored route centerlines. River paint is baked in layer 1."
+    },
+    {
+      "name": "layout",
+      "type": "file",
+      "value": "../scene.json"
+    },
+    {
+      "name": "river_edge_records",
+      "type": "file",
+      "value": "river_edges.json"
+    }
+  ],
+  "layers": [
+    {
+      "id": 1,
+      "name": "Rendered ground, vegetation interior, river, vineyard and water-resource passes (sample-specific)",
+      "type": "imagelayer",
+      "image": "ground_and_forest_interior.png",
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true
+    },
+    {
+      "id": 2,
+      "name": "Depth-sorted vegetation, ice edges, actors and sites",
+      "type": "objectgroup",
+      "draworder": "index",
+      "objects": [
+        {
+          "id": 1,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 362,
+          "y": 0,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 22.07
+            }
+          ]
+        },
+        {
+          "id": 2,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 257,
+          "y": 7,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 29.72
+            }
+          ]
+        },
+        {
+          "id": 3,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 297,
+          "y": 16,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 44.68
+            }
+          ]
+        },
+        {
+          "id": 4,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 358,
+          "y": 22,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 52.46
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 247,
+          "y": 54,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 76.61
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 354,
+          "y": 63,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 94.26
+            }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 286,
+          "y": 74,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 96.73
+            }
+          ]
+        },
+        {
+          "id": 8,
+          "name": "mountain_rock_0",
+          "gid": 17,
+          "x": 5,
+          "y": 25,
+          "width": 124,
+          "height": 88,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 98.56
+            }
+          ]
+        },
+        {
+          "id": 9,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 317,
+          "y": 77,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 105.29
+            }
+          ]
+        },
+        {
+          "id": 10,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 250,
+          "y": 97,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 119.23
+            }
+          ]
+        },
+        {
+          "id": 11,
+          "name": "broadleaf_edge_1",
+          "gid": 18,
+          "x": 126,
+          "y": 102,
+          "width": 28,
+          "height": 31,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 131.03
+            }
+          ]
+        },
+        {
+          "id": 12,
+          "name": "broadleaf_edge_3",
+          "gid": 19,
+          "x": 232,
+          "y": 105,
+          "width": 28,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 132.96
+            }
+          ]
+        },
+        {
+          "id": 13,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 348,
+          "y": 108,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 136.07
+            }
+          ]
+        },
+        {
+          "id": 14,
+          "name": "broadleaf_edge_2",
+          "gid": 20,
+          "x": 207,
+          "y": 115,
+          "width": 28,
+          "height": 27,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 139.58
+            }
+          ]
+        },
+        {
+          "id": 15,
+          "name": "broadleaf_edge_0",
+          "gid": 21,
+          "x": 151,
+          "y": 114,
+          "width": 28,
+          "height": 28,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 139.81
+            }
+          ]
+        },
+        {
+          "id": 16,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 522,
+          "y": 112,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 141.47
+            }
+          ]
+        },
+        {
+          "id": 17,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 570,
+          "y": 112,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 141.84
+            }
+          ]
+        },
+        {
+          "id": 18,
+          "name": "broadleaf_edge_2",
+          "gid": 20,
+          "x": 183,
+          "y": 118,
+          "width": 28,
+          "height": 27,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 142.42
+            }
+          ]
+        },
+        {
+          "id": 19,
+          "name": "broadleaf_edge_2",
+          "gid": 20,
+          "x": 120,
+          "y": 131,
+          "width": 28,
+          "height": 27,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 155.8
+            }
+          ]
+        },
+        {
+          "id": 20,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 604,
+          "y": 136,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 163.79
+            }
+          ]
+        },
+        {
+          "id": 21,
+          "name": "broadleaf_edge_1",
+          "gid": 18,
+          "x": 135,
+          "y": 140,
+          "width": 28,
+          "height": 31,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 169.26
+            }
+          ]
+        },
+        {
+          "id": 22,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 357,
+          "y": 147,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 175.35
+            }
+          ]
+        },
+        {
+          "id": 23,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 522,
+          "y": 147,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 177.5
+            }
+          ]
+        },
+        {
+          "id": 24,
+          "name": "broadleaf_edge_1",
+          "gid": 18,
+          "x": 118,
+          "y": 151,
+          "width": 28,
+          "height": 31,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 179.28
+            }
+          ]
+        },
+        {
+          "id": 25,
+          "name": "broadleaf_edge_3",
+          "gid": 19,
+          "x": 128,
+          "y": 171,
+          "width": 28,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 198.76
+            }
+          ]
+        },
+        {
+          "id": 26,
+          "name": "winter_fox_0_shadow",
+          "gid": 23,
+          "x": 15,
+          "y": 201,
+          "width": 60,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 204.70000000000002
+            }
+          ]
+        },
+        {
+          "id": 27,
+          "name": "winter_fox_0",
+          "gid": 24,
+          "x": 15,
+          "y": 170,
+          "width": 60,
+          "height": 36,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 204.8
+            }
+          ]
+        },
+        {
+          "id": 28,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 514,
+          "y": 189,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 211.1
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 597,
+          "y": 183,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 211.19
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 354,
+          "y": 186,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 214.17
+            }
+          ]
+        },
+        {
+          "id": 31,
+          "name": "broadleaf_edge_2",
+          "gid": 20,
+          "x": 126,
+          "y": 200,
+          "width": 28,
+          "height": 27,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 224.2
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "name": "winter_fox_1_shadow",
+          "gid": 25,
+          "x": 58,
+          "y": 233,
+          "width": 60,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 236.70000000000002
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "name": "winter_fox_1",
+          "gid": 26,
+          "x": 58,
+          "y": 199,
+          "width": 60,
+          "height": 39,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 236.8
+            }
+          ]
+        },
+        {
+          "id": 34,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 595,
+          "y": 217,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 246.53
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "name": "broadleaf_edge_3",
+          "gid": 19,
+          "x": 119,
+          "y": 220,
+          "width": 28,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 247.56
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 513,
+          "y": 230,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 257.86
+            }
+          ]
+        },
+        {
+          "id": 37,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 356,
+          "y": 231,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 260.58
+            }
+          ]
+        },
+        {
+          "id": 38,
+          "name": "broadleaf_edge_2",
+          "gid": 20,
+          "x": 130,
+          "y": 239,
+          "width": 28,
+          "height": 27,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 263.42
+            }
+          ]
+        },
+        {
+          "id": 39,
+          "name": "broadleaf_edge_0",
+          "gid": 21,
+          "x": 127,
+          "y": 254,
+          "width": 28,
+          "height": 28,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 279.68
+            }
+          ]
+        },
+        {
+          "id": 40,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 608,
+          "y": 253,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 281.31
+            }
+          ]
+        },
+        {
+          "id": 41,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 499,
+          "y": 254,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 283.79
+            }
+          ]
+        },
+        {
+          "id": 42,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 279,
+          "y": 260,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 287.87
+            }
+          ]
+        },
+        {
+          "id": 43,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 348,
+          "y": 266,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 295.91
+            }
+          ]
+        },
+        {
+          "id": 44,
+          "name": "broadleaf_edge_0",
+          "gid": 21,
+          "x": 124,
+          "y": 278,
+          "width": 28,
+          "height": 28,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 304.11
+            }
+          ]
+        },
+        {
+          "id": 45,
+          "name": "broadleaf_edge_1",
+          "gid": 18,
+          "x": 150,
+          "y": 276,
+          "width": 28,
+          "height": 31,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 305.08
+            }
+          ]
+        },
+        {
+          "id": 46,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 318,
+          "y": 277,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 305.39
+            }
+          ]
+        },
+        {
+          "id": 47,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 513,
+          "y": 286,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 308.62
+            }
+          ]
+        },
+        {
+          "id": 48,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 244,
+          "y": 284,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 313.48
+            }
+          ]
+        },
+        {
+          "id": 49,
+          "name": "scarlet_pepper_0",
+          "gid": 27,
+          "x": 262,
+          "y": 280,
+          "width": 70,
+          "height": 45,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 322.56
+            }
+          ]
+        },
+        {
+          "id": 50,
+          "name": "fish_school",
+          "gid": 28,
+          "x": 768,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 323.0
+            }
+          ]
+        },
+        {
+          "id": 51,
+          "name": "jungle_edge_3",
+          "gid": 22,
+          "x": 351,
+          "y": 300,
+          "width": 30,
+          "height": 32,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 330.29
+            }
+          ]
+        },
+        {
+          "id": 52,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 585,
+          "y": 300,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 330.75
+            }
+          ]
+        },
+        {
+          "id": 53,
+          "name": "broadleaf_edge_0",
+          "gid": 21,
+          "x": 194,
+          "y": 307,
+          "width": 28,
+          "height": 28,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 332.92
+            }
+          ]
+        },
+        {
+          "id": 54,
+          "name": "jungle_edge_1",
+          "gid": 15,
+          "x": 507,
+          "y": 310,
+          "width": 32,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 338.24
+            }
+          ]
+        },
+        {
+          "id": 55,
+          "name": "stag_shadow_1",
+          "gid": 29,
+          "x": 139,
+          "y": 336,
+          "width": 48,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 339.09999999999997
+            }
+          ]
+        },
+        {
+          "id": 56,
+          "name": "white_stag_1",
+          "gid": 30,
+          "x": 139,
+          "y": 283,
+          "width": 48,
+          "height": 58,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 339.2
+            }
+          ]
+        },
+        {
+          "id": 57,
+          "name": "broadleaf_edge_3",
+          "gid": 19,
+          "x": 239,
+          "y": 312,
+          "width": 28,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 339.82
+            }
+          ]
+        },
+        {
+          "id": 58,
+          "name": "broadleaf_edge_3",
+          "gid": 19,
+          "x": 172,
+          "y": 329,
+          "width": 28,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 356.91
+            }
+          ]
+        },
+        {
+          "id": 59,
+          "name": "broadleaf_edge_0",
+          "gid": 21,
+          "x": 125,
+          "y": 333,
+          "width": 28,
+          "height": 28,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 359.07
+            }
+          ]
+        },
+        {
+          "id": 60,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 593,
+          "y": 337,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 359.24
+            }
+          ]
+        },
+        {
+          "id": 61,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 250,
+          "y": 332,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 363.14
+            }
+          ]
+        },
+        {
+          "id": 62,
+          "name": "stag_shadow_0",
+          "gid": 31,
+          "x": 200,
+          "y": 361,
+          "width": 48,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 363.41999999999996
+            }
+          ]
+        },
+        {
+          "id": 63,
+          "name": "white_stag_0",
+          "gid": 32,
+          "x": 200,
+          "y": 301,
+          "width": 48,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 363.52
+            }
+          ]
+        },
+        {
+          "id": 64,
+          "name": "scarlet_pepper_1",
+          "gid": 33,
+          "x": 308,
+          "y": 326,
+          "width": 70,
+          "height": 40,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 363.52
+            }
+          ]
+        },
+        {
+          "id": 65,
+          "name": "broadleaf_edge_3",
+          "gid": 19,
+          "x": 240,
+          "y": 345,
+          "width": 28,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 373.22
+            }
+          ]
+        },
+        {
+          "id": 66,
+          "name": "broadleaf_edge_2",
+          "gid": 20,
+          "x": 118,
+          "y": 349,
+          "width": 28,
+          "height": 27,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 373.95
+            }
+          ]
+        },
+        {
+          "id": 67,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 553,
+          "y": 344,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 374.37
+            }
+          ]
+        },
+        {
+          "id": 68,
+          "name": "broadleaf_edge_3",
+          "gid": 19,
+          "x": 156,
+          "y": 346,
+          "width": 28,
+          "height": 30,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 374.4
+            }
+          ]
+        },
+        {
+          "id": 69,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 500,
+          "y": 347,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 377.61
+            }
+          ]
+        },
+        {
+          "id": 70,
+          "name": "broadleaf_edge_1",
+          "gid": 18,
+          "x": 181,
+          "y": 350,
+          "width": 28,
+          "height": 31,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 378.28
+            }
+          ]
+        },
+        {
+          "id": 71,
+          "name": "broadleaf_edge_0",
+          "gid": 21,
+          "x": 132,
+          "y": 353,
+          "width": 28,
+          "height": 28,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 378.93
+            }
+          ]
+        },
+        {
+          "id": 72,
+          "name": "jungle_edge_2",
+          "gid": 14,
+          "x": 308,
+          "y": 357,
+          "width": 34,
+          "height": 24,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 379.44
+            }
+          ]
+        },
+        {
+          "id": 73,
+          "name": "jungle_edge_0",
+          "gid": 16,
+          "x": 358,
+          "y": 350,
+          "width": 29,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 380.44
+            }
+          ]
+        },
+        {
+          "id": 74,
+          "name": "scarlet_pepper_1",
+          "gid": 33,
+          "x": 262,
+          "y": 413,
+          "width": 70,
+          "height": 40,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 450.56
+            }
+          ]
+        },
+        {
+          "id": 75,
+          "name": "boar_0_shadow",
+          "gid": 34,
+          "x": 10,
+          "y": 457,
+          "width": 52,
+          "height": 8,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 460.7
+            }
+          ]
+        },
+        {
+          "id": 76,
+          "name": "woolly_sheep_0_shadow",
+          "gid": 35,
+          "x": 522,
+          "y": 457,
+          "width": 52,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 460.7
+            }
+          ]
+        },
+        {
+          "id": 77,
+          "name": "boar_0",
+          "gid": 36,
+          "x": 10,
+          "y": 423,
+          "width": 52,
+          "height": 39,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 460.8
+            }
+          ]
+        },
+        {
+          "id": 78,
+          "name": "woolly_sheep_0",
+          "gid": 37,
+          "x": 522,
+          "y": 418,
+          "width": 52,
+          "height": 45,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 460.8
+            }
+          ]
+        },
+        {
+          "id": 79,
+          "name": "stag_shadow_0",
+          "gid": 31,
+          "x": 139,
+          "y": 464,
+          "width": 48,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 467.09999999999997
+            }
+          ]
+        },
+        {
+          "id": 80,
+          "name": "white_stag_0",
+          "gid": 32,
+          "x": 139,
+          "y": 405,
+          "width": 48,
+          "height": 64,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 467.2
+            }
+          ]
+        },
+        {
+          "id": 81,
+          "name": "stag_shadow_1",
+          "gid": 29,
+          "x": 200,
+          "y": 489,
+          "width": 48,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 491.41999999999996
+            }
+          ]
+        },
+        {
+          "id": 82,
+          "name": "boar_1_shadow",
+          "gid": 38,
+          "x": 67,
+          "y": 488,
+          "width": 52,
+          "height": 8,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 491.41999999999996
+            }
+          ]
+        },
+        {
+          "id": 83,
+          "name": "woolly_sheep_1_shadow",
+          "gid": 39,
+          "x": 579,
+          "y": 488,
+          "width": 52,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 491.41999999999996
+            }
+          ]
+        },
+        {
+          "id": 84,
+          "name": "white_stag_1",
+          "gid": 30,
+          "x": 200,
+          "y": 435,
+          "width": 48,
+          "height": 58,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 491.52
+            }
+          ]
+        },
+        {
+          "id": 85,
+          "name": "scarlet_pepper_0",
+          "gid": 27,
+          "x": 308,
+          "y": 449,
+          "width": 70,
+          "height": 45,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 491.52
+            }
+          ]
+        },
+        {
+          "id": 86,
+          "name": "boar_1",
+          "gid": 40,
+          "x": 67,
+          "y": 456,
+          "width": 52,
+          "height": 37,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 491.52
+            }
+          ]
+        },
+        {
+          "id": 87,
+          "name": "woolly_sheep_1",
+          "gid": 41,
+          "x": 579,
+          "y": 450,
+          "width": 52,
+          "height": 43,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 491.52
+            }
+          ]
+        },
+        {
+          "id": 88,
+          "name": "scarlet_pepper_1",
+          "gid": 33,
+          "x": 134,
+          "y": 541,
+          "width": 70,
+          "height": 40,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 578.56
+            }
+          ]
+        },
+        {
+          "id": 89,
+          "name": "cottage_plot",
+          "gid": 42,
+          "x": 265,
+          "y": 535,
+          "width": 110,
+          "height": 82,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 579.0
+            }
+          ]
+        },
+        {
+          "id": 90,
+          "name": "aurochs_0_shadow",
+          "gid": 43,
+          "x": 8,
+          "y": 585,
+          "width": 56,
+          "height": 8,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 588.6999999999999
+            }
+          ]
+        },
+        {
+          "id": 91,
+          "name": "aurochs_0",
+          "gid": 44,
+          "x": 8,
+          "y": 548,
+          "width": 56,
+          "height": 42,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 588.8
+            }
+          ]
+        },
+        {
+          "id": 92,
+          "name": "mammoth_adult_shadow",
+          "gid": 45,
+          "x": 390,
+          "y": 587,
+          "width": 84,
+          "height": 8,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 591.26
+            }
+          ]
+        },
+        {
+          "id": 93,
+          "name": "mammoth_adult",
+          "gid": 46,
+          "x": 390,
+          "y": 536,
+          "width": 84,
+          "height": 58,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 591.36
+            }
+          ]
+        },
+        {
+          "id": 94,
+          "name": "aurochs_1_shadow",
+          "gid": 47,
+          "x": 65,
+          "y": 616,
+          "width": 56,
+          "height": 8,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 619.42
+            }
+          ]
+        },
+        {
+          "id": 95,
+          "name": "mammoth_young_shadow",
+          "gid": 48,
+          "x": 460,
+          "y": 616,
+          "width": 42,
+          "height": 8,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 619.42
+            }
+          ]
+        },
+        {
+          "id": 96,
+          "name": "scarlet_pepper_0",
+          "gid": 27,
+          "x": 180,
+          "y": 577,
+          "width": 70,
+          "height": 45,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 619.52
+            }
+          ]
+        },
+        {
+          "id": 97,
+          "name": "aurochs_1",
+          "gid": 49,
+          "x": 65,
+          "y": 586,
+          "width": 56,
+          "height": 35,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 619.52
+            }
+          ]
+        },
+        {
+          "id": 98,
+          "name": "mammoth_young",
+          "gid": 50,
+          "x": 460,
+          "y": 588,
+          "width": 42,
+          "height": 33,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 619.52
+            }
+          ]
+        },
+        {
+          "id": 99,
+          "name": "corn_field",
+          "gid": 51,
+          "x": 264,
+          "y": 666,
+          "width": 112,
+          "height": 76,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 707.0
+            }
+          ]
+        },
+        {
+          "id": 100,
+          "name": "riding_horse_0_shadow",
+          "gid": 52,
+          "x": 136,
+          "y": 713,
+          "width": 56,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 716.6999999999999
+            }
+          ]
+        },
+        {
+          "id": 101,
+          "name": "riding_horse_0",
+          "gid": 53,
+          "x": 136,
+          "y": 675,
+          "width": 56,
+          "height": 44,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 716.8
+            }
+          ]
+        },
+        {
+          "id": 102,
+          "name": "riding_horse_1_shadow",
+          "gid": 54,
+          "x": 193,
+          "y": 744,
+          "width": 56,
+          "height": 6,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 747.42
+            }
+          ]
+        },
+        {
+          "id": 103,
+          "name": "riding_horse_1",
+          "gid": 55,
+          "x": 193,
+          "y": 708,
+          "width": 56,
+          "height": 42,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "depth_y",
+              "type": "float",
+              "value": 747.52
+            }
+          ]
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": true
+    },
+    {
+      "id": 3,
+      "name": "Terrain semantic IDs (edit source JSON to rerender)",
+      "type": "tilelayer",
+      "width": 8,
+      "height": 6,
+      "data": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        2,
+        4,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        2,
+        2,
+        2,
+        3,
+        3,
+        3,
+        3
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 4,
+      "name": "Forest semantic IDs",
+      "type": "tilelayer",
+      "width": 8,
+      "height": 6,
+      "data": [
+        0,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6,
+        10,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        6,
+        10,
+        0,
+        10,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 5,
+      "name": "Logical cell identities",
+      "type": "objectgroup",
+      "draworder": "index",
+      "objects": [
+        {
+          "id": 104,
+          "name": "r0_c0",
+          "x": 0,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "M"
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 105,
+          "name": "r0_c1",
+          "x": 128,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "H"
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 106,
+          "name": "r0_c2",
+          "x": 256,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "J"
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "H"
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 107,
+          "name": "r0_c3",
+          "x": 384,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": 108,
+          "name": "r0_c4",
+          "x": 512,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": 109,
+          "name": "r0_c5",
+          "x": 640,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 110,
+          "name": "r0_c6",
+          "x": 768,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "id": 111,
+          "name": "r0_c7",
+          "x": 896,
+          "y": 0,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": 112,
+          "name": "r1_c0",
+          "x": 0,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 113,
+          "name": "r1_c1",
+          "x": 128,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "D"
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 114,
+          "name": "r1_c2",
+          "x": 256,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "J"
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 115,
+          "name": "r1_c3",
+          "x": 384,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": 116,
+          "name": "r1_c4",
+          "x": 512,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "J"
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": 117,
+          "name": "r1_c5",
+          "x": 640,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 118,
+          "name": "r1_c6",
+          "x": 768,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "id": 119,
+          "name": "r1_c7",
+          "x": 896,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": 120,
+          "name": "r2_c0",
+          "x": 0,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 121,
+          "name": "r2_c1",
+          "x": 128,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "D"
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 122,
+          "name": "r2_c2",
+          "x": 256,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "J"
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 123,
+          "name": "r2_c3",
+          "x": 384,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": 124,
+          "name": "r2_c4",
+          "x": 512,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "J"
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": 125,
+          "name": "r2_c5",
+          "x": 640,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 126,
+          "name": "r2_c6",
+          "x": 768,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "id": 127,
+          "name": "r2_c7",
+          "x": 896,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": 128,
+          "name": "r3_c0",
+          "x": 0,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 129,
+          "name": "r3_c1",
+          "x": 128,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 130,
+          "name": "r3_c2",
+          "x": 256,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 131,
+          "name": "r3_c3",
+          "x": 384,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": 132,
+          "name": "r3_c4",
+          "x": 512,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "plains"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": 133,
+          "name": "r3_c5",
+          "x": 640,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 134,
+          "name": "r3_c6",
+          "x": 768,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "id": 135,
+          "name": "r3_c7",
+          "x": 896,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": 136,
+          "name": "r4_c0",
+          "x": 0,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 137,
+          "name": "r4_c1",
+          "x": 128,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 138,
+          "name": "r4_c2",
+          "x": 256,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 139,
+          "name": "r4_c3",
+          "x": 384,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "plains"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": 140,
+          "name": "r4_c4",
+          "x": 512,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "plains"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": 141,
+          "name": "r4_c5",
+          "x": 640,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 142,
+          "name": "r4_c6",
+          "x": 768,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "id": 143,
+          "name": "r4_c7",
+          "x": 896,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 7
+            }
+          ]
+        },
+        {
+          "id": 144,
+          "name": "r5_c0",
+          "x": 0,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 145,
+          "name": "r5_c1",
+          "x": 128,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 146,
+          "name": "r5_c2",
+          "x": 256,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 147,
+          "name": "r5_c3",
+          "x": 384,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "grass"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": 148,
+          "name": "r5_c4",
+          "x": 512,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": 149,
+          "name": "r5_c5",
+          "x": 640,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 150,
+          "name": "r5_c6",
+          "x": 768,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "id": 151,
+          "name": "r5_c7",
+          "x": 896,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "material_id",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "terrain_kind",
+              "type": "string",
+              "value": "water"
+            },
+            {
+              "name": "forest",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "forest_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "relief_kind",
+              "type": "string",
+              "value": "."
+            },
+            {
+              "name": "ice",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_N",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_E",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_S",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "river_W",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 7
+            }
+          ]
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 6,
+      "name": "River source traces or explicit authored route centerlines (hidden; no inferred links)",
+      "type": "objectgroup",
+      "draworder": "index",
+      "objects": [
+        {
+          "id": 152,
+          "name": "brook",
+          "x": 512.0,
+          "y": 0.0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0.0,
+              "y": 0.0
+            },
+            {
+              "x": -1.9553765335200524,
+              "y": 32.0
+            },
+            {
+              "x": -0.43932359863566717,
+              "y": 64.0
+            },
+            {
+              "x": 1.9553765335200524,
+              "y": 96.0
+            },
+            {
+              "x": 0.0,
+              "y": 128.0
+            },
+            {
+              "x": -0.9708004435527755,
+              "y": 160.0
+            },
+            {
+              "x": 2.0892804975865147,
+              "y": 192.0
+            },
+            {
+              "x": 0.9708004435527755,
+              "y": 224.0
+            },
+            {
+              "x": 0.0,
+              "y": 256.0
+            },
+            {
+              "x": -32.0,
+              "y": 257.08240349541313
+            },
+            {
+              "x": -64.0,
+              "y": 254.15153973636575
+            },
+            {
+              "x": -96.0,
+              "y": 254.91759650458687
+            },
+            {
+              "x": -128.0,
+              "y": 256.0
+            },
+            {
+              "x": -126.91759650458687,
+              "y": 288.0
+            },
+            {
+              "x": -126.15153973636575,
+              "y": 320.0
+            },
+            {
+              "x": -129.08240349541313,
+              "y": 352.0
+            },
+            {
+              "x": -128.0,
+              "y": 384.0
+            },
+            {
+              "x": -96.0,
+              "y": 382.36345212966853
+            },
+            {
+              "x": -64.0,
+              "y": 384.63515520640794
+            },
+            {
+              "x": -32.0,
+              "y": 385.63654787033147
+            },
+            {
+              "x": 0.0,
+              "y": 384.0
+            },
+            {
+              "x": 1.7500249897536833,
+              "y": 416.0
+            },
+            {
+              "x": -0.35330591627513286,
+              "y": 448.0
+            },
+            {
+              "x": -1.75002498975374,
+              "y": 480.0
+            },
+            {
+              "x": 0.0,
+              "y": 512.0
+            },
+            {
+              "x": 0.49196082628202475,
+              "y": 544.0
+            },
+            {
+              "x": -2.4012390740631986,
+              "y": 576.0
+            },
+            {
+              "x": -0.49196082628202475,
+              "y": 608.0
+            },
+            {
+              "x": 0.0,
+              "y": 640.0
+            },
+            {
+              "x": -1.345395561474163,
+              "y": 672.0
+            },
+            {
+              "x": -1.621672459632748,
+              "y": 704.0
+            },
+            {
+              "x": 1.3453955614741062,
+              "y": 736.0
+            },
+            {
+              "x": 0.0,
+              "y": 768.0
+            }
+          ],
+          "properties": [
+            {
+              "name": "role",
+              "type": "string",
+              "value": "authored_shared_edge"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "route_id",
+              "type": "string",
+              "value": "brook"
+            },
+            {
+              "name": "semantic_edge_ids_json",
+              "type": "string",
+              "value": "[\"V:4:0\", \"V:4:1\", \"H:3:2\", \"V:3:2\", \"H:3:3\", \"V:4:3\", \"V:4:4\", \"V:4:5\"]"
+            },
+            {
+              "name": "route_metadata_json",
+              "type": "string",
+              "value": "{\"id\": \"brook\", \"nodes\": [[4, 0], [4, 1], [4, 2], [3, 2], [3, 3], [4, 3], [4, 4], [4, 5], [4, 6]], \"coast_outlet\": true}"
+            }
+          ]
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 7,
+      "name": "Relief semantic IDs (H/M independent of terrain and forest)",
+      "type": "tilelayer",
+      "width": 8,
+      "height": 6,
+      "data": [
+        9,
+        8,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 8,
+      "name": "Resource category identities; water resources use their recorded baked passes",
+      "type": "objectgroup",
+      "draworder": "index",
+      "objects": [
+        {
+          "id": 153,
+          "name": "deer_r3_c1",
+          "x": 128,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "deer"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "deer_herd.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 154,
+          "name": "spices_r3_c2",
+          "x": 256,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "spices"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "scarlet_pepper_bushes.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 155,
+          "name": "spices_r4_c1",
+          "x": 128,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "spices"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "scarlet_pepper_bushes.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 156,
+          "name": "corn_r5_c2",
+          "x": 256,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "corn"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "corn_field.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 157,
+          "name": "fish_r2_c6",
+          "x": 768,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "fish"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "fish_school.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        },
+        {
+          "id": 158,
+          "name": "deer_r2_c1",
+          "x": 128,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "deer"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "deer_herd.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 159,
+          "name": "spices_r2_c2",
+          "x": 256,
+          "y": 256,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "spices"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "scarlet_pepper_bushes.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        },
+        {
+          "id": 160,
+          "name": "pigs_r3_c0",
+          "x": 0,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "pigs"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 8
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_boars.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "boars"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 161,
+          "name": "cows_r4_c0",
+          "x": 0,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "cows"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 9
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_aurochs.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "aurochs"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 162,
+          "name": "ivory_r4_c3",
+          "x": 384,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "ivory"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 10
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_mammoths.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "mammoths"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "id": 163,
+          "name": "fur_r1_c0",
+          "x": 0,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "fur"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 7
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_winter_foxes.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "winter_foxes"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "id": 164,
+          "name": "sheep_r3_c4",
+          "x": 512,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "sheep"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 11
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_woolly_sheep.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "woolly_sheep"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 4
+            }
+          ]
+        },
+        {
+          "id": 165,
+          "name": "clams_r4_c5",
+          "x": 640,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "clams"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 12
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_pearl_clams.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "pearl_clams"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_water_treatment43"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "partial; provisional physical water contact"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 166,
+          "name": "horse_r5_c1",
+          "x": 128,
+          "y": 640,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "horse"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 30
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_riding_horses.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "riding_horses"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "id": 167,
+          "name": "crab_r1_c5",
+          "x": 640,
+          "y": 128,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "crab"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 31
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_giant_red_crabs.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "giant_red_crabs"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_painted_waterline51"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "partial; provisional physical water contact"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 5
+            }
+          ]
+        },
+        {
+          "id": 168,
+          "name": "whale_r3_c6",
+          "x": 768,
+          "y": 384,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "whale"
+            },
+            {
+              "name": "semantic_resource_code",
+              "type": "int",
+              "value": 32
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "wildlife_leviathans.png"
+            },
+            {
+              "name": "runtime_group",
+              "type": "string",
+              "value": "leviathans"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_painted_waterline51"
+            },
+            {
+              "name": "implementation_status",
+              "type": "string",
+              "value": "prototype; consult mapping registry"
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 6
+            }
+          ]
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 9,
+      "name": "Independent improvement identities; presses are upright objects",
+      "type": "objectgroup",
+      "draworder": "index",
+      "objects": [
+        {
+          "id": 169,
+          "name": "cottage_r4_c2",
+          "x": 256,
+          "y": 512,
+          "width": 128,
+          "height": 128,
+          "rotation": 0,
+          "visible": true,
+          "properties": [
+            {
+              "name": "source_category",
+              "type": "string",
+              "value": "cottage"
+            },
+            {
+              "name": "semantic_improvement_code",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "asset_identifier",
+              "type": "string",
+              "value": "cottage_plot.png"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "upright_object_pass"
+            },
+            {
+              "name": "independent_of_resource_id",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "column",
+              "type": "int",
+              "value": 2
+            }
+          ]
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 10,
+      "name": "Independent ice semantic IDs (underlying terrain stays water)",
+      "type": "tilelayer",
+      "width": 8,
+      "height": 6,
+      "data": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    },
+    {
+      "id": 11,
+      "name": "Shared-edge river topology (authored only; no duplicate paint)",
+      "type": "objectgroup",
+      "draworder": "index",
+      "objects": [
+        {
+          "id": 170,
+          "name": "V:4:0",
+          "x": 512,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "V:4:0"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [0, 3], \"side\": \"E\"}, {\"cell\": [0, 4], \"side\": \"W\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [0], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "E"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 0
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "W"
+            }
+          ]
+        },
+        {
+          "id": 171,
+          "name": "V:4:1",
+          "x": 512,
+          "y": 128,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "V:4:1"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [1, 3], \"side\": \"E\"}, {\"cell\": [1, 4], \"side\": \"W\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [1], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "E"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "W"
+            }
+          ]
+        },
+        {
+          "id": 172,
+          "name": "H:3:2",
+          "x": 384,
+          "y": 256,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 128,
+              "y": 0
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "H:3:2"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [1, 3], \"side\": \"S\"}, {\"cell\": [2, 3], \"side\": \"N\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [2], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "S"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "N"
+            }
+          ]
+        },
+        {
+          "id": 173,
+          "name": "V:3:2",
+          "x": 384,
+          "y": 256,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "V:3:2"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [2, 2], \"side\": \"E\"}, {\"cell\": [2, 3], \"side\": \"W\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [3], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "E"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "W"
+            }
+          ]
+        },
+        {
+          "id": 174,
+          "name": "H:3:3",
+          "x": 384,
+          "y": 384,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 128,
+              "y": 0
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "H:3:3"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [2, 3], \"side\": \"S\"}, {\"cell\": [3, 3], \"side\": \"N\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [4], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "S"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "N"
+            }
+          ]
+        },
+        {
+          "id": 175,
+          "name": "V:4:3",
+          "x": 512,
+          "y": 384,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "V:4:3"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [3, 3], \"side\": \"E\"}, {\"cell\": [3, 4], \"side\": \"W\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [5], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "E"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "W"
+            }
+          ]
+        },
+        {
+          "id": 176,
+          "name": "V:4:4",
+          "x": 512,
+          "y": 512,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "V:4:4"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [4, 3], \"side\": \"E\"}, {\"cell\": [4, 4], \"side\": \"W\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [6], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "E"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "W"
+            }
+          ]
+        },
+        {
+          "id": 177,
+          "name": "V:4:5",
+          "x": 512,
+          "y": 640,
+          "width": 0,
+          "height": 0,
+          "rotation": 0,
+          "visible": true,
+          "polyline": [
+            {
+              "x": 0,
+              "y": 0
+            },
+            {
+              "x": 0,
+              "y": 128
+            }
+          ],
+          "properties": [
+            {
+              "name": "edge_id",
+              "type": "string",
+              "value": "V:4:5"
+            },
+            {
+              "name": "grid_start_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_start_y",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "grid_end_x",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "grid_end_y",
+              "type": "int",
+              "value": 6
+            },
+            {
+              "name": "adjacent_cells_json",
+              "type": "string",
+              "value": "[{\"cell\": [5, 3], \"side\": \"E\"}, {\"cell\": [5, 4], \"side\": \"W\"}]"
+            },
+            {
+              "name": "route_memberships_json",
+              "type": "string",
+              "value": "[{\"route_id\": \"brook\", \"segment_indices\": [7], \"route_metadata\": {\"id\": \"brook\", \"coast_outlet\": true}}]"
+            },
+            {
+              "name": "evidence_provenance",
+              "type": "string",
+              "value": "Authored game design: rivers run between gameplay cells. Centerline meanders locally near these shared edges."
+            },
+            {
+              "name": "semantic_only",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "input_mode",
+              "type": "string",
+              "value": "authored_shared_edges"
+            },
+            {
+              "name": "render_pass",
+              "type": "string",
+              "value": "baked_ground"
+            },
+            {
+              "name": "owner_0_row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "owner_0_column",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "owner_0_side",
+              "type": "string",
+              "value": "E"
+            },
+            {
+              "name": "owner_1_row",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "owner_1_column",
+              "type": "int",
+              "value": 4
+            },
+            {
+              "name": "owner_1_side",
+              "type": "string",
+              "value": "W"
+            }
+          ]
+        }
+      ],
+      "x": 0,
+      "y": 0,
+      "opacity": 1,
+      "visible": false
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "J_semantic_cell_changes": 0,
+  "old_mushroom_files_removed_from_current_runtime": 4,
+  "new_jungle_PNGs": 5,
+  "narrative_label_repairs": [
+    {
+      "file": "examples/creature_coast/features.json",
+      "old_sha256": "f7d34794c2716264e65c262d24a7f3a244563f083d15477457b6bb1b81966956",
+      "new_sha256": "e7225d9dc66f80d2f3fa8fe922118123a6edbe08c9d38bbdb4af1ba4c22e021b",
+      "change": "Narrative terminology only; J cells, geometry and river paths unchanged"
+    },
+    {
+      "file": "examples/jungle_mixed/features.json",
+      "old_sha256": "f7d34794c2716264e65c262d24a7f3a244563f083d15477457b6bb1b81966956",
+      "new_sha256": "e7225d9dc66f80d2f3fa8fe922118123a6edbe08c9d38bbdb4af1ba4c22e021b",
+      "change": "Narrative terminology only; J cells, geometry and river paths unchanged"
+    },
+    {
+      "file": "examples/mixed_junctions/features.json",
+      "old_sha256": "18bbd45a44fb6c234f7fb7223ace2810dba97c439ff110b460f52df5757f21ed",
+      "new_sha256": "b6abf53f9c1d16dd0c81ba2eccbb26de6fdf84b20e66a4bcd8cc4156bc3346ab",
+      "change": "Narrative terminology only; J cells, geometry and river paths unchanged"
+    },
+    {
+      "file": "examples/wildlife_water_test/features.json",
+      "old_sha256": "d07db0f9d632b0cd094815954f7550379dd4cc9d3629ee773686e01ea4eace0f",
+      "new_sha256": "1820a195d8ac259d2c3e7f3e590571be5cd390ca9c5cfa760c8ec5b608905c4e",
+      "change": "Narrative terminology only; J cells, geometry and river paths unchanged"
+    }
+  ],
+  "historical_art_remains_in_prior_archives": true,
+  "final_package_hold": "Shared-edge river55 topology"
+}

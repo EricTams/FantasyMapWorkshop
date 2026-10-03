@@ -1,0 +1,112 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        1,
+        0
+      ],
+      "asset": "botanical_dye.png",
+      "kind": "resource",
+      "label": "dye",
+      "source_category": "dye"
+    },
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "asset": "botanical_incense.png",
+      "kind": "resource",
+      "label": "incense",
+      "source_category": "incense"
+    },
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "asset": "botanical_silk.png",
+      "kind": "resource",
+      "label": "silk",
+      "source_category": "silk"
+    },
+    {
+      "cell": [
+        1,
+        6
+      ],
+      "asset": "botanical_sugar.png",
+      "kind": "resource",
+      "label": "sugar",
+      "source_category": "sugar"
+    },
+    {
+      "cell": [
+        3,
+        0
+      ],
+      "asset": "botanical_banana.png",
+      "kind": "resource",
+      "label": "banana",
+      "source_category": "banana"
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "asset": "grapes_resource.png",
+      "kind": "resource",
+      "label": "Grapes",
+      "source_category": "wine"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "asset": "vineyard_press.png",
+      "kind": "improvement",
+      "label": "Vineyard press",
+      "source_category": "winery"
+    },
+    {
+      "cell": [
+        3,
+        5
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet peppers",
+      "source_category": "spices"
+    },
+    {
+      "cell": [
+        6,
+        3
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "Cottage"
+    },
+    {
+      "cell": [
+        5,
+        4
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "White stags"
+    }
+  ]
+}

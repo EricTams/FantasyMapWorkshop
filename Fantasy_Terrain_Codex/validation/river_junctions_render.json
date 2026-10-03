@@ -1,0 +1,354 @@
+{
+  "screen_chunk_max_difference": 0,
+  "upright_edge_tree_count": 0,
+  "all_explicit_trunk_roots_on_owned_forest_and_land": true,
+  "known_land_water_centers_matching": 16,
+  "known_land_water_centers_checked": 16,
+  "hill_cells": 0,
+  "mountain_cells": 0,
+  "hill_bump_instances": 0,
+  "mountain_instances": 0,
+  "all_hill_anchors_on_owned_hill_cells": true,
+  "reusable_materials": 6,
+  "reusable_tree_sprites": 4,
+  "reusable_jungle_sprites": 0,
+  "rendered_broadleaf_cells": 0,
+  "rendered_pine_cells": 0,
+  "rendered_jungle_cells": 0,
+  "resource_and_hill_clearance_records": [],
+  "all_edge_roots_outside_support_openings": true,
+  "jungle_edge_root_count": 0,
+  "vineyard_shared_row_field": null,
+  "visible_river_paths": 3,
+  "river_edge_topology": {
+    "version": 1,
+    "mode": "shared_edges",
+    "edge_count": 9,
+    "edges": [
+      {
+        "id": "V:2:0",
+        "grid_start": [
+          2,
+          0
+        ],
+        "grid_end": [
+          2,
+          1
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              0,
+              1
+            ],
+            "side": "E"
+          },
+          {
+            "cell": [
+              0,
+              2
+            ],
+            "side": "W"
+          }
+        ]
+      },
+      {
+        "id": "V:2:1",
+        "grid_start": [
+          2,
+          1
+        ],
+        "grid_end": [
+          2,
+          2
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "side": "E"
+          },
+          {
+            "cell": [
+              1,
+              2
+            ],
+            "side": "W"
+          }
+        ]
+      },
+      {
+        "id": "V:2:2",
+        "grid_start": [
+          2,
+          2
+        ],
+        "grid_end": [
+          2,
+          3
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "side": "E"
+          },
+          {
+            "cell": [
+              2,
+              2
+            ],
+            "side": "W"
+          }
+        ]
+      },
+      {
+        "id": "H:2:3",
+        "grid_start": [
+          2,
+          3
+        ],
+        "grid_end": [
+          3,
+          3
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              2,
+              2
+            ],
+            "side": "S"
+          },
+          {
+            "cell": [
+              3,
+              2
+            ],
+            "side": "N"
+          }
+        ]
+      },
+      {
+        "id": "V:3:3",
+        "grid_start": [
+          3,
+          3
+        ],
+        "grid_end": [
+          3,
+          4
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              3,
+              2
+            ],
+            "side": "E"
+          },
+          {
+            "cell": [
+              3,
+              3
+            ],
+            "side": "W"
+          }
+        ]
+      },
+      {
+        "id": "H:0:2",
+        "grid_start": [
+          0,
+          2
+        ],
+        "grid_end": [
+          1,
+          2
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "side": "S"
+          },
+          {
+            "cell": [
+              2,
+              0
+            ],
+            "side": "N"
+          }
+        ]
+      },
+      {
+        "id": "H:1:2",
+        "grid_start": [
+          1,
+          2
+        ],
+        "grid_end": [
+          2,
+          2
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "side": "S"
+          },
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "side": "N"
+          }
+        ]
+      },
+      {
+        "id": "H:3:1",
+        "grid_start": [
+          3,
+          1
+        ],
+        "grid_end": [
+          4,
+          1
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              0,
+              3
+            ],
+            "side": "S"
+          },
+          {
+            "cell": [
+              1,
+              3
+            ],
+            "side": "N"
+          }
+        ]
+      },
+      {
+        "id": "H:2:1",
+        "grid_start": [
+          2,
+          1
+        ],
+        "grid_end": [
+          3,
+          1
+        ],
+        "adjacent_cells": [
+          {
+            "cell": [
+              0,
+              2
+            ],
+            "side": "S"
+          },
+          {
+            "cell": [
+              1,
+              2
+            ],
+            "side": "N"
+          }
+        ]
+      }
+    ],
+    "node_degrees": {
+      "2,0": 1,
+      "2,1": 3,
+      "2,2": 3,
+      "2,3": 2,
+      "3,3": 2,
+      "3,4": 1,
+      "0,2": 1,
+      "1,2": 2,
+      "4,1": 1,
+      "3,1": 2
+    },
+    "connected_components": 1,
+    "junction_nodes": [
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "endpoint_nodes": [
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        4,
+        1
+      ]
+    ],
+    "centerline_meander_max_px": 2.8,
+    "all_segments_unit_grid_edges": true
+  },
+  "reusable_site_sprites": 4,
+  "unique_illustration_tiles_used": 0,
+  "forest_interior_sampled_upright_in_screen_space": true,
+  "quality_verdict": "requires visual review; geometry tests are not quality proof",
+  "generic_layout_independent_of_benchmark": true,
+  "upright_objects_exported_from_single_helper": true,
+  "relief_semantics_independent_of_base_and_forest": true,
+  "ice_semantics_independent_of_base_terrain": true,
+  "ice_cells_keep_water_terrain": true,
+  "ice_cells": 0,
+  "tundra_cells": 0,
+  "snow_cells": 0,
+  "exported_masks": [
+    "bank",
+    "forest_floor",
+    "forest_interior",
+    "land",
+    "river_bank",
+    "river_channel",
+    "river_water",
+    "sand",
+    "shallow_water",
+    "vegetation_clearance"
+  ],
+  "river_route_provenance": "Authored topology diagnostic; not a source-transcribed Civ4 junction",
+  "river_input_mode": "authored_shared_edges",
+  "river_shared_edge_records": 9,
+  "river_centerline_records": 3,
+  "river_edge_records_match_runtime": true,
+  "river_paint_baked_only": true,
+  "status": "Prototype55",
+  "tiled_visible_layer_reconstruction_max_difference": 0,
+  "tiled_native_application_opened": false,
+  "tiled_validation": "Local JSON/XML structural checks, relative references and pixel reconstruction only; no native Tiled run",
+  "terrain_cells": 16,
+  "visible_object_instances": 0,
+  "unique_render_size_sprites": 0,
+  "cell_identity_records": 16
+}

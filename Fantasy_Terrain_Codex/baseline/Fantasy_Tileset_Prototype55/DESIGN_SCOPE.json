@@ -1,0 +1,120 @@
+{
+  "prototype": 55,
+  "delivery_status": "Bounded Prototype55 checkpoint; reviewed through55",
+  "accepted_spices_mapping": {
+    "name": "Scarlet pepper bushes",
+    "description": "Low shrubs with obvious red fruit",
+    "implementation_status": "Implemented36 artwork, retained unchanged",
+    "files": [
+      "assets/pepper/scarlet_pepper_0.png",
+      "assets/pepper/scarlet_pepper_1.png"
+    ]
+  },
+  "optional_draft": {
+    "category": "fantasy_spice_proposal",
+    "files": [
+      "assets/fantasy/crimson_spice_0.png",
+      "assets/fantasy/crimson_spice_1.png"
+    ],
+    "description": "Existing crimson leaves/large seedpods proposal; not the accepted canonical Spices art",
+    "pixels_changed": false,
+    "accepted": false,
+    "enabled_by_default": false
+  },
+  "implemented_jungle_mapping": {
+    "name": "Dense broadleaf jungle with palms",
+    "user_direction": "Latest explicit user override: retain jungle, replace mushroom thickets",
+    "files": [
+      "assets/jungle/jungle_interior.png",
+      "assets/jungle/jungle_edge_0.png",
+      "assets/jungle/jungle_edge_1.png",
+      "assets/jungle/jungle_edge_2.png",
+      "assets/jungle/jungle_edge_3.png",
+      "assets/jungle/jungle_manifest.json"
+    ],
+    "historical_mushroom_art": "Earlier immutable checkpoint archives only"
+  },
+  "full_concept_guide": "fantasy_translation_guide.json",
+  "implementation_registry": "mapping_registry.json",
+  "counts": {
+    "implemented": 41,
+    "partial": 11,
+    "not built": 29
+  },
+  "no_complete_Civ4_replacement_claim": true,
+  "independent_axes": [
+    "terrain",
+    "vegetation D/P/J",
+    "relief H/M",
+    "ice over water",
+    "resources",
+    "improvements",
+    "authored shared-edge river topology"
+  ],
+  "unknown_observed_bases_preserved": 90,
+  "source_traced_rivers": "Nine observed layouts and their27 input JSON files are unchanged diagnostic evidence; traces are never silently snapped or joined",
+  "authored_rivers": "Implemented55 integer grid-corner unit shared-edge topology; source55 eight-edge default, explicit audited migration of eight layouts and no remaining authored interior-cutting route",
+  "limitations": [
+    "Clams and giant red crabs have unresolved physical water contact; their partial statuses are retained",
+    "Leviathans are implemented surfacing prototypes; no complete variant or animation claim",
+    "Pack ice repeats in a rectangular pattern; outer footprint remains geometric",
+    "Periodic meadow structures and repeated vegetation, angular generic coasts and geometric biome boundaries remain",
+    "Neat resource clearings remain a prototype polish limit",
+    "Gold and silver rely on yellow-versus-white color",
+    "Vine outer endpoints can clip",
+    "Sun-maize large cobs, Smallholding, Castle settlement growth and broader81concept variants remain partial or unbuilt",
+    "No animations, general collision/navigation or complete game integration",
+    "Native Tiled GUI and downstream-engine testing have not been performed"
+  ],
+  "reviewed_through": 55,
+  "canonical_runtime_PNGs": 130,
+  "input_layouts": {
+    "total": 25,
+    "authored": 16,
+    "observed": 9
+  },
+  "default_example": "examples/jungle_mixed",
+  "baseline48_asset_preservation": {
+    "non_mushroom_PNGs_retained_unchanged": 91,
+    "historical_mushroom_PNGs_replaced": 4,
+    "new_real_jungle54_PNGs": 5
+  },
+  "authored_river_migration_audit": "qa/authored_river_migration55.json",
+  "source_references55": [
+    "civ4_matched_v55/shared/river_edges.py",
+    "civ4_matched_v55/authored_river_migration.json"
+  ],
+  "delivery": {
+    "complete_default_Tiled_samples": 1,
+    "all_inputs_render_with_core_only": true,
+    "optional_packs": [
+      "extra cached exports",
+      "frozen artwork sources"
+    ],
+    "maximum_archive_bytes": 18000000,
+    "source_screenshots_included": false
+  },
+  "aquatic51_rendering": {
+    "mode": "painted_waterline",
+    "actual_pass": "water-clipped baked ground",
+    "duplicate_visible_Tiled_actors": false,
+    "crab_status": "partial physical contact",
+    "whale_status": "implemented prototype"
+  },
+  "tiled_semantics": {
+    "GIDs1_to10_unchanged": true,
+    "tundra_gid": 11,
+    "snow_gid": 12,
+    "ice_gid": 13,
+    "visible_sprite_firstgid": 14,
+    "independent_ice_layer_id": 10,
+    "hidden_shared_edge_river_layer_id": 11,
+    "river_records": [
+      "edge IDs",
+      "grid endpoints",
+      "adjacent cell sides",
+      "route membership",
+      "provenance"
+    ]
+  }
+}

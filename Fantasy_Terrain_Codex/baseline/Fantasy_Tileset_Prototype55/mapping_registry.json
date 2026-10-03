@@ -1,0 +1,991 @@
+{
+  "concept_count": 81,
+  "definitions": {
+    "implemented": "A tested reusable prototype depicts this original concept. This does not mean every adjacency, variant, animation or final-quality requirement is complete.",
+    "partial": "A related renderable treatment or component exists, but the original translated concept is incomplete.",
+    "not built": "The original translated concept has no current implementation. Unrelated legacy artwork does not count."
+  },
+  "runtime_png_count_is_not_concept_count": true,
+  "mappings": [
+    {
+      "group": "ground",
+      "source_category": "grassland",
+      "fantasy_name": "Meadow",
+      "visual_concept": "Fresh green",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Meadow material and continuous ground32 field are available.",
+      "available_files": [
+        "assets/materials/meadow.png"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "plains",
+      "fantasy_name": "Golden steppe",
+      "visual_concept": "Ochre grasses",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Plains currently use a meadow-based golden tint; a separate ochre-grass asset is not supplied.",
+      "available_files": [
+        "ground_field.py",
+        "kit_renderer.py"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "desert",
+      "fantasy_name": "Sand wastes",
+      "visual_concept": "Pale dunes",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Sand ownership and pale tint are supported; dedicated dune forms are pending.",
+      "available_files": [
+        "kit_renderer.py"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "tundra",
+      "fantasy_name": "Frost heath",
+      "visual_concept": "Gray-purple heath",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Readable cold-category prototype.53 adds climate-aware relief. Geometric biome transitions, repeated rectangular pack-ice pattern and outer ice footprint remain visible limits. Snow ground and pack ice over water have separate semantic IDs.",
+      "available_files": [
+        "assets/cold/frost_heath.png",
+        "cold_renderer.py",
+        "assets/cold/cold_manifest.json"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "snow",
+      "fantasy_name": "Snowfields",
+      "visual_concept": "Snow-covered ground",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Readable cold-category prototype.53 adds climate-aware relief. Geometric biome transitions, repeated rectangular pack-ice pattern and outer ice footprint remain visible limits. Snow ground and pack ice over water have separate semantic IDs.",
+      "available_files": [
+        "assets/cold/snowfields.png",
+        "cold_renderer.py",
+        "assets/cold/cold_manifest.json"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "coast",
+      "fantasy_name": "Turquoise shallows",
+      "visual_concept": "Shallow coastal water",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Shallow water and source/authored coast masks are available. Generic coast contours remain angular in places and need further visual polish.",
+      "available_files": [
+        "assets/materials/shallow_water.png",
+        "coast_renderer.py"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "ocean",
+      "fantasy_name": "Deep sea",
+      "visual_concept": "Dark blue offshore water",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Deep-water material is available; no water animation is included.",
+      "available_files": [
+        "assets/materials/deep_water.png"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "lake",
+      "fantasy_name": "Inland lake",
+      "visual_concept": "Inland water and shallows",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "The water materials can be reused; dedicated lake topology/editor support is not a separate implemented family.",
+      "available_files": [
+        "coast_renderer.py"
+      ]
+    },
+    {
+      "group": "ground",
+      "source_category": "river",
+      "fantasy_name": "Winding river",
+      "visual_concept": "Blue winding channel",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Prototype55 uses explicit integer grid-corner unit shared edges for authored rivers. The default jungle_mixed route has eight edges. The eight-layout migration retains former paths in qa/authored_river_migration55.json; no authored interior-cutting route remains. Observed source traces remain unchanged diagnostic evidence with hidden gaps unconnected. Tiled hidden layer11 records IDs, endpoints and adjacent cell sides; river paint is baked once.",
+      "available_files": [
+        "river_edges.py",
+        "river_renderer.py",
+        "qa/authored_river_migration55.json"
+      ]
+    },
+    {
+      "group": "relief",
+      "source_category": "flat",
+      "fantasy_name": "Flat ground",
+      "visual_concept": "Base terrain without relief",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Base ground renders without H/M relief.",
+      "available_files": [
+        "ground_field.py"
+      ]
+    },
+    {
+      "group": "relief",
+      "source_category": "hill",
+      "fantasy_name": "Rounded hills",
+      "visual_concept": "Grassy rounded rises with sparse light-gray exposed rock",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Rounded light-rock hill underlays are implemented from pass33. Prototype40 adds small shared-mask exposed-slope openings in overlapping vegetation; H remains independent of terrain and D/P/J. Climate-aware53 variants select sand, tundra or snow using explicit base terrain IDs. Unknown bases remain unknown and receive the neutral original relief.",
+      "available_files": [
+        "assets/relief/hill_rock_0.png",
+        "assets/relief/hill_rock_1.png"
+      ]
+    },
+    {
+      "group": "relief",
+      "source_category": "mountain",
+      "fantasy_name": "Pointed crags",
+      "visual_concept": "Darker gray, taller, spiky, impassable forms",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Upright pointed crags are implemented; connected mountain ranges and gameplay impassability are not implemented. Climate-aware53 variants select sand, tundra or snow using explicit base terrain IDs. Unknown bases remain unknown and receive the neutral original relief.",
+      "available_files": [
+        "assets/relief/mountain_rock_0.png",
+        "assets/relief/mountain_rock_1.png"
+      ]
+    },
+    {
+      "group": "feature",
+      "source_category": "forest",
+      "fantasy_name": "Greenwood",
+      "visual_concept": "Compact broad canopy",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Connected Greenwood material and broadleaf edges are available; pine is a separate partial family. Prototype40 adds targeted shared-mask hoof/shrub and hill-slope openings; roots exclude openings and upright edges remain depth-sorted.",
+      "available_files": [
+        "assets/materials/woodland.png",
+        "assets/sprites/broadleaf_edge_0.png"
+      ]
+    },
+    {
+      "group": "feature",
+      "source_category": "jungle",
+      "fantasy_name": "Dense broadleaf jungle with palms",
+      "visual_concept": "Dense tropical jungle with upright canopy edges",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Reviewed real-jungle54 interior and four rooted broadleaf/palm edges replace historical Giant mushroom thickets at every J cell, following the latest guide override. Shared masks and contact clearings are retained. Included in the current55 default jungle_mixed sample with shared-edge river topology.",
+      "available_files": [
+        "assets/jungle/jungle_interior.png",
+        "assets/jungle/jungle_edge_0.png",
+        "assets/jungle/jungle_edge_1.png",
+        "assets/jungle/jungle_edge_2.png",
+        "assets/jungle/jungle_edge_3.png",
+        "assets/jungle/jungle_manifest.json",
+        "kit_renderer.py"
+      ]
+    },
+    {
+      "group": "feature",
+      "source_category": "oasis",
+      "fantasy_name": "Spring grove",
+      "visual_concept": "Pool and palms",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "feature",
+      "source_category": "floodplains",
+      "fantasy_name": "Fertile riverbanks",
+      "visual_concept": "Green reeds",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "feature",
+      "source_category": "ice",
+      "fantasy_name": "Pack ice",
+      "visual_concept": "Angular ice plates",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Readable cold-category prototype.53 adds climate-aware relief. Geometric biome transitions, repeated rectangular pack-ice pattern and outer ice footprint remain visible limits. Snow ground and pack ice over water have separate semantic IDs.",
+      "available_files": [
+        "assets/cold/pack_ice.png",
+        "cold_renderer.py",
+        "assets/cold/cold_manifest.json"
+      ]
+    },
+    {
+      "group": "feature",
+      "source_category": "fallout",
+      "fantasy_name": "Blight",
+      "visual_concept": "Black ground, violet fissures and dead stalks",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "food",
+      "source_category": "wheat",
+      "fantasy_name": "Golden wheat",
+      "visual_concept": "Tall seedheads",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Existing wheat-field art is retained; final tall-seedhead readability is not established.",
+      "available_files": [
+        "assets/resources/wheat_field.png"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "corn",
+      "fantasy_name": "Sun-maize",
+      "visual_concept": "Oversized yellow cobs and upright leaves",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "The Sun-maize mapping is original. Crop-field art is available, but explicit oversized yellow cobs remain a study.",
+      "available_files": [
+        "assets/sprites/corn_field.png"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "rice",
+      "fantasy_name": "Marsh rice",
+      "visual_concept": "Short sprouts in water",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Existing water-dominant rice art is retained; Marsh rice readability remains limited.",
+      "available_files": [
+        "assets/resources/rice_paddy.png"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "banana",
+      "fantasy_name": "Giant pod-fruit",
+      "visual_concept": "Yellow crescent hanging pods",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Giant pod-fruit. Reusable botanical49/50 owned-cell upright sprites with contact clearings, reviewed and included in the current55 core.",
+      "available_files": [
+        "assets/botanicals/botanical_manifest.json",
+        "botanical_renderer.py"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "cow",
+      "fantasy_name": "Aurochs",
+      "visual_concept": "Large ancestral cattle",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original fantasy animal group has reusable transparent sprites, ground-foot anchors, source-cell context tests and a passed visual checkpoint",
+      "available_files": [
+        "assets/wildlife/wildlife_manifest.json",
+        "wildlife_renderer.py"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "pig",
+      "fantasy_name": "Boar",
+      "visual_concept": "Wild boar",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original fantasy animal group has reusable transparent sprites, ground-foot anchors, source-cell context tests and a passed visual checkpoint",
+      "available_files": [
+        "assets/wildlife/wildlife_manifest.json",
+        "wildlife_renderer.py"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "sheep",
+      "fantasy_name": "Woolly sheep",
+      "visual_concept": "Thick woolly coats",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Rounded woolly sheep with distinct dark faces/horns.",
+      "available_files": []
+    },
+    {
+      "group": "food",
+      "source_category": "deer",
+      "fantasy_name": "White stags",
+      "visual_concept": "White bodies and impressive branching antlers",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "White stag pair uses reviewed elevated-view camera35 art and separate shadows. Prototype40 adds targeted shared-mask hoof-contact openings where vegetation overlaps; art remains unchanged.",
+      "available_files": [
+        "assets/fantasy/white_stag_0.png",
+        "assets/fantasy/white_stag_1.png"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "fish",
+      "fantasy_name": "Silverfin shoal",
+      "visual_concept": "A clearly visible school of fish",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Silverfin shoal uses the five-body fish29 school.",
+      "available_files": [
+        "assets/resources/fish_school.png"
+      ]
+    },
+    {
+      "group": "food",
+      "source_category": "clam",
+      "fantasy_name": "Pearl clams",
+      "visual_concept": "Open shells with pale interiors",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Open pearl shells are recognizable, but water absorption/contact treatment still reads as tinted floating shells. A coherent shallow clam-bed context remains unresolved.",
+      "available_files": []
+    },
+    {
+      "group": "food",
+      "source_category": "crab",
+      "fantasy_name": "Giant red crabs",
+      "visual_concept": "Distinct red bodies and claws",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Giant red crabs have clear silhouettes and owned water cells. The51 painted_waterline treatment is actually baked into water-clipped ground and excluded from visible Tiled actors, avoiding duplicate drawing. Physical water contact still reads somewhat surface-perched; coherent shallow-bed/wading treatment remains unresolved, so this concept is partial.",
+      "available_files": [
+        "assets/wildlife/giant_red_crab_0.png",
+        "assets/wildlife/giant_red_crab_1.png",
+        "submerged_resources.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "gold",
+      "fantasy_name": "Gold veins",
+      "visual_concept": "Yellow veins in rock",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original reusable mineral prototype; tested at native scale in eleven-category family. Gold/silver rely on their yellow versus pale-metal color cue.",
+      "available_files": [
+        "assets/minerals/gold.png",
+        "mineral_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "silver",
+      "fantasy_name": "Silver veins",
+      "visual_concept": "Pale veins in dark rock",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original reusable mineral prototype; tested at native scale in eleven-category family. Gold/silver rely on their yellow versus pale-metal color cue.",
+      "available_files": [
+        "assets/minerals/silver.png",
+        "mineral_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "gems",
+      "fantasy_name": "Jewel clusters",
+      "visual_concept": "Short chunky multicolored crystals",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original reusable mineral prototype; tested at native scale in eleven-category family. Gold/silver rely on their yellow versus pale-metal color cue.",
+      "available_files": [
+        "assets/minerals/gems.png",
+        "mineral_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "ivory",
+      "fantasy_name": "Mammoths",
+      "visual_concept": "Impressive woolly tusked animals",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original fantasy animal group has reusable transparent sprites, ground-foot anchors, source-cell context tests and a passed visual checkpoint",
+      "available_files": [
+        "assets/wildlife/wildlife_manifest.json",
+        "wildlife_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "fur",
+      "fantasy_name": "Winter foxes",
+      "visual_concept": "White-tailed winter foxes",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original long-tailed winter foxes, corrected from the legacy fur visual.",
+      "available_files": [
+        "assets/resources/fur_habitat.png"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "dye",
+      "fantasy_name": "Indigo flowers",
+      "visual_concept": "Deep blue-purple flowering plants",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Indigo flowers. Reusable botanical49/50 owned-cell upright sprites with contact clearings, reviewed and included in the current55 core.",
+      "available_files": [
+        "assets/botanicals/botanical_manifest.json",
+        "botanical_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "incense",
+      "fantasy_name": "Resin trees",
+      "visual_concept": "Crooked trees with amber drops",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Resin trees with attached bark sap after the accepted50 correction. Reusable botanical49/50 owned-cell upright sprites with contact clearings, reviewed and included in the current55 core.",
+      "available_files": [
+        "assets/botanicals/botanical_manifest.json",
+        "botanical_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "silk",
+      "fantasy_name": "Giant silkworm cocoons",
+      "visual_concept": "White hanging ovals on low trees",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Giant silkworm cocoons. Reusable botanical49/50 owned-cell upright sprites with contact clearings, reviewed and included in the current55 core.",
+      "available_files": [
+        "assets/botanicals/botanical_manifest.json",
+        "botanical_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "spices",
+      "fantasy_name": "Scarlet pepper bushes",
+      "visual_concept": "Low green shrubs with obvious red pepper fruit",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Accepted pepper36 artwork remains unchanged: low green shrubs with obvious red fruit. Prototype40 adds targeted shared-mask shrub-contact openings where vegetation overlaps. Seedpods remain an unrelated, unaccepted off-default draft.",
+      "available_files": [
+        "assets/pepper/scarlet_pepper_0.png",
+        "assets/pepper/scarlet_pepper_1.png",
+        "assets/pepper/scarlet_pepper_bushes.png"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "sugar",
+      "fantasy_name": "Honey reeds",
+      "visual_concept": "Thick gold jointed canes",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Honey reeds. Reusable botanical49/50 owned-cell upright sprites with contact clearings, reviewed and included in the current55 core.",
+      "available_files": [
+        "assets/botanicals/botanical_manifest.json",
+        "botanical_renderer.py"
+      ]
+    },
+    {
+      "group": "luxury",
+      "source_category": "wine",
+      "fantasy_name": "Grapes",
+      "visual_concept": "Purple bunches on low vines",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Existing painted grape rows form one global lattice over the union of adjacent wine cells; outer endpoint clipping remains polish.",
+      "available_files": []
+    },
+    {
+      "group": "luxury",
+      "source_category": "whale",
+      "fantasy_name": "Leviathans",
+      "visual_concept": "Huge curved backs and forked tails",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Leviathans are an implemented surfacing prototype with a curved exposed back/tail and cooler submerged flank. The51 painted_waterline treatment is actually baked into water-clipped ground and excluded from visible Tiled actors, avoiding duplicate drawing. A reviewed prototype does not establish finished variants or animation.",
+      "available_files": [
+        "assets/wildlife/wildlife_manifest.json",
+        "wildlife_renderer.py",
+        "submerged_resources.py"
+      ]
+    },
+    {
+      "group": "strategic",
+      "source_category": "stone",
+      "fantasy_name": "Building stone",
+      "visual_concept": "Broad gray slabs",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Low groups of broad gray building slabs; actual source stone cell tested.",
+      "available_files": []
+    },
+    {
+      "group": "strategic",
+      "source_category": "marble",
+      "fantasy_name": "White marble",
+      "visual_concept": "White blocks with dark veins",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Bright angular blocks with dark veins.",
+      "available_files": []
+    },
+    {
+      "group": "strategic",
+      "source_category": "copper",
+      "fantasy_name": "Copper ore",
+      "visual_concept": "Reddish ore",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Rounded warm copper ore with broad exposed metallic seams.",
+      "available_files": []
+    },
+    {
+      "group": "strategic",
+      "source_category": "iron",
+      "fantasy_name": "Iron ore",
+      "visual_concept": "Dark ore with rust streaks",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Dark rusty fractured ore; distinct from mountain/hill silhouettes in a native category check.",
+      "available_files": []
+    },
+    {
+      "group": "strategic",
+      "source_category": "horse",
+      "fantasy_name": "Riding horses",
+      "visual_concept": "Horses at resource-site scale",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Elevated riding-horse group passes hoof contact/camera.",
+      "available_files": [
+        "assets/wildlife/wildlife_manifest.json",
+        "wildlife_renderer.py",
+        "submerged_resources.py"
+      ]
+    },
+    {
+      "group": "strategic",
+      "source_category": "coal",
+      "fantasy_name": "Emberstone",
+      "visual_concept": "Black stone with orange cracks; fuels forges",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original reusable mineral prototype; tested at native scale in eleven-category family. Gold/silver rely on their yellow versus pale-metal color cue.",
+      "available_files": [
+        "assets/minerals/emberstone.png",
+        "mineral_renderer.py"
+      ]
+    },
+    {
+      "group": "strategic",
+      "source_category": "oil",
+      "fantasy_name": "Black ichor",
+      "visual_concept": "Glossy black seep; supplies alchemical engines",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original reusable mineral prototype; tested at native scale in eleven-category family. Gold/silver rely on their yellow versus pale-metal color cue.",
+      "available_files": [
+        "assets/minerals/black_ichor.png",
+        "mineral_renderer.py"
+      ]
+    },
+    {
+      "group": "strategic",
+      "source_category": "aluminum",
+      "fantasy_name": "Mithril",
+      "visual_concept": "Pale-blue metallic blades; advanced armor and flying craft",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original reusable mineral prototype; tested at native scale in eleven-category family. Gold/silver rely on their yellow versus pale-metal color cue.",
+      "available_files": [
+        "assets/minerals/mithril.png",
+        "mineral_renderer.py"
+      ]
+    },
+    {
+      "group": "strategic",
+      "source_category": "uranium",
+      "fantasy_name": "Voidstone",
+      "visual_concept": "One large violet crystal in a broken rock shell",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Original reusable mineral prototype; tested at native scale in eleven-category family. Gold/silver rely on their yellow versus pale-metal color cue.",
+      "available_files": [
+        "assets/minerals/voidstone.png",
+        "mineral_renderer.py"
+      ]
+    },
+    {
+      "group": "improvement",
+      "source_category": "farm",
+      "fantasy_name": "Smallholding",
+      "visual_concept": "Crop rows and a tiny barn",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Crop plots exist, but the complete Smallholding with tiny barn is not separately implemented.",
+      "available_files": [
+        "assets/sprites/corn_field.png",
+        "assets/resources/wheat_field.png"
+      ]
+    },
+    {
+      "group": "improvement",
+      "source_category": "pasture",
+      "fantasy_name": "Herd enclosure",
+      "visual_concept": "Wooden fence",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "camp",
+      "fantasy_name": "Hunter lodge",
+      "visual_concept": "Low tent, drying rack and hide",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "plantation",
+      "fantasy_name": "Garden estate",
+      "visual_concept": "Orderly rows and a pavilion",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "winery",
+      "fantasy_name": "Vineyard press",
+      "visual_concept": "Trellis and vat",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Separate press/vat improvement with a local bay; does not erase grape resources or restart rows.",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "mine",
+      "fantasy_name": "Dwarven mine",
+      "visual_concept": "Dark stone entrance and an ore cart",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "A mine-site overlay exists; the specified Dwarven mine entrance and ore-cart concept is not established as complete.",
+      "available_files": [
+        "assets/sprites/mine_site.png"
+      ]
+    },
+    {
+      "group": "improvement",
+      "source_category": "quarry",
+      "fantasy_name": "Stonecutter pit",
+      "visual_concept": "Stepped rock and a crane",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "well",
+      "fantasy_name": "Ichor pump",
+      "visual_concept": "Tall pumping frame",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "offshore_platform",
+      "fantasy_name": "Sea extraction tower",
+      "visual_concept": "Tower on stilts",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "fishing_boats",
+      "fantasy_name": "Fishing skiffs",
+      "visual_concept": "Small boats and nets",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "whaling_boats",
+      "fantasy_name": "Leviathan hunters",
+      "visual_concept": "Longboats and a harpoon",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "workshop",
+      "fantasy_name": "Smithy",
+      "visual_concept": "Broad chimney",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "lumbermill",
+      "fantasy_name": "Timberyard",
+      "visual_concept": "Stacked logs and a saw",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "windmill",
+      "fantasy_name": "Windmill",
+      "visual_concept": "Oversized four sails",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "watermill",
+      "fantasy_name": "Watermill",
+      "visual_concept": "Large wheel beside a river",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "cottage",
+      "fantasy_name": "Crofter cottage",
+      "visual_concept": "One thatched house",
+      "status": "implemented",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "A single cottage/property overlay exists; settlement growth stages are separate and remain pending.",
+      "available_files": [
+        "assets/sprites/cottage_plot.png"
+      ]
+    },
+    {
+      "group": "improvement",
+      "source_category": "hamlet",
+      "fantasy_name": "Hamlet",
+      "visual_concept": "Three houses and a well",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "village",
+      "fantasy_name": "Market village",
+      "visual_concept": "Bright awning",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "town",
+      "fantasy_name": "Guild town",
+      "visual_concept": "Dense roofs and a tall hall",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "fort",
+      "fantasy_name": "Watchkeep",
+      "visual_concept": "Square tower and compact wall",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "improvement",
+      "source_category": "forest_preserve",
+      "fantasy_name": "Druid grove",
+      "visual_concept": "Standing stones and living trees",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "goody_hut",
+      "fantasy_name": "Wayside shrine",
+      "visual_concept": "Roof and chest",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "city_ruins",
+      "fantasy_name": "Fallen settlement",
+      "visual_concept": "Broken wall and arch",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "road",
+      "fantasy_name": "Dirt and cobble track",
+      "visual_concept": "Grounded connecting track",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "railroad",
+      "fantasy_name": "Rune highway",
+      "visual_concept": "Pale paving and spaced rune stones",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "wood_bridge",
+      "fantasy_name": "Wooden bridge",
+      "visual_concept": "Wooden river crossing",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "stone_bridge",
+      "fantasy_name": "Stone bridge",
+      "visual_concept": "Stone river crossing",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "city",
+      "fantasy_name": "Castle settlement",
+      "visual_concept": "A central keep surrounded by roofs, increasing in density as it grows",
+      "status": "partial",
+      "delivery": "Prototype55 bounded core; reviewed through55",
+      "notes": "Compact settlement art exists. The accepted Castle settlement central keep and growth-dependent roof density remain pending.",
+      "available_files": [
+        "assets/sprites/city_compact.png"
+      ]
+    },
+    {
+      "group": "map_object",
+      "source_category": "borders",
+      "fantasy_name": "Realm borders",
+      "visual_concept": "Faction lines",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "unexplored_fog",
+      "fantasy_name": "Unexplored parchment",
+      "visual_concept": "Unexplored map treatment",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    },
+    {
+      "group": "map_object",
+      "source_category": "explored_fog",
+      "fantasy_name": "Subdued explored terrain",
+      "visual_concept": "Distinct from blight",
+      "status": "not built",
+      "delivery": "Not in current kit",
+      "notes": "Concept guide; consult kit manifest for available assets",
+      "available_files": []
+    }
+  ],
+  "next_priorities": [
+    "Cold biome transitions and rectangular pack-ice repetition",
+    "Oasis, fertile riverbanks and blight",
+    "Seventeen missing improvement concepts",
+    "Nine missing map-object concepts",
+    "Substantive physical water contact for clams and crabs",
+    "Original crop and castle-settlement mappings remain partial"
+  ],
+  "evidence_notes": [
+    "Statuses describe reusable concept prototypes reviewed through55, not final visual quality or all neighbor/climate combinations.",
+    "All 91 non-mushroom runtime PNGs from48 are unchanged. Four historical mushroom PNGs were replaced by five real-jungle54 PNGs; the current runtime has130 canonical PNGs.",
+    "All90 unknown base cells and all27 input JSON files in the nine observed layouts remain unchanged. Actual Civ4 late-strategic and precious resource source cells remain unverified.",
+    "Authored river topology is explicit shared-edge design. qa/authored_river_migration55.json retains the previous paths for eight migrated layouts; observed traces remain diagnostic evidence.",
+    "The compact core includes one complete default Tiled sample and all25 independently renderable inputs. Extra cached exports and frozen artwork-source packs are optional; source screenshots are excluded.",
+    "Tiled validation covers JSON/XML, relative references, semantics and exact visible-pixel reconstruction. Native Tiled GUI and downstream-engine testing have not been performed.",
+    "Historical versioned integration and QA documents retain their named checkpoint scope and do not override the current55 inventory."
+  ],
+  "counts": {
+    "implemented": 41,
+    "partial": 11,
+    "not built": 29
+  },
+  "latest_direction_override": {
+    "source_category": "jungle",
+    "previous_translation": "Giant mushroom thicket",
+    "current_translation": "Jungle",
+    "reason": "User direction; real jungle replaces mushroom thickets. Historical checkpoint archives retain prior art.",
+    "current_checkpoint": 55
+  },
+  "checkpoint": 55,
+  "reviewed_through": 55,
+  "canonical_runtime_png_count": 130,
+  "input_layouts": {
+    "total": 25,
+    "authored": 16,
+    "observed": 9
+  },
+  "default_example": "examples/jungle_mixed"
+}

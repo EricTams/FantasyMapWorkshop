@@ -1,0 +1,565 @@
+{
+  "id": "dutch_developed_fields",
+  "title": "Dutch improved fields, mines and coast",
+  "source_url": "http://www.sullla.com/Civ4/WCC/WCC-14.jpg",
+  "source_page_url": "https://sullla.com/Civ4/WCC.html",
+  "source_art_status": "Stock-looking Beyond the Sword art, built-in Tilted Axis map",
+  "grid_size": [
+    5,
+    5
+  ],
+  "crop_bounds_px": [
+    296,
+    177,
+    726,
+    514
+  ],
+  "geometry": {
+    "type": "approximate perspective grid",
+    "row_boundary_y": [
+      177,
+      235,
+      301,
+      368,
+      438,
+      513
+    ],
+    "column_boundary_x_by_row": [
+      [
+        327,
+        404,
+        482,
+        561,
+        640,
+        720
+      ],
+      [
+        322,
+        401,
+        480,
+        560,
+        640,
+        720
+      ],
+      [
+        318,
+        398,
+        478,
+        559,
+        640,
+        721
+      ],
+      [
+        311,
+        393,
+        474,
+        557,
+        640,
+        723
+      ],
+      [
+        305,
+        387,
+        471,
+        556,
+        640,
+        724
+      ],
+      [
+        296,
+        381,
+        466,
+        552,
+        641,
+        726
+      ]
+    ],
+    "confidence": "medium-high; hill contours locally bend grid"
+  },
+  "terrain_rows": [
+    [
+      "grass",
+      "grass",
+      "grass",
+      "plains",
+      "unknown"
+    ],
+    [
+      "grass",
+      "grass",
+      "unknown",
+      "unknown",
+      "sand"
+    ],
+    [
+      "plains",
+      "grass",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    [
+      "unknown",
+      "plains",
+      "plains",
+      "unknown",
+      "unknown"
+    ],
+    [
+      "water",
+      "grass",
+      "grass",
+      "grass",
+      "sand"
+    ]
+  ],
+  "forest_rows": [
+    [
+      ".",
+      ".",
+      ".",
+      ".",
+      "P"
+    ],
+    [
+      ".",
+      ".",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      ".",
+      ".",
+      "P",
+      ".",
+      "P"
+    ],
+    [
+      ".",
+      ".",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      ".",
+      ".",
+      ".",
+      ".",
+      "."
+    ]
+  ],
+  "features": [
+    {
+      "cell": [
+        0,
+        1
+      ],
+      "kind": "city",
+      "label": "East Korea",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "kind": "improvement",
+      "label": "field improvement, exact type unknown",
+      "confidence": "medium",
+      "note": "Visible gridded green plots and small structure; do not assert farm vs cottage from this crop alone"
+    },
+    {
+      "cell": [
+        1,
+        0
+      ],
+      "kind": "resource_improvement",
+      "label": "corn farm",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "kind": "improvement",
+      "label": "mine",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        1,
+        3
+      ],
+      "kind": "improvement",
+      "label": "mine",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        3,
+        1
+      ],
+      "kind": "resource_improvement",
+      "label": "wine / winery",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "kind": "resource",
+      "label": "sheep",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        4,
+        1
+      ],
+      "kind": "improvement",
+      "label": "small buildings, type unknown",
+      "confidence": "medium"
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "kind": "city",
+      "label": "Willemstad",
+      "confidence": "high"
+    }
+  ],
+  "river_routes": [
+    {
+      "nodes": [
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ]
+      ],
+      "confidence": "high",
+      "note": "River east of East Korea ends within next row; source termination is near rocky tile boundary."
+    }
+  ],
+  "elevation_ignored": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "benchmark_focus": [
+    "Improvement silhouettes distinct from base terrain",
+    "Mine / field / vineyard differentiation",
+    "Road network crosses many terrain types",
+    "Coastal developed grass beside dry terrain"
+  ],
+  "notes": [
+    "Gray hill bases unknown; flatten geometry only if target assets exclude elevation.",
+    "No road topology transcribed in this version; visible black lines are roads and must not be mistaken for rivers.",
+    "Feature types not safely identifiable are explicitly unknown.",
+    "Leftmost bottom cell is water despite adjacent shoreline/grass spill. This was checked against the overlaid grid."
+  ],
+  "source_dimensions_px": [
+    1200,
+    674
+  ],
+  "forest_legend": {
+    "D": "broadleaf canopy",
+    "P": "pine/conifer canopy",
+    "?": "unknown"
+  },
+  "unknown_cells": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      0
+    ]
+  ],
+  "source_sha256": "f8cd3fe4187f58183c120210011b30c6e66dc403544681071041106dc119d3c7",
+  "confidence_policy": "Topology is visually transcribed. Known labels are high/medium visual confidence; exact game-state semantics are unverified without save file.",
+  "river_digitization": {
+    "method": "Hand-digitized visible blue channel centerline in original pixels; no unseen source spans connected",
+    "estimated_pixel_error": 3,
+    "paths": [
+      {
+        "path_id": "east_korea_visible",
+        "route_id": "east_korea_river",
+        "source_pixels": [
+          [
+            473,
+            169
+          ],
+          [
+            486,
+            173
+          ],
+          [
+            498,
+            174
+          ],
+          [
+            509,
+            170
+          ],
+          [
+            519,
+            172
+          ],
+          [
+            527,
+            176
+          ],
+          [
+            536,
+            181
+          ],
+          [
+            546,
+            181
+          ],
+          [
+            555,
+            180
+          ],
+          [
+            563,
+            184
+          ],
+          [
+            570,
+            190
+          ],
+          [
+            568,
+            199
+          ],
+          [
+            561,
+            209
+          ],
+          [
+            557,
+            222
+          ],
+          [
+            552,
+            231
+          ],
+          [
+            553,
+            241
+          ],
+          [
+            555,
+            253
+          ],
+          [
+            556,
+            265
+          ],
+          [
+            559,
+            275
+          ],
+          [
+            565,
+            281
+          ],
+          [
+            566,
+            289
+          ]
+        ],
+        "notes": "Trace includes a short upstream lead-in above selected crop. Main selected portion is visible; endpoint tapers into rocky ground near y289.",
+        "fractional_grid_nodes": [
+          [
+            1.8809,
+            -0.1379
+          ],
+          [
+            2.0489,
+            -0.069
+          ],
+          [
+            2.2014,
+            -0.0517
+          ],
+          [
+            2.3392,
+            -0.1207
+          ],
+          [
+            2.4667,
+            -0.0862
+          ],
+          [
+            2.5693,
+            -0.0172
+          ],
+          [
+            2.6847,
+            0.069
+          ],
+          [
+            2.8112,
+            0.069
+          ],
+          [
+            2.9248,
+            0.0517
+          ],
+          [
+            3.0268,
+            0.1207
+          ],
+          [
+            3.1164,
+            0.2241
+          ],
+          [
+            3.093,
+            0.3793
+          ],
+          [
+            3.0069,
+            0.5517
+          ],
+          [
+            2.9596,
+            0.7759
+          ],
+          [
+            2.8991,
+            0.931
+          ],
+          [
+            2.9137,
+            1.0909
+          ],
+          [
+            2.9411,
+            1.2727
+          ],
+          [
+            2.9559,
+            1.4545
+          ],
+          [
+            2.9951,
+            1.6061
+          ],
+          [
+            3.0706,
+            1.697
+          ],
+          [
+            3.0844,
+            1.8182
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      }
+    ],
+    "occlusions": [],
+    "connectivity": "One visible river centerline, no invented continuation after the observed termination.",
+    "rendering_instruction": "Do not connect paths by list order. Draw each path independently; labels/gap connectors only at explicit after_path_id/before_path_id occlusions, never between separate route_ids.",
+    "flow_direction": "Polyline order is tracing order, not asserted hydrological direction."
+  },
+  "hill_cells": [
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      3
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      4
+    ]
+  ],
+  "mountain_cells": [],
+  "screenshot_bundled": false,
+  "crop_local_path": "/workspace/scratch/69c5d365b573/civ4_benchmarks/dutch_developed_fields_crop.png"
+}

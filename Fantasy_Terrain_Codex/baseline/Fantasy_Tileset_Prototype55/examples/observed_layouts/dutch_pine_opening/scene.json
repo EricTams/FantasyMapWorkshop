@@ -1,0 +1,1128 @@
+{
+  "id": "dutch_pine_opening",
+  "title": "Dutch pine forest with broad clearings",
+  "source_url": "http://www.sullla.com/Civ4/WCC/WCC-11.jpg",
+  "source_page_url": "https://sullla.com/Civ4/WCC.html",
+  "source_art_status": "Stock-looking Beyond the Sword art, built-in Tilted Axis map",
+  "grid_size": [
+    5,
+    5
+  ],
+  "crop_bounds_px": [
+    180,
+    80,
+    610,
+    359
+  ],
+  "geometry": {
+    "type": "approximate perspective grid",
+    "row_boundary_y": [
+      80,
+      130,
+      179,
+      233,
+      293,
+      358
+    ],
+    "column_boundary_x_by_row": [
+      [
+        239,
+        307,
+        374,
+        441,
+        506,
+        570
+      ],
+      [
+        230,
+        302,
+        371,
+        440,
+        509,
+        578
+      ],
+      [
+        220,
+        296,
+        368,
+        440,
+        512,
+        585
+      ],
+      [
+        208,
+        290,
+        364,
+        439,
+        515,
+        593
+      ],
+      [
+        195,
+        282,
+        360,
+        439,
+        519,
+        601
+      ],
+      [
+        180,
+        272,
+        355,
+        438,
+        523,
+        610
+      ]
+    ],
+    "confidence": "medium-high: hills locally displace grid"
+  },
+  "terrain_rows": [
+    [
+      "grass",
+      "plains",
+      "grass",
+      "grass",
+      "unknown"
+    ],
+    [
+      "unknown",
+      "unknown",
+      "unknown",
+      "grass",
+      "unknown"
+    ],
+    [
+      "plains",
+      "unknown",
+      "grass",
+      "unknown",
+      "unknown"
+    ],
+    [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  ],
+  "forest_rows": [
+    [
+      ".",
+      ".",
+      ".",
+      ".",
+      "P"
+    ],
+    [
+      "P",
+      "P",
+      "P",
+      ".",
+      "P"
+    ],
+    [
+      ".",
+      "P",
+      ".",
+      "P",
+      "P"
+    ],
+    [
+      ".",
+      ".",
+      "P",
+      "P",
+      "P"
+    ],
+    [
+      ".",
+      "P",
+      ".",
+      ".",
+      "P"
+    ]
+  ],
+  "features": [
+    {
+      "cell": [
+        0,
+        1
+      ],
+      "kind": "resource",
+      "label": "ivory",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        0,
+        2
+      ],
+      "kind": "resource",
+      "label": "sheep",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        0,
+        3
+      ],
+      "kind": "resource",
+      "label": "corn",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "kind": "city",
+      "label": "Cradle",
+      "confidence": "high"
+    }
+  ],
+  "river_routes": [
+    {
+      "nodes": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          4,
+          2
+        ]
+      ],
+      "confidence": "high visible route; continuation under trees unverified",
+      "note": "River continues beyond observed tree-occluded endpoints; do not claim a source/sink at last node"
+    },
+    {
+      "nodes": [
+        [
+          4,
+          4
+        ],
+        [
+          5,
+          4
+        ]
+      ],
+      "confidence": "medium",
+      "note": "Separate visible downstream fragment along bottom-right tree edge; connection hidden by forest"
+    }
+  ],
+  "elevation_ignored": [
+    [
+      3,
+      0
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ]
+  ],
+  "benchmark_focus": [
+    "Pine silhouette distinct from broadleaf",
+    "Large connected canopy plus isolated lower stands",
+    "Open resource clearings readable without tree holes everywhere"
+  ],
+  "notes": [
+    "Ground beneath dense forest deliberately unknown.",
+    "Orange overlay is cultural border, never classify it as sand.",
+    "Two river fragments are not asserted to connect through invisible cells.",
+    "Cell [3,1] base revised to unknown after detailed water audit: orange ownership tint and an isolated blue patch prevent a reliable plains-vs-other-base label. No river connection or lake/oasis identity is asserted."
+  ],
+  "source_dimensions_px": [
+    1200,
+    675
+  ],
+  "forest_legend": {
+    "D": "broadleaf canopy",
+    "P": "pine/conifer canopy",
+    "?": "unknown"
+  },
+  "unknown_cells": [
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      1,
+      4
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      1
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      3,
+      1
+    ]
+  ],
+  "source_sha256": "93136bd69c087eb73044f8b8fe76017d67fdd392d3bed040293c3f3f4703017e",
+  "confidence_policy": "Topology is visually transcribed. Known labels are high/medium visual confidence; exact game-state semantics are unverified without save file.",
+  "river_digitization": {
+    "method": "Visible source-pixel centerlines manually traced and overlay-checked; no unobserved spans joined",
+    "estimated_pixel_error": 3,
+    "paths": [
+      {
+        "path_id": "dutch_north_visible",
+        "route_id": "dutch_east_river",
+        "source_pixels": [
+          [
+            373,
+            80
+          ],
+          [
+            377,
+            88
+          ],
+          [
+            380,
+            98
+          ],
+          [
+            382,
+            109
+          ],
+          [
+            381,
+            116
+          ],
+          [
+            374,
+            120
+          ],
+          [
+            363,
+            123
+          ],
+          [
+            356,
+            125
+          ],
+          [
+            371,
+            125
+          ],
+          [
+            384,
+            126
+          ],
+          [
+            379,
+            131
+          ],
+          [
+            368,
+            134
+          ],
+          [
+            372,
+            140
+          ],
+          [
+            381,
+            144
+          ],
+          [
+            385,
+            148
+          ],
+          [
+            379,
+            153
+          ],
+          [
+            379,
+            160
+          ],
+          [
+            387,
+            164
+          ],
+          [
+            378,
+            168
+          ],
+          [
+            366,
+            172
+          ],
+          [
+            362,
+            177
+          ],
+          [
+            368,
+            180
+          ],
+          [
+            380,
+            175
+          ],
+          [
+            389,
+            173
+          ],
+          [
+            401,
+            177
+          ],
+          [
+            416,
+            179
+          ],
+          [
+            429,
+            178
+          ],
+          [
+            439,
+            175
+          ]
+        ],
+        "notes": "Visible source curve and eastward run; tinted switchback remains visible under culture overlay, but color there is not original river color.",
+        "fractional_grid_nodes": [
+          [
+            1.9851,
+            0.0
+          ],
+          [
+            2.0517,
+            0.16
+          ],
+          [
+            2.1045,
+            0.36
+          ],
+          [
+            2.1429,
+            0.58
+          ],
+          [
+            2.1338,
+            0.72
+          ],
+          [
+            2.035,
+            0.8
+          ],
+          [
+            1.8775,
+            0.86
+          ],
+          [
+            1.7776,
+            0.9
+          ],
+          [
+            1.9956,
+            0.9
+          ],
+          [
+            2.1854,
+            0.92
+          ],
+          [
+            2.1167,
+            1.0204
+          ],
+          [
+            1.9602,
+            1.0816
+          ],
+          [
+            2.0232,
+            1.2041
+          ],
+          [
+            2.1554,
+            1.2857
+          ],
+          [
+            2.2154,
+            1.3673
+          ],
+          [
+            2.1336,
+            1.4694
+          ],
+          [
+            2.1389,
+            1.6122
+          ],
+          [
+            2.2544,
+            1.6939
+          ],
+          [
+            2.1308,
+            1.7755
+          ],
+          [
+            1.9661,
+            1.8571
+          ],
+          [
+            1.9148,
+            1.9592
+          ],
+          [
+            2.001,
+            2.0185
+          ],
+          [
+            2.1638,
+            1.9184
+          ],
+          [
+            2.288,
+            1.8776
+          ],
+          [
+            2.4574,
+            1.9592
+          ],
+          [
+            2.6667,
+            2.0
+          ],
+          [
+            2.8471,
+            1.9796
+          ],
+          [
+            2.9861,
+            1.9184
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      },
+      {
+        "path_id": "dutch_middle_a",
+        "route_id": "dutch_east_river",
+        "source_pixels": [
+          [
+            452,
+            178
+          ],
+          [
+            460,
+            179
+          ],
+          [
+            468,
+            179
+          ],
+          [
+            473,
+            180
+          ]
+        ],
+        "notes": "Visible blue between crowns",
+        "confidence": "medium visible fragment; +/-3 source pixels",
+        "fractional_grid_nodes": [
+          [
+            3.1668,
+            1.9796
+          ],
+          [
+            3.2778,
+            2.0
+          ],
+          [
+            3.3889,
+            2.0
+          ],
+          [
+            3.4581,
+            2.0185
+          ]
+        ]
+      },
+      {
+        "path_id": "dutch_middle_b",
+        "route_id": "dutch_east_river",
+        "source_pixels": [
+          [
+            479,
+            181
+          ],
+          [
+            484,
+            181
+          ]
+        ],
+        "notes": "Short exposed blue window between foreground pine crowns",
+        "confidence": "medium visible fragment; +/-3 source pixels",
+        "fractional_grid_nodes": [
+          [
+            3.5411,
+            2.037
+          ],
+          [
+            3.6104,
+            2.037
+          ]
+        ]
+      },
+      {
+        "path_id": "dutch_middle_c",
+        "route_id": "dutch_east_river",
+        "source_pixels": [
+          [
+            499,
+            182
+          ],
+          [
+            505,
+            183
+          ]
+        ],
+        "notes": "Short culturally tinted water window; lower confidence than blue spans",
+        "confidence": "medium visible fragment; +/-3 source pixels",
+        "fractional_grid_nodes": [
+          [
+            3.8177,
+            2.0556
+          ],
+          [
+            3.9001,
+            2.0741
+          ]
+        ]
+      },
+      {
+        "path_id": "dutch_downstream_left_visible",
+        "route_id": "dutch_east_river",
+        "source_pixels": [
+          [
+            551,
+            287
+          ],
+          [
+            557,
+            291
+          ],
+          [
+            562,
+            292
+          ]
+        ],
+        "notes": "Small downstream channel flash before foreground crown occlusion.",
+        "fractional_grid_nodes": [
+          [
+            4.3971,
+            3.9
+          ],
+          [
+            4.4658,
+            3.9667
+          ],
+          [
+            4.5256,
+            3.9833
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      },
+      {
+        "path_id": "dutch_downstream_right_visible",
+        "route_id": "dutch_east_river",
+        "source_pixels": [
+          [
+            575,
+            292
+          ],
+          [
+            584,
+            294
+          ],
+          [
+            594,
+            299
+          ],
+          [
+            603,
+            299
+          ],
+          [
+            613,
+            296
+          ],
+          [
+            619,
+            292
+          ]
+        ],
+        "notes": "Visible downstream bend, partly beyond right common-grid edge.",
+        "fractional_grid_nodes": [
+          [
+            4.6843,
+            3.9833
+          ],
+          [
+            4.7912,
+            4.0154
+          ],
+          [
+            4.905,
+            4.0923
+          ],
+          [
+            5.0142,
+            4.0923
+          ],
+          [
+            5.1409,
+            4.0462
+          ],
+          [
+            5.2213,
+            3.9833
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      },
+      {
+        "path_id": "dutch_downstream_lower_visible",
+        "route_id": "dutch_east_river",
+        "source_pixels": [
+          [
+            590,
+            314
+          ],
+          [
+            598,
+            309
+          ],
+          [
+            606,
+            306
+          ],
+          [
+            614,
+            304
+          ],
+          [
+            619,
+            299
+          ]
+        ],
+        "notes": "Separate visible lower channel behind foreground crowns; connection outside visible boundary unverified.",
+        "fractional_grid_nodes": [
+          [
+            4.8337,
+            4.3231
+          ],
+          [
+            4.9373,
+            4.2462
+          ],
+          [
+            5.0386,
+            4.2
+          ],
+          [
+            5.1385,
+            4.1692
+          ],
+          [
+            5.2082,
+            4.0923
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      },
+      {
+        "path_id": "dutch_west_visible",
+        "route_id": "dutch_west_river",
+        "source_pixels": [
+          [
+            144,
+            175
+          ],
+          [
+            160,
+            177
+          ],
+          [
+            175,
+            174
+          ],
+          [
+            188,
+            176
+          ],
+          [
+            197,
+            179
+          ],
+          [
+            207,
+            178
+          ],
+          [
+            217,
+            179
+          ],
+          [
+            225,
+            184
+          ],
+          [
+            227,
+            190
+          ],
+          [
+            221,
+            197
+          ],
+          [
+            219,
+            205
+          ],
+          [
+            214,
+            211
+          ],
+          [
+            207,
+            217
+          ],
+          [
+            202,
+            222
+          ],
+          [
+            201,
+            230
+          ],
+          [
+            205,
+            241
+          ],
+          [
+            205,
+            251
+          ],
+          [
+            202,
+            259
+          ],
+          [
+            205,
+            266
+          ],
+          [
+            213,
+            270
+          ]
+        ],
+        "notes": "Separate western river along the left common-grid boundary; large upstream lead-in is outside scored grid.",
+        "fractional_grid_nodes": [
+          [
+            -1.0151,
+            1.9184
+          ],
+          [
+            -0.7966,
+            1.9592
+          ],
+          [
+            -0.6088,
+            1.898
+          ],
+          [
+            -0.4305,
+            1.9388
+          ],
+          [
+            -0.3026,
+            2.0
+          ],
+          [
+            -0.1739,
+            1.9796
+          ],
+          [
+            -0.0395,
+            2.0
+          ],
+          [
+            0.0798,
+            2.0926
+          ],
+          [
+            0.1223,
+            2.2037
+          ],
+          [
+            0.0641,
+            2.3333
+          ],
+          [
+            0.0606,
+            2.4815
+          ],
+          [
+            0.014,
+            2.5926
+          ],
+          [
+            -0.0568,
+            2.7037
+          ],
+          [
+            -0.1045,
+            2.7963
+          ],
+          [
+            -0.0939,
+            2.9444
+          ],
+          [
+            -0.0153,
+            3.1333
+          ],
+          [
+            0.0108,
+            3.3
+          ],
+          [
+            -0.0044,
+            3.4333
+          ],
+          [
+            0.049,
+            3.55
+          ],
+          [
+            0.153,
+            3.6167
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      },
+      {
+        "path_id": "dutch_west_sandbar_branch",
+        "route_id": "dutch_west_river",
+        "source_pixels": [
+          [
+            197,
+            179
+          ],
+          [
+            198,
+            183
+          ],
+          [
+            207,
+            185
+          ],
+          [
+            217,
+            184
+          ],
+          [
+            221,
+            191
+          ],
+          [
+            221,
+            197
+          ]
+        ],
+        "role": "visible_sandbar_branch",
+        "joins_path_id": "dutch_west_visible",
+        "confidence": "medium visible local sandbar branch",
+        "fractional_grid_nodes": [
+          [
+            -0.3026,
+            2.0
+          ],
+          [
+            -0.2762,
+            2.0741
+          ],
+          [
+            -0.1522,
+            2.1111
+          ],
+          [
+            -0.0247,
+            2.0926
+          ],
+          [
+            0.0474,
+            2.2222
+          ],
+          [
+            0.0641,
+            2.3333
+          ]
+        ]
+      }
+    ],
+    "occlusions": [
+      {
+        "after_path_id": "dutch_north_visible",
+        "before_path_id": "dutch_middle_a",
+        "source_bounds": [
+          440,
+          169,
+          452,
+          184
+        ],
+        "reason": "Foreground pine crown covers the channel."
+      },
+      {
+        "after_path_id": "dutch_middle_a",
+        "before_path_id": "dutch_middle_b",
+        "source_bounds": [
+          474,
+          174,
+          479,
+          188
+        ],
+        "reason": "Foreground crown."
+      },
+      {
+        "after_path_id": "dutch_middle_b",
+        "before_path_id": "dutch_middle_c",
+        "source_bounds": [
+          485,
+          174,
+          498,
+          190
+        ],
+        "reason": "Foreground crowns cover the channel."
+      },
+      {
+        "after_path_id": "dutch_middle_c",
+        "before_path_id": "dutch_downstream_left_visible",
+        "source_bounds": [
+          505,
+          181,
+          569,
+          289
+        ],
+        "reason": "Dense forest hides route; exact intervening path is unknown."
+      },
+      {
+        "after_path_id": "dutch_downstream_left_visible",
+        "before_path_id": "dutch_downstream_right_visible",
+        "source_bounds": [
+          563,
+          286,
+          575,
+          307
+        ],
+        "reason": "Foreground crown masks the reach."
+      }
+    ],
+    "connectivity": "Distinct western visible corridor, plus multiple observable fragments of eastern corridor. Hidden connections are explicitly untraced; channel order is not flow direction.",
+    "rendering_instruction": "Do not connect paths by array order or infer gaps between them. Use explicit route_id, branch connections and occlusion references only.",
+    "flow_direction": "Trace ordering is not an assertion of hydrological flow.",
+    "outside_common_grid_note": "Several western and far-right lead-in/out points are outside common grid. Normalized edge extrapolation is not scored outside it.",
+    "visible_water_patches_not_connected": [
+      {
+        "source_bounds": [
+          333,
+          239,
+          359,
+          257
+        ],
+        "kind": "small visible blue water patch",
+        "status": "connection/type unknown; do not invent connection to any traced river",
+        "note": "Near southwest of city marker; no visible linking channel through canopy."
+      }
+    ]
+  },
+  "screenshot_bundled": false,
+  "crop_local_path": "/workspace/scratch/69c5d365b573/civ4_benchmarks/dutch_pine_opening_crop.png"
+}

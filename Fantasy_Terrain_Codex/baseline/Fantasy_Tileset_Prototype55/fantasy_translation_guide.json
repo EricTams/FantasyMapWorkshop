@@ -1,0 +1,584 @@
+{
+  "schema_version": 1,
+  "purpose": "81-category fantasy concept guide with explicit latest user direction overrides; separate from implementation inventory",
+  "status_note": "Concepts guide the art direction. This is not a claim that every category is implemented or approved as final art. The earlier crimson seedpod proposal is not the spices concept.",
+  "categories": [
+    {
+      "group": "ground",
+      "source_category": "grassland",
+      "fantasy_name": "Meadow",
+      "visual_concept": "Fresh green",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "plains",
+      "fantasy_name": "Golden steppe",
+      "visual_concept": "Ochre grasses",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "desert",
+      "fantasy_name": "Sand wastes",
+      "visual_concept": "Pale dunes",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "tundra",
+      "fantasy_name": "Frost heath",
+      "visual_concept": "Gray-purple heath",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "snow",
+      "fantasy_name": "Snowfields",
+      "visual_concept": "Snow-covered ground",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "coast",
+      "fantasy_name": "Turquoise shallows",
+      "visual_concept": "Shallow coastal water",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "ocean",
+      "fantasy_name": "Deep sea",
+      "visual_concept": "Dark blue offshore water",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "lake",
+      "fantasy_name": "Inland lake",
+      "visual_concept": "Inland water and shallows",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "ground",
+      "source_category": "river",
+      "fantasy_name": "Winding river",
+      "visual_concept": "Blue winding channel",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "relief",
+      "source_category": "flat",
+      "fantasy_name": "Flat ground",
+      "visual_concept": "Base terrain without relief",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "relief",
+      "source_category": "hill",
+      "fantasy_name": "Rounded hills",
+      "visual_concept": "Grassy rounded rises with sparse light-gray exposed rock",
+      "implementation_status": "Implemented rounded light-rock overlay in pass 33"
+    },
+    {
+      "group": "relief",
+      "source_category": "mountain",
+      "fantasy_name": "Pointed crags",
+      "visual_concept": "Darker gray, taller, spiky, impassable forms",
+      "implementation_status": "Implemented dark pointed overlay in pass 33; connected range design remains a prototype"
+    },
+    {
+      "group": "feature",
+      "source_category": "forest",
+      "fantasy_name": "Greenwood",
+      "visual_concept": "Compact broad canopy",
+      "implementation_status": "Implemented connected broadleaf kit; pine is a separate partial family"
+    },
+    {
+      "group": "feature",
+      "source_category": "jungle",
+      "fantasy_name": "Jungle",
+      "visual_concept": "Dense tropical jungle",
+      "implementation_status": "Pending giant mushroom thicket; legacy broadleaf stand is not the final translated category",
+      "previous_translation": "Giant mushroom thicket",
+      "override_note": "Latest user instruction: jungle remains jungle; mushroom treatment is historical only"
+    },
+    {
+      "group": "feature",
+      "source_category": "oasis",
+      "fantasy_name": "Spring grove",
+      "visual_concept": "Pool and palms",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "feature",
+      "source_category": "floodplains",
+      "fantasy_name": "Fertile riverbanks",
+      "visual_concept": "Green reeds",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "feature",
+      "source_category": "ice",
+      "fantasy_name": "Pack ice",
+      "visual_concept": "Angular ice plates",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "feature",
+      "source_category": "fallout",
+      "fantasy_name": "Blight",
+      "visual_concept": "Black ground, violet fissures and dead stalks",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "wheat",
+      "fantasy_name": "Golden wheat",
+      "visual_concept": "Tall seedheads",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "corn",
+      "fantasy_name": "Sun-maize",
+      "visual_concept": "Oversized yellow cobs and upright leaves",
+      "implementation_status": "Crop field available; explicit oversized sun-maize concept remains a study"
+    },
+    {
+      "group": "food",
+      "source_category": "rice",
+      "fantasy_name": "Marsh rice",
+      "visual_concept": "Short sprouts in water",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "banana",
+      "fantasy_name": "Giant pod-fruit",
+      "visual_concept": "Yellow crescent hanging pods",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "cow",
+      "fantasy_name": "Aurochs",
+      "visual_concept": "Large ancestral cattle",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "pig",
+      "fantasy_name": "Boar",
+      "visual_concept": "Wild boar",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "sheep",
+      "fantasy_name": "Woolly sheep",
+      "visual_concept": "Thick woolly coats",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "deer",
+      "fantasy_name": "White stags",
+      "visual_concept": "White bodies and impressive branching antlers",
+      "implementation_status": "Implemented as elevated-view white stag pair in pass 35"
+    },
+    {
+      "group": "food",
+      "source_category": "fish",
+      "fantasy_name": "Silverfin shoal",
+      "visual_concept": "A clearly visible school of fish",
+      "implementation_status": "Implemented silverfin school in pass 29"
+    },
+    {
+      "group": "food",
+      "source_category": "clam",
+      "fantasy_name": "Pearl clams",
+      "visual_concept": "Open shells with pale interiors",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "food",
+      "source_category": "crab",
+      "fantasy_name": "Giant red crabs",
+      "visual_concept": "Distinct red bodies and claws",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "gold",
+      "fantasy_name": "Gold veins",
+      "visual_concept": "Yellow veins in rock",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "silver",
+      "fantasy_name": "Silver veins",
+      "visual_concept": "Pale veins in dark rock",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "gems",
+      "fantasy_name": "Jewel clusters",
+      "visual_concept": "Short chunky multicolored crystals",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "ivory",
+      "fantasy_name": "Mammoths",
+      "visual_concept": "Impressive woolly tusked animals",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "fur",
+      "fantasy_name": "Winter foxes",
+      "visual_concept": "White-tailed winter foxes",
+      "implementation_status": "Pending winter foxes; legacy animal art does not implement this concept"
+    },
+    {
+      "group": "luxury",
+      "source_category": "dye",
+      "fantasy_name": "Indigo flowers",
+      "visual_concept": "Deep blue-purple flowering plants",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "incense",
+      "fantasy_name": "Resin trees",
+      "visual_concept": "Crooked trees with amber drops",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "silk",
+      "fantasy_name": "Giant silkworm cocoons",
+      "visual_concept": "White hanging ovals on low trees",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "spices",
+      "fantasy_name": "Scarlet pepper bushes",
+      "visual_concept": "Low green shrubs with obvious red pepper fruit",
+      "implementation_status": "Implemented as low green scarlet pepper bushes in pass 36"
+    },
+    {
+      "group": "luxury",
+      "source_category": "sugar",
+      "fantasy_name": "Honey reeds",
+      "visual_concept": "Thick gold jointed canes",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "wine",
+      "fantasy_name": "Grapes",
+      "visual_concept": "Purple bunches on low vines",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "luxury",
+      "source_category": "whale",
+      "fantasy_name": "Leviathans",
+      "visual_concept": "Huge curved backs and forked tails",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "stone",
+      "fantasy_name": "Building stone",
+      "visual_concept": "Broad gray slabs",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "marble",
+      "fantasy_name": "White marble",
+      "visual_concept": "White blocks with dark veins",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "copper",
+      "fantasy_name": "Copper ore",
+      "visual_concept": "Reddish ore",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "iron",
+      "fantasy_name": "Iron ore",
+      "visual_concept": "Dark ore with rust streaks",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "horse",
+      "fantasy_name": "Riding horses",
+      "visual_concept": "Horses at resource-site scale",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "coal",
+      "fantasy_name": "Emberstone",
+      "visual_concept": "Black stone with orange cracks; fuels forges",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "oil",
+      "fantasy_name": "Black ichor",
+      "visual_concept": "Glossy black seep; supplies alchemical engines",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "aluminum",
+      "fantasy_name": "Mithril",
+      "visual_concept": "Pale-blue metallic blades; advanced armor and flying craft",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "strategic",
+      "source_category": "uranium",
+      "fantasy_name": "Voidstone",
+      "visual_concept": "One large violet crystal in a broken rock shell",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "farm",
+      "fantasy_name": "Smallholding",
+      "visual_concept": "Crop rows and a tiny barn",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "pasture",
+      "fantasy_name": "Herd enclosure",
+      "visual_concept": "Wooden fence",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "camp",
+      "fantasy_name": "Hunter lodge",
+      "visual_concept": "Low tent, drying rack and hide",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "plantation",
+      "fantasy_name": "Garden estate",
+      "visual_concept": "Orderly rows and a pavilion",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "winery",
+      "fantasy_name": "Vineyard press",
+      "visual_concept": "Trellis and vat",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "mine",
+      "fantasy_name": "Dwarven mine",
+      "visual_concept": "Dark stone entrance and an ore cart",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "quarry",
+      "fantasy_name": "Stonecutter pit",
+      "visual_concept": "Stepped rock and a crane",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "well",
+      "fantasy_name": "Ichor pump",
+      "visual_concept": "Tall pumping frame",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "offshore_platform",
+      "fantasy_name": "Sea extraction tower",
+      "visual_concept": "Tower on stilts",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "fishing_boats",
+      "fantasy_name": "Fishing skiffs",
+      "visual_concept": "Small boats and nets",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "whaling_boats",
+      "fantasy_name": "Leviathan hunters",
+      "visual_concept": "Longboats and a harpoon",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "workshop",
+      "fantasy_name": "Smithy",
+      "visual_concept": "Broad chimney",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "lumbermill",
+      "fantasy_name": "Timberyard",
+      "visual_concept": "Stacked logs and a saw",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "windmill",
+      "fantasy_name": "Windmill",
+      "visual_concept": "Oversized four sails",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "watermill",
+      "fantasy_name": "Watermill",
+      "visual_concept": "Large wheel beside a river",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "cottage",
+      "fantasy_name": "Crofter cottage",
+      "visual_concept": "One thatched house",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "hamlet",
+      "fantasy_name": "Hamlet",
+      "visual_concept": "Three houses and a well",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "village",
+      "fantasy_name": "Market village",
+      "visual_concept": "Bright awning",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "town",
+      "fantasy_name": "Guild town",
+      "visual_concept": "Dense roofs and a tall hall",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "fort",
+      "fantasy_name": "Watchkeep",
+      "visual_concept": "Square tower and compact wall",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "improvement",
+      "source_category": "forest_preserve",
+      "fantasy_name": "Druid grove",
+      "visual_concept": "Standing stones and living trees",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "goody_hut",
+      "fantasy_name": "Wayside shrine",
+      "visual_concept": "Roof and chest",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "city_ruins",
+      "fantasy_name": "Fallen settlement",
+      "visual_concept": "Broken wall and arch",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "road",
+      "fantasy_name": "Dirt and cobble track",
+      "visual_concept": "Grounded connecting track",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "railroad",
+      "fantasy_name": "Rune highway",
+      "visual_concept": "Pale paving and spaced rune stones",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "wood_bridge",
+      "fantasy_name": "Wooden bridge",
+      "visual_concept": "Wooden river crossing",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "stone_bridge",
+      "fantasy_name": "Stone bridge",
+      "visual_concept": "Stone river crossing",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "city",
+      "fantasy_name": "Castle settlement",
+      "visual_concept": "A central keep surrounded by roofs, increasing in density as it grows",
+      "implementation_status": "Compact settlement is available; central keep and growth stages are pending"
+    },
+    {
+      "group": "map_object",
+      "source_category": "borders",
+      "fantasy_name": "Realm borders",
+      "visual_concept": "Faction lines",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "unexplored_fog",
+      "fantasy_name": "Unexplored parchment",
+      "visual_concept": "Unexplored map treatment",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    },
+    {
+      "group": "map_object",
+      "source_category": "explored_fog",
+      "fantasy_name": "Subdued explored terrain",
+      "visual_concept": "Distinct from blight",
+      "implementation_status": "Concept guide; consult kit manifest for available assets"
+    }
+  ],
+  "latest_direction_overrides": [
+    {
+      "source_category": "jungle",
+      "previous_translation": "Giant mushroom thicket",
+      "current_translation": "Jungle",
+      "reason": "User direction; real jungle replaces mushroom thickets. Historical checkpoint archives retain prior art."
+    }
+  ]
+}

@@ -1,0 +1,605 @@
+{
+  "generation_count": 1,
+  "logical_cell_px": 128,
+  "sprites": [
+    {
+      "name": "boar_0",
+      "file": "boar_0.png",
+      "shadow_file": "boar_0_shadow.png",
+      "native_size": [
+        52,
+        39
+      ],
+      "root_anchor": [
+        26.0,
+        37.44
+      ],
+      "source_component_box": [
+        92,
+        11,
+        583,
+        379
+      ]
+    },
+    {
+      "name": "boar_1",
+      "file": "boar_1.png",
+      "shadow_file": "boar_1_shadow.png",
+      "native_size": [
+        52,
+        37
+      ],
+      "root_anchor": [
+        26.0,
+        35.519999999999996
+      ],
+      "source_component_box": [
+        707,
+        28,
+        1222,
+        398
+      ]
+    },
+    {
+      "name": "aurochs_0",
+      "file": "aurochs_0.png",
+      "shadow_file": "aurochs_0_shadow.png",
+      "native_size": [
+        56,
+        42
+      ],
+      "root_anchor": [
+        28.0,
+        40.32
+      ],
+      "source_component_box": [
+        46,
+        377,
+        606,
+        792
+      ]
+    },
+    {
+      "name": "aurochs_1",
+      "file": "aurochs_1.png",
+      "shadow_file": "aurochs_1_shadow.png",
+      "native_size": [
+        56,
+        35
+      ],
+      "root_anchor": [
+        28.0,
+        33.6
+      ],
+      "source_component_box": [
+        665,
+        418,
+        1259,
+        793
+      ]
+    },
+    {
+      "name": "mammoth_adult",
+      "file": "mammoth_adult.png",
+      "shadow_file": "mammoth_adult_shadow.png",
+      "native_size": [
+        84,
+        58
+      ],
+      "root_anchor": [
+        48.72,
+        55.68
+      ],
+      "source_component_box": [
+        45,
+        725,
+        735,
+        1205
+      ]
+    },
+    {
+      "name": "mammoth_young",
+      "file": "mammoth_young.png",
+      "shadow_file": "mammoth_young_shadow.png",
+      "native_size": [
+        42,
+        33
+      ],
+      "root_anchor": [
+        21.0,
+        31.68
+      ],
+      "source_component_box": [
+        799,
+        842,
+        1240,
+        1189
+      ]
+    },
+    {
+      "name": "winter_fox_0",
+      "file": "winter_fox_0.png",
+      "shadow_file": "winter_fox_0_shadow.png",
+      "native_size": [
+        60,
+        36
+      ],
+      "root_anchor": [
+        21.0,
+        34.56
+      ],
+      "source_component_box": [
+        72,
+        57,
+        667,
+        417
+      ],
+      "water_grade": false
+    },
+    {
+      "name": "winter_fox_1",
+      "file": "winter_fox_1.png",
+      "shadow_file": "winter_fox_1_shadow.png",
+      "native_size": [
+        60,
+        39
+      ],
+      "root_anchor": [
+        42.0,
+        37.44
+      ],
+      "source_component_box": [
+        691,
+        76,
+        1250,
+        436
+      ],
+      "water_grade": false
+    },
+    {
+      "name": "woolly_sheep_0",
+      "file": "woolly_sheep_0.png",
+      "shadow_file": "woolly_sheep_0_shadow.png",
+      "native_size": [
+        52,
+        45
+      ],
+      "root_anchor": [
+        26.0,
+        43.199999999999996
+      ],
+      "source_component_box": [
+        65,
+        424,
+        544,
+        835
+      ],
+      "water_grade": false
+    },
+    {
+      "name": "woolly_sheep_1",
+      "file": "woolly_sheep_1.png",
+      "shadow_file": "woolly_sheep_1_shadow.png",
+      "native_size": [
+        52,
+        43
+      ],
+      "root_anchor": [
+        26.0,
+        41.28
+      ],
+      "source_component_box": [
+        710,
+        436,
+        1216,
+        859
+      ],
+      "water_grade": false
+    },
+    {
+      "name": "pearl_clam_0",
+      "file": "pearl_clam_0.png",
+      "shadow_file": "pearl_clam_0_shadow.png",
+      "native_size": [
+        38,
+        32
+      ],
+      "root_anchor": [
+        19.0,
+        28.16
+      ],
+      "source_component_box": [
+        786,
+        864,
+        1190,
+        1199
+      ],
+      "water_grade": true
+    },
+    {
+      "name": "pearl_clam_1",
+      "file": "pearl_clam_1.png",
+      "shadow_file": "pearl_clam_1_shadow.png",
+      "native_size": [
+        36,
+        24
+      ],
+      "root_anchor": [
+        18.0,
+        21.12
+      ],
+      "source_component_box": [
+        83,
+        867,
+        570,
+        1195
+      ],
+      "water_grade": true
+    },
+    {
+      "name": "riding_horse_0",
+      "file": "riding_horse_0.png",
+      "shadow_file": "riding_horse_0_shadow.png",
+      "native_size": [
+        56,
+        44
+      ],
+      "root_anchor": [
+        28.0,
+        41.8
+      ],
+      "source_component_box": [
+        125,
+        26,
+        604,
+        399
+      ],
+      "painted_waterline": false
+    },
+    {
+      "name": "riding_horse_1",
+      "file": "riding_horse_1.png",
+      "shadow_file": "riding_horse_1_shadow.png",
+      "native_size": [
+        56,
+        42
+      ],
+      "root_anchor": [
+        28.0,
+        39.9
+      ],
+      "source_component_box": [
+        679,
+        45,
+        1182,
+        419
+      ],
+      "painted_waterline": false
+    },
+    {
+      "name": "giant_red_crab_0",
+      "file": "giant_red_crab_0.png",
+      "shadow_file": "giant_red_crab_0_shadow.png",
+      "native_size": [
+        52,
+        31
+      ],
+      "root_anchor": [
+        26.0,
+        15.5
+      ],
+      "source_component_box": [
+        47,
+        409,
+        650,
+        764
+      ],
+      "painted_waterline": true
+    },
+    {
+      "name": "giant_red_crab_1",
+      "file": "giant_red_crab_1.png",
+      "shadow_file": "giant_red_crab_1_shadow.png",
+      "native_size": [
+        52,
+        31
+      ],
+      "root_anchor": [
+        26.0,
+        15.5
+      ],
+      "source_component_box": [
+        667,
+        426,
+        1263,
+        783
+      ],
+      "painted_waterline": true
+    },
+    {
+      "name": "leviathan",
+      "file": "leviathan.png",
+      "shadow_file": "leviathan_shadow.png",
+      "native_size": [
+        104,
+        37
+      ],
+      "root_anchor": [
+        52.0,
+        18.5
+      ],
+      "source_component_box": [
+        61,
+        769,
+        1264,
+        1202
+      ],
+      "painted_waterline": true
+    }
+  ],
+  "groups": {
+    "boars": {
+      "source_category": "pigs",
+      "fantasy_translation": "Boars",
+      "instances": [
+        {
+          "sprite": 0,
+          "root_uv": [
+            0.28,
+            0.6
+          ],
+          "clearance_radius": [
+            30,
+            18
+          ]
+        },
+        {
+          "sprite": 1,
+          "root_uv": [
+            0.73,
+            0.84
+          ],
+          "clearance_radius": [
+            30,
+            18
+          ]
+        }
+      ]
+    },
+    "aurochs": {
+      "source_category": "cows",
+      "fantasy_translation": "Aurochs",
+      "instances": [
+        {
+          "sprite": 2,
+          "root_uv": [
+            0.28,
+            0.6
+          ],
+          "clearance_radius": [
+            32,
+            19
+          ]
+        },
+        {
+          "sprite": 3,
+          "root_uv": [
+            0.73,
+            0.84
+          ],
+          "clearance_radius": [
+            32,
+            19
+          ]
+        }
+      ]
+    },
+    "mammoths": {
+      "source_category": "ivory",
+      "fantasy_translation": "Mammoths",
+      "instances": [
+        {
+          "sprite": 4,
+          "root_uv": [
+            0.43,
+            0.62
+          ],
+          "clearance_radius": [
+            40,
+            24
+          ]
+        },
+        {
+          "sprite": 5,
+          "root_uv": [
+            0.76,
+            0.84
+          ],
+          "clearance_radius": [
+            24,
+            16
+          ]
+        }
+      ]
+    },
+    "winter_foxes": {
+      "source_category": "fur",
+      "fantasy_translation": "Winter foxes",
+      "instances": [
+        {
+          "sprite": 6,
+          "root_uv": [
+            0.28,
+            0.6
+          ],
+          "clearance_radius": [
+            27,
+            17
+          ]
+        },
+        {
+          "sprite": 7,
+          "root_uv": [
+            0.78,
+            0.85
+          ],
+          "clearance_radius": [
+            27,
+            17
+          ]
+        }
+      ]
+    },
+    "woolly_sheep": {
+      "source_category": "sheep",
+      "fantasy_translation": "Woolly sheep",
+      "instances": [
+        {
+          "sprite": 8,
+          "root_uv": [
+            0.28,
+            0.6
+          ],
+          "clearance_radius": [
+            29,
+            19
+          ]
+        },
+        {
+          "sprite": 9,
+          "root_uv": [
+            0.73,
+            0.84
+          ],
+          "clearance_radius": [
+            29,
+            19
+          ]
+        }
+      ]
+    },
+    "pearl_clams": {
+      "source_category": "clams",
+      "fantasy_translation": "Pearl clams",
+      "water_resource": true,
+      "instances": [
+        {
+          "sprite": 10,
+          "root_uv": [
+            0.3,
+            0.35
+          ],
+          "clearance_radius": [
+            0,
+            0
+          ]
+        },
+        {
+          "sprite": 11,
+          "root_uv": [
+            0.68,
+            0.56
+          ],
+          "clearance_radius": [
+            0,
+            0
+          ]
+        },
+        {
+          "sprite": 10,
+          "root_uv": [
+            0.42,
+            0.83
+          ],
+          "clearance_radius": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "riding_horses": {
+      "source_category": "horse",
+      "fantasy_translation": "Riding horses",
+      "instances": [
+        {
+          "sprite": 12,
+          "root_uv": [
+            0.28,
+            0.6
+          ],
+          "clearance_radius": [
+            28,
+            18
+          ]
+        },
+        {
+          "sprite": 13,
+          "root_uv": [
+            0.73,
+            0.84
+          ],
+          "clearance_radius": [
+            28,
+            18
+          ]
+        }
+      ]
+    },
+    "giant_red_crabs": {
+      "source_category": "crab",
+      "fantasy_translation": "Giant red crabs",
+      "water_resource": true,
+      "painted_waterline": true,
+      "instances": [
+        {
+          "sprite": 14,
+          "root_uv": [
+            0.28,
+            0.35
+          ],
+          "clearance_radius": [
+            0,
+            0
+          ]
+        },
+        {
+          "sprite": 15,
+          "root_uv": [
+            0.73,
+            0.71
+          ],
+          "clearance_radius": [
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    "leviathans": {
+      "source_category": "whale",
+      "fantasy_translation": "Leviathans",
+      "water_resource": true,
+      "painted_waterline": true,
+      "instances": [
+        {
+          "sprite": 16,
+          "root_uv": [
+            0.5,
+            0.53
+          ],
+          "clearance_radius": [
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  },
+  "camera": "Elevated gameplay view, upright screen-space sprites with ground-foot anchors",
+  "source_atlas_separation": "Six connected alpha components, no quadrant cuts",
+  "white_resource_generation_count": 1,
+  "clam_processing": "Small cool-water color grade and91%alpha preserve visible shells while integrating with water",
+  "creature_generation_count": 1,
+  "creature_source": "creatures_source.png"
+}

@@ -1,0 +1,198 @@
+{
+  "generation_count": 1,
+  "logical_cell_px": 128,
+  "resources": [
+    {
+      "category": "dye",
+      "variants": [
+        {
+          "file": "indigo_flowers_0.png",
+          "native_size": [
+            112,
+            64
+          ],
+          "root_anchor": [
+            56,
+            57.6
+          ],
+          "source_component_box": [
+            25,
+            85,
+            621,
+            428
+          ]
+        },
+        {
+          "file": "indigo_flowers_1.png",
+          "native_size": [
+            112,
+            65
+          ],
+          "root_anchor": [
+            56,
+            58.5
+          ],
+          "source_component_box": [
+            654,
+            929,
+            1207,
+            1248
+          ]
+        }
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        56,
+        29
+      ]
+    },
+    {
+      "category": "incense",
+      "variants": [
+        {
+          "file": "resin_trees.png",
+          "native_size": [
+            112,
+            77
+          ],
+          "root_anchor": [
+            56,
+            69.3
+          ],
+          "source_component_box": [
+            642,
+            31,
+            1211,
+            424
+          ],
+          "edit_source": "resin_edit_source.png",
+          "edited_source_box": [
+            13,
+            9,
+            1504,
+            1041
+          ],
+          "edited_native_content_size": [
+            111,
+            77
+          ],
+          "edited_native_offset": [
+            0,
+            0
+          ]
+        }
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        56,
+        29
+      ]
+    },
+    {
+      "category": "silk",
+      "variants": [
+        {
+          "file": "cocoon_trees.png",
+          "native_size": [
+            112,
+            59
+          ],
+          "root_anchor": [
+            56,
+            53.1
+          ],
+          "source_component_box": [
+            19,
+            490,
+            623,
+            807
+          ]
+        }
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        56,
+        29
+      ]
+    },
+    {
+      "category": "sugar",
+      "variants": [
+        {
+          "file": "honey_reeds.png",
+          "native_size": [
+            112,
+            80
+          ],
+          "root_anchor": [
+            56,
+            72.0
+          ],
+          "source_component_box": [
+            649,
+            444,
+            1209,
+            842
+          ]
+        }
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        56,
+        29
+      ]
+    },
+    {
+      "category": "banana",
+      "variants": [
+        {
+          "file": "giant_pod_fruit.png",
+          "native_size": [
+            112,
+            76
+          ],
+          "root_anchor": [
+            56,
+            68.4
+          ],
+          "source_component_box": [
+            16,
+            833,
+            630,
+            1252
+          ]
+        }
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        56,
+        29
+      ]
+    }
+  ],
+  "concepts": {
+    "dye": "Indigo flowers: concentrated blue flower patches",
+    "incense": "Resin trees: sparse crooked trees with amber resin drops",
+    "silk": "Giant silkworm cocoons: large white hanging ovals on low trees",
+    "sugar": "Honey reeds: tall thick golden jointed canes",
+    "banana": "Giant pod-fruit: hanging yellow crescent pods"
+  },
+  "cultivation_improvements": "Separate gameplay layer; not baked into these resource assets",
+  "resin_edit_generation_count": 1,
+  "resin_treatment": "Amber flows emerge from bark fissures and follow the trunks; no pendant canopy fruit"
+}

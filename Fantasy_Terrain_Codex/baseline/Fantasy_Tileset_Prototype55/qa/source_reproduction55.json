@@ -1,0 +1,60 @@
+{
+  "scope": "Frozen49/50,51,52,53 and54 source assets;55 adds topology code only",
+  "environment": {
+    "Python": "3.12.14",
+    "NumPy": "2.3.5",
+    "Pillow": "12.3.0",
+    "SciPy": "1.17.0"
+  },
+  "new_and_extended_families": {
+    "botanicals49_50": {
+      "PNGs": 6,
+      "manifest_exact": true,
+      "sequence": [
+        "export_botanicals.py",
+        "export_resin_edit.py"
+      ]
+    },
+    "wildlife41_42_51": {
+      "PNGs": 34,
+      "manifest_exact": true,
+      "sequence": [
+        "export_wildlife.py",
+        "export_white_resources.py",
+        "export_creatures.py"
+      ]
+    },
+    "cold52": {
+      "PNGs": 6,
+      "manifest_exact": true,
+      "sequence": [
+        "export_cold.py"
+      ]
+    },
+    "relief33_53": {
+      "PNGs": 16,
+      "manifest_exact": true,
+      "sequence": [
+        "export_relief.py",
+        "build_climate_variants.py"
+      ]
+    },
+    "jungle54": {
+      "PNGs": 5,
+      "manifest_exact": true,
+      "sequence": [
+        "export_jungle.py"
+      ]
+    }
+  },
+  "reproduced_PNGs_total": 67,
+  "reproduced_manifests_total": 5,
+  "all_byte_identical": true,
+  "source_inputs_frozen_and_unchanged": true,
+  "jungle_periodic_opposite_edges_max_difference": 0,
+  "jungle_four_sprites_have_transparent_partial_and_opaque_alpha": true,
+  "unchanged_non_mushroom48_PNGs": 91,
+  "source_artwork_needed_to_render_core": false,
+  "source_reproduction_requires_optional_generated_atlases_and_exporters": true,
+  "source_screenshot_dependencies": []
+}

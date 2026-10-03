@@ -1,0 +1,99 @@
+{
+  "materials": {
+    "frost_heath": {
+      "file": "frost_heath.png",
+      "source_box": [
+        31,
+        50,
+        492,
+        510
+      ],
+      "native_size": [
+        512,
+        512
+      ]
+    },
+    "snowfields": {
+      "file": "snowfields.png",
+      "source_box": [
+        535,
+        50,
+        1002,
+        510
+      ],
+      "native_size": [
+        512,
+        512
+      ]
+    },
+    "pack_ice": {
+      "file": "pack_ice.png",
+      "source_box": [
+        1045,
+        50,
+        1507,
+        510
+      ],
+      "native_size": [
+        512,
+        512
+      ]
+    }
+  },
+  "edge_sprites": [
+    {
+      "file": "ice_edge_0.png",
+      "source_box": [
+        20,
+        575,
+        483,
+        955
+      ],
+      "native_size": [
+        48,
+        39
+      ],
+      "anchor": [
+        24.0,
+        19.5
+      ]
+    },
+    {
+      "file": "ice_edge_1.png",
+      "source_box": [
+        535,
+        571,
+        1004,
+        966
+      ],
+      "native_size": [
+        48,
+        40
+      ],
+      "anchor": [
+        24.0,
+        20.0
+      ]
+    },
+    {
+      "file": "ice_edge_2.png",
+      "source_box": [
+        1053,
+        592,
+        1517,
+        976
+      ],
+      "native_size": [
+        48,
+        40
+      ],
+      "anchor": [
+        24.0,
+        20.0
+      ]
+    }
+  ],
+  "generation_count": 1,
+  "tile_size": 128,
+  "source": "cold_atlas_source.png"
+}

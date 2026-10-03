@@ -1,0 +1,42 @@
+{
+  "status": "Actual existing assets retained, not upgraded or category proxies",
+  "resources": {
+    "wheat_field.png": {
+      "render_notes": [
+        "Wheat represented by existing planted-field composition; improvement status not inferred"
+      ],
+      "used_in": [
+        "berlin_desert_rivers"
+      ]
+    },
+    "fur_habitat.png": {
+      "render_notes": [
+        "Retained for backwards compatibility; current verified fur cells use Winter foxes via wildlife_winter_foxes.png"
+      ],
+      "used_in": []
+    },
+    "deer_herd.png": {
+      "render_notes": [
+        "Feature identifier dispatches to reviewed35 White stags; the old legacy PNG is not the current actor rendering"
+      ],
+      "used_in": [
+        "arboria_river_elbows",
+        "arboria_opening",
+        "boreal_pine_river"
+      ]
+    },
+    "rice_paddy.png": {
+      "render_notes": [
+        "Original fantasy rendering of source resource category"
+      ],
+      "used_in": [
+        "arboria_river_elbows",
+        "arboria_opening"
+      ]
+    }
+  },
+  "limits": [
+    "Legacy wheat and rice readability limits remain; missing concepts are separately reported by mapping_registry.json",
+    "Current fur uses Winter foxes; Pearl clams remain partial/provisional water grounding"
+  ]
+}

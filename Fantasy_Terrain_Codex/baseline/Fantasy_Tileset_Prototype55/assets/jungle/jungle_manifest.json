@@ -1,0 +1,83 @@
+{
+  "category": "jungle",
+  "fantasy_translation": "Dense broadleaf jungle with palms",
+  "user_direction": "2026-09-30: retain jungle rather than giant mushroom thicket",
+  "interior_material": "jungle_interior.png",
+  "screen_sampling_scale_at128": 8.4,
+  "logical_cell_px": 128,
+  "interior_generation_count": 1,
+  "edge_generation_count": 1,
+  "sprites": [
+    {
+      "file": "jungle_edge_0.png",
+      "native_size": [
+        31,
+        36
+      ],
+      "root_anchor": [
+        15.5,
+        33.480000000000004
+      ],
+      "source_component_box": [
+        97,
+        52,
+        596,
+        624
+      ]
+    },
+    {
+      "file": "jungle_edge_1.png",
+      "native_size": [
+        35,
+        33
+      ],
+      "root_anchor": [
+        17.5,
+        30.69
+      ],
+      "source_component_box": [
+        650,
+        73,
+        1234,
+        620
+      ]
+    },
+    {
+      "file": "jungle_edge_2.png",
+      "native_size": [
+        37,
+        26
+      ],
+      "root_anchor": [
+        18.5,
+        24.18
+      ],
+      "source_component_box": [
+        34,
+        704,
+        699,
+        1167
+      ]
+    },
+    {
+      "file": "jungle_edge_3.png",
+      "native_size": [
+        33,
+        35
+      ],
+      "root_anchor": [
+        16.5,
+        32.550000000000004
+      ],
+      "source_component_box": [
+        714,
+        654,
+        1219,
+        1184
+      ]
+    }
+  ],
+  "placement": "Continuous union of adjacent J cells; world/screen registered material and rooted exterior silhouettes; existing resource clearings retained.",
+  "periodic_boundary_max_difference": 0,
+  "interior_native_repeat_px": 149.29
+}

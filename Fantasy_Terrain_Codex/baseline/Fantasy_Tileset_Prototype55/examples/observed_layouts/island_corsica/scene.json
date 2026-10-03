@@ -1,0 +1,179 @@
+{
+  "id": "island_corsica",
+  "title": "Corsica five-cell forest island",
+  "source_url": "http://www.sullla.com/Civ4/WCLT/WCLT-14.jpg",
+  "source_page_url": "https://www.sullla.com/Civ4/WCLT.html",
+  "source_art_status": "Appears standard Civ4 art; user-made Totestra map script documented, no art replacement stated",
+  "grid_size": [
+    5,
+    5
+  ],
+  "crop_bounds_px": [
+    297,
+    149,
+    872,
+    531
+  ],
+  "geometry": {
+    "type": "approximate perspective grid",
+    "row_boundary_y": [
+      149,
+      215,
+      286,
+      360,
+      444,
+      530
+    ],
+    "column_boundary_x_by_row": [
+      [
+        366,
+        462,
+        558,
+        653,
+        752,
+        847
+      ],
+      [
+        355,
+        453,
+        552,
+        653,
+        752,
+        853
+      ],
+      [
+        341,
+        443,
+        548,
+        651,
+        755,
+        859
+      ],
+      [
+        327,
+        432,
+        540,
+        647,
+        756,
+        864
+      ],
+      [
+        313,
+        423,
+        532,
+        644,
+        756,
+        868
+      ],
+      [
+        297,
+        410,
+        524,
+        640,
+        755,
+        871
+      ]
+    ],
+    "confidence": "high cell topology; grid-line pixels approximate"
+  },
+  "terrain_rows": [
+    [
+      "water",
+      "water",
+      "water",
+      "water",
+      "water"
+    ],
+    [
+      "water",
+      "water",
+      "water",
+      "grass",
+      "water"
+    ],
+    [
+      "water",
+      "water",
+      "grass",
+      "grass",
+      "water"
+    ],
+    [
+      "water",
+      "water",
+      "grass",
+      "grass",
+      "water"
+    ],
+    [
+      "water",
+      "water",
+      "water",
+      "water",
+      "water"
+    ]
+  ],
+  "forest_rows": [
+    ".....",
+    "...D.",
+    "..D..",
+    "..D..",
+    "....."
+  ],
+  "forest_legend": {
+    "D": "broadleaf tree canopy; forest vs jungle botanical identity uncertain",
+    "P": "pine/conifer",
+    "?": "unknown"
+  },
+  "features": [
+    {
+      "cell": [
+        2,
+        3
+      ],
+      "kind": "resource",
+      "label": "corn",
+      "confidence": "high",
+      "note": "Resource bubble lifted above planted/worked cell; worker covers much of tile"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "kind": "city",
+      "label": "Corsica",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "kind": "resource",
+      "label": "fish",
+      "confidence": "high",
+      "note": "Fish bubble is lifted toward city label"
+    }
+  ],
+  "river_routes": [],
+  "elevation_ignored": [],
+  "unknown_cells": [],
+  "benchmark_focus": [
+    "Coastline concave northwest corner",
+    "Three connected tree cells around clearing",
+    "Land-water identity across narrow island",
+    "Single corn field vs tree mass"
+  ],
+  "notes": [
+    "Top row is water; canopy from row 1 overhangs into it. Northern tree cell does not create another land tile.",
+    "This is a custom map script with standard-looking art, retained for coast topology."
+  ],
+  "source_dimensions_px": [
+    1400,
+    788
+  ],
+  "source_sha256": "f8269a14ec6be14780b223224ca8a43572c2d46c382a618605ca68c8e573bfbf",
+  "confidence_policy": "Topology is visually transcribed. Known labels are high/medium visual confidence; exact game-state semantics are unverified without save file.",
+  "screenshot_bundled": false
+}

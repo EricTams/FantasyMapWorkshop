@@ -1,0 +1,30 @@
+{
+  "latest_input_merges": [
+    {
+      "scene": "arboria_opening",
+      "version": 44
+    },
+    {
+      "scene": "dutch_developed_fields",
+      "version": 46
+    }
+  ],
+  "additional_stale_entries_removed": [
+    {
+      "file": "examples/observed_layouts/arboria_opening/features.json",
+      "removed": [
+        {
+          "cell": [
+            1,
+            0
+          ],
+          "kind": "resource",
+          "label": "ivory",
+          "confidence": "high",
+          "note": "Plains confirmed by visible tooltip"
+        }
+      ]
+    }
+  ],
+  "baseline": "Reconciled Core43"
+}

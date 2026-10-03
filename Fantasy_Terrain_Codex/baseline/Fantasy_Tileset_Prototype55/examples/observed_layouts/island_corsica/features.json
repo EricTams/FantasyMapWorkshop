@@ -1,0 +1,102 @@
+{
+  "scene_id": "island_corsica",
+  "grid_cells": 25,
+  "known_base_cells": 25,
+  "unknown_base_cells": [],
+  "rendered_broadleaf_cells": 3,
+  "missing_pine_cells": [],
+  "rendered_features": [
+    {
+      "cell": [
+        2,
+        3
+      ],
+      "kind": "resource",
+      "label": "corn",
+      "confidence": "high",
+      "note": "Resource bubble lifted above planted/worked cell; worker covers much of tile",
+      "asset": "corn_field.png",
+      "render_note": "Shared kit26 upright authored site"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "kind": "city",
+      "label": "Corsica",
+      "confidence": "high",
+      "asset": "city_compact.png",
+      "render_note": "Shared kit26 upright authored site"
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "kind": "resource",
+      "label": "fish",
+      "confidence": "high",
+      "note": "Fish bubble is lifted toward city label",
+      "asset": "fish_school.png",
+      "render_note": "Five-body transparent school from kit29"
+    }
+  ],
+  "missing_features": [],
+  "rendered_river_paths": 0,
+  "untraced_river_routes": [],
+  "source_url": "http://www.sullla.com/Civ4/WCLT/WCLT-14.jpg",
+  "caveats": [
+    "No UI/units/yield bubbles recreated",
+    "Unknown base remains excluded beneath known woodland",
+    "No missing feature is replaced by another category",
+    "Wildlife extracted/repositioned as small figures across tile, retaining terrain between them; no forest cells deleted",
+    "Rice source is water-dominant; asset is a visible prototype, not a claimed final readability pass",
+    "All source-visible river centerlines rendered with material channels and damp banks; source-hidden spans are annotated rather than invented",
+    "Legacy wheat, wildlife and rice assets retained; their remaining style/readability limits are not resolved by this integration",
+    "Only explicitly confirmed hill/mountain cells are rendered; unknown base IDs remain unknown and unannotated relief is not inferred"
+  ],
+  "rendered_pine_cells": 0,
+  "newly_rendered_features_pass24": [
+    {
+      "cell": [
+        2,
+        3
+      ],
+      "kind": "resource",
+      "label": "corn",
+      "confidence": "high",
+      "note": "Resource bubble lifted above planted/worked cell; worker covers much of tile",
+      "asset": "corn_field.png",
+      "render_note": "Original fantasy rendering of source resource category"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "kind": "city",
+      "label": "Corsica",
+      "confidence": "high",
+      "asset": "city_compact.png",
+      "render_note": "Compact fantasy city cluster; source culture/era-specific architecture not duplicated"
+    },
+    {
+      "cell": [
+        4,
+        3
+      ],
+      "kind": "resource",
+      "label": "fish",
+      "confidence": "high",
+      "note": "Fish bubble is lifted toward city label",
+      "asset": "fish_school.png",
+      "render_note": "Original fantasy rendering of source resource category"
+    }
+  ],
+  "kit_version": 30,
+  "relief_cells": {
+    "H": [],
+    "M": []
+  }
+}

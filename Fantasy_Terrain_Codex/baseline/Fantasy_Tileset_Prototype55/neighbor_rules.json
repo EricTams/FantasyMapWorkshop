@@ -1,0 +1,172 @@
+{
+  "cell_size": 128,
+  "terrain_codes": {
+    "sand": 0,
+    "grass": 1,
+    "water": 2,
+    "plains": 3,
+    "unknown": 255,
+    "tundra": 4,
+    "snow": 5
+  },
+  "ownership": "closed vector land polygon at world-pixel centers; independent semantic cells retained",
+  "forest_mask": "repeat D|P|J semantic cells to 128px, intersect land, exclude river channel_mask; keep edge roots >=5px outside support openings",
+  "forest_floor_weight": "smoothstep(0,13,signed forest distance + edge warp); force 1 for core distance>=32px; multiply smoothstep(-1,4,clearance_distance)",
+  "forest_interior_weight": "smoothstep(9,24,signed forest distance + edge warp); force 1 for core distance>=32px; multiply smoothstep(-1,4,clearance_distance)",
+  "edge_tree_root_strip_px": [
+    3,
+    22
+  ],
+  "tree_min_land_distance_px": 4,
+  "edge_tree_candidate_grid_px": 17,
+  "edge_tree_min_root_spacing_px": 24,
+  "forest_proximity_sigma_px": 12,
+  "current_neighbor_system": "full-field signed distances and gaussian masks, not prepainted scene tiles or a 512-file binary mask lookup",
+  "chunk_contract": "world-global masks/material phase; render screen sub-boxes with same complete KitScene",
+  "coast_config_source": "coast_renderer.COAST27_CONFIG",
+  "pending": "See the 81-entry concept guide and implementation registry; no missing category proxies",
+  "edge_warp": "(coast noise(world+.5, scale29, seed2801)-.5)*10 + (noise(scale13,seed2802)-.5)*3",
+  "unknown_forest_base": "same floor_mask blend, never whole Boolean rectangular substrate",
+  "extra_edge_tree_root_strip_px": [
+    3,
+    18
+  ],
+  "extra_edge_tree_candidate_grid_px": 10,
+  "extra_edge_tree_min_root_spacing_px": 15.5,
+  "forest_codes": {
+    "D": "broadleaf Greenwood",
+    "P": "pine",
+    "J": "Dense broadleaf jungle with palms",
+    ".": "empty"
+  },
+  "pine_screen_sample_scale_at128": 2.0,
+  "pine_transition": "gaussian_filter(P pixel mask,5)/max(gaussian_filter(D|P|J pixel mask,5),1e-8)",
+  "river_source": "Authored: scene.river_edges integer grid-corner unit routes compiled by river_edges.py; observed: river_digitization.paths unchanged, separate evidence paths never joined. source_occlusions produces labels only.",
+  "relief_semantics": "Independent explicit hill_cells H and mountain_cells M; never inferred from unknown base or D/P/J vegetation",
+  "hill_render_order": "ground underlay before vegetation and river; targeted support openings reveal slopes where vegetation overlaps",
+  "mountain_and_actor_order": "shared KitScene.object_instances stable depth sort including trees, jungle edges, actors, shadows, sites and peppers",
+  "pepper_dispatch": "Explicit scarlet_pepper_bushes.png feature → two owned upright pepper objects",
+  "jungle_transition": "gaussian_filter(J pixel mask,5)/max(gaussian_filter(D|P|J pixel mask,5),1e-8)",
+  "jungle_screen_sample_scale_at128": 8.4,
+  "jungle_effective_repeat_at128_px": 149.29,
+  "jungle_min_root_spacing_px": 29,
+  "jungle_interior_continuity": "Adjacent J cells share globally sampled material without internal border padding",
+  "support_openings": {
+    "source": "vegetation_clearance.build",
+    "features": {
+      "deer_herd.png": "two hoof-contact openings",
+      "scarlet_pepper_bushes.png": "two shrub-contact openings"
+    },
+    "relief": "one exposed-slope opening per applicable hill cell",
+    "mask": "Deterministic warped ellipses, intersect valid vegetation and owning cell inset by4px",
+    "minimum_edge_root_clearance_px": 5,
+    "extra_edge_candidate_grid_px": 10,
+    "extra_edge_root_strip_px": [
+      5,
+      14
+    ],
+    "extra_edge_min_root_spacing_px": 22,
+    "floor_and_interior_keep": "smoothstep(-1,4,signed clearance distance)",
+    "scope_limit": "Targeted contacts and hill cues only; not general resource collision/navigation; neat margins remain prototype polish"
+  },
+  "tiled_semantic_gids": {
+    "terrain": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      11,
+      12
+    ],
+    "D": 6,
+    "P": 7,
+    "H": 8,
+    "M": 9,
+    "J": 10,
+    "tundra": 11,
+    "snow": 12,
+    "ice": 13
+  },
+  "tiled_visible_object_firstgid": 14,
+  "mineral_resources": {
+    "module": "mineral_renderer.py",
+    "manifest": "assets/minerals/mineral_manifest.json",
+    "categories": [
+      "stone",
+      "marble",
+      "copper",
+      "iron",
+      "coal",
+      "oil",
+      "aluminum",
+      "uranium",
+      "gold",
+      "silver",
+      "gems"
+    ],
+    "placement": "Owned-cell root anchors. Upright minerals use isotropic screen-width scaling. Oil/Black ichor is ground_plane: width uses cell width, height and vertical anchor use projected cell height. Deposits remain separate from terrain and H/M relief.",
+    "render_pass": "Named mineral objects in the shared stable depth sort; oil geometry is ground-projected, other deposits are upright"
+  },
+  "vineyard_field": {
+    "module": "vineyard_field.py",
+    "row_modules": [
+      "assets/vineyard/rows/vine_row_0_aligned_native.png",
+      "assets/vineyard/rows/vine_row_1_aligned_native.png",
+      "assets/vineyard/rows/vine_row_2_aligned_native.png"
+    ],
+    "logical_cell_px": 128,
+    "row_pitch_px": 33,
+    "endpoint_overlap_px": 13,
+    "angle_degrees": 31,
+    "phase": "One global world-coordinate lattice, independent of gameplay cell and rendering chunk",
+    "ownership": "Union of wine cells intersected with land and excluding river channel; no internal cell-boundary inset",
+    "outer_boundary": "Feathered ownership clipping; clipped external endpoints remain visual polish",
+    "press_bays": "Local bay at each press footprint; no row phase restart",
+    "projection": "Low vine rows follow ground projection; presses stay upright",
+    "tiled_ground": "Baked into layout-specific ground image",
+    "tiled_resource_record": "Wine identity remains in the independent hidden resource layer with baked_vineyard_field46 render pass",
+    "tiled_improvement_record": "Winery identity remains in a separate hidden improvement layer; named press sprite is visible",
+    "duplicate_grape_objects": "Do not emit standalone grape plot objects while the field is active",
+    "standalone_original_plots": "Both original grape plot PNGs and the standalone renderer remain available"
+  },
+  "semantic_separation": "Terrain, D/P/J vegetation, H/M relief, independent ice, resource codes, improvement codes, authored shared-edge river topology and Tiled GIDs are independent namespaces",
+  "observed_unknown_base_cells_retained": 90,
+  "cold_ground": "Tundra4 and snow5 material fields blend over owned land; pack ice is an independent feature over water2",
+  "climate_relief": "Explicit sand0/tundra4/snow5 selects matching relief sprite; other bases retain original sprites",
+  "painted_waterline": "51 crab and Leviathan preserve authored immersion in the actual water-clipped baked ground pass; no duplicate visible Tiled actors. Crab physical contact remains partial; Leviathan is a surfacing prototype. Clam43 treatment remains separate and provisional.",
+  "checkpoint": 55,
+  "river_shared_edges": {
+    "module": "river_edges.py",
+    "source_reference": "civ4_matched_v55/shared/river_edges.py",
+    "migration_source_reference": "civ4_matched_v55/authored_river_migration.json",
+    "coordinate_order": "integer grid corners [x,y]; adjacent cells [row,column]",
+    "segments": "Horizontal or vertical unit edges within map bounds",
+    "canonical_edge_ids": "V:x:y or H:x:y",
+    "edge_metadata": [
+      "grid_start",
+      "grid_end",
+      "adjacent_cells with N/E/S/W sides"
+    ],
+    "shared_route_edges": "One canonical record and identical paint geometry per shared edge",
+    "centerline_meander_max_px": 2.8,
+    "default_example": "examples/jungle_mixed",
+    "default_edge_count": 8,
+    "migration_audit": "qa/authored_river_migration55.json",
+    "explicitly_migrated_layout_count": 8,
+    "former_paths_retained_in_audit": true,
+    "remaining_authored_interior_cutting_routes": 0,
+    "observed_traces": "Unchanged diagnostic evidence; never silently snapped",
+    "tiled_hidden_layer_id": 11,
+    "tiled_trace_or_centerline_layer_id": 6,
+    "render_pass": "baked_ground; hidden topology does not duplicate paint"
+  },
+  "tiled_layer_ids": {
+    "relief": 7,
+    "resource": 8,
+    "improvement": 9,
+    "independent_ice": 10,
+    "authored_shared_edge_rivers": 11
+  },
+  "ice_limit": "Repeated rectangular pack-ice pattern and geometric outer footprint remain unresolved"
+}

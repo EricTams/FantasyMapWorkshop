@@ -1,0 +1,1098 @@
+{
+  "id": "arboria_opening",
+  "title": "Arboria early broadleaf mass and clearings",
+  "source_url": "http://www.sullla.com/Civ4/JWB-10.jpg",
+  "grid_size": [
+    5,
+    5
+  ],
+  "crop_bounds_px": [
+    254,
+    104,
+    672,
+    401
+  ],
+  "geometry": {
+    "type": "approximate perspective grid",
+    "row_boundary_y": [
+      105,
+      154,
+      209,
+      269,
+      333,
+      400
+    ],
+    "column_boundary_x_by_row": [
+      [
+        300,
+        370,
+        439,
+        509,
+        578,
+        646
+      ],
+      [
+        293,
+        365,
+        437,
+        508,
+        581,
+        650
+      ],
+      [
+        285,
+        359,
+        434,
+        507,
+        582,
+        655
+      ],
+      [
+        276,
+        352,
+        431,
+        506,
+        584,
+        660
+      ],
+      [
+        266,
+        345,
+        427,
+        506,
+        586,
+        665
+      ],
+      [
+        254,
+        338,
+        423,
+        505,
+        588,
+        671
+      ]
+    ],
+    "confidence": "medium-high visible line topology"
+  },
+  "terrain_rows": [
+    [
+      "grass",
+      "grass",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    [
+      "plains",
+      "unknown",
+      "grass",
+      "grass",
+      "grass"
+    ],
+    [
+      "unknown",
+      "unknown",
+      "unknown",
+      "unknown",
+      "plains"
+    ],
+    [
+      "unknown",
+      "plains",
+      "unknown",
+      "unknown",
+      "unknown"
+    ],
+    [
+      "grass",
+      "grass",
+      "unknown",
+      "grass",
+      "plains"
+    ]
+  ],
+  "forest_rows": [
+    [
+      ".",
+      ".",
+      "D",
+      "D",
+      "D"
+    ],
+    [
+      ".",
+      "D",
+      ".",
+      ".",
+      "."
+    ],
+    [
+      "D",
+      "D",
+      ".",
+      "D",
+      "."
+    ],
+    [
+      "D",
+      ".",
+      "D",
+      "D",
+      "D"
+    ],
+    [
+      ".",
+      ".",
+      "D",
+      ".",
+      "D"
+    ]
+  ],
+  "features": [
+    {
+      "cell": [
+        1,
+        0
+      ],
+      "kind": "resource",
+      "label": "ivory",
+      "confidence": "high",
+      "note": "Plains confirmed by visible tooltip"
+    },
+    {
+      "cell": [
+        1,
+        3
+      ],
+      "kind": "resource",
+      "label": "rice",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "kind": "resource",
+      "label": "deer",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        2,
+        2
+      ],
+      "kind": "city",
+      "label": "Timbuktu",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        2,
+        4
+      ],
+      "kind": "resource",
+      "label": "stone",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        3,
+        1
+      ],
+      "kind": "resource",
+      "label": "fur",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        4,
+        4
+      ],
+      "kind": "resource",
+      "label": "fur",
+      "confidence": "high"
+    }
+  ],
+  "river_routes": [
+    {
+      "nodes": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          3
+        ]
+      ],
+      "confidence": "medium-high",
+      "note": "Top river bends southeast toward capital; last part city-occluded"
+    },
+    {
+      "nodes": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "confidence": "medium-high",
+      "note": "Western river reaches south across clear grass"
+    }
+  ],
+  "elevation_ignored": [
+    [
+      2,
+      2
+    ]
+  ],
+  "unknown_cells": [
+    [
+      0,
+      2
+    ],
+    [
+      0,
+      3
+    ],
+    [
+      0,
+      4
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      0
+    ],
+    [
+      3,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      2
+    ]
+  ],
+  "benchmark_focus": [
+    "Early connected broadleaf forest",
+    "Open grass clearing vs forest occupancy",
+    "Resources legible against tree mass"
+  ],
+  "notes": [
+    "Forested bases are mostly hidden; their visual similarity does not justify asserting exact grass versus plains.",
+    "This camera is zoomed out and streamer UI is outside selected crop."
+  ],
+  "source_dimensions_px": [
+    1344,
+    756
+  ],
+  "source_art_status": "Stock-looking Beyond the Sword art, Arboria map script; no terrain art mod stated",
+  "source_page_url": "https://sullla.com/Civ4/JWB.html",
+  "forest_legend": {
+    "D": "broadleaf canopy, forest/jungle identity uncertain",
+    "P": "pine/conifer",
+    "?": "unknown"
+  },
+  "source_sha256": "33de102c5a706e02b7a7f7cf7e847987b7de7054b3d7fa3eb67531387c463b2f",
+  "confidence_policy": "Topology is visually transcribed. Known labels are high/medium visual confidence; exact game-state semantics are unverified without save file.",
+  "river_digitization": {
+    "method": "Visible source-pixel centerlines manually traced and overlay-checked; no unobserved spans joined",
+    "estimated_pixel_error": 3,
+    "paths": [
+      {
+        "path_id": "north_east_visible",
+        "route_id": "north_east_corridor",
+        "source_pixels": [
+          [
+            324,
+            154
+          ],
+          [
+            339,
+            153
+          ],
+          [
+            356,
+            154
+          ],
+          [
+            376,
+            155
+          ],
+          [
+            394,
+            158
+          ],
+          [
+            411,
+            162
+          ],
+          [
+            426,
+            167
+          ],
+          [
+            432,
+            174
+          ],
+          [
+            435,
+            181
+          ],
+          [
+            431,
+            191
+          ],
+          [
+            423,
+            200
+          ],
+          [
+            426,
+            205
+          ],
+          [
+            438,
+            209
+          ],
+          [
+            452,
+            211
+          ],
+          [
+            461,
+            208
+          ],
+          [
+            473,
+            212
+          ],
+          [
+            480,
+            208
+          ],
+          [
+            486,
+            206
+          ],
+          [
+            491,
+            207
+          ],
+          [
+            497,
+            209
+          ],
+          [
+            505,
+            211
+          ],
+          [
+            513,
+            213
+          ],
+          [
+            516,
+            217
+          ],
+          [
+            518,
+            222
+          ],
+          [
+            520,
+            226
+          ],
+          [
+            518,
+            230
+          ],
+          [
+            516,
+            233
+          ],
+          [
+            513,
+            236
+          ],
+          [
+            512,
+            243
+          ],
+          [
+            512,
+            250
+          ],
+          [
+            517,
+            257
+          ]
+        ],
+        "notes": "Visible northern path begins east of ivory bubble and ends before city-label occlusion.",
+        "fractional_grid_nodes": [
+          [
+            0.4306,
+            1.0
+          ],
+          [
+            0.6373,
+            0.9796
+          ],
+          [
+            0.875,
+            1.0
+          ],
+          [
+            1.1542,
+            1.0182
+          ],
+          [
+            1.4076,
+            1.0727
+          ],
+          [
+            1.6471,
+            1.1455
+          ],
+          [
+            1.8585,
+            1.2364
+          ],
+          [
+            1.9465,
+            1.3636
+          ],
+          [
+            1.9928,
+            1.4909
+          ],
+          [
+            1.9462,
+            1.6727
+          ],
+          [
+            1.8458,
+            1.8364
+          ],
+          [
+            1.8901,
+            1.9273
+          ],
+          [
+            2.0548,
+            2.0
+          ],
+          [
+            2.2477,
+            2.0333
+          ],
+          [
+            2.3693,
+            1.9818
+          ],
+          [
+            2.5356,
+            2.05
+          ],
+          [
+            2.6297,
+            1.9818
+          ],
+          [
+            2.7111,
+            1.9455
+          ],
+          [
+            2.7801,
+            1.9636
+          ],
+          [
+            2.863,
+            2.0
+          ],
+          [
+            2.9731,
+            2.0333
+          ],
+          [
+            3.0807,
+            2.0667
+          ],
+          [
+            3.1211,
+            2.1333
+          ],
+          [
+            3.1483,
+            2.2167
+          ],
+          [
+            3.1751,
+            2.2833
+          ],
+          [
+            3.1492,
+            2.35
+          ],
+          [
+            3.1234,
+            2.4
+          ],
+          [
+            3.0845,
+            2.45
+          ],
+          [
+            3.0726,
+            2.5667
+          ],
+          [
+            3.0738,
+            2.6833
+          ],
+          [
+            3.1395,
+            2.8
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      },
+      {
+        "path_id": "north_sandbar_branch",
+        "route_id": "north_east_corridor",
+        "source_pixels": [
+          [
+            473,
+            212
+          ],
+          [
+            479,
+            216
+          ],
+          [
+            485,
+            219
+          ],
+          [
+            490,
+            221
+          ],
+          [
+            498,
+            219
+          ],
+          [
+            503,
+            222
+          ],
+          [
+            505,
+            227
+          ],
+          [
+            510,
+            230
+          ],
+          [
+            513,
+            236
+          ]
+        ],
+        "role": "visible_sandbar_branch",
+        "joins_path_id": "north_east_visible",
+        "confidence": "medium; small branch around a visible sandbar",
+        "notes": "Local channel braid, not an asserted gameplay river junction.",
+        "fractional_grid_nodes": [
+          [
+            2.5356,
+            2.05
+          ],
+          [
+            2.6193,
+            2.1167
+          ],
+          [
+            2.7023,
+            2.1667
+          ],
+          [
+            2.7711,
+            2.2
+          ],
+          [
+            2.8795,
+            2.1667
+          ],
+          [
+            2.9485,
+            2.2167
+          ],
+          [
+            2.9769,
+            2.3
+          ],
+          [
+            3.044,
+            2.35
+          ],
+          [
+            3.0845,
+            2.45
+          ]
+        ]
+      },
+      {
+        "path_id": "west_south_visible",
+        "route_id": "west_south_corridor",
+        "source_pixels": [
+          [
+            280,
+            210
+          ],
+          [
+            282,
+            221
+          ],
+          [
+            279,
+            232
+          ],
+          [
+            277,
+            243
+          ],
+          [
+            280,
+            247
+          ],
+          [
+            285,
+            249
+          ],
+          [
+            286,
+            255
+          ],
+          [
+            290,
+            262
+          ],
+          [
+            302,
+            269
+          ],
+          [
+            314,
+            273
+          ],
+          [
+            321,
+            278
+          ],
+          [
+            329,
+            285
+          ],
+          [
+            341,
+            288
+          ],
+          [
+            347,
+            290
+          ],
+          [
+            349,
+            296
+          ],
+          [
+            349,
+            302
+          ],
+          [
+            347,
+            309
+          ],
+          [
+            348,
+            314
+          ],
+          [
+            355,
+            317
+          ],
+          [
+            362,
+            320
+          ],
+          [
+            366,
+            325
+          ],
+          [
+            367,
+            329
+          ],
+          [
+            364,
+            334
+          ],
+          [
+            354,
+            337
+          ],
+          [
+            344,
+            335
+          ],
+          [
+            335,
+            339
+          ],
+          [
+            329,
+            344
+          ],
+          [
+            327,
+            351
+          ],
+          [
+            330,
+            357
+          ],
+          [
+            341,
+            363
+          ],
+          [
+            347,
+            372
+          ],
+          [
+            348,
+            381
+          ],
+          [
+            356,
+            386
+          ],
+          [
+            349,
+            390
+          ],
+          [
+            337,
+            385
+          ],
+          [
+            331,
+            391
+          ],
+          [
+            330,
+            400
+          ]
+        ],
+        "notes": "Entire visible western run; endpoints clipped by fog/crop.",
+        "fractional_grid_nodes": [
+          [
+            -0.0655,
+            2.0167
+          ],
+          [
+            -0.0161,
+            2.2
+          ],
+          [
+            -0.0341,
+            2.3833
+          ],
+          [
+            -0.0386,
+            2.5667
+          ],
+          [
+            0.0093,
+            2.6333
+          ],
+          [
+            0.0796,
+            2.6667
+          ],
+          [
+            0.1046,
+            2.7667
+          ],
+          [
+            0.1709,
+            2.8833
+          ],
+          [
+            0.3421,
+            3.0
+          ],
+          [
+            0.507,
+            3.0625
+          ],
+          [
+            0.6072,
+            3.1406
+          ],
+          [
+            0.7231,
+            3.25
+          ],
+          [
+            0.884,
+            3.2969
+          ],
+          [
+            0.9649,
+            3.3281
+          ],
+          [
+            0.9994,
+            3.4219
+          ],
+          [
+            1.0076,
+            3.5156
+          ],
+          [
+            0.992,
+            3.625
+          ],
+          [
+            1.0114,
+            3.7031
+          ],
+          [
+            1.1015,
+            3.75
+          ],
+          [
+            1.1914,
+            3.7969
+          ],
+          [
+            1.2466,
+            3.875
+          ],
+          [
+            1.2636,
+            3.9375
+          ],
+          [
+            1.2329,
+            4.0149
+          ],
+          [
+            1.1146,
+            4.0597
+          ],
+          [
+            0.99,
+            4.0299
+          ],
+          [
+            0.882,
+            4.0896
+          ],
+          [
+            0.8139,
+            4.1642
+          ],
+          [
+            0.7994,
+            4.2687
+          ],
+          [
+            0.8454,
+            4.3582
+          ],
+          [
+            0.9893,
+            4.4478
+          ],
+          [
+            1.0725,
+            4.5821
+          ],
+          [
+            1.0952,
+            4.7164
+          ],
+          [
+            1.196,
+            4.791
+          ],
+          [
+            1.1177,
+            4.8507
+          ],
+          [
+            0.969,
+            4.7761
+          ],
+          [
+            0.9047,
+            4.8657
+          ],
+          [
+            0.9048,
+            5.0
+          ]
+        ],
+        "confidence": "medium-high visible centerline; approximate +/-3 source pixels"
+      },
+      {
+        "path_id": "west_sandbar_branch",
+        "route_id": "west_south_corridor",
+        "source_pixels": [
+          [
+            280,
+            247
+          ],
+          [
+            288,
+            245
+          ],
+          [
+            296,
+            248
+          ],
+          [
+            300,
+            253
+          ],
+          [
+            298,
+            260
+          ],
+          [
+            290,
+            262
+          ]
+        ],
+        "role": "visible_sandbar_branch",
+        "joins_path_id": "west_south_visible",
+        "confidence": "medium; small visible braid around sandbar",
+        "notes": "Local channel braid only.",
+        "fractional_grid_nodes": [
+          [
+            0.0093,
+            2.6333
+          ],
+          [
+            0.1117,
+            2.6
+          ],
+          [
+            0.2238,
+            2.65
+          ],
+          [
+            0.2862,
+            2.7333
+          ],
+          [
+            0.2728,
+            2.85
+          ],
+          [
+            0.1709,
+            2.8833
+          ]
+        ]
+      }
+    ],
+    "occlusions": [
+      {
+        "after_path_id": "north_east_visible",
+        "source_bounds": [
+          505,
+          258,
+          547,
+          286
+        ],
+        "reason": "City label/buildings hide continuation."
+      },
+      {
+        "before_path_id": "north_east_visible",
+        "source_bounds": [
+          284,
+          143,
+          327,
+          183
+        ],
+        "reason": "Ivory bubble/fog hides upstream relation to other visible run."
+      }
+    ],
+    "connectivity": "Two main visible corridors plus their visible sandbar branches. No connection between the main corridors is asserted across hidden area.",
+    "rendering_instruction": "Do not connect paths by array order or infer gaps between them. Use explicit route_id, branch connections and occlusion references only.",
+    "flow_direction": "Trace ordering is not an assertion of hydrological flow."
+  },
+  "screenshot_bundled": false,
+  "crop_local_path": "/workspace/scratch/69c5d365b573/civ4_benchmarks/arboria_opening_crop.png"
+}

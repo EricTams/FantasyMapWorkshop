@@ -1,0 +1,274 @@
+{
+  "id": "celtic_developed_peninsula",
+  "title": "Developed peninsula with mines and small settlements",
+  "source_url": "http://www.sullla.com/Civ4/JWB-16.jpg",
+  "source_page_url": "https://sullla.com/Civ4/JWB.html",
+  "source_art_status": "Stock-looking Beyond the Sword art, built-in Arboria map",
+  "source_dimensions_px": [
+    1334,
+    751
+  ],
+  "grid_size": [
+    5,
+    5
+  ],
+  "crop_bounds_px": [
+    432,
+    208,
+    900,
+    571
+  ],
+  "geometry": {
+    "type": "approximate perspective grid",
+    "row_boundary_y": [
+      208,
+      276,
+      344,
+      415,
+      489,
+      570
+    ],
+    "column_boundary_x_by_row": [
+      [
+        468,
+        550,
+        630,
+        707,
+        787,
+        864
+      ],
+      [
+        462,
+        546,
+        628,
+        708,
+        791,
+        871
+      ],
+      [
+        455,
+        542,
+        626,
+        709,
+        795,
+        878
+      ],
+      [
+        448,
+        537,
+        624,
+        710,
+        799,
+        885
+      ],
+      [
+        441,
+        532,
+        622,
+        711,
+        803,
+        892
+      ],
+      [
+        432,
+        527,
+        620,
+        713,
+        807,
+        900
+      ]
+    ],
+    "confidence": "high coastal topology; city art extends beyond cell"
+  },
+  "terrain_rows": [
+    [
+      "water",
+      "water",
+      "water",
+      "water",
+      "water"
+    ],
+    [
+      "water",
+      "water",
+      "grass",
+      "grass",
+      "unknown"
+    ],
+    [
+      "water",
+      "grass",
+      "grass",
+      "grass",
+      "water"
+    ],
+    [
+      "water",
+      "grass",
+      "plains",
+      "unknown",
+      "unknown"
+    ],
+    [
+      "unknown",
+      "grass",
+      "unknown",
+      "unknown",
+      "unknown"
+    ]
+  ],
+  "forest_rows": [
+    ".....",
+    ".....",
+    ".....",
+    "....D",
+    "..DDD"
+  ],
+  "forest_legend": {
+    "D": "broadleaf canopy",
+    "P": "pine/conifer",
+    "?": "unknown"
+  },
+  "features": [
+    {
+      "cell": [
+        1,
+        3
+      ],
+      "kind": "improvement",
+      "label": "cottage-family small settlement; growth stage unknown",
+      "confidence": "medium"
+    },
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "kind": "improvement",
+      "label": "mine",
+      "confidence": "high"
+    },
+    {
+      "cell": [
+        2,
+        1
+      ],
+      "kind": "improvement",
+      "label": "cottage-family small settlement; growth stage unknown",
+      "confidence": "medium"
+    },
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "kind": "city",
+      "label": "Verlamion, newly captured",
+      "confidence": "medium",
+      "candidate_cells": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "note": "City label and stacked unit/wonder art straddle row boundary; exact city anchor needs save-state or clearer screenshot."
+    },
+    {
+      "cell": [
+        2,
+        3
+      ],
+      "kind": "improvement",
+      "label": "cottage-family small settlement; growth stage unknown",
+      "confidence": "medium"
+    },
+    {
+      "cell": [
+        3,
+        3
+      ],
+      "kind": "improvement",
+      "label": "mine",
+      "confidence": "high"
+    }
+  ],
+  "river_routes": [],
+  "elevation_ignored": [
+    [
+      1,
+      4
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "unknown_cells": [
+    [
+      1,
+      4
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      0
+    ],
+    [
+      4,
+      2
+    ],
+    [
+      4,
+      3
+    ],
+    [
+      4,
+      4
+    ]
+  ],
+  "benchmark_focus": [
+    "Convex peninsula and concave bay",
+    "Small settlements vs mines vs city silhouette",
+    "Improved clearings meeting large tree mass"
+  ],
+  "notes": [
+    "Tall city, wonder and stacked-unit art straddle rows 0-2. City anchor is ambiguous and is flagged instead of asserted.",
+    "Cottage-family improvement silhouettes identifiable with medium confidence; exact cottage/hamlet/village growth stage is not asserted.",
+    "Row4,col0 is a mountain and should be excluded in the no-elevation target.",
+    "Military unit portraits below y577 were excluded from this crop."
+  ],
+  "source_sha256": "b14c113f022aa55f67552ca25a2adf29c89da6cd8eb70303e2c40f03745a09d2",
+  "confidence_policy": "Topology is visually transcribed. Known labels are high/medium visual confidence; exact game-state semantics are unverified without save file.",
+  "hill_cells": [
+    [
+      1,
+      4
+    ],
+    [
+      3,
+      3
+    ]
+  ],
+  "mountain_cells": [
+    [
+      4,
+      0
+    ]
+  ],
+  "screenshot_bundled": false
+}

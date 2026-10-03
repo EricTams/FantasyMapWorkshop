@@ -1,0 +1,114 @@
+{
+  "generation_count": 2,
+  "logical_tile_px": 128,
+  "sprites": [
+    {
+      "file": "white_stag_0.png",
+      "kind": "white_stag",
+      "native_size": [
+        48,
+        64
+      ],
+      "ground_anchor": [
+        24.0,
+        62.08
+      ],
+      "source_component_box": [
+        160,
+        25,
+        781,
+        856
+      ],
+      "source": "sources/stag_camera_source.png",
+      "camera": "New elevated-view painting; no anisotropic squashing"
+    },
+    {
+      "file": "white_stag_1.png",
+      "kind": "white_stag",
+      "native_size": [
+        48,
+        58
+      ],
+      "ground_anchor": [
+        24.0,
+        56.26
+      ],
+      "source_component_box": [
+        1011,
+        67,
+        1670,
+        861
+      ],
+      "source": "sources/stag_camera_source.png",
+      "camera": "New elevated-view painting; no anisotropic squashing"
+    },
+    {
+      "file": "crimson_spice_0.png",
+      "kind": "fantasy_spice_proposal",
+      "native_size": [
+        108,
+        93
+      ],
+      "ground_anchor": [
+        54.0,
+        85.56
+      ],
+      "source_component_box": [
+        64,
+        690,
+        600,
+        1154
+      ]
+    },
+    {
+      "file": "crimson_spice_1.png",
+      "kind": "fantasy_spice_proposal",
+      "native_size": [
+        110,
+        75
+      ],
+      "ground_anchor": [
+        55.0,
+        69.0
+      ],
+      "source_component_box": [
+        667,
+        733,
+        1285,
+        1154
+      ]
+    }
+  ],
+  "deer_instances": [
+    {
+      "pose": 0,
+      "root_uv": [
+        0.27,
+        0.65
+      ]
+    },
+    {
+      "pose": 1,
+      "root_uv": [
+        0.75,
+        0.84
+      ]
+    }
+  ],
+  "spice_root_uv": [
+    0.5,
+    0.9
+  ],
+  "spice_category": "Optional draft fantasy_spice_proposal; not accepted canonical Spices art",
+  "method": "Generated cutouts resized; upright world-anchored placement; shadows derived from original alpha",
+  "source_sequence": [
+    "sources/fantasy_resources_source.png (34; optional draft spice retained)",
+    "sources/stag_camera_source.png (35; replaces only stags)"
+  ],
+  "accepted_spices_mapping": "Scarlet pepper bushes with obvious red fruit are implemented separately in Prototype36; see mapping_registry.json",
+  "export_sequence": [
+    "tools/export_resources.py",
+    "tools/export_stag_camera.py",
+    "tools/rebuild_fantasy_assets.py also emits transparent example compositions"
+  ]
+}

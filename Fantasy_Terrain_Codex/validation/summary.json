@@ -1,0 +1,33 @@
+{
+  "validated_utc_date": "2026-10-02",
+  "environment": {
+    "Python": "3.12.14",
+    "NumPy": "2.3.5",
+    "Pillow": "12.3.0",
+    "SciPy": "1.17.0",
+    "platform": "Linux"
+  },
+  "scope": "Portable preserved Prototype55 baseline; later PNGs are references only",
+  "original_baseline_files": 338,
+  "original_checksum_entries": 337,
+  "original_checksum_mismatches": 0,
+  "baseline_runtime_pngs": 130,
+  "baseline_input_layouts": 25,
+  "all_baseline_files_unchanged_after_default_render": true,
+  "default_preview_sha256": "753ec5d92d0d6f3cc256226d22c426a0401295d779737875f8ed3a2105010ebc",
+  "reference_pngs_verified": 5,
+  "fresh_extraction_default_render_and_verifier": "passed",
+  "river_junctions_render_and_verifier": "passed",
+  "observed_arboria_opening_render": "passed",
+  "python_syntax_files_parsed": 25,
+  "json_files_parsed_before_validation_reports": 109,
+  "all_25_layouts_rerun": false,
+  "native_tiled_gui_tested": false,
+  "windows_or_macos_execution_tested": false,
+  "clean_venv_dependency_install_tested": false,
+  "browser_port_tested": false,
+  "latest_world20_reproduced": false,
+  "new_art_generated": false,
+  "deployed": false,
+  "aesthetic_parity_established": false
+}

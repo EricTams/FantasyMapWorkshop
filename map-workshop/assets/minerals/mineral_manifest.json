@@ -1,0 +1,318 @@
+{
+  "generation_count": 1,
+  "logical_cell_px": 128,
+  "deposits": [
+    {
+      "category": "stone",
+      "file": "stone.png",
+      "native_size": [
+        112,
+        64
+      ],
+      "root_anchor": [
+        56,
+        57.6
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "source_component_box": [
+        63,
+        75,
+        768,
+        480
+      ]
+    },
+    {
+      "category": "marble",
+      "file": "marble.png",
+      "native_size": [
+        112,
+        67
+      ],
+      "root_anchor": [
+        56,
+        60.300000000000004
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "source_component_box": [
+        810,
+        84,
+        1505,
+        498
+      ]
+    },
+    {
+      "category": "copper",
+      "file": "copper.png",
+      "native_size": [
+        112,
+        69
+      ],
+      "root_anchor": [
+        56,
+        62.1
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "source_component_box": [
+        52,
+        528,
+        768,
+        967
+      ]
+    },
+    {
+      "category": "iron",
+      "file": "iron.png",
+      "native_size": [
+        112,
+        70
+      ],
+      "root_anchor": [
+        56,
+        63.0
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "source_component_box": [
+        811,
+        544,
+        1491,
+        966
+      ]
+    },
+    {
+      "category": "coal",
+      "fantasy_name": "Emberstone",
+      "file": "emberstone.png",
+      "native_size": [
+        112,
+        69
+      ],
+      "root_anchor": [
+        56,
+        62.1
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "ground_plane": false,
+      "source_component_box": [
+        54,
+        50,
+        738,
+        474
+      ]
+    },
+    {
+      "category": "oil",
+      "fantasy_name": "Black Ichor",
+      "file": "black_ichor.png",
+      "native_size": [
+        112,
+        56
+      ],
+      "root_anchor": [
+        56,
+        50.4
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "ground_plane": true,
+      "source_component_box": [
+        790,
+        124,
+        1482,
+        467
+      ]
+    },
+    {
+      "category": "aluminum",
+      "fantasy_name": "Mithril",
+      "file": "mithril.png",
+      "native_size": [
+        112,
+        80
+      ],
+      "root_anchor": [
+        56,
+        72.0
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "ground_plane": false,
+      "source_component_box": [
+        73,
+        470,
+        759,
+        958
+      ]
+    },
+    {
+      "category": "uranium",
+      "fantasy_name": "Voidstone",
+      "file": "voidstone.png",
+      "native_size": [
+        112,
+        84
+      ],
+      "root_anchor": [
+        56,
+        75.60000000000001
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "ground_plane": false,
+      "source_component_box": [
+        810,
+        464,
+        1470,
+        960
+      ]
+    },
+    {
+      "category": "gold",
+      "fantasy_name": "Gold veins and nuggets",
+      "file": "gold.png",
+      "native_size": [
+        112,
+        76
+      ],
+      "root_anchor": [
+        56,
+        68.4
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "source_component_box": [
+        19,
+        143,
+        725,
+        621
+      ]
+    },
+    {
+      "category": "silver",
+      "fantasy_name": "Silver veins",
+      "file": "silver.png",
+      "native_size": [
+        112,
+        77
+      ],
+      "root_anchor": [
+        56,
+        69.3
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "source_component_box": [
+        754,
+        159,
+        1418,
+        615
+      ]
+    },
+    {
+      "category": "gems",
+      "fantasy_name": "Jewel clusters",
+      "file": "gems.png",
+      "native_size": [
+        112,
+        76
+      ],
+      "root_anchor": [
+        56,
+        68.4
+      ],
+      "root_uv": [
+        0.5,
+        0.78
+      ],
+      "clearance_radius": [
+        57,
+        30
+      ],
+      "source_component_box": [
+        1449,
+        131,
+        2154,
+        609
+      ]
+    }
+  ],
+  "concepts": {
+    "stone": "Building stone: broad gray slabs",
+    "marble": "White marble: white blocks with dark veins",
+    "copper": "Copper: reddish metallic ore",
+    "iron": "Iron: dark ore with rust streaks",
+    "coal": "Emberstone: black chunks with restrained orange heat cracks",
+    "oil": "Black ichor: irregular glossy black seep",
+    "aluminum": "Mithril: pale-blue metallic blades projecting from rock",
+    "uranium": "Voidstone: one large violet crystal in a broken stone shell",
+    "gold": "Warm yellow exposed veins and natural nuggets",
+    "silver": "Pale metallic veins in dark host rock",
+    "gems": "Several short chunky multicolored crystals"
+  },
+  "strategic_generation_count": 1,
+  "precious_generation_count": 1
+}

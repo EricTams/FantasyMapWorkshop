@@ -1,0 +1,56 @@
+{
+  "fractional_grid_polygon": [
+    [
+      -1,
+      -1
+    ],
+    [
+      5,
+      -1
+    ],
+    [
+      4.98,
+      0.4
+    ],
+    [
+      5.04,
+      1.4
+    ],
+    [
+      4.97,
+      2.5
+    ],
+    [
+      5.03,
+      3.4
+    ],
+    [
+      4.98,
+      4.8
+    ],
+    [
+      5.03,
+      6
+    ],
+    [
+      5,
+      8
+    ],
+    [
+      -1,
+      8
+    ]
+  ],
+  "edge_evidence": [
+    "analysis_clipped",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "authored",
+    "analysis_clipped",
+    "analysis_clipped"
+  ]
+}

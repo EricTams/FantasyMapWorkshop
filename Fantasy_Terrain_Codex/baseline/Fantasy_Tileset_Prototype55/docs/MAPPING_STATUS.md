@@ -1,0 +1,89 @@
+# Current concept status
+
+Prototype55 is the bounded checkpoint reviewed through55. The 81 guide concepts comprise 41 implemented prototypes, 11 partial concepts and 29 not built. See `mapping_registry.json` for exact notes and `INTEGRATION55.md` for the current integration contract. The 130 runtime PNGs are not a measure of concept coverage.
+
+The default `examples/jungle_mixed` has the source55 eight-edge river and real jungle54. All 25 input layouts remain independently renderable (16 authored, nine observed). The compact core has one complete prebuilt default Tiled sample; other caches and frozen source-art packs are optional.
+
+Botanicals49/50, riding horses/crabs/Leviathans51, cold52, climate relief53, jungle54 and authored river topology55 are included. Clams and crabs remain partial in physical water contact; the Leviathan is an implemented prototype. Rectangular ice repetition, repeated materials/vegetation, angular generic coasts, geometric biome edges, neat clearings, vine-end clipping and gold/silver color reliance remain documented limits. Native Tiled GUI testing has not been performed. No complete Civ4-replacement claim is made.
+
+- grassland → Meadow: implemented
+- plains → Golden steppe: partial
+- desert → Sand wastes: partial
+- tundra → Frost heath: implemented
+- snow → Snowfields: implemented
+- coast → Turquoise shallows: implemented
+- ocean → Deep sea: implemented
+- lake → Inland lake: partial
+- river → Winding river: implemented
+- flat → Flat ground: implemented
+- hill → Rounded hills: implemented
+- mountain → Pointed crags: implemented
+- forest → Greenwood: implemented
+- jungle → Dense broadleaf jungle with palms: implemented
+- oasis → Spring grove: not built
+- floodplains → Fertile riverbanks: not built
+- ice → Pack ice: implemented
+- fallout → Blight: not built
+- wheat → Golden wheat: partial
+- corn → Sun-maize: partial
+- rice → Marsh rice: partial
+- banana → Giant pod-fruit: implemented
+- cow → Aurochs: implemented
+- pig → Boar: implemented
+- sheep → Woolly sheep: implemented
+- deer → White stags: implemented
+- fish → Silverfin shoal: implemented
+- clam → Pearl clams: partial
+- crab → Giant red crabs: partial
+- gold → Gold veins: implemented
+- silver → Silver veins: implemented
+- gems → Jewel clusters: implemented
+- ivory → Mammoths: implemented
+- fur → Winter foxes: implemented
+- dye → Indigo flowers: implemented
+- incense → Resin trees: implemented
+- silk → Giant silkworm cocoons: implemented
+- spices → Scarlet pepper bushes: implemented
+- sugar → Honey reeds: implemented
+- wine → Grapes: implemented
+- whale → Leviathans: implemented
+- stone → Building stone: implemented
+- marble → White marble: implemented
+- copper → Copper ore: implemented
+- iron → Iron ore: implemented
+- horse → Riding horses: implemented
+- coal → Emberstone: implemented
+- oil → Black ichor: implemented
+- aluminum → Mithril: implemented
+- uranium → Voidstone: implemented
+- farm → Smallholding: partial
+- pasture → Herd enclosure: not built
+- camp → Hunter lodge: not built
+- plantation → Garden estate: not built
+- winery → Vineyard press: implemented
+- mine → Dwarven mine: partial
+- quarry → Stonecutter pit: not built
+- well → Ichor pump: not built
+- offshore_platform → Sea extraction tower: not built
+- fishing_boats → Fishing skiffs: not built
+- whaling_boats → Leviathan hunters: not built
+- workshop → Smithy: not built
+- lumbermill → Timberyard: not built
+- windmill → Windmill: not built
+- watermill → Watermill: not built
+- cottage → Crofter cottage: implemented
+- hamlet → Hamlet: not built
+- village → Market village: not built
+- town → Guild town: not built
+- fort → Watchkeep: not built
+- forest_preserve → Druid grove: not built
+- goody_hut → Wayside shrine: not built
+- city_ruins → Fallen settlement: not built
+- road → Dirt and cobble track: not built
+- railroad → Rune highway: not built
+- wood_bridge → Wooden bridge: not built
+- stone_bridge → Stone bridge: not built
+- city → Castle settlement: partial
+- borders → Realm borders: not built
+- unexplored_fog → Unexplored parchment: not built
+- explored_fog → Subdued explored terrain: not built

@@ -1,0 +1,58 @@
+{
+  "generation_count": 1,
+  "resource": "spices",
+  "original_mapping": "Scarlet pepper bushes: low shrubs with obvious red fruit",
+  "sprites": [
+    {
+      "file": "scarlet_pepper_0.png",
+      "native_size": [
+        70,
+        45
+      ],
+      "ground_anchor": [
+        35.0,
+        42.75
+      ],
+      "source_component_box": [
+        57,
+        175,
+        830,
+        672
+      ]
+    },
+    {
+      "file": "scarlet_pepper_1.png",
+      "native_size": [
+        70,
+        40
+      ],
+      "ground_anchor": [
+        35.0,
+        38.0
+      ],
+      "source_component_box": [
+        887,
+        221,
+        1720,
+        702
+      ]
+    }
+  ],
+  "instances": [
+    {
+      "pose": 0,
+      "root_uv": [
+        0.32,
+        0.52
+      ]
+    },
+    {
+      "pose": 1,
+      "root_uv": [
+        0.68,
+        0.84
+      ]
+    }
+  ],
+  "logical_cell_px": 128
+}

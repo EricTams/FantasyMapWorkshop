@@ -1,0 +1,58 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        1,
+        4
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "White stags on snow"
+    },
+    {
+      "cell": [
+        5,
+        3
+      ],
+      "asset": "wildlife_winter_foxes.png",
+      "kind": "resource",
+      "label": "Winter foxes on snow"
+    },
+    {
+      "cell": [
+        1,
+        2
+      ],
+      "asset": "wildlife_woolly_sheep.png",
+      "kind": "resource",
+      "label": "Woolly sheep on frost heath"
+    },
+    {
+      "cell": [
+        4,
+        1
+      ],
+      "asset": "wildlife_mammoths.png",
+      "kind": "resource",
+      "label": "Mammoths on frost heath"
+    },
+    {
+      "cell": [
+        6,
+        6
+      ],
+      "asset": "wildlife_leviathans.png",
+      "kind": "resource",
+      "label": "Leviathan in open water"
+    },
+    {
+      "cell": [
+        6,
+        0
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "Cottage on meadow"
+    }
+  ]
+}

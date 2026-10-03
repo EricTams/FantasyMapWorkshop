@@ -1,0 +1,651 @@
+{
+  "scene_id": "totestra_peninsula",
+  "source_url": "http://www.sullla.com/Civ4/WCLT/WCLT-11.jpg",
+  "definition": "Approximate outer wet-beach/land boundary against shallow water; distinguishes visible coast, inferred hidden spans and artificial clipping closure.",
+  "closed": true,
+  "source_pixel_polygon": [
+    [
+      614,
+      130
+    ],
+    [
+      619,
+      145
+    ],
+    [
+      617,
+      156
+    ],
+    [
+      612,
+      170
+    ],
+    [
+      607,
+      182
+    ],
+    [
+      609,
+      195
+    ],
+    [
+      614,
+      208
+    ],
+    [
+      617,
+      222
+    ],
+    [
+      623,
+      232
+    ],
+    [
+      630,
+      233
+    ],
+    [
+      634,
+      225
+    ],
+    [
+      628,
+      216
+    ],
+    [
+      627,
+      202
+    ],
+    [
+      627,
+      191
+    ],
+    [
+      635,
+      181
+    ],
+    [
+      647,
+      176
+    ],
+    [
+      659,
+      176
+    ],
+    [
+      674,
+      181
+    ],
+    [
+      687,
+      190
+    ],
+    [
+      696,
+      201
+    ],
+    [
+      695,
+      208
+    ],
+    [
+      687,
+      217
+    ],
+    [
+      678,
+      222
+    ],
+    [
+      688,
+      232
+    ],
+    [
+      710,
+      239
+    ],
+    [
+      735,
+      242
+    ],
+    [
+      753,
+      250
+    ],
+    [
+      760,
+      258
+    ],
+    [
+      757,
+      272
+    ],
+    [
+      751,
+      286
+    ],
+    [
+      742,
+      300
+    ],
+    [
+      726,
+      307
+    ],
+    [
+      710,
+      312
+    ],
+    [
+      700,
+      321
+    ],
+    [
+      692,
+      334
+    ],
+    [
+      691,
+      349
+    ],
+    [
+      694,
+      362
+    ],
+    [
+      691,
+      378
+    ],
+    [
+      686,
+      396
+    ],
+    [
+      678,
+      412
+    ],
+    [
+      666,
+      422
+    ],
+    [
+      648,
+      429
+    ],
+    [
+      548,
+      429
+    ],
+    [
+      548,
+      130
+    ],
+    [
+      614,
+      130
+    ]
+  ],
+  "fractional_grid_polygon": [
+    [
+      1.0156,
+      0.0
+    ],
+    [
+      1.0891,
+      0.2727
+    ],
+    [
+      1.0547,
+      0.4727
+    ],
+    [
+      0.9737,
+      0.7273
+    ],
+    [
+      0.8947,
+      0.9455
+    ],
+    [
+      0.9218,
+      1.1754
+    ],
+    [
+      0.9939,
+      1.4035
+    ],
+    [
+      1.0355,
+      1.6491
+    ],
+    [
+      1.1227,
+      1.8246
+    ],
+    [
+      1.2273,
+      1.8421
+    ],
+    [
+      1.2906,
+      1.7018
+    ],
+    [
+      1.2036,
+      1.5439
+    ],
+    [
+      1.1936,
+      1.2982
+    ],
+    [
+      1.1977,
+      1.1053
+    ],
+    [
+      1.3246,
+      0.9273
+    ],
+    [
+      1.5115,
+      0.8364
+    ],
+    [
+      1.6966,
+      0.8364
+    ],
+    [
+      1.9252,
+      0.9273
+    ],
+    [
+      2.1171,
+      1.0877
+    ],
+    [
+      2.2438,
+      1.2807
+    ],
+    [
+      2.2227,
+      1.4035
+    ],
+    [
+      2.0949,
+      1.5614
+    ],
+    [
+      1.9555,
+      1.6491
+    ],
+    [
+      2.0977,
+      1.8246
+    ],
+    [
+      2.4206,
+      1.9474
+    ],
+    [
+      2.791,
+      2.0
+    ],
+    [
+      3.0507,
+      2.1356
+    ],
+    [
+      3.1452,
+      2.2712
+    ],
+    [
+      3.0871,
+      2.5085
+    ],
+    [
+      2.9855,
+      2.7458
+    ],
+    [
+      2.8392,
+      2.9831
+    ],
+    [
+      2.5975,
+      3.0968
+    ],
+    [
+      2.3596,
+      3.1774
+    ],
+    [
+      2.2081,
+      3.3226
+    ],
+    [
+      2.0853,
+      3.5323
+    ],
+    [
+      2.0633,
+      3.7742
+    ],
+    [
+      2.0991,
+      3.9839
+    ],
+    [
+      2.0466,
+      4.2273
+    ],
+    [
+      1.9648,
+      4.5
+    ],
+    [
+      1.8429,
+      4.7424
+    ],
+    [
+      1.6701,
+      4.8939
+    ],
+    [
+      1.4167,
+      5.0
+    ],
+    [
+      0.0,
+      5.0
+    ],
+    [
+      0.0,
+      0.0
+    ],
+    [
+      1.0156,
+      0.0
+    ]
+  ],
+  "edge_evidence": [
+    {
+      "from_vertex": 0,
+      "to_vertex": 1,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 1,
+      "to_vertex": 2,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 2,
+      "to_vertex": 3,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 3,
+      "to_vertex": 4,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 4,
+      "to_vertex": 5,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 5,
+      "to_vertex": 6,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 6,
+      "to_vertex": 7,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 7,
+      "to_vertex": 8,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 8,
+      "to_vertex": 9,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 9,
+      "to_vertex": 10,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 10,
+      "to_vertex": 11,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 11,
+      "to_vertex": 12,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 12,
+      "to_vertex": 13,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 13,
+      "to_vertex": 14,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 14,
+      "to_vertex": 15,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 15,
+      "to_vertex": 16,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 16,
+      "to_vertex": 17,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 17,
+      "to_vertex": 18,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 18,
+      "to_vertex": 19,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 19,
+      "to_vertex": 20,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 20,
+      "to_vertex": 21,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 21,
+      "to_vertex": 22,
+      "status": "visible",
+      "confidence": "low-medium; shaded shore beside dense canopy"
+    },
+    {
+      "from_vertex": 22,
+      "to_vertex": 23,
+      "status": "inferred"
+    },
+    {
+      "from_vertex": 23,
+      "to_vertex": 24,
+      "status": "inferred"
+    },
+    {
+      "from_vertex": 24,
+      "to_vertex": 25,
+      "status": "inferred"
+    },
+    {
+      "from_vertex": 25,
+      "to_vertex": 26,
+      "status": "inferred"
+    },
+    {
+      "from_vertex": 26,
+      "to_vertex": 27,
+      "status": "inferred"
+    },
+    {
+      "from_vertex": 27,
+      "to_vertex": 28,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 28,
+      "to_vertex": 29,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 29,
+      "to_vertex": 30,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 30,
+      "to_vertex": 31,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 31,
+      "to_vertex": 32,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 32,
+      "to_vertex": 33,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 33,
+      "to_vertex": 34,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 34,
+      "to_vertex": 35,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 35,
+      "to_vertex": 36,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 36,
+      "to_vertex": 37,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 37,
+      "to_vertex": 38,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 38,
+      "to_vertex": 39,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 39,
+      "to_vertex": 40,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 40,
+      "to_vertex": 41,
+      "status": "visible",
+      "confidence": "medium-high visible shore, +/-4px estimate"
+    },
+    {
+      "from_vertex": 41,
+      "to_vertex": 42,
+      "status": "analysis_clipped"
+    },
+    {
+      "from_vertex": 42,
+      "to_vertex": 43,
+      "status": "analysis_clipped"
+    },
+    {
+      "from_vertex": 43,
+      "to_vertex": 44,
+      "status": "analysis_clipped"
+    }
+  ],
+  "uncertainty_spans": [
+    {
+      "edges": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "reason": "Pointer, pig bubble and purple map sign obscure the north shore of the east-pointing spur; interpolated closure only."
+    }
+  ],
+  "pixel_error_estimate": {
+    "visible_edges_px": 4,
+    "inferred_edges_px": 20
+  },
+  "notes": [
+    "Narrow visible blue inlet between western mainland and northern forest cap is traced as a concavity; no extra water gameplay cell is asserted.",
+    "Dark/fogged coastal shading weakens precision around the northern forest cap. The coast, not its color, is the measured feature.",
+    "Mainland continues off west and south. Three straight closure edges are analysis clipping, not coastline.",
+    "Northern cap/inlet wet edge is shaded and canopy-adjacent; use low weight or exclude it from exact shoreline scoring. The cleaner southern exposed coast is the strongest wet-boundary evidence."
+  ],
+  "renderer_instruction": "Use polygon for land/water shape only; score visible edges, exclude inferred and analysis-clipped edges. Do not render clipped closure as beach/coast; it is only a polygon closure."
+}

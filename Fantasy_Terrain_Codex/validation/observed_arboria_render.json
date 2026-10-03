@@ -1,0 +1,61 @@
+{
+  "screen_chunk_max_difference": 0,
+  "upright_edge_tree_count": 172,
+  "all_explicit_trunk_roots_on_owned_forest_and_land": true,
+  "known_land_water_centers_matching": 12,
+  "known_land_water_centers_checked": 12,
+  "hill_cells": 0,
+  "mountain_cells": 0,
+  "hill_bump_instances": 0,
+  "mountain_instances": 0,
+  "all_hill_anchors_on_owned_hill_cells": true,
+  "reusable_materials": 6,
+  "reusable_tree_sprites": 4,
+  "reusable_jungle_sprites": 0,
+  "rendered_broadleaf_cells": 13,
+  "rendered_pine_cells": 0,
+  "rendered_jungle_cells": 0,
+  "resource_and_hill_clearance_records": [
+    {
+      "cell": [
+        4,
+        4
+      ],
+      "kind": "wildlife_contact",
+      "center_world": [
+        547.84,
+        585.8
+      ],
+      "radius_world": [
+        27,
+        17
+      ],
+      "cleared_px": 1431
+    },
+    {
+      "cell": [
+        4,
+        4
+      ],
+      "kind": "wildlife_contact",
+      "center_world": [
+        611.84,
+        617.8
+      ],
+      "radius_world": [
+        27,
+        17
+      ],
+      "cleared_px": 1439
+    }
+  ],
+  "all_edge_roots_outside_support_openings": true,
+  "jungle_edge_root_count": 0,
+  "vineyard_shared_row_field": null,
+  "visible_river_paths": 4,
+  "river_edge_topology": null,
+  "reusable_site_sprites": 4,
+  "unique_illustration_tiles_used": 0,
+  "forest_interior_sampled_upright_in_screen_space": true,
+  "quality_verdict": "requires visual review; geometry tests are not quality proof"
+}

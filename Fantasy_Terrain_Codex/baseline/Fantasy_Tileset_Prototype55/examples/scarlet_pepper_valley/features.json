@@ -1,0 +1,63 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        3,
+        1
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "White stags",
+      "resource_id": "deer"
+    },
+    {
+      "cell": [
+        3,
+        2
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet pepper bushes",
+      "resource_id": "spices"
+    },
+    {
+      "cell": [
+        4,
+        1
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet pepper bushes",
+      "resource_id": "spices"
+    },
+    {
+      "cell": [
+        4,
+        2
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "Cottage"
+    },
+    {
+      "cell": [
+        5,
+        2
+      ],
+      "asset": "corn_field.png",
+      "kind": "resource",
+      "label": "Sun-maize study",
+      "resource_id": "corn"
+    },
+    {
+      "cell": [
+        2,
+        6
+      ],
+      "asset": "fish_school.png",
+      "kind": "resource",
+      "label": "Silverfin shoal",
+      "resource_id": "fish"
+    }
+  ]
+}

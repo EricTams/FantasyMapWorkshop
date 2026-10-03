@@ -1,0 +1,128 @@
+{
+  "source": "sources/vineyard/vineyard_atlas_source.png (optional source supplement)",
+  "source_size": [
+    1254,
+    1254
+  ],
+  "generation_mode": "built-in image_gen",
+  "generation_count": 1,
+  "tile_size": [
+    128,
+    128
+  ],
+  "reference_only": [
+    "Earlier generated edge/site and meadow artwork; provenance only, not runtime dependencies"
+  ],
+  "extraction": "Found four separate major alpha components at alpha > 1, verified their non-overlapping extents, cropped each component bounding rectangle with 3px margin. Original alpha and RGB are retained in high-resolution crops; native sprites use Lanczos reduction. No painted shapes substituted and no regeneration.",
+  "alpha_zero_fraction": 0.514771868775898,
+  "assets": [
+    {
+      "name": "grapes_plot_0",
+      "layer": "resource",
+      "native_file": "grapes_plot_0.png",
+      "source_alpha_component": {
+        "component": 4,
+        "pixels": 203816,
+        "box": [
+          14,
+          66,
+          630,
+          597
+        ]
+      },
+      "native_size": [
+        112,
+        97
+      ],
+      "native_placement_xy": [
+        6,
+        10
+      ],
+      "footprint_width_fraction": 0.875,
+      "visible_resource_alpha_occlusion_by_paired_improvement": 0.0009702507385367862
+    },
+    {
+      "name": "grapes_plot_1",
+      "layer": "resource",
+      "native_file": "grapes_plot_1.png",
+      "source_alpha_component": {
+        "component": 13,
+        "pixels": 185830,
+        "box": [
+          645,
+          85,
+          1239,
+          601
+        ]
+      },
+      "native_size": [
+        112,
+        97
+      ],
+      "native_placement_xy": [
+        6,
+        10
+      ],
+      "footprint_width_fraction": 0.875,
+      "visible_resource_alpha_occlusion_by_paired_improvement": 3.746364139358022e-06
+    },
+    {
+      "name": "vineyard_press_0",
+      "layer": "improvement",
+      "native_file": "vineyard_press_0.png",
+      "source_alpha_component": {
+        "component": 260,
+        "pixels": 165977,
+        "box": [
+          67,
+          673,
+          613,
+          1160
+        ]
+      },
+      "native_size": [
+        44,
+        39
+      ],
+      "native_placement_xy": [
+        78,
+        80
+      ],
+      "footprint_width_fraction": 0.34375
+    },
+    {
+      "name": "vineyard_press_1",
+      "layer": "improvement",
+      "native_file": "vineyard_press_1.png",
+      "source_alpha_component": {
+        "component": 259,
+        "pixels": 166631,
+        "box": [
+          683,
+          672,
+          1227,
+          1179
+        ]
+      },
+      "native_size": [
+        44,
+        41
+      ],
+      "native_placement_xy": [
+        78,
+        80
+      ],
+      "footprint_width_fraction": 0.34375
+    }
+  ],
+  "context_background_source": "assets/materials/meadow.png",
+  "qc_notes": [
+    "Both resource variants have recognizable purple fruit and broad low vine rows.",
+    "Generated resource plots have narrow connected earth strips beneath vines rather than only individual soil flecks; no broad opaque plaque.",
+    "The requested front-right pocket is less open than ideal. Bottom-right compact press placement preserves most visible grape resource; measured alpha overlap is recorded per paired variant.",
+    "Improvement silhouettes include grapes on a short trellis as requested; the vines in each resource stay separate assets.",
+    "Fine grape and wood detail is largely lost at native scale; purple fruit and wood/vat masses remain.",
+    "No uncertain Civ4 source terrain is asserted. This is standalone source QA, not an integrated map pass."
+  ],
+  "runtime_contract": "The four native_file entries and three rows/vine_row_{0,1,2}_aligned_native.png files are runtime assets. Source atlas/crop/seam provenance is in the optional source supplement manifests; no missing tile composite is a runtime dependency."
+}

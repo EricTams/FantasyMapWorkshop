@@ -1,0 +1,33 @@
+{
+  "rendered_features": [
+    {
+      "cell": [
+        1,
+        6
+      ],
+      "asset": "deer_herd.png",
+      "kind": "resource",
+      "label": "White stags",
+      "resource_id": "deer"
+    },
+    {
+      "cell": [
+        4,
+        6
+      ],
+      "asset": "scarlet_pepper_bushes.png",
+      "kind": "resource",
+      "label": "Scarlet pepper bushes",
+      "resource_id": "spices"
+    },
+    {
+      "cell": [
+        2,
+        6
+      ],
+      "asset": "cottage_plot.png",
+      "kind": "improvement",
+      "label": "Crofter cottage"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "scene_count": 9,
+  "retained_unknown_base_cells": 90,
+  "known_totestra_2B_J_retained": true,
+  "inputs": [
+    {
+      "scene": "dutch_pine_opening",
+      "input_version": 42,
+      "unknown_base_cells": 18,
+      "semantic_scene_exact_latest": true,
+      "rendered_feature_merge_exact_latest": true,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "arboria_opening",
+      "input_version": 42,
+      "unknown_base_cells": 13,
+      "semantic_scene_exact_latest": true,
+      "rendered_feature_merge_exact_latest": true,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "berlin_desert_rivers",
+      "input_version": 41,
+      "unknown_base_cells": 7,
+      "semantic_scene_exact_latest": true,
+      "rendered_feature_merge_exact_latest": true,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "arboria_river_elbows",
+      "input_version": 42,
+      "unknown_base_cells": 9,
+      "semantic_scene_exact_latest": true,
+      "rendered_feature_merge_exact_latest": true,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "dutch_developed_fields",
+      "input_version": 42,
+      "unknown_base_cells": 9,
+      "semantic_scene_exact_latest": true,
+      "rendered_feature_merge_exact_latest": true,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "totestra_peninsula",
+      "input_version": 43,
+      "unknown_base_cells": 7,
+      "semantic_scene_exact_latest": true,
+      "rendered_feature_merge_exact_latest": true,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "celtic_developed_peninsula",
+      "input_version": 40,
+      "provenance": "Retained from validated Core40; no newer41\u201343 scene supplied",
+      "unknown_base_cells": 7,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "boreal_pine_river",
+      "input_version": 40,
+      "provenance": "Retained from validated Core40; no newer41\u201343 scene supplied",
+      "unknown_base_cells": 20,
+      "unknown_bases_not_reclassified": true
+    },
+    {
+      "scene": "island_corsica",
+      "input_version": 40,
+      "provenance": "Retained from validated Core40; no newer41\u201343 scene supplied",
+      "unknown_base_cells": 0,
+      "unknown_bases_not_reclassified": true
+    }
+  ]
+}
