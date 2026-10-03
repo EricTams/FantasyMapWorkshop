@@ -1,4 +1,5 @@
 import {noise,randomAt} from './generator.js';
+import {displacement,ownership,makeGeometry} from './geometry.js';
 const BASE=new URL('./assets/',import.meta.url);
 const names=['materials/deep_water.png','materials/shallow_water.png','materials/meadow.png','materials/shore.png',...Array.from({length:4},(_,i)=>`sprites/broadleaf_edge_${i}.png`),...Array.from({length:4},(_,i)=>`pine/sprites/pine_edge_${i}.png`),...Array.from({length:4},(_,i)=>`jungle/jungle_edge_${i}.png`),...['hill','mountain'].flatMap(kind=>[0,1].map(i=>`relief/${kind}_rock_${i}.png`)),...['mithril','gems','voidstone'].map(s=>`minerals/${s}.png`),'fantasy/white_stags_tile.png','pepper/scarlet_pepper_bushes.png','resources/wheat_field.png','wildlife/aurochs_0.png','wildlife/aurochs_1.png','resources/fish_school.png'];
 export const images={};
@@ -14,43 +15,67 @@ function prepareTexture(image){
 }
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 const colors={desert:[204,184,141],plains:[181,168,103],grassland:[143,156,78],ocean:[143,156,78]};
-function biomeColor(world,x,y){
- const ix=Math.floor(x),iy=Math.floor(y),fx=x-ix,fy=y-iy;
- const nx=fx<.06?ix-1:fx>.94?ix+1:ix,ny=fy<.06?iy-1:fy>.94?iy+1:iy;
- const wx=fx<.06?(.06-fx)/.12:fx>.94?(fx-.94)/.12:0,wy=fy<.06?(.06-fy)/.12:fy>.94?(fy-.94)/.12:0;
- const at=(a,b)=>colors[world.cells[clamp(b,0,15)*16+clamp(a,0,15)].terrain];
- const a=at(ix,iy),b=at(nx,iy),c=at(ix,ny),d=at(nx,ny);
- return a.map((v,k)=>(v*(1-wx)+b[k]*wx)*(1-wy)+(c[k]*(1-wx)+d[k]*wx)*wy);
+function biomeMaterial(world,x,y,band){
+ const color=[0,0,0];let desert=0;
+ for(const part of ownership(x,y,band)){
+  const cell=world.cells[clamp(part.row,0,15)*16+clamp(part.col,0,15)];
+  const c=colors[cell.terrain];for(let k=0;k<3;k++)color[k]+=c[k]*part.weight;
+  if(cell.terrain==='desert')desert+=part.weight;
+ }
+ return {color,desert};
 }
-function field(world,x,y,fn){const ix=Math.floor(x),iy=Math.floor(y),fx=x-ix,fy=y-iy;const at=(a,b)=>a<0||b<0||a>=16||b>=16?0:fn(world.cells[b*16+a]);return (at(ix,iy)*(1-fx)+at(ix+1,iy)*fx)*(1-fy)+(at(ix,iy+1)*(1-fx)+at(ix+1,iy+1)*fx)*fy;}
+// Sample world fields on a four-pixel lattice, then interpolate, never per tile.
+function prepareFields(world,seed){
+ const step=4,w=513,h=385,channels=8,a=new Float32Array(w*h*channels),geometry=makeGeometry(world);
+ for(let iy=0;iy<h;iy++)for(let ix=0;ix<w;ix++){
+  const x=ix*step,y=iy*step,[dx,dy]=displacement(seed,x,y),qx=x+dx,qy=y+dy;
+  const r=geometry.riverDistance(qx,qy),o=(iy*w+ix)*channels;
+  a[o]=dx;a[o+1]=dy;
+  // Coast retains the orthogonal tile silhouette, with only a little edge weathering.
+  const cx=x+dx*.16,cy=y+dy*.16;
+  a[o+2]=(geometry.coastDistance(cx-6,cy-6)+geometry.coastDistance(cx+6,cy-6)+geometry.coastDistance(cx-6,cy+6)+geometry.coastDistance(cx+6,cy+6))/4;
+  a[o+3]=r.distance;
+  a[o+4]=(3.3+noise(seed,qx/48,qy/36,111)*2.1)*clamp(r.progress/42,.12,1);
+  a[o+5]=noise(seed,qx/19,qy/14,112);
+  a[o+6]=4+noise(seed,qx/35,qy/26,113)*2;
+  a[o+7]=r.progress;
+ }
+ const out=new Float32Array(channels);
+ return {geometry,sample(x,y){
+  const xx=clamp(x/step,0,w-1.001),yy=clamp(y/step,0,h-1.001),ix=Math.floor(xx),iy=Math.floor(yy),fx=xx-ix,fy=yy-iy,o=(iy*w+ix)*channels;
+  for(let k=0;k<channels;k++)out[k]=(a[o+k]*(1-fx)+a[o+channels+k]*fx)*(1-fy)+(a[o+w*channels+k]*(1-fx)+a[o+(w+1)*channels+k]*fx)*fy;
+  return out;
+ }};
+}
 const resourcePath={mithril:'minerals/mithril.png',gems:'minerals/gems.png',voidstone:'minerals/voidstone.png',white_stags:'fantasy/white_stags_tile.png',scarlet_pepper:'pepper/scarlet_pepper_bushes.png',wheat:'resources/wheat_field.png',fish:'resources/fish_school.png'};
 export function renderWorld(world,seed){
  const canvas=document.createElement('canvas');canvas.width=2048;canvas.height=1536;const ctx=canvas.getContext('2d');const data=ctx.createImageData(2048,1536);const p=data.data;
  const water=texture.deep_water,shallow=texture.shallow_water,ground=texture.meadow,sand=texture.shore;
- // A small continuous mask is enlarged through interpolation for organic coasts.
- const coast=new Float32Array(129*129);
- for(let y=0;y<=128;y++)for(let x=0;x<=128;x++)coast[y*129+x]=field(world,x/8-.5,y/8-.5,c=>c.land?1:0)+(noise(seed,x/5,y/5,60)-.5)*.15;
+ const fields=prepareFields(world,seed);
  for(let y=0;y<1536;y++){
-  const gy=y/96,yy=y/12,iy=Math.floor(yy),fy=yy-iy;
   for(let x=0;x<2048;x++){
-   const gx=x/128,xx=x/16,ix=Math.floor(xx),fx=xx-ix;
-   const v=(coast[iy*129+ix]*(1-fx)+coast[iy*129+ix+1]*fx)*(1-fy)+(coast[(iy+1)*129+ix]*(1-fx)+coast[(iy+1)*129+ix+1]*fx)*fy;
-   const land=clamp((v-.47)*28),shelf=clamp((v-.12)*3.2),beach=clamp((.60-v)*9)*land;
-   // Narrow irregular ownership bands leave each tile's center pure.
-   const warp=3*Math.sin(x*.05+y*.018)+2*Math.sin(y*.07+x*.024);
-   const bx=clamp((x+warp)/128,0,15.999),by=clamp((y+warp*.75)/96,0,15.999);
-   const c=world.cells[Math.floor(by)*16+Math.floor(bx)];
-   const tx=Math.floor(x*.8)%224,ty=Math.floor(y*1.067)%224,ti=(ty*224+tx)*3;
-   const wi=((y%224)*224+x%224)*3;const o=(y*2048+x)*4;
-   const color=biomeColor(world,bx,by);
+   const f=fields.sample(x,y),qx=x+f[0],qy=y+f[1],coast=f[2];
+   const land=clamp((coast+1.1)/2.2),shelf=clamp((coast+25)/25),beach=clamp((7-coast)/7)*land;
+   const bx=clamp(qx,0,2047.999),by=clamp(qy,0,1535.999);
+   // Ownership, material detail, and channel distance all use the same displaced point.
+   const tx=((Math.floor(qx*.8)%224)+224)%224,ty=((Math.floor(qy*1.067)%224)+224)%224,ti=(ty*224+tx)*3;
+   const wi=((y%224)*224+x%224)*3,o=(y*2048+x)*4;
+   const {color,desert}=biomeMaterial(world,bx,by,f[6]);
+   const channel=clamp((f[4]-f[3]+1.4)/2.8);
+   const bank=clamp((f[4]+2.5+f[5]*2-f[3])/3.5);
+   const riverLand=clamp((coast+6)/10);
    for(let k=0;k<3;k++){
-    let g=color[k]+(ground[ti+k]-ground.mean[k])*.45;
-    if(c.terrain==='desert')g=color[k]+(sand[ti+k]-sand.mean[k])*.42;
+    let g=color[k]+(ground[ti+k]-ground.mean[k])*.45*(1-desert)+(sand[ti+k]-sand.mean[k])*.42*desert;
     g=g*(1-beach)+([198,186,137][k]+(sand[ti+k]-sand.mean[k])*.4)*beach;
     const deep=[19,74,114][k]+(water[wi+k]-water.mean[k])*.40;
     const light=[42,107,131][k]+(shallow[wi+k]-shallow.mean[k])*.45;
     const sea=deep*(1-shelf*.78)+light*shelf*.78;
-    p[o+k]=sea*(1-land)+g*land;
+    let base=sea*(1-land)+g*land;
+    const bankColor=[102,114,74][k]+(ground[ti+k]-ground.mean[k])*.25;
+    base=base*(1-bank*.55*riverLand)+bankColor*bank*.55*riverLand;
+    // Sampled water detail and irregular banks replace three uniform stroked lines.
+    const riverColor=[54,111,125][k]+(shallow[ti+k]-shallow.mean[k])*.55+(f[5]-.5)*9;
+    p[o+k]=base*(1-channel*riverLand)+riverColor*channel*riverLand;
    }p[o+3]=255;
   }
  }ctx.putImageData(data,0,0);
@@ -60,15 +85,16 @@ export function renderWorld(world,seed){
  for(const c of world.cells){if(c.relief==='hill'){
   for(let j=0;j<3;j++){const x=c.x*128+30+j*34,y=c.y*96+44+(j%2)*25;const img=images[`relief/hill_rock_${j%2}.png`];ctx.drawImage(img,x-39,y-26,78,78*img.height/img.width);}
  }}
- drawRivers(ctx,world,seed);
+
  // A global planting lattice connects forest neighbors without tiled canopy stamps.
  for(let y=12;y<1530;y+=14)for(let x=10;x<2040;x+=17){
   const px=x+(randomAt(seed,x,y,70)-.5)*13,py=y+(randomAt(seed,x,y,71)-.5)*11;
-  const col=Math.floor((px+7*Math.sin(py*.07)+3*Math.sin(px*.12))/128),row=Math.floor((py+5*Math.sin(px*.07))/96),c=world.cells[row*16+col];if(!c?.vegetation)continue;
-  if(field(world,px/128-.5,py/96-.5,t=>t.land?1:0)<.65)continue;
+  const f=fields.sample(px,py);
+  const col=Math.floor((px+f[0])/128),row=Math.floor((py+f[1])/96),c=world.cells[row*16+col];if(!c?.vegetation)continue;
+  if(f[2]<8)continue;
   const dx=px-(col+.5)*128,dy=py-(row+.5)*96;
   if(c.resource&&(dx*dx/2600+dy*dy/1200)<1)continue;
-  if(nearRiver(world,px,py,12))continue;
+  if(f[3]<f[4]+15)continue;
   const i=Math.floor(randomAt(seed,x,y,72)*4),kind=c.vegetation;
   const path=kind==='pine'?`pine/sprites/pine_edge_${i}.png`:kind==='jungle'?`jungle/jungle_edge_${i}.png`:`sprites/broadleaf_edge_${i}.png`;
   add(path,px,py,(kind==='pine'?29:39)*(0.85+randomAt(seed,x,y,73)*.28),.93);
@@ -80,16 +106,4 @@ export function renderWorld(world,seed){
  }
  objects.sort((a,b)=>a.depth-b.depth);for(const o of objects)ctx.drawImage(o.img,o.x,o.y,o.w,o.h);
  return canvas;
-}
-function nearRiver(world,x,y,r){for(const river of world.rivers)for(let i=1;i<river.nodes.length;i++){
- const [ax,ay]=river.nodes[i-1].map((v,k)=>v*(k?96:128)),[bx,by]=river.nodes[i].map((v,k)=>v*(k?96:128));
- const t=clamp(((x-ax)*(bx-ax)+(y-ay)*(by-ay))/((bx-ax)**2+(by-ay)**2));if(Math.hypot(x-ax-t*(bx-ax),y-ay-t*(by-ay))<r)return true;
- }return false;}
-function drawRivers(ctx,world,seed){
- ctx.lineCap='round';ctx.lineJoin='round';
- for(const river of world.rivers){const points=[];
-  river.nodes.forEach(([x,y],i)=>{if(!i){points.push([x*128,y*96]);return;}const [ax,ay]=river.nodes[i-1];for(let j=1;j<=8;j++){const t=j/8,wiggle=Math.sin(t*Math.PI)*3*(noise(seed,x+t,y+t,91)-.3);points.push([(ax+(x-ax)*t)*128+(x===ax?wiggle:0),(ay+(y-ay)*t)*96+(y===ay?wiggle:0)]);}});
-  const path=()=>{ctx.beginPath();ctx.moveTo(...points[0]);for(let i=1;i<points.length-1;i++){const p=points[i],next=points[i+1];ctx.quadraticCurveTo(...p,(p[0]+next[0])/2,(p[1]+next[1])/2);}ctx.lineTo(...points.at(-1));};
-  path();ctx.strokeStyle='#7b8966';ctx.lineWidth=12;ctx.stroke();ctx.strokeStyle='#467e89';ctx.lineWidth=8;ctx.stroke();ctx.strokeStyle='#6b9c9a99';ctx.lineWidth=3;ctx.stroke();
- }
 }

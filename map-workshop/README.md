@@ -20,25 +20,28 @@ Sliders regenerate after a brief pause. A fixed seed preserves the underlying no
 - One connected landmass, always bordered by ocean. Maximum coverage is capped at 196 of 256 cells to retain that border.
 - Seeded elevation/moisture fields drive terrain, relief and vegetation. A coast-rooted shortest-path tree generates acyclic rivers on grid edges. This is a gameplay-oriented drainage approximation, not a hydrological simulation: local uphill segments may occur.
 - Terrain, vegetation, relief and resource identities are independent. Resources are biome-dependent and forests have clearings. Placement is not yet balanced for multiplayer or tested for complete sprite collision avoidance.
+- Coastlines follow the union of logical land tiles, with small softened corners and edge weathering. A shared inverse displacement field drives biome ownership, material coordinates, forest boundaries, river distances and tree clearance. Rivers use a union distance field with varying widths, textured water and source tapering; the logical shared-edge graph is unchanged.
 - Original materials are globally sampled with overlapping repeat boundaries and reduced contrast. Biome crossfades occupy narrow edge bands. Vegetation is drawn on a globally seeded lattice and sprites are sorted by their ground contact depth.
 - Uses grassland, plains, desert, broadleaf, pine and jungle. Later swamp, scrub, desert-wetland and snowy alpine art is missing and is not represented as recovered work. Older pine assets currently represent wooded hills.
-- Current aesthetic limits: obvious forest cell shapes, residual texture repetition, straight river reaches, abrupt river sources, repeated mountain silhouettes, and occasional crowded resource/mountain tiles. No claim of Civ4 quality parity.
+- Current aesthetic limits: obvious forest cell shapes, residual texture repetition, some long river reaches and angular elbows, repeated mountain silhouettes, and occasional crowded resource/mountain tiles. No claim of Civ4 quality parity.
 - Rendering is synchronous Canvas 2D with a loading overlay and debounced controls. A worker and chunk caching would be appropriate before increasing map size significantly.
 - No external service, runtime package, telemetry, new artwork, publishing or deployment. Assets copied unchanged from `../Fantasy_Terrain_Codex/baseline/Fantasy_Tileset_Prototype55/assets`; original provenance and rights remain unchanged.
 
 ## Files
 
 - `generator.js`: pure seeded geography, settings, drainage and map data.
+- `geometry.js`: shared displacement, biome weights, tile coast distances and river distances.
 - `renderer.js`: material sampling, coasts, vegetation, rivers and resource art.
 - `app.js`: controls, camera, tile inspection and exports.
 - `tests/generator.test.mjs`: deterministic replay, connected land, resource/relief constraints, river bounds/adjacency/cycles and control extremes over 80 seeds.
 - `tests/materials.html`: flat-field and mixed-field rendering diagnostics.
-- `checkpoints/v1/`: exported default map JSON/PNG, UI captures, checksums and verification record.
+- `checkpoints/v1/`: original browser milestone.
+- `checkpoints/v2/`: shared displacement iteration, unchanged semantic map, new renders, diagnostics and checksums.
 
 Run tests with Node 20+:
 
 ```sh
-node --test tests/generator.test.mjs
+node --test tests/*.test.mjs
 ```
 
 Preserve each meaningful iteration in Git, including semantic inputs and previews; never overwrite the historical baseline to match the new renderer.

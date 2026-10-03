@@ -1,0 +1,16 @@
+{
+  "iteration": "shared-displacement-v2",
+  "seed": "elderwood",
+  "semantic_map_unchanged_from_v1": true,
+  "geometry_checks": "6 tests pass including 80-seed generator sweep, deterministic bounded continuous displacement, pure tile centers, normalized continuous biome weights, orthogonal coast distances and joined river distances",
+  "browser": "Chrome and Codex preview rendered successfully. Flat and mixed materials plus river-on-biome-seam diagnostic inspected. No captured browser errors in diagnostics. PNG and JSON exported in Chrome.",
+  "visual_review": "Squared coast with small softened corners; coherent irregular biome boundaries and matching river curves; width variation, textured water, tapered sources. Repeated materials, forest cell shapes and some long reaches remain.",
+  "files": {
+    "geometry.js": "3906134e18e3cd7651bdc2ec9323d9da00afc7c68e1b3a686a347333013fcc27",
+    "renderer.js": "4e747495662686c4d4e71d481dbf41a0e568edd44e4ec804db9f9078ece113d8",
+    "checkpoints/v2/world.png": "556f897a78bad5d0f33dfd8dce6a48580108ced9ef80d5bc6df82b32685ff686",
+    "checkpoints/v2/world.json": "29c5497eb49ebf4a69b7c382631864361af2b3d02b874472c0fa2e71693c2f1e",
+    "checkpoints/v2/materials.png": "2a23e8a2ffc53c5540c4bc4060ab6e3734c84b11482cf272eb94ffea10eb42e4",
+    "checkpoints/v2/workshop.png": "ef2856e1125541a6052ab220795c0afc1f0afebf182a36c6342c9e4e396aa40d"
+  }
+}
