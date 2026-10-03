@@ -1,0 +1,5 @@
+{
+  "visualReview": "Stronger contact and cast shadows inspected in native-size animal comparison; both previews refreshed.",
+  "changes": "Contact opacity .23 to .40; cast .19 to .32; slightly wider and deeper ellipses.",
+  "tests": "Visual parameter change; unit tests not rerun."
+}

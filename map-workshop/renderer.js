@@ -223,8 +223,8 @@ function drawAnimalShadows(ctx,casters){
   const left=Math.min(...feet.map(p=>p[0])),right=Math.max(...feet.map(p=>p[0]));
   const x=o.x+(left+right)/2*o.w/o.img.width,y=o.y+bottom*o.h/o.img.height;
   // A soft cast to the lower right matches the existing upper-left illumination.
-  ellipse(x+o.w*.07,y+o.w*.015,o.w*.42,o.w*.13,.19);
-  ellipse(x,y,o.w*.28,o.w*.065,.23);
+  ellipse(x+o.w*.07,y+o.w*.015,o.w*.48,o.w*.15,.32);
+  ellipse(x,y,o.w*.31,o.w*.08,.40);
  }
  ctx.restore();
 }
